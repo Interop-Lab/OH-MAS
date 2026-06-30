@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/memleak",
+  "examples": [
+    {
+      "buggy_code": "void func() {\n    char *buf = (char *)malloc(100);\n    if (buf == NULL) return;\n    process(buf);\n    // missing free\n}",
+      "fixed_code": "void func() {\n    char *buf = (char *)malloc(100);\n    if (buf == NULL) return;\n    process(buf);\n    free(buf);\n}"
+    }
+  ],
+  "explanation": "动态分配的内存没有被释放，导致内存泄漏。"
+}

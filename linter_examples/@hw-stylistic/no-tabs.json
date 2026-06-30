@@ -1,0 +1,10 @@
+{
+  "rule_id": "@hw-stylistic/no-tabs",
+  "examples": [
+    {
+      "buggy_code": "export    const    message:    string = 'Hello World';",
+      "fixed_code": "export const message: string = 'Hello World';"
+    }
+  ],
+  "explanation": "禁止使用tab作为缩进，推荐使用空格。该规则仅检查.ets文件类型。"
+}

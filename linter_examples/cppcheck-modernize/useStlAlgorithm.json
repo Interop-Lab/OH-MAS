@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/useStlAlgorithm",
+  "examples": [
+    {
+      "buggy_code": "bool found = false;\nfor (int i = 0; i < vec.size(); i++) {\n    if (vec[i] == target) {\n        found = true;\n        break;\n    }\n}",
+      "fixed_code": "bool found = std::find(vec.begin(), vec.end(), target) != vec.end();"
+    }
+  ],
+  "explanation": "手写的循环逻辑可以用 STL 算法（如 std::find, std::count）替代，更简洁安全。"
+}

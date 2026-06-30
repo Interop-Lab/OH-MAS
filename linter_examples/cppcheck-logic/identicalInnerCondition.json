@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/identicalInnerCondition",
+  "examples": [
+    {
+      "buggy_code": "if (ptr != NULL) {\n    if (ptr != NULL) {\n        use(ptr);\n    }\n}",
+      "fixed_code": "if (ptr != NULL) {\n    use(ptr);\n}"
+    }
+  ],
+  "explanation": "内层 if 的条件和外层相同，是冗余检查。"
+}

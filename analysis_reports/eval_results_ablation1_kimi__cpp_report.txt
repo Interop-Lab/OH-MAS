@@ -1,0 +1,265 @@
+================================================================================
+OH-MAS Detailed Results Analysis
+Results Directory: OH-MAS_results/ablation1_kimi/cpp
+================================================================================
+
+OVERALL METRICS
+--------------------------------------------------------------------------------
+Total Instances:      100
+Patch Apply Rate:     96.00% (96/100)
+Strict Pass Rate:     72.00% (72/100)
+Secondary Defect Rate: 4.00% (3/75)
+Pass@1:               44.00% (44/100)
+Average Rounds:       1.90
+Average Cost:         $0.0651
+Total Cost:           $6.51
+
+Failure Breakdown:
+  Failed at L1:       4 (4.0%)
+  Failed at L2:       24 (24.0%)
+  Failed at L3:       0 (0.0%)
+  Crash:              0 (0.0%)
+
+================================================================================
+PER-INSTANCE RESULTS
+================================================================================
+
+PASSED INSTANCES (72)
+--------------------------------------------------------------------------------
+Task ID         Rule                                          Rounds   Pass@1  
+--------------------------------------------------------------------------------
+CPP_0006        cppcheck/passedByValue                        2        No      
+CPP_0009        cppcheck/passedByValue                        3        No      
+CPP_0010        cppcheck/knownConditionTrueFalse              1        Yes     
+CPP_0011        cppcheck/passedByValue                        1        Yes     
+CPP_0014        cppcheck/passedByValue                        2        No      
+CPP_0020        cppcheck/knownConditionTrueFalse              3        No      
+CPP_0029        cppcheck/passedByValue                        2        No      
+CPP_0038        cppcheck/shadowVariable                       1        Yes     
+CPP_0041        cppcheck/passedByValue                        1        Yes     
+CPP_0046        cppcheck/passedByValue                        1        Yes     
+CPP_0047        cppcheck/shadowVariable                       1        Yes     
+CPP_0048        cppcheck/shadowVariable                       1        Yes     
+CPP_0058        cppcheck/variableScope                        2        No      
+CPP_0071        cppcheck/passedByValue                        2        No      
+CPP_0082        cppcheck/passedByValue                        3        No      
+CPP_0084        cppcheck/passedByValue                        2        No      
+CPP_0089        cppcheck/useStlAlgorithm                      1        Yes     
+CPP_0091        cppcheck/noExplicitConstructor                1        Yes     
+CPP_0092        cppcheck/missingReturn                        1        Yes     
+CPP_0093        cppcheck/knownConditionTrueFalse              1        Yes     
+CPP_0095        cppcheck/knownConditionTrueFalse              1        Yes     
+CPP_0097        cppcheck/knownConditionTrueFalse              2        No      
+CPP_0100        cppcheck/knownConditionTrueFalse              1        Yes     
+CPP_0118        cppcheck/functionStatic                       1        Yes     
+CPP_0119        cppcheck/nullPointer                          1        Yes     
+CPP_0121        cppcheck/functionStatic                       1        Yes     
+CPP_0125        cppcheck/shadowVariable                       1        Yes     
+CPP_0147        cppcheck/variableScope                        1        Yes     
+CPP_0150        cppcheck/variableScope                        2        No      
+CPP_0157        cppcheck/redundantAssignment                  1        Yes     
+CPP_0188        cppcheck/variableScope                        1        Yes     
+CPP_0190        cppcheck/useStlAlgorithm                      2        No      
+CPP_0192        cppcheck/shadowVariable                       1        Yes     
+CPP_0193        cppcheck/variableScope                        2        No      
+CPP_0197        cppcheck/useStlAlgorithm                      2        No      
+CPP_0200        cppcheck/useStlAlgorithm                      2        No      
+CPP_0204        cppcheck/useStlAlgorithm                      2        No      
+CPP_0206        cppcheck/variableScope                        1        Yes     
+CPP_0210        cppcheck/variableScope                        1        Yes     
+CPP_0220        cppcheck/useStlAlgorithm                      3        No      
+CPP_0222        cppcheck/shadowVariable                       1        Yes     
+CPP_0226        cppcheck/redundantAssignment                  2        No      
+CPP_0232        cppcheck/nullPointer                          2        No      
+CPP_0235        cppcheck/nullPointer                          1        Yes     
+CPP_0236        cppcheck/nullPointer                          1        Yes     
+CPP_0239        cppcheck/nullPointer                          1        Yes     
+CPP_0241        cppcheck/uninitvar                            1        Yes     
+CPP_0242        cppcheck/uninitvar                            2        No      
+CPP_0243        cppcheck/nullPointer                          1        Yes     
+CPP_0246        cppcheck/nullPointer                          1        Yes     
+CPP_0250        cppcheck/nullPointer                          2        No      
+CPP_0255        cppcheck/nullPointer                          1        Yes     
+CPP_0256        cppcheck/nullPointer                          1        Yes     
+CPP_0257        cppcheck/nullPointer                          2        No      
+CPP_0266        cppcheck/nullPointer                          1        Yes     
+CPP_0270        cppcheck/nullPointer                          1        Yes     
+CPP_0274        cppcheck/nullPointer                          1        Yes     
+CPP_0282        cppcheck/redundantAssignment                  1        Yes     
+CPP_0283        cppcheck/uninitvar                            1        Yes     
+CPP_0293        cppcheck/shadowVariable                       1        Yes     
+CPP_0306        cppcheck/identicalInnerCondition              3        No      
+CPP_0310        cppcheck/stlIfStrFind                         3        No      
+CPP_0319        cppcheck/stlIfStrFind                         1        Yes     
+CPP_0324        cppcheck/stlIfStrFind                         1        Yes     
+CPP_0325        cppcheck/stlIfStrFind                         2        No      
+CPP_0327        cppcheck/redundantAssignment                  1        Yes     
+CPP_0329        cppcheck/redundantAssignment                  2        No      
+CPP_0332        cppcheck/identicalInnerCondition              1        Yes     
+CPP_0335        cppcheck/stlIfStrFind                         2        No      
+CPP_0340        cppcheck/identicalInnerCondition              2        No      
+CPP_0343        cppcheck/functionStatic                       1        Yes     
+CPP_0357        cppcheck/noExplicitConstructor                1        Yes     
+
+FAILED INSTANCES (28)
+--------------------------------------------------------------------------------
+Task ID         Rule                                     Failed Level  Rounds  
+--------------------------------------------------------------------------------
+CPP_0023        cppcheck/knownConditionTrueFalse         L2            3       
+CPP_0024        cppcheck/knownConditionTrueFalse         L2            3       
+CPP_0059        cppcheck/variableScope                   L2            3       
+CPP_0065        cppcheck/passedByValue                   L2            3       
+CPP_0070        cppcheck/passedByValue                   L2            3       
+CPP_0074        cppcheck/passedByValue                   L2            3       
+CPP_0085        cppcheck/passedByValue                   L2            3       
+CPP_0109        cppcheck/knownConditionTrueFalse         L2            3       
+CPP_0111        cppcheck/shadowVariable                  L2            3       
+CPP_0115        cppcheck/redundantAssignment             L1            3       
+CPP_0129        cppcheck/knownConditionTrueFalse         L2            3       
+CPP_0130        cppcheck/variableScope                   L2            3       
+CPP_0139        cppcheck/knownConditionTrueFalse         L2            3       
+CPP_0143        cppcheck/variableScope                   L2            3       
+CPP_0155        cppcheck/variableScope                   L2            3       
+CPP_0176        cppcheck/noExplicitConstructor           L1            3       
+CPP_0178        cppcheck/noExplicitConstructor           L1            3       
+CPP_0183        cppcheck/useStlAlgorithm                 L2            3       
+CPP_0212        cppcheck/useStlAlgorithm                 L2            3       
+CPP_0216        cppcheck/useStlAlgorithm                 L2            3       
+CPP_0217        cppcheck/useStlAlgorithm                 L2            3       
+CPP_0221        cppcheck/useStlAlgorithm                 L2            3       
+CPP_0279        cppcheck/memleak                         L2            3       
+CPP_0287        cppcheck/memleak                         L2            3       
+CPP_0303        cppcheck/identicalInnerCondition         L2            3       
+CPP_0328        cppcheck/redundantAssignment             L2            3       
+CPP_0331        cppcheck/stlIfStrFind                    L1            3       
+CPP_0350        cppcheck/uninitvar                       L2            3       
+
+================================================================================
+STATISTICS BY RULE
+================================================================================
+
+Rule: cppcheck/passedByValue
+  Total:      14
+  Passed:     10 (71.4%)
+  Failed L1:  0
+  Failed L2:  4
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0006, CPP_0009, CPP_0011, CPP_0014, CPP_0029, CPP_0041, CPP_0046, CPP_0065, CPP_0070, CPP_0071, CPP_0074, CPP_0082, CPP_0084, CPP_0085
+
+Rule: cppcheck/nullPointer
+  Total:      14
+  Passed:     14 (100.0%)
+  Failed L1:  0
+  Failed L2:  0
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0119, CPP_0232, CPP_0235, CPP_0236, CPP_0239, CPP_0243, CPP_0246, CPP_0250, CPP_0255, CPP_0256, CPP_0257, CPP_0266, CPP_0270, CPP_0274
+
+Rule: cppcheck/knownConditionTrueFalse
+  Total:      11
+  Passed:     6 (54.5%)
+  Failed L1:  0
+  Failed L2:  5
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0010, CPP_0020, CPP_0023, CPP_0024, CPP_0093, CPP_0095, CPP_0097, CPP_0100, CPP_0109, CPP_0129, CPP_0139
+
+Rule: cppcheck/variableScope
+  Total:      11
+  Passed:     7 (63.6%)
+  Failed L1:  0
+  Failed L2:  4
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0058, CPP_0059, CPP_0130, CPP_0143, CPP_0147, CPP_0150, CPP_0155, CPP_0188, CPP_0193, CPP_0206, CPP_0210
+
+Rule: cppcheck/useStlAlgorithm
+  Total:      11
+  Passed:     6 (54.5%)
+  Failed L1:  0
+  Failed L2:  5
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0089, CPP_0183, CPP_0190, CPP_0197, CPP_0200, CPP_0204, CPP_0212, CPP_0216, CPP_0217, CPP_0220, CPP_0221
+
+Rule: cppcheck/shadowVariable
+  Total:      8
+  Passed:     7 (87.5%)
+  Failed L1:  0
+  Failed L2:  1
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0038, CPP_0047, CPP_0048, CPP_0111, CPP_0125, CPP_0192, CPP_0222, CPP_0293
+
+Rule: cppcheck/redundantAssignment
+  Total:      7
+  Passed:     5 (71.4%)
+  Failed L1:  1
+  Failed L2:  1
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0115, CPP_0157, CPP_0226, CPP_0282, CPP_0327, CPP_0328, CPP_0329
+
+Rule: cppcheck/stlIfStrFind
+  Total:      6
+  Passed:     5 (83.3%)
+  Failed L1:  1
+  Failed L2:  0
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0310, CPP_0319, CPP_0324, CPP_0325, CPP_0331, CPP_0335
+
+Rule: cppcheck/noExplicitConstructor
+  Total:      4
+  Passed:     2 (50.0%)
+  Failed L1:  2
+  Failed L2:  0
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0091, CPP_0176, CPP_0178, CPP_0357
+
+Rule: cppcheck/uninitvar
+  Total:      4
+  Passed:     3 (75.0%)
+  Failed L1:  0
+  Failed L2:  1
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0241, CPP_0242, CPP_0283, CPP_0350
+
+Rule: cppcheck/identicalInnerCondition
+  Total:      4
+  Passed:     3 (75.0%)
+  Failed L1:  0
+  Failed L2:  1
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0303, CPP_0306, CPP_0332, CPP_0340
+
+Rule: cppcheck/functionStatic
+  Total:      3
+  Passed:     3 (100.0%)
+  Failed L1:  0
+  Failed L2:  0
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0118, CPP_0121, CPP_0343
+
+Rule: cppcheck/memleak
+  Total:      2
+  Passed:     0 (0.0%)
+  Failed L1:  0
+  Failed L2:  2
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0279, CPP_0287
+
+Rule: cppcheck/missingReturn
+  Total:      1
+  Passed:     1 (100.0%)
+  Failed L1:  0
+  Failed L2:  0
+  Failed L3:  0
+  Crash:      0
+  Instances:  CPP_0092

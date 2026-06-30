@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/prefixPostFix",
+  "examples": [
+    {
+      "buggy_code": "for (auto it = vec.begin(); it != vec.end(); it++) {\n    process(*it);\n}",
+      "fixed_code": "for (auto it = vec.begin(); it != vec.end(); ++it) {\n    process(*it);\n}"
+    }
+  ],
+  "explanation": "非基本类型的迭代器使用后置自增(it++)会产生临时对象，应使用前置自增(++it)。"
+}

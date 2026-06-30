@@ -1,0 +1,194 @@
+# Rule Family Hints for GW Agent
+#
+# This configuration provides specialized localization strategies for different ArkUI
+# linter rule families. These hints guide the GW agent to precisely locate violations
+# and extract focused context.
+
+'@performance/hp-arkui-no-func-as-arg-for-reusable-component':
+  rule_family: arkui_component_performance
+  priority: critical
+
+  # Human-readable strategy summary
+  strategy: |
+    Find component instantiation sites with function CALLS as parameters.
+    CRITICAL: Distinguish between function member definitions (onClick: () => void)
+    and method CALLS (this.method()) - the rule detects CALLS, not definitions.
+
+  # Search patterns for GW to use
+  search_patterns:
+    - type: component_instantiation
+      pattern: '\w+\(\{'
+      description: Find all component instantiations
+    - type: method_call_in_params
+      pattern: 'this\.\w+\('
+      description: Find instance method calls
+    - type: object_method_call
+      pattern: '\w+\.\w+\('
+      description: Find object method calls
+
+  # Context extraction settings
+  focus_narrow: true  # Extract narrow context around violation
+  extract_lines_context: 10  # ±10 lines around violation line
+
+  # Dependency graph settings
+  graph_max_hops: 1
+  required_files: ['alarm_file']
+  optional_files: ['method_definitions']
+
+  # Key reminders for GW
+  localization_hints:
+    - "Don't extract entire alarm range (e.g., 19-110 lines)"
+    - "Focus on specific component instantiation with method call"
+    - "Mark the exact violation line in snippet metadata"
+    - "Ignore function member definitions (e.g., onClickHead: () => void)"
+    - "Ignore event handlers (e.g., .onClick(this.handler))"
+
+'@performance/hp-arkui-use-reusable-component':
+  rule_family: arkui_component_performance
+  priority: high
+
+  strategy: |
+    Find complex inline components inside LazyForEach that should be extracted
+    into @Reusable components for better performance.
+
+  search_patterns:
+    - type: lazy_foreach
+      pattern: 'LazyForEach\('
+      description: Find LazyForEach blocks
+    - type: complex_inline_ui
+      pattern: 'ListItem|GridItem'
+      description: Find list/grid item builders
+
+  focus_narrow: false  # Need broader context for extraction
+  extract_lines_context: 30  # Include full LazyForEach itemBuilder
+
+  graph_max_hops: 0
+  required_files: ['alarm_file']
+  optional_files: []
+
+  localization_hints:
+    - "Extract the itemBuilder callback content (ListItem/GridItem)"
+    - "Include conditional rendering logic (if statements)"
+    - "Identify state dependencies (item.xxx, this.xxx)"
+    - "Don't include LazyForEach call itself"
+
+'@performance/hp-arkui-use-object-link-to-replace-prop':
+  rule_family: arkui_state_management
+  priority: high
+
+  strategy: |
+    Find @Prop declarations for @Observed class types that should use @ObjectLink
+    for better performance (avoids deep copy overhead).
+    CRITICAL: Must verify class has @Observed decorator before fix can be applied.
+
+  search_patterns:
+    - type: prop_declaration
+      pattern: '@Prop \w+: \w+'
+      description: Find @Prop declarations
+    - type: observed_class
+      pattern: '@Observed\s+(export\s+)?class'
+      description: Verify class has @Observed
+
+  focus_narrow: true
+  extract_lines_context: 5
+
+  graph_max_hops: 1
+  required_files: ['alarm_file', 'class_definition_file']
+  optional_files: ['parent_component_file']
+
+  localization_hints:
+    - "Extract the @Prop declaration line (typically 1 line)"
+    - "Follow imports to find class definition file"
+    - "MUST verify class has @Observed decorator"
+    - "If class lacks @Observed, fix cannot be applied"
+
+'@performance/hp-arkui-no-state-var-access-in-loop':
+  rule_family: arkui_state_management
+  priority: critical
+
+  strategy: |
+    Find @State variable access in procedural loops (for/while).
+    CRITICAL: Distinguish between declarative UI loops (ForEach in build())
+    and procedural loops (for/while in methods) - only fix procedural loops!
+
+  search_patterns:
+    - type: procedural_loop
+      pattern: 'for\s*\(|while\s*\('
+      description: Find for/while loops
+    - type: state_access
+      pattern: 'this\.\w+\.'
+      description: Find @State variable access
+
+  focus_narrow: true
+  extract_lines_context: 8
+
+  graph_max_hops: 0
+  required_files: ['alarm_file']
+  optional_files: []
+
+  localization_hints:
+    - "Check if alarm is in build() method - if YES, likely false alarm"
+    - "Target procedural loops in onClick, lifecycle, private methods"
+    - "Do NOT touch ForEach loops in build() - they need reactivity"
+    - "Extract method signature and loop body only"
+
+'@performance/hp-arkui-use-local-var-to-replace-state-var':
+  rule_family: arkui_state_management
+  priority: medium
+
+  strategy: |
+    Find unnecessary @State access in business logic where local variables
+    would suffice. Verify context is not in build() reactivity.
+
+  search_patterns:
+    - type: state_access
+      pattern: 'this\.\w+'
+      description: Find state variable access
+
+  focus_narrow: true
+  extract_lines_context: 10
+
+  graph_max_hops: 0
+  required_files: ['alarm_file']
+  optional_files: []
+
+  localization_hints:
+    - "Check context - if in build(), likely needed for reactivity"
+    - "Target business logic methods, not UI rendering"
+    - "Extract exact usage line"
+
+'@performance/hp-arkui-replace-nested-reusable-component-by-builder':
+  rule_family: arkui_component_performance
+  priority: critical
+
+  strategy: |
+    Find @Reusable components that contain nested custom component instantiations.
+    These must be completely inlined using @Builder methods with only built-in UI.
+
+  search_patterns:
+    - type: reusable_component
+      pattern: '@Reusable'
+      description: Find @Reusable components
+    - type: custom_component_call
+      pattern: '\w+Component\(\{'
+      description: Find custom component calls in build()
+
+  focus_narrow: false  # Need full component context
+  extract_lines_context: 50
+
+  graph_max_hops: 1
+  required_files: ['alarm_file', 'nested_component_files']
+  optional_files: []
+
+  localization_hints:
+    - "Find the @Reusable parent component"
+    - "Identify nested custom component calls (not built-in like Row/Column)"
+    - "Extract both parent and nested component definitions"
+    - "Complete inlining required - see repair_experiences for details"
+
+# Global Configuration
+config:
+  default_extract_lines: 10
+  default_max_hops: 1
+  enable_snippet_focus_marking: true
+  confidence_threshold: 0.7

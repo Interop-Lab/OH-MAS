@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/functionStatic",
+  "examples": [
+    {
+      "buggy_code": "class Utils {\npublic:\n    int add(int a, int b) { return a + b; }\n};",
+      "fixed_code": "class Utils {\npublic:\n    static int add(int a, int b) { return a + b; }\n};"
+    }
+  ],
+  "explanation": "成员函数没有使用任何成员变量，可以声明为 static。"
+}

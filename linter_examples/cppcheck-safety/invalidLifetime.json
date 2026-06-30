@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/invalidLifetime",
+  "examples": [
+    {
+      "buggy_code": "int* getNumber() {\n    int x = 42;\n    return &x;\n}",
+      "fixed_code": "int* getNumber() {\n    int *x = (int *)malloc(sizeof(int));\n    *x = 42;\n    return x;\n}"
+    }
+  ],
+  "explanation": "返回了局部变量的指针/引用，函数返回后该内存已失效。"
+}

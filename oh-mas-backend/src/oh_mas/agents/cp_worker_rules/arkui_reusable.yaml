@@ -1,0 +1,152 @@
+# ArkUI @Reusable component optimization rules
+# Applies to performance rules related to LazyForEach and @Reusable decorator
+
+rule_pattern: "@performance/hp-arkui-.*-reusable"
+priority: 10
+applies_to:
+  - "@performance/hp-arkui-use-reusable-component"
+  - "@performance/hp-arkui-replace-nested-reusable-component-by-builder"
+  - "@performance/hp-arkui-suggest-reuseid-for-if-else-reusable-component"
+
+instructions: |
+  # ArkUI @Reusable Critical Rules
+
+  ## STEP 0 — Scan ALL LazyForEach callsites in the alarm file FIRST
+  Before writing any fix, count how many LazyForEach blocks exist in the file.
+  The alarm line number may point to only ONE of them.
+  **Each LazyForEach block that contains an un-@Reusable inline component is a separate
+  violation point.** Fix ALL of them in a single patch or DA L2 will still fail.
+
+  ## Rule 1 — Apply @Reusable to the ITERATED component only
+  - Add @Reusable ONLY to the struct directly instantiated by LazyForEach
+  - Do NOT add @Reusable to root/page-level components
+
+  ## Rule 2 — Lifecycle: ALWAYS implement aboutToReuse()
+  Every @Reusable struct MUST have:
+  ```typescript
+  aboutToReuse(params: Record<string, ESObject>) {
+    this.stateVar = params.stateVar as Type;
+    // update ALL @State properties
+  }
+  ```
+
+  ## Rule 3 — No custom components in build() OR @Builder methods
+  The linter scans ALL methods in the struct, not just build().
+  A custom component call anywhere in the struct triggers
+  @performance/hp-arkui-replace-nested-reusable-component-by-builder.
+
+  - ❌ WRONG: @Builder contains `ChildComponent({...})`
+  - ✅ CORRECT: @Builder contains ONLY built-in primitives (Row, Column, Text, Image, …)
+
+  **Inlining Checklist:**
+  1. Lift ALL @State/@Prop/@Link variables from nested component to parent
+  2. Lift ALL private variables and properties to parent level
+  3. Create @Builder method with ONLY the UI code from the nested component's build()
+  4. Replace nested component instantiation with @Builder call in parent's build()
+
+  ## Rule 4 — Eliminate ALL if-else from the @Reusable struct to avoid suggest-reuseid
+  The linter rule @performance/hp-arkui-suggest-reuseid-for-if-else-reusable-component
+  fires on the callsite when ANY method in the @Reusable struct (build() OR @Builder)
+  contains an if-else that affects UI structure.
+
+  **Adding .reuseId() at the callsite does NOT suppress this warning.**
+  The only reliable fix is to remove all structural if-else from the struct entirely.
+
+  **Preferred replacement: `.visibility()` ternary**
+  ```typescript
+  // ❌ WRONG — if-else in build() or @Builder triggers the warning
+  build() {
+    if (this.showDivider) { Divider() }
+  }
+
+  // ✅ CORRECT — ternary on .visibility() has no structural branching
+  build() {
+    Divider()
+      .visibility(this.showDivider ? Visibility.Visible : Visibility.None)
+  }
+  ```
+
+  Apply the same pattern to @Builder methods:
+  ```typescript
+  // ❌ WRONG — if-else in @Builder also triggers suggest-reuseid
+  @Builder buildPortrait() {
+    if (StringUtil.isEmpty(this.suffix)) {
+      Image($r('app.media.ic_user_portrait'))
+    } else {
+      Text(this.suffix.toUpperCase())
+    }
+  }
+
+  // ✅ CORRECT — both nodes always present, toggled via Visibility
+  @Builder buildPortrait() {
+    Image($r('app.media.ic_user_portrait'))
+      .visibility(StringUtil.isEmpty(this.suffix) ? Visibility.Visible : Visibility.None)
+    Text(this.suffix.toUpperCase())
+      .visibility(StringUtil.isEmpty(this.suffix) ? Visibility.None : Visibility.Visible)
+  }
+  ```
+
+  ## Rule 5 — reuseId at LazyForEach callsite
+  Only required when the @Reusable struct STILL has conditional UI structure AFTER your fix.
+  If you applied the Visibility approach (Rule 4), the UI structure is uniform and a static
+  reuseId (e.g., `.reuseId('item')`) is sufficient.
+  If two completely separate @Reusable structs are used for different branches inside
+  LazyForEach instead, use distinct reuseIds for each.
+
+  ## Rule 6 — DA L3 awareness: line-number shift
+  Adding new code to the target file shifts the line numbers of pre-existing violations.
+  DA L3 uses (file, line, rule) exact tuples, so shifted lines appear as "new violations".
+  This is not a regression in your fix — it is a limitation of the current DA L3 logic.
+  Do NOT try to avoid introducing new code; instead, produce the correct fix and accept
+  that DA L3 may report false positives for shifted pre-existing rules.
+
+  ## Example transformation (full)
+  ```typescript
+  // BEFORE: Two problems — inline ListItem in LazyForEach + nested custom component
+  LazyForEach(this.source, (item: MyData) => {
+    ListItem() {
+      Stack() {
+        CustomItemView({ item: item.detail, onTap: this.onTap })
+        if (item.showDivider) { Divider() }
+      }
+    }
+  })
+
+  // AFTER: @Reusable struct with inlined UI, Visibility instead of if-else
+  @Reusable
+  @Component
+  struct MyListItem {
+    @State item: MyData = new MyData();
+    @State showDivider: boolean = false;
+    onTap: Function = () => {};
+
+    aboutToReuse(params: Record<string, ESObject>) {
+      this.item = params.item as MyData;
+      this.showDivider = (params.item as MyData).showDivider;
+    }
+
+    @Builder buildDetail() {
+      // Inlined content of CustomItemView — ONLY built-in components
+      Row() {
+        Image(this.item.detail.icon)
+        Text(this.item.detail.title)
+      }
+      .onClick(() => { this.onTap(this.item.detail.id); })
+    }
+
+    build() {
+      ListItem() {
+        Stack() {
+          this.buildDetail()
+          Divider()
+            .visibility(this.showDivider ? Visibility.Visible : Visibility.None)
+        }
+      }
+    }
+  }
+
+  LazyForEach(this.source, (item: MyData) => {
+    MyListItem({ item: item, showDivider: item.showDivider, onTap: this.onTap })
+    .reuseId('list-item')
+  })
+  ```

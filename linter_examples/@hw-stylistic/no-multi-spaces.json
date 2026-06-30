@@ -1,0 +1,10 @@
+{
+  "rule_id": "@hw-stylistic/no-multi-spaces",
+  "examples": [
+    {
+      "buggy_code": "export const   message:  string  =  'Hello World';",
+      "fixed_code": "export const message: string = 'Hello World';"
+    }
+  ],
+  "explanation": "不允许出现连续多个空格，除非是换行。该规则仅检查.ets文件类型。"
+}

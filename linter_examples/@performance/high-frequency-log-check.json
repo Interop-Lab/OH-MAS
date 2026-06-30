@@ -1,0 +1,10 @@
+{
+  "rule_id": "@performance/high-frequency-log-check",
+  "examples": [
+    {
+      "buggy_code": "import hilog from '@ohos.hilog';\n\n@Entry\n@Component\nstruct Index {\n  build() {\n    Column() {\n      Scroll()\n        .onWillScroll(() => {\n          // Avoid printing logs\n          hilog.info(1001, 'Index', 'onWillScroll');\n        })\n    }\n  }\n}",
+      "fixed_code": "@Entry\n@Component\nstruct Index {\n  build() {\n    Column() {\n      Scroll()\n        .onWillScroll(() => {\n          const TAG = 'onWillScroll';\n        })\n    }\n  }\n}"
+    }
+  ],
+  "explanation": "不建议在高频函数中使用Hilog。"
+}

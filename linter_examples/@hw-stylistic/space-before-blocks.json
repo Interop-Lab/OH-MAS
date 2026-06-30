@@ -1,0 +1,10 @@
+{
+  "rule_id": "@hw-stylistic/space-before-blocks",
+  "examples": [
+    {
+      "buggy_code": "export function a(){\n  // doSomething\n}\n\n@Entry\n@Component\n// Missing space before opening brace.\nstruct Index{\n  // Missing space before opening brace.\n  build(){\n    // Missing space before opening brace.\n    Row(){\n      // Missing space before opening brace.\n      Column(){\n        Text('Hello World')\n      }\n      .width('100%')\n    }\n    .height('100%')\n  }\n}",
+      "fixed_code": "export function a() {\n  // doSomething\n}\n\n@Entry\n@Component\nstruct Index {\n  build() {\n    Row() {\n      Column() {\n        Text('Hello World')\n      }\n      .width('100%')\n    }\n    .height('100%')\n  }\n}"
+    }
+  ],
+  "explanation": "强制在“{”之前加空格。该规则仅检查.ets文件类型。"
+}

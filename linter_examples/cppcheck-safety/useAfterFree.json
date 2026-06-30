@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/useAfterFree",
+  "examples": [
+    {
+      "buggy_code": "char *p = (char *)malloc(100);\nfree(p);\nprintf(\"%s\", p);",
+      "fixed_code": "char *p = (char *)malloc(100);\nprintf(\"%s\", p);\nfree(p);\np = NULL;"
+    }
+  ],
+  "explanation": "内存被释放后继续使用，导致未定义行为。"
+}

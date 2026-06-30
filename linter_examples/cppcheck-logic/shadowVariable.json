@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/shadowVariable",
+  "examples": [
+    {
+      "buggy_code": "int count = 10;\nvoid func() {\n    int count = 0;\n    for (int i = 0; i < count; i++) {}\n}",
+      "fixed_code": "int count = 10;\nvoid func() {\n    int localCount = 0;\n    for (int i = 0; i < localCount; i++) {}\n}"
+    }
+  ],
+  "explanation": "内层作用域的变量名与外层相同，可能导致意外使用错误的变量。"
+}

@@ -1,0 +1,10 @@
+{
+  "rule_id": "@performance/hp-arkts-no-use-any-export-current",
+  "examples": [
+    {
+      "buggy_code": "class User {\n  id?: number;\n  name?: string;\n}\n// 当前文件 User.ets\nexport * from './User';\n// 当前文件 User.ets\nexport * as XX from './User';",
+      "fixed_code": "export class User {\n  id?: number;\n  name?: string;\n}"
+    }
+  ],
+  "explanation": "避免使用export * 导出当前module中定义的类型和数据。"
+}

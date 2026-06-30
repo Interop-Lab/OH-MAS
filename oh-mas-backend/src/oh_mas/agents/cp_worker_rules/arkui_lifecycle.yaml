@@ -1,0 +1,27 @@
+# ArkUI component lifecycle rules
+# Applies to incorrect lifecycle method usage
+
+rule_pattern: ".*lifecycle.*"
+priority: 5
+applies_to:
+  - "no-lifecycle-misuse"
+  - "@hw-stylistic/arkui-lifecycle-conventions"
+
+instructions: |
+  # ArkUI Lifecycle Rules
+
+  **Valid lifecycle methods:**
+  - aboutToAppear(): Called when component is about to appear
+  - aboutToDisappear(): Called before component disappears
+  - onPageShow(): Page-level lifecycle (not available in custom components)
+  - onPageHide(): Page-level lifecycle (not available in custom components)
+
+  **Common mistakes:**
+  - Using page lifecycle methods (onPageShow/Hide) in custom components
+  - Calling lifecycle methods manually instead of letting framework invoke them
+  - Defining lifecycle methods with incorrect signatures
+
+  **Resolution:**
+  - Use aboutToAppear/aboutToDisappear in custom components
+  - Reserve onPageShow/Hide for @Entry decorated page components only
+  - Ensure method signatures match framework specifications

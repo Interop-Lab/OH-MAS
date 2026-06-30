@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/redundantCopy",
+  "examples": [
+    {
+      "buggy_code": "std::string s = \"hello\";\ns = getValue();",
+      "fixed_code": "std::string s = getValue();"
+    }
+  ],
+  "explanation": "变量初始化后立即被赋予新值，初始拷贝构造是多余的。"
+}

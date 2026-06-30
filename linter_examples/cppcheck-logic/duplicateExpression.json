@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/duplicateExpression",
+  "examples": [
+    {
+      "buggy_code": "if (x == 1 && x == 1) {\n    doSomething();\n}",
+      "fixed_code": "if (x == 1) {\n    doSomething();\n}"
+    }
+  ],
+  "explanation": "表达式两侧相同，通常是复制粘贴错误。"
+}

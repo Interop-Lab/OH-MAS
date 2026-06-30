@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/doubleFree",
+  "examples": [
+    {
+      "buggy_code": "char *p = (char *)malloc(100);\nfree(p);\nfree(p);",
+      "fixed_code": "char *p = (char *)malloc(100);\nfree(p);\np = NULL;"
+    }
+  ],
+  "explanation": "同一块内存被释放两次，导致未定义行为。"
+}

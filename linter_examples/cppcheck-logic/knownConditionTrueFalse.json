@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/knownConditionTrueFalse",
+  "examples": [
+    {
+      "buggy_code": "unsigned int x = getValue();\nif (x >= 0) {\n    process(x);\n}",
+      "fixed_code": "unsigned int x = getValue();\nprocess(x);\n// unsigned 永远 >= 0，条件多余"
+    }
+  ],
+  "explanation": "条件表达式的值在编译期就能确定，是永真或永假，通常是逻辑错误。"
+}

@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/nullPointer",
+  "examples": [
+    {
+      "buggy_code": "void process(Node *node) {\n    int val = node->value;\n    if (node != NULL) {\n        printf(\"%d\", val);\n    }\n}",
+      "fixed_code": "void process(Node *node) {\n    if (node == NULL) return;\n    int val = node->value;\n    printf(\"%d\", val);\n}"
+    }
+  ],
+  "explanation": "指针可能为 NULL 时被解引用，应先检查。"
+}

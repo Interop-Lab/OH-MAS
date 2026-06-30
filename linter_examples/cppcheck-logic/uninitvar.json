@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/uninitvar",
+  "examples": [
+    {
+      "buggy_code": "int x;\nprintf(\"%d\", x);",
+      "fixed_code": "int x = 0;\nprintf(\"%d\", x);"
+    }
+  ],
+  "explanation": "变量在使用前没有初始化，导致未定义行为。"
+}

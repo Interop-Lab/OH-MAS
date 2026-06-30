@@ -1,0 +1,136 @@
+================================================================================
+OH-MAS Detailed Results Analysis
+Results Directory: OH-MAS_results/ablation1_kimi/arkts
+================================================================================
+
+OVERALL METRICS
+--------------------------------------------------------------------------------
+Total Instances:      100
+Patch Apply Rate:     83.00% (83/100)
+Strict Pass Rate:     73.00% (73/100)
+Secondary Defect Rate: 9.21% (7/76)
+Pass@1:               50.00% (50/100)
+Average Rounds:       1.47
+Average Cost:         $0.0248
+Total Cost:           $2.48
+
+Failure Breakdown:
+  Failed at L1:       17 (17.0%)
+  Failed at L2:       8 (8.0%)
+  Failed at L3:       2 (2.0%)
+  Crash:              16 (16.0%)
+
+================================================================================
+PER-INSTANCE RESULTS
+================================================================================
+
+PASSED INSTANCES (73)
+--------------------------------------------------------------------------------
+Task ID         Rule                                          Rounds   Pass@1  
+--------------------------------------------------------------------------------
+OH_0001         @performance/hp-arkts-no-use-any-export-other 1        Yes     
+OH_0003         @performance/hp-arkui-no-state-var-access-... 2        No      
+OH_0008         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0009         @performance/hp-arkui-use-reusable-component  1        Yes     
+OH_0012         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0014         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0018         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0023         @performance/hp-arkui-use-reusable-component  1        Yes     
+OH_0032         @performance/hp-arkui-no-stringify-in-lazy... 2        No      
+OH_0037         @performance/hp-arkui-use-reusable-component  1        Yes     
+OH_0041         @performance/hp-arkui-no-stringify-in-lazy... 1        Yes     
+OH_0044         @performance/hp-arkui-no-stringify-in-lazy... 1        Yes     
+OH_0046         @performance/hp-arkui-use-reusable-component  2        No      
+OH_0048         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0057         @performance/hp-arkui-use-reusable-component  1        Yes     
+OH_0060         @performance/hp-arkui-use-reusable-component  1        Yes     
+OH_0099         @performance/hp-arkui-no-state-var-access-... 2        No      
+OH_0100         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0102         @performance/hp-arkui-no-stringify-in-lazy... 1        Yes     
+OH_0103         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0107         @performance/hp-arkui-use-reusable-component  3        No      
+OH_0108         @performance/hp-arkui-no-stringify-in-lazy... 1        Yes     
+OH_0113         @performance/hp-arkui-set-cache-count-for-... 2        No      
+OH_0115         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0129         @performance/high-frequency-log-check         1        Yes     
+OH_0130         @performance/hp-arkui-no-state-var-access-... 2        No      
+OH_0133         @performance/foreach-args-check               1        Yes     
+OH_0134         @performance/hp-arkui-no-state-var-access-... 2        No      
+OH_0138         @performance/hp-arkui-suggest-use-effectki... 2        No      
+OH_0140         @performance/hp-arkui-use-transition-to-re... 1        Yes     
+OH_0142         @performance/hp-arkui-suggest-use-effectki... 1        Yes     
+OH_0144         @performance/hp-arkui-suggest-use-effectki... 2        No      
+OH_0153         @performance/hp-arkui-use-object-link-to-r... 1        Yes     
+OH_0154         @performance/hp-arkui-use-object-link-to-r... 1        Yes     
+OH_0156         @performance/hp-arkui-use-object-link-to-r... 2        No      
+OH_0159         @performance/hp-arkui-use-object-link-to-r... 2        No      
+OH_0165         @performance/hp-arkui-no-state-var-access-... 1        Yes     
+OH_0169         @performance/hp-arkui-no-state-var-access-... 2        No      
+OH_0175         @performance/hp-arkui-use-local-var-to-rep... 2        No      
+OH_0182         @performance/hp-arkui-use-local-var-to-rep... 3        No      
+OH_0188         @performance/hp-arkui-use-local-var-to-rep... 1        Yes     
+OH_0189         @performance/hp-arkui-use-local-var-to-rep... 2        No      
+OH_0193         @performance/hp-arkui-no-stringify-in-lazy... 1        Yes     
+OH_0197         @performance/foreach-args-check               1        Yes     
+OH_0201         @performance/foreach-args-check               1        Yes     
+OH_0215         @performance/hp-arkui-no-state-var-access-... 1        Yes     
+OH_0223         @performance/hp-arkui-use-reusable-component  2        No      
+OH_0239         @performance/hp-arkui-no-func-as-arg-for-r... 2        No      
+OH_0241         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0254         @performance/hp-arkui-use-reusable-component  1        Yes     
+OH_0255         @performance/hp-arkui-no-stringify-in-lazy... 1        Yes     
+OH_0257         @performance/hp-arkui-use-reusable-component  2        No      
+OH_0260         @performance/hp-arkui-use-object-link-to-r... 1        Yes     
+OH_0261         @performance/hp-arkui-use-object-link-to-r... 2        No      
+OH_0268         @performance/hp-arkui-use-local-var-to-rep... 1        Yes     
+OH_0279         @performance/hp-arkui-use-reusable-component  2        No      
+OH_0290         @performance/hp-arkui-set-cache-count-for-... 1        Yes     
+OH_0311         @previewer/mandatory-default-value-for-loc... 1        Yes     
+OH_0312         @previewer/mandatory-default-value-for-loc... 1        Yes     
+OH_0316         @hw-stylistic/no-tabs                         1        Yes     
+OH_0319         @hw-stylistic/quotes                          1        Yes     
+OH_0320         @hw-stylistic/quotes                          1        Yes     
+OH_0321         @hw-stylistic/quotes                          1        Yes     
+OH_0325         @hw-stylistic/no-multi-spaces                 1        Yes     
+OH_0326         @hw-stylistic/max-len                         1        Yes     
+OH_0334         @hw-stylistic/space-infix-ops                 1        Yes     
+OH_0340         @performance/hp-arkts-no-use-any-export-other 1        Yes     
+OH_0341         @performance/hp-arkts-no-use-any-export-other 1        Yes     
+OH_0349         @performance/hp-arkui-use-object-link-to-r... 1        Yes     
+OH_0353         @performance/hp-arkui-use-reusable-component  2        No      
+OH_0360         @performance/hp-arkui-no-state-var-access-... 2        No      
+OH_0369         @performance/hp-arkts-no-use-any-export-other 1        Yes     
+OH_0380         @performance/foreach-args-check               1        Yes     
+
+FAILED INSTANCES (27)
+--------------------------------------------------------------------------------
+Task ID         Rule                                     Failed Level  Rounds  
+--------------------------------------------------------------------------------
+OH_0019         @performance/hp-arkui-use-reusable-co... L2            3       
+OH_0030         @performance/hp-arkui-set-cache-count... L2            3       
+OH_0061         @performance/hp-arkui-set-cache-count... L2            3       
+OH_0062         unknown                                  L1            1       
+OH_0078         unknown                                  L1            1       
+OH_0080         unknown                                  L1            1       
+OH_0082         unknown                                  L1            1       
+OH_0083         unknown                                  L1            1       
+OH_0090         unknown                                  L1            1       
+OH_0116         unknown                                  L1            1       
+OH_0122         unknown                                  L1            1       
+OH_0128         unknown                                  L1            1       
+OH_0183         @performance/hp-arkui-use-local-var-t... L2            3       
+OH_0186         @performance/hp-arkui-no-state-var-ac... L2            3       
+OH_0249         @performance/hp-arkui-use-reusable-co... L3            3       
+OH_0264         @performance/hp-arkui-no-state-var-ac... L2            3       
+OH_0269         @performance/hp-arkui-set-cache-count... L2            3       
+OH_0300         @performance/hp-arkui-no-state-var-ac... L1            3       
+OH_0307         unknown                                  L1            1       
+OH_0317         @performance/hp-arkui-no-func-as-arg-... L2            3       
+OH_0327         unknown                                  L1            1       
+OH_0329         unknown                                  L1            1       
+OH_0352         unknown                                  L1            1       
+OH_0361         unknown                                  L1            1       
+OH_0366         unknown                                  L1            1       
+OH_0376         @performance/hp-arkui-load-on-demand     L3            3       
+OH_0381         unknown                                  L1            1       
+

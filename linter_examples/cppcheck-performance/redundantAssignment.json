@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/redundantAssignment",
+  "examples": [
+    {
+      "buggy_code": "int x = 10;\nx = 20;\nprintf(\"%d\", x);",
+      "fixed_code": "int x = 20;\nprintf(\"%d\", x);"
+    }
+  ],
+  "explanation": "变量被赋值后在使用前又被重新赋值，第一次赋值是多余的。"
+}

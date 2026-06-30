@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/resourceLeak",
+  "examples": [
+    {
+      "buggy_code": "void readFile() {\n    FILE *fp = fopen(\"data.txt\", \"r\");\n    if (!fp) return;\n    char buf[256];\n    fgets(buf, sizeof(buf), fp);\n    // missing fclose\n}",
+      "fixed_code": "void readFile() {\n    FILE *fp = fopen(\"data.txt\", \"r\");\n    if (!fp) return;\n    char buf[256];\n    fgets(buf, sizeof(buf), fp);\n    fclose(fp);\n}"
+    }
+  ],
+  "explanation": "打开的文件/句柄没有关闭，导致资源泄漏。"
+}

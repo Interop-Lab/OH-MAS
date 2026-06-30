@@ -1,0 +1,10 @@
+{
+  "rule_id": "@performance/foreach-args-check",
+  "examples": [
+    {
+      "buggy_code": "@Entry\n@Component\nstruct ForeachTest {\n  private data: string[] = ['1', '2', '3'];\n\n  build() {\n    RelativeContainer() {\n      List() {\n        ForEach(this.data, (item: string, index: number) => {\n          ListItem() {\n            Text(item);\n          }\n        })\n      }\n      .width('100%')\n      .height('100%')\n    }\n    .height('100%')\n    .width('100%')\n  }\n}",
+      "fixed_code": "@Entry\n@Component\nstruct ForeachTest {\n  private data: string[] = ['1', '2', '3'];\n\n  build() {\n    RelativeContainer() {\n      List() {\n        ForEach(this.data, (item: string, index: number) => {\n          ListItem() {\n            Text(item);\n          }\n        }, (item: string, index: number) => item)\n      }\n      .width('100%')\n      .height('100%')\n    }\n    .height('100%')\n    .width('100%')\n  }\n}"
+    }
+  ],
+  "explanation": "建议在ForEach参数中设置keyGenerator。"
+}

@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/passedByValue",
+  "examples": [
+    {
+      "buggy_code": "void process(std::string data) {\n    printf(\"%s\", data.c_str());\n}",
+      "fixed_code": "void process(const std::string& data) {\n    printf(\"%s\", data.c_str());\n}"
+    }
+  ],
+  "explanation": "大对象按值传递会产生不必要的拷贝开销，应使用 const 引用。"
+}

@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/missingReturn",
+  "examples": [
+    {
+      "buggy_code": "int getStatus(int code) {\n    if (code > 0) {\n        return 1;\n    }\n    // missing return for code <= 0\n}",
+      "fixed_code": "int getStatus(int code) {\n    if (code > 0) {\n        return 1;\n    }\n    return 0;\n}"
+    }
+  ],
+  "explanation": "有返回值的函数在某些路径上没有 return 语句。"
+}

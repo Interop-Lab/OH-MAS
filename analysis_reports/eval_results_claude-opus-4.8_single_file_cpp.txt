@@ -1,0 +1,460 @@
+============================================================
+OH-Bench 实验 - 数据集: cpp
+  执行模式: 持久容器 (快速模式)
+============================================================
+  加载数据集: 359 任务
+  Agent 结果: 359 条
+  本次评估: 359 条
+
+  持久容器 oh-bench-worker-60255 就绪
+ID              | Result                         | Method             | Rule
+-----------------------------------------------------------------------------------------------
+CPP_0001        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0002        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0003        | PASS                           | diff_converted     | variableScope
+CPP_0004        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0005        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0006        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0007        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0008        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0009        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0010        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0011        | PASS                           | diff_converted     | passedByValue
+CPP_0012        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0013        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0014        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0015        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0016        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0017        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0018        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0019        | PASS                           | diff_converted     | passedByValue
+CPP_0020        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0021        | LINTER_FAIL                    | diff_patched       | knownConditionTrueFalse
+CPP_0022        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0023        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0024        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0025        | PASS                           | diff_converted     | shadowVariable
+CPP_0026        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0027        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0028        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0029        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0030        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0031        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0032        | PASS                           | diff_converted     | passedByValue
+CPP_0033        | PASS                           | diff_converted     | passedByValue
+CPP_0034        | SECONDARY_DEFECT: 1            | diff_converted     | useStlAlgorithm
+CPP_0035        | PASS                           | diff_converted     | passedByValue
+CPP_0036        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0037        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0038        | PASS                           | diff_converted     | shadowVariable
+CPP_0039        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0040        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0041        | PASS                           | diff_converted     | passedByValue
+CPP_0042        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0043        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0044        | PASS                           | diff_converted     | passedByValue
+CPP_0045        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0046        | PASS                           | diff_converted     | passedByValue
+CPP_0047        | PASS                           | diff_converted     | shadowVariable
+CPP_0048        | PASS                           | diff_converted     | shadowVariable
+CPP_0049        | PASS                           | diff_converted     | shadowVariable
+CPP_0050        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0051        | PASS                           | diff_converted     | shadowVariable
+CPP_0052        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0053        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0054        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0055        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0056        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0057        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0058        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0059        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0060        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0061        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0062        | PASS                           | diff_converted     | passedByValue
+CPP_0063        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0064        | PASS                           | diff_converted     | passedByValue
+CPP_0065        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0066        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0067        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0068        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0069        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0070        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0071        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0072        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0073        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0074        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0075        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0076        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0077        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0078        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0079        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0080        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0081        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0082        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0083        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0084        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0085        | LINTER_FAIL                    | diff_converted     | passedByValue
+CPP_0086        | LINTER_FAIL                    | diff_converted     | redundantAssignment
+CPP_0087        | LINTER_FAIL                    | diff_converted     | redundantAssignment
+CPP_0088        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0089        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0090        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0091        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0092        | PASS                           | diff_converted     | missingReturn
+CPP_0093        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0094        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0095        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0096        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0097        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0098        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0099        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0100        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0101        | PASS                           | diff_converted     | missingReturn
+CPP_0102        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0103        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0104        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0105        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0106        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0107        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0108        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0109        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0110        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0111        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0112        | PASS                           | diff_converted     | uninitvar
+CPP_0113        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0114        | PASS                           | diff_converted     | knownConditionTrueFalse
+CPP_0115        | PASS                           | diff_converted     | redundantAssignment
+CPP_0116        | PASS                           | diff_converted     | redundantAssignment
+CPP_0117        | PASS                           | diff_converted     | redundantAssignment
+CPP_0118        | PASS                           | diff_converted     | functionStatic
+CPP_0119        | PASS                           | diff_converted     | nullPointer
+CPP_0120        | PASS                           | diff_converted     | shadowVariable
+CPP_0121        | PASS                           | diff_converted     | functionStatic
+CPP_0122        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0123        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0124        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0125        | PASS                           | diff_converted     | shadowVariable
+CPP_0126        | PASS                           | diff_converted     | functionStatic
+CPP_0127        | PASS                           | diff_converted     | nullPointer
+CPP_0128        | APPLY_ERROR: git apply failed: error: corrupt patch at line 15 | raw_diff_fallback  | knownConditionTrueFalse
+CPP_0129        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0130        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0131        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0132        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0133        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0134        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0135        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0136        | LINTER_FAIL                    | diff_converted     | redundantAssignment
+CPP_0137        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0138        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0139        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0140        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0141        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0142        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0143        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0144        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0145        | LINTER_FAIL                    | diff_converted     | knownConditionTrueFalse
+CPP_0146        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0147        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0148        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0149        | PASS                           | diff_converted     | variableScope
+CPP_0150        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0151        | PASS                           | diff_converted     | variableScope
+CPP_0152        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0153        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0154        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0155        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0156        | PASS                           | diff_converted     | variableScope
+CPP_0157        | PASS                           | diff_converted     | redundantAssignment
+CPP_0158        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0159        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0160        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0161        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0162        | PASS                           | diff_converted     | variableScope
+CPP_0163        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0164        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0165        | PASS                           | diff_converted     | variableScope
+CPP_0166        | PASS                           | diff_converted     | redundantAssignment
+CPP_0167        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0168        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0169        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0170        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0171        | LINTER_FAIL                    | diff_converted     | shadowVariable
+CPP_0172        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0173        | PASS                           | diff_converted     | redundantAssignment
+CPP_0174        | PASS                           | diff_converted     | shadowVariable
+CPP_0175        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0176        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0177        | PASS                           | diff_converted     | shadowVariable
+CPP_0178        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0179        | PASS                           | diff_converted     | variableScope
+CPP_0180        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0181        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0182        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0183        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0184        | PASS                           | diff_converted     | shadowVariable
+CPP_0185        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0186        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0187        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0188        | PASS                           | diff_converted     | variableScope
+CPP_0189        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0190        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0191        | PASS                           | diff_converted     | shadowVariable
+CPP_0192        | PASS                           | diff_converted     | shadowVariable
+CPP_0193        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0194        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0195        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0196        | PASS                           | diff_converted     | shadowVariable
+CPP_0197        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0198        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0199        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0200        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0201        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0202        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0203        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0204        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0205        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0206        | LINTER_FAIL                    | diff_converted     | variableScope
+CPP_0207        | PASS                           | diff_converted     | shadowVariable
+CPP_0208        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0209        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0210        | PASS                           | diff_converted     | variableScope
+CPP_0211        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0212        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0213        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0214        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0215        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0216        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0217        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0218        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0219        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0220        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0221        | LINTER_FAIL                    | diff_converted     | useStlAlgorithm
+CPP_0222        | PASS                           | diff_converted     | shadowVariable
+CPP_0223        | PASS                           | diff_converted     | useStlAlgorithm
+CPP_0224        | PASS                           | diff_converted     | shadowVariable
+CPP_0225        | PASS                           | diff_converted     | variableScope
+CPP_0226        | PASS                           | diff_converted     | redundantAssignment
+CPP_0227        | PASS                           | diff_converted     | uninitvar
+CPP_0228        | PASS                           | diff_converted     | nullPointer
+CPP_0229        | PASS                           | diff_converted     | nullPointer
+CPP_0230        | PASS                           | diff_converted     | nullPointer
+CPP_0231        | PASS                           | diff_converted     | nullPointer
+CPP_0232        | PASS                           | diff_converted     | nullPointer
+CPP_0233        | PASS                           | diff_converted     | nullPointer
+CPP_0234        | PASS                           | diff_converted     | nullPointer
+CPP_0235        | PASS                           | diff_converted     | nullPointer
+CPP_0236        | PASS                           | diff_converted     | nullPointer
+CPP_0237        | PASS                           | diff_converted     | nullPointer
+CPP_0238        | PASS                           | diff_converted     | nullPointer
+CPP_0239        | PASS                           | diff_converted     | nullPointer
+CPP_0240        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0241        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0242        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0243        | PASS                           | diff_converted     | nullPointer
+CPP_0244        | PASS                           | diff_converted     | nullPointer
+CPP_0245        | PASS                           | diff_converted     | nullPointer
+CPP_0246        | PASS                           | diff_converted     | nullPointer
+CPP_0247        | PASS                           | diff_converted     | nullPointer
+CPP_0248        | PASS                           | diff_converted     | nullPointer
+CPP_0249        | PASS                           | diff_converted     | nullPointer
+CPP_0250        | PASS                           | diff_converted     | nullPointer
+CPP_0251        | PASS                           | diff_converted     | nullPointer
+CPP_0252        | PASS                           | diff_converted     | nullPointer
+CPP_0253        | PASS                           | diff_converted     | nullPointer
+CPP_0254        | PASS                           | diff_converted     | nullPointer
+CPP_0255        | PASS                           | diff_converted     | nullPointer
+CPP_0256        | PASS                           | diff_converted     | nullPointer
+CPP_0257        | PASS                           | diff_converted     | nullPointer
+CPP_0258        | PASS                           | diff_converted     | nullPointer
+CPP_0259        | PASS                           | diff_converted     | nullPointer
+CPP_0260        | PASS                           | diff_converted     | nullPointer
+CPP_0261        | PASS                           | diff_converted     | nullPointer
+CPP_0262        | PASS                           | diff_converted     | nullPointer
+CPP_0263        | PASS                           | diff_converted     | nullPointer
+CPP_0264        | PASS                           | diff_converted     | nullPointer
+CPP_0265        | PASS                           | diff_converted     | nullPointer
+CPP_0266        | PASS                           | diff_converted     | nullPointer
+CPP_0267        | PASS                           | diff_converted     | nullPointer
+CPP_0268        | PASS                           | diff_converted     | nullPointer
+CPP_0269        | PASS                           | diff_converted     | nullPointer
+CPP_0270        | PASS                           | diff_converted     | nullPointer
+CPP_0271        | PASS                           | diff_converted     | nullPointer
+CPP_0272        | PASS                           | diff_converted     | nullPointer
+CPP_0273        | PASS                           | diff_converted     | nullPointer
+CPP_0274        | PASS                           | diff_converted     | nullPointer
+CPP_0275        | PASS                           | diff_converted     | nullPointer
+CPP_0276        | APPLY_ERROR: git apply failed: error: corrupt patch at line 18 | raw_diff_fallback  | nullPointer
+CPP_0277        | PASS                           | diff_converted     | nullPointer
+CPP_0278        | PASS                           | diff_converted     | nullPointer
+CPP_0279        | LINTER_FAIL                    | diff_converted     | memleak
+CPP_0280        | LINTER_FAIL                    | diff_converted     | memleak
+CPP_0281        | PASS                           | diff_converted     | redundantAssignment
+CPP_0282        | PASS                           | diff_converted     | redundantAssignment
+CPP_0283        | PASS                           | diff_converted     | uninitvar
+CPP_0284        | PASS                           | diff_converted     | uninitvar
+CPP_0285        | APPLY_ERROR: git apply failed: error: a/components/nstackx/nstackx_core/dfile/core/nstackx_dfile.c: No such file or directory | raw_diff_fallback  | memleak
+CPP_0286        | PASS                           | diff_converted     | memleak
+CPP_0287        | PASS                           | diff_converted     | memleak
+CPP_0288        | PASS                           | diff_converted     | memleak
+CPP_0289        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0290        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0291        | SECONDARY_DEFECT: 2            | diff_converted     | redundantAssignment
+CPP_0292        | PASS                           | diff_converted     | shadowVariable
+CPP_0293        | PASS                           | diff_converted     | shadowVariable
+CPP_0294        | PASS                           | diff_converted     | shadowVariable
+CPP_0295        | PASS                           | diff_converted     | shadowVariable
+CPP_0296        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0297        | PASS                           | diff_converted     | uninitvar
+CPP_0298        | PASS                           | diff_converted     | redundantAssignment
+CPP_0299        | PASS                           | diff_converted     | redundantAssignment
+CPP_0300        | LINTER_FAIL                    | diff_converted     | identicalInnerCondition
+CPP_0301        | PASS                           | diff_converted     | redundantAssignment
+CPP_0302        | PASS                           | diff_converted     | redundantAssignment
+CPP_0303        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0304        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0305        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0306        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0307        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0308        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0309        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0310        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0311        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0312        | PASS                           | diff_converted     | stlIfStrFind
+CPP_0313        | LINTER_FAIL                    | diff_converted     | identicalInnerCondition
+CPP_0314        | LINTER_FAIL                    | diff_converted     | identicalInnerCondition
+CPP_0315        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0316        | PASS                           | diff_converted     | redundantAssignment
+CPP_0317        | PASS                           | diff_converted     | stlIfStrFind
+CPP_0318        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0319        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0320        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0321        | PASS                           | diff_converted     | stlIfStrFind
+CPP_0322        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0323        | LINTER_FAIL                    | diff_patched       | identicalInnerCondition
+CPP_0324        | PASS                           | diff_converted     | stlIfStrFind
+CPP_0325        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0326        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0327        | PASS                           | diff_converted     | redundantAssignment
+CPP_0328        | LINTER_FAIL                    | diff_converted     | redundantAssignment
+CPP_0329        | LINTER_FAIL                    | diff_converted     | redundantAssignment
+CPP_0330        | PASS                           | diff_converted     | redundantAssignment
+CPP_0331        | PASS                           | diff_converted     | stlIfStrFind
+CPP_0332        | LINTER_FAIL                    | diff_converted     | identicalInnerCondition
+CPP_0333        | PASS                           | diff_converted     | redundantAssignment
+CPP_0334        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0335        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0336        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0337        | PASS                           | diff_converted     | stlIfStrFind
+CPP_0338        | PASS                           | diff_converted     | stlIfStrFind
+CPP_0339        | PASS                           | diff_converted     | identicalInnerCondition
+CPP_0340        | LINTER_FAIL                    | diff_converted     | identicalInnerCondition
+CPP_0341        | LINTER_FAIL                    | diff_converted     | stlIfStrFind
+CPP_0342        | PASS                           | diff_converted     | functionStatic
+CPP_0343        | PASS                           | diff_converted     | functionStatic
+CPP_0344        | PASS                           | diff_converted     | functionStatic
+CPP_0345        | PASS                           | diff_converted     | functionStatic
+CPP_0346        | PASS                           | diff_converted     | functionStatic
+CPP_0347        | PASS                           | diff_converted     | functionStatic
+CPP_0348        | PASS                           | diff_converted     | functionStatic
+CPP_0349        | PASS                           | diff_converted     | uninitvar
+CPP_0350        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0351        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0352        | PASS                           | diff_converted     | uninitvar
+CPP_0353        | PASS                           | diff_converted     | redundantAssignment
+CPP_0354        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0355        | LINTER_FAIL                    | diff_converted     | uninitvar
+CPP_0356        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0357        | PASS                           | diff_converted     | noExplicitConstructor
+CPP_0358        | PASS                           | diff_converted     | memleak
+CPP_0359        | PASS                           | diff_converted     | missingReturn
+
+================================================================================
+OH-Bench 评估报告
+时间: 2026-06-23 11:52:47
+数据集: cpp | Agent: agent_results_plan1_cpp_claude-opus-4.8_single_file.json
+执行模式: 持久容器 (快速模式)
+================================================================================
+
+## 1. 总体统计 (359 任务)
+  补丁成功应用:   356/359 (99.2%)
+  告警消除:       201/359 (56.0%)
+  严格通过:     199/359 (55.4%)
+  ---
+  仍有告警:       155/359 (43.2%)
+  二次缺陷:       2/359
+  语法错误:       0/359
+  补丁应用失败:   3/359 (0.8%)
+  超时:           0/359
+  系统错误:       0/359
+
+## 转换方法分布
+  diff_converted      : 354
+  raw_diff_fallback   : 3
+  diff_patched        : 2
+
+## 按规则统计
+规则                                            |   总 | PASS | FAIL | ERR | SEC |    通过率
+-------------------------------------------------------------------------------------
+functionStatic                                |  10 |   10 |    0 |   0 |   0 |   100%
+identicalInnerCondition                       |  15 |    9 |    6 |   0 |   0 |    60%
+knownConditionTrueFalse                       |  40 |   13 |   26 |   1 |   0 |    32%
+memleak                                       |   7 |    4 |    2 |   1 |   0 |    57%
+missingReturn                                 |   3 |    3 |    0 |   0 |   0 |   100%
+noExplicitConstructor                         |  15 |   15 |    0 |   0 |   0 |   100%
+nullPointer                                   |  50 |   49 |    0 |   1 |   0 |    98%
+passedByValue                                 |  50 |   10 |   40 |   0 |   0 |    20%
+redundantAssignment                           |  24 |   18 |    5 |   0 |   1 |    75%
+shadowVariable                                |  30 |   21 |    9 |   0 |   0 |    70%
+stlIfStrFind                                  |  20 |    7 |   13 |   0 |   0 |    35%
+uninitvar                                     |  15 |    7 |    8 |   0 |   0 |    47%
+useStlAlgorithm                               |  40 |   23 |   16 |   0 |   1 |    57%
+variableScope                                 |  40 |   10 |   30 |   0 |   0 |    25%
+
+## 难度分析
+  简单 (>70%通过): 5 个规则
+    noExplicitConstructor: 15/15
+    redundantAssignment: 18/24
+    missingReturn: 3/3
+    functionStatic: 10/10
+    nullPointer: 49/50
+  中等 (20-70%通过): 9 个规则
+    useStlAlgorithm: 23/40
+    knownConditionTrueFalse: 13/40
+    variableScope: 10/40
+    passedByValue: 10/50
+    shadowVariable: 21/30
+    uninitvar: 7/15
+    memleak: 4/7
+    identicalInnerCondition: 9/15
+    stlIfStrFind: 7/20
+  困难 (<20%通过): 0 个规则
+
+## 区分度评价
+  数据集有一定区分度
+
+## Baseline 问题 (83 个)
+  CPP_0019: passedByValue
+  CPP_0033: passedByValue
+  CPP_0036: knownConditionTrueFalse
+  CPP_0041: passedByValue
+  CPP_0044: passedByValue
+  CPP_0050: knownConditionTrueFalse
+  CPP_0053: knownConditionTrueFalse
+  CPP_0095: knownConditionTrueFalse
+  CPP_0100: knownConditionTrueFalse
+  CPP_0114: knownConditionTrueFalse
+  CPP_0118: functionStatic
+  CPP_0121: functionStatic
+  CPP_0126: functionStatic
+  CPP_0179: variableScope
+  CPP_0182: useStlAlgorithm
+
+## APPLY_ERROR 详情 (3 个)
+  knownConditionTrueFalse                 : 1
+  nullPointer                             : 1
+  memleak                                 : 1
+
+================================================================================
+
+报告已保存: logs/report_agent_results_plan1_cpp_claude-opus-4.8_single_file_20260623_032248.txt

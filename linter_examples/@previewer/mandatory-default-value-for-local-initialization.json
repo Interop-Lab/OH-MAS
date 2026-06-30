@@ -1,0 +1,10 @@
+{
+  "rule_id": "@previewer/mandatory-default-value-for-local-initialization",
+  "examples": [
+    {
+      "buggy_code": "@Entry\n@Component\nstruct Index {\n  @BuilderParam myBuilder: () => void;\n\n  build() {\n    Row() {\n      Column() {\n        Text('Hello World')\n        this.myBuilder()\n      }\n    }\n  }\n}",
+      "fixed_code": "@Builder\nfunction MyBuilderFunction(): void {\n}\n\n@Entry\n@Component\nstruct Index {\n  messageA?: string;\n  message: string = 'Hello World';\n  @Provide messageB: string = 'messageB';\n  @StorageLink('varA') varA: number = 2;\n  @StorageProp('languageCode') lang: string = 'en';\n  @LocalStorageLink('PropA') storageLink1: number = 1;\n  @LocalStorageProp('PropB') storageLink2: number = 2;\n  @BuilderParam myBuilder: () => void = MyBuilderFunction;\n\n  build() {\n    Row() {\n      Column() {\n        Text(this.message)\n        this.myBuilder()\n      }\n    }\n  }\n}"
+    }
+  ],
+  "explanation": "如果组件的属性支持本地初始化，需要设置一个合法的不依赖运行时的默认值。"
+}

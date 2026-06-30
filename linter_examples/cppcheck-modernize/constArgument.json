@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/constArgument",
+  "examples": [
+    {
+      "buggy_code": "void print(std::string& msg) {\n    printf(\"%s\", msg.c_str());\n}",
+      "fixed_code": "void print(const std::string& msg) {\n    printf(\"%s\", msg.c_str());\n}"
+    }
+  ],
+  "explanation": "函数参数没有被修改，应加 const 修饰。"
+}

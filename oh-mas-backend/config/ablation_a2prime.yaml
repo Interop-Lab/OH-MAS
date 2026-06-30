@@ -1,0 +1,109 @@
+# A2' Ablation: w/ Retry but w/o Typed Accumulative Feedback
+# Based on ablation_a2.yaml but with max_retries=2 (same as Full).
+#
+# Differs from Full system in ONE dimension only:
+#   - AO feedback_mode: free_text_nonaccumulative
+#     * Feedback to CP is DA's reason + raw linter output (plain text)
+#     * No structured LinterViolation / IntroducedWarning objects
+#     * No constraint accumulation across retries
+#
+# Everything else is kept identical to Full:
+#   - max_retries: 2 (retry loop preserved)
+#   - AO LLM decision: enabled (model selection still adaptive)
+#   - GW LLM: enabled (semantic graph analysis preserved)
+#   - Same model pool as Full
+
+runtime:
+  repositories_root: ../../repositories
+  runtime_root: ../runtime
+  trace_root: ../runtime/traces
+  keep_runtime: false
+  execution_mode: docker_whole
+  docker_image: harmonyrepair:with-codelinter
+  docker_repo_path: /workspace/repo
+  docker_code_path: /workspace/oh_mas_src
+  docker_extra_args: ""
+  max_retries: 2
+
+oh_kb:
+  provider: "graph_explore_mock"
+  fail_open: true
+  timeout_ms: 200
+  max_items: 10
+  seed_file: oh_kb_seed.json
+  graph_root: ../runtime/graph_explore
+  linter_examples_root: ../../linter_examples
+  repair_experiences_path: ../data/repair_experiences.json
+
+ao:
+  enable_llm_decision: true
+  feedback_mode: free_text_nonaccumulative
+  llm_model: openrouter/google/gemini-2.5-flash
+  llm_model_class: openrouter
+  llm_temperature: 0.0
+  llm_max_tokens: 800
+  llm_timeout: 30
+
+gw:
+  enable_llm: true
+  llm_model: openrouter/anthropic/claude-sonnet-4.5
+  llm_model_class: openrouter
+  llm_temperature: 0.0
+  llm_max_tokens: 20000
+  llm_timeout: 60
+  max_steps: 15
+  deterministic_fallback: true
+  llm_max_retries: 3
+  llm_retry_delay: 1.0
+
+cp:
+  provider: litellm
+  backend: litellm
+  worker_model_class: litellm
+  temperature: 0.0
+  max_tokens: 8000
+  timeout: 90
+  fallback_diff: false
+  step_limit: 15
+  step_limits_by_mode:
+    easy: 20
+    medium: 20
+    hard: 20
+  cost_limit: 3.0
+  worker_trace_root: ../runtime/traces/cp_workers
+  repo_root: ../../mini-swe-agent
+  deterministic_test_mode: false
+  max_parallel_workers: 3
+  models_registry:
+    - openrouter/anthropic/claude-sonnet-4.5
+    - openrouter/google/gemini-2.5-flash
+    - openrouter/moonshotai/kimi-k2.5
+  mode_strategy:
+    easy:
+      - openrouter/anthropic/claude-sonnet-4.5
+      - openrouter/google/gemini-2.5-flash
+      - openrouter/moonshotai/kimi-k2.5
+    medium:
+      - openrouter/anthropic/claude-sonnet-4.5
+      - openrouter/google/gemini-2.5-flash
+      - openrouter/moonshotai/kimi-k2.5
+    hard:
+      - openrouter/anthropic/claude-sonnet-4.5
+      - openrouter/google/gemini-2.5-flash
+      - openrouter/moonshotai/kimi-k2.5
+
+da:
+  mode: strict
+  repo_path: ../../mini-swe-agent
+  execution_mode: host
+  docker_image: harmonyrepair:latest
+  docker_workdir: /workspace
+  docker_extra_args: ""
+  git_bin: git
+  codelinter_bin: /usr/local/bin/codelinter
+  cppcheck_bin: cppcheck
+  require_tools_preflight: true
+  codelinter_target_cmd: "{codelinter_bin} -f json -o {report_file} {target_file}"
+  cppcheck_target_cmd: "{cppcheck_bin} --enable=all --suppress=missingIncludeSystem --suppress=missingInclude --xml --xml-version=2 {target_file}"
+  codelinter_repo_cmd: "{codelinter_bin} -f json -o {report_file} {repo_path}"
+  cppcheck_repo_cmd: "{cppcheck_bin} --enable=all --suppress=missingIncludeSystem --suppress=missingInclude --xml --xml-version=2 {repo_path}"

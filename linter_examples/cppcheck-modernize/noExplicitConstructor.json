@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/noExplicitConstructor",
+  "examples": [
+    {
+      "buggy_code": "class Wrapper {\npublic:\n    Wrapper(int value) : val_(value) {}\nprivate:\n    int val_;\n};",
+      "fixed_code": "class Wrapper {\npublic:\n    explicit Wrapper(int value) : val_(value) {}\nprivate:\n    int val_;\n};"
+    }
+  ],
+  "explanation": "单参数构造函数没有 explicit 关键字，可能导致意外的隐式类型转换。"
+}

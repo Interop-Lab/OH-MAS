@@ -1,0 +1,874 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "description": "规则条件化上下文构建先验库，用于指导GW选择切片策略、代码片段和修复约束",
+    "updated": "2026-05-18"
+  },
+  "_schema": {
+    "slice_strategy": "切片策略: minimal|component_aware|decorator_aware|dataflow_aware|control_flow_aware|scope_aware|type_aware|call_graph_aware|api_aware|import_only",
+    "semantic_focus": "语义关注点列表，GW应提取的代码元素",
+    "must_include": "必须纳入最终上下文的结构或片段，防止误剪关键证据",
+    "snippet_hints": "代码片段提取提示，指导GW提取函数/组件/调用块而非整文件",
+    "max_depth": "依赖图遍历深度，0=仅告警文件；该值是上限，不替代规则/语义裁剪",
+    "rule_family": "规则族，用于统计、评估和fallback",
+    "description": "规则说明，帮助GW理解修复目标"
+  },
+  "rules": {
+    "===== ArkTS 风格规则 (7条) =====": "以下规则仅需告警行本身",
+    "@hw-stylistic/block-opening-brace-newline": {
+      "slice_strategy": "minimal",
+      "semantic_focus": [
+        "target_line",
+        "brace_style"
+      ],
+      "max_depth": 0,
+      "description": "左花括号应与声明在同一行，不需要上下文",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span",
+        "adjacent_lines"
+      ],
+      "snippet_hints": [
+        "extract_alarm_line_with_2_to_5_neighbor_lines"
+      ],
+      "rule_family": "arkts_style"
+    },
+    "@hw-stylistic/empty-line-around-block": {
+      "slice_strategy": "minimal",
+      "semantic_focus": [
+        "target_line",
+        "surrounding_lines"
+      ],
+      "max_depth": 0,
+      "description": "代码块前后需要空行，仅需检查局部空行",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span",
+        "adjacent_lines"
+      ],
+      "snippet_hints": [
+        "extract_alarm_line_with_2_to_5_neighbor_lines"
+      ],
+      "rule_family": "arkts_style"
+    },
+    "@hw-stylistic/file-header": {
+      "slice_strategy": "minimal",
+      "semantic_focus": [
+        "file_header",
+        "copyright",
+        "license"
+      ],
+      "max_depth": 0,
+      "description": "文件头部缺少版权声明，仅需文件开头几行",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span",
+        "adjacent_lines"
+      ],
+      "snippet_hints": [
+        "extract_alarm_line_with_2_to_5_neighbor_lines"
+      ],
+      "rule_family": "arkts_style"
+    },
+    "@hw-stylistic/function-comment": {
+      "slice_strategy": "minimal",
+      "semantic_focus": [
+        "function_signature",
+        "jsdoc_comment",
+        "parameters"
+      ],
+      "max_depth": 0,
+      "description": "函数缺少JSDoc注释，仅需函数签名上下文",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span",
+        "adjacent_lines"
+      ],
+      "snippet_hints": [
+        "extract_alarm_line_with_2_to_5_neighbor_lines"
+      ],
+      "rule_family": "arkts_style"
+    },
+    "@hw-stylistic/keyword-and-operator-wrap": {
+      "slice_strategy": "minimal",
+      "semantic_focus": [
+        "target_line",
+        "operator",
+        "keyword"
+      ],
+      "max_depth": 0,
+      "description": "关键字/运算符换行位置，仅需告警行",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span",
+        "adjacent_lines"
+      ],
+      "snippet_hints": [
+        "extract_alarm_line_with_2_to_5_neighbor_lines"
+      ],
+      "rule_family": "arkts_style"
+    },
+    "@hw-stylistic/line-length": {
+      "slice_strategy": "minimal",
+      "semantic_focus": [
+        "target_line"
+      ],
+      "max_depth": 0,
+      "description": "行长度超限，需要拆分长行",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span",
+        "adjacent_lines"
+      ],
+      "snippet_hints": [
+        "extract_alarm_line_with_2_to_5_neighbor_lines"
+      ],
+      "rule_family": "arkts_style"
+    },
+    "@hw-stylistic/max-lines-per-file": {
+      "slice_strategy": "scope_aware",
+      "semantic_focus": [
+        "file_structure",
+        "function_boundaries"
+      ],
+      "max_depth": 0,
+      "description": "文件行数过多，可能需要拆分模块",
+      "must_include": [
+        "file_structure_summary",
+        "top_level_declarations",
+        "largest_component_or_function_boundaries"
+      ],
+      "snippet_hints": [
+        "extract_file_outline_instead_of_full_file_when_possible"
+      ],
+      "rule_family": "arkts_style"
+    },
+    "===== ArkTS 组件性能规则 (10条) =====": "关注ArkUI组件结构和装饰器",
+    "@performance/hp-arkui-create-bind-bindmenu-submenus": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "@Component",
+        "bindMenu",
+        "bindContextMenu",
+        "SubMenu",
+        "builder_function"
+      ],
+      "max_depth": 1,
+      "description": "SubMenu应使用@Builder封装，需要查看组件结构",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_component_struct",
+        "extract_alarm_method_or_ui_block",
+        "include_decorated_state_fields_used_by_alarm_block"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-do-bindingdata-initialization-out-abouttoappear": {
+      "slice_strategy": "decorator_aware",
+      "semantic_focus": [
+        "@State",
+        "@Prop",
+        "@Link",
+        "aboutToAppear",
+        "initialization_assignment",
+        "constructor_or_declaration_default"
+      ],
+      "max_depth": 0,
+      "description": "状态变量应在声明时初始化，不应在aboutToAppear中初始化",
+      "must_include": [
+        "decorated_field_declaration",
+        "aboutToAppear_assignment_block",
+        "all_reads_of_initialized_field_in_component"
+      ],
+      "snippet_hints": [
+        "extract_decorated_fields",
+        "extract_aboutToAppear_body",
+        "extract_initializer_expression_dependencies"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-do-bindmenu-bindcontextmenu-bindpopup": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "bindMenu",
+        "bindContextMenu",
+        "bindPopup",
+        "@Builder",
+        "builder_function"
+      ],
+      "max_depth": 1,
+      "description": "弹出菜单内容应使用@Builder封装",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_component_struct",
+        "extract_alarm_method_or_ui_block",
+        "include_decorated_state_fields_used_by_alarm_block"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-do-bindsheet-content-builder": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "bindSheet",
+        "@Builder",
+        "sheet_content"
+      ],
+      "max_depth": 1,
+      "description": "bindSheet内容应使用@Builder封装",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_component_struct",
+        "extract_alarm_method_or_ui_block",
+        "include_decorated_state_fields_used_by_alarm_block"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-no-bindpopup-bindmenu-bindcontextmenu-bindcontentcover-bindsheet-bindmodal-bindcontentcover": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "bind_attributes",
+        "repeated_bind",
+        "component_rebuild"
+      ],
+      "max_depth": 1,
+      "description": "避免多个bind属性同时使用导致重复构建",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_component_struct",
+        "extract_alarm_method_or_ui_block",
+        "include_decorated_state_fields_used_by_alarm_block"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-no-bindsheet-fullscreen-modal": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "bindSheet",
+        "modal_type",
+        "fullscreen"
+      ],
+      "max_depth": 1,
+      "description": "全屏模态应使用Navigation而非bindSheet",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_component_struct",
+        "extract_alarm_method_or_ui_block",
+        "include_decorated_state_fields_used_by_alarm_block"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-no-bindsheet-height-detents-bindcontentcover-modalheight": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "bindSheet",
+        "height",
+        "detents",
+        "bindContentCover"
+      ],
+      "max_depth": 1,
+      "description": "避免在bindSheet中设置固定高度",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_component_struct",
+        "extract_alarm_method_or_ui_block",
+        "include_decorated_state_fields_used_by_alarm_block"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-prefer-lazyforeach": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "ForEach",
+        "LazyForEach",
+        "List",
+        "Grid",
+        "Swiper",
+        "WaterFlow",
+        "IDataSource",
+        "data_source",
+        "key_generator",
+        "cachedCount"
+      ],
+      "max_depth": 1,
+      "description": "长列表应使用LazyForEach而非ForEach，需要实现IDataSource",
+      "must_include": [
+        "ForEach_callsite",
+        "collection_expression",
+        "item_builder_block",
+        "existing_data_source_class_or_absence",
+        "container_component"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_List_Grid_Swiper_or_WaterFlow",
+        "extract_ForEach_callback_and_key_generator",
+        "extract_or_search_neighbor_IDataSource_examples"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-prefer-reusable-component": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "@Component",
+        "@Reusable",
+        "@Builder",
+        "LazyForEach",
+        "iterated_child_component",
+        "@State",
+        "@Prop",
+        "@Link",
+        "@ObjectLink",
+        "aboutToReuse",
+        "aboutToRecycle",
+        "function_parameters"
+      ],
+      "max_depth": 1,
+      "description": "LazyForEach迭代出的复杂子组件才应添加@Reusable；若子组件有状态或入参，必须同时处理aboutToReuse等复用生命周期，禁止给页面根组件或所有组件机械加装饰器。",
+      "must_include": [
+        "LazyForEach_callsite",
+        "iterated_child_component_definition",
+        "child_component_constructor_params",
+        "state_fields_in_child_component",
+        "aboutToReuse_or_missing_marker"
+      ],
+      "snippet_hints": [
+        "extract_LazyForEach_item_builder_block",
+        "extract_exact_child_component_struct_referenced_by_LazyForEach",
+        "extract_child_component_state_fields_and_aboutToReuse",
+        "extract_parent_callsite_params"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-use-reusable-component": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "@Component",
+        "@Reusable",
+        "@Builder",
+        "LazyForEach",
+        "iterated_child_component",
+        "nested_custom_component",
+        "@State",
+        "@Prop",
+        "@Link",
+        "@ObjectLink",
+        "aboutToReuse",
+        "aboutToRecycle",
+        "function_parameters",
+        "reuseId",
+        "if_else_conditional_rendering"
+      ],
+      "max_depth": 1,
+      "description": "复杂组件应使用@Reusable，但必须定位LazyForEach直接迭代的子组件；若该子组件内部继续渲染自定义组件，应提取为@Builder以避免nested reusable component告警；若子组件build方法含if/else条件渲染，LazyForEach调用点还必须添加.reuseId(type判断表达式)，否则会触发hp-arkui-suggest-reuseid-for-if-else-reusable-component。",
+      "must_include": [
+        "LazyForEach_callsite",
+        "iterated_child_component_definition",
+        "nested_custom_component_usages_in_iterated_child",
+        "child_component_constructor_params",
+        "state_fields_in_child_component",
+        "aboutToReuse_or_missing_marker",
+        "LazyForEach_callsite_reuseId_if_conditional_build"
+      ],
+      "snippet_hints": [
+        "extract_LazyForEach_item_builder_block",
+        "extract_exact_child_component_struct_referenced_by_LazyForEach",
+        "extract_nested_custom_component_call_sites_inside_child_build",
+        "extract_child_component_state_fields_and_aboutToReuse",
+        "extract_parent_callsite_params",
+        "check_if_child_build_has_if_else_branch",
+        "if_conditional_build_add_reuseId_at_LazyForEach_callsite"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-no-func-as-arg-for-reusable-component": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "@Component",
+        "@Reusable",
+        "component_instantiation",
+        "function_call",
+        "method_call",
+        "parameter_expression"
+      ],
+      "max_depth": 1,
+      "description": "禁止在@Reusable组件实例化参数中使用函数调用(如this.method())。注意区分：函数成员定义(onClick: () => void)和方法调用(this.getRawContactId(index))，规则检测的是后者。",
+      "must_include": [
+        "alarm_file",
+        "component_instantiation_site",
+        "parameter_with_function_call",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_component_instantiation_with_params",
+        "focus_on_parameter_block",
+        "do_not_extract_entire_component_definition",
+        "extract_5_to_15_lines_around_instantiation"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "@performance/hp-arkui-use-object-link-to-replace-prop": {
+      "slice_strategy": "decorator_aware",
+      "semantic_focus": [
+        "@Prop",
+        "@ObjectLink",
+        "@Observed",
+        "class_definition",
+        "import",
+        "state_management"
+      ],
+      "max_depth": 1,
+      "description": "对@Observed类使用@ObjectLink替代@Prop以避免深拷贝。必须验证类有@Observed装饰器。",
+      "must_include": [
+        "alarm_file",
+        "prop_declaration_line",
+        "class_definition_file",
+        "observed_decorator_verification"
+      ],
+      "snippet_hints": [
+        "extract_prop_declaration_line",
+        "extract_import_statement_for_class",
+        "extract_class_definition_with_observed_check"
+      ],
+      "rule_family": "arkui_state_management"
+    },
+    "@performance/hp-arkui-recycle-bindsheet-builder": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "bindSheet",
+        "@Builder",
+        "builder_reuse"
+      ],
+      "max_depth": 1,
+      "description": "bindSheet的Builder应被复用",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_component_struct",
+        "extract_alarm_method_or_ui_block",
+        "include_decorated_state_fields_used_by_alarm_block"
+      ],
+      "rule_family": "arkui_component_performance"
+    },
+    "===== ArkTS 其他性能规则 (3条) =====": "关注调用链和类型",
+    "@performance/foreach-use-unique-key-generator": {
+      "slice_strategy": "component_aware",
+      "semantic_focus": [
+        "ForEach",
+        "key_generator",
+        "third_parameter",
+        "item_id",
+        "stable_unique_field",
+        "index_usage"
+      ],
+      "max_depth": 1,
+      "description": "ForEach应提供唯一键生成函数作为第三个参数",
+      "must_include": [
+        "ForEach_callsite",
+        "item_type_or_sample_fields",
+        "existing_identifier_field",
+        "third_parameter_or_missing_marker"
+      ],
+      "snippet_hints": [
+        "extract_ForEach_arguments",
+        "extract_item_model_type_or_literal_shape"
+      ],
+      "rule_family": "arkui_iteration"
+    },
+    "@performance/high-frequency-log": {
+      "slice_strategy": "call_graph_aware",
+      "semantic_focus": [
+        "console.log",
+        "hilog",
+        "Logger",
+        "loop",
+        "callback",
+        "event_handler"
+      ],
+      "max_depth": 2,
+      "description": "高频路径中的日志调用影响性能，需要检查调用上下文",
+      "must_include": [
+        "log_callsite",
+        "enclosing_loop_callback_or_lifecycle",
+        "logger_import_or_wrapper"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_hot_path_function",
+        "include_immediate_callers_when_alarm_is_in_helper"
+      ],
+      "rule_family": "arkui_hot_path"
+    },
+    "@performance/hp-arkts-no-any-unknown-types": {
+      "slice_strategy": "type_aware",
+      "semantic_focus": [
+        "type_annotation",
+        "any",
+        "unknown",
+        "function_parameter",
+        "return_type",
+        "exported_api",
+        "assignment_source",
+        "callsite_types"
+      ],
+      "max_depth": 1,
+      "description": "避免使用any/unknown类型，需要推断正确的类型",
+      "must_include": [
+        "any_or_unknown_declaration",
+        "initializer_or_assignment_source",
+        "direct_callsite_or_export_boundary"
+      ],
+      "snippet_hints": [
+        "extract_symbol_declaration",
+        "extract_initializer_and_one_hop_type_sources"
+      ],
+      "rule_family": "arkts_type"
+    },
+    "===== ArkTS 预览器规则 (1条) =====": "关注装饰器初始化",
+    "@previewer/previewer-no-uninitialized-state-prop-prop": {
+      "slice_strategy": "decorator_aware",
+      "semantic_focus": [
+        "@State",
+        "@Prop",
+        "declaration",
+        "initialization",
+        "default_value"
+      ],
+      "max_depth": 0,
+      "description": "预览器要求@State/@Prop变量必须初始化",
+      "must_include": [
+        "decorated_field_declaration",
+        "component_struct_header"
+      ],
+      "snippet_hints": [
+        "extract_decorated_field_with_component_header"
+      ],
+      "rule_family": "arkts_preview"
+    },
+    "===== C++ 内存安全规则 (2条) =====": "关注分配/释放和空指针",
+    "cppcheck/memleak": {
+      "slice_strategy": "dataflow_aware",
+      "semantic_focus": [
+        "malloc",
+        "new",
+        "calloc",
+        "realloc",
+        "free",
+        "delete",
+        "return_path",
+        "exception_path"
+      ],
+      "max_depth": 2,
+      "description": "内存泄漏，需要追踪分配点到所有退出路径",
+      "must_include": [
+        "allocation_site",
+        "all_return_paths",
+        "cleanup_candidates",
+        "ownership_transfer_calls"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function_full_body",
+        "include_callees_only_for_ownership_transfer"
+      ],
+      "rule_family": "cppcheck_memory_safety"
+    },
+    "cppcheck/nullPointer": {
+      "slice_strategy": "dataflow_aware",
+      "semantic_focus": [
+        "pointer_declaration",
+        "null_assignment",
+        "dereference",
+        "null_check",
+        "function_return"
+      ],
+      "max_depth": 2,
+      "description": "空指针解引用，需要追踪指针的赋值和使用路径",
+      "must_include": [
+        "null_assignment_or_nullable_return",
+        "dereference_site",
+        "existing_null_checks",
+        "all_control_paths_to_deref"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function_full_body",
+        "include_immediate_returning_callee_if_pointer_from_call"
+      ],
+      "rule_family": "cppcheck_memory_safety"
+    },
+    "===== C++ 变量规则 (4条) =====": "关注变量定义和作用域",
+    "cppcheck/uninitvar": {
+      "slice_strategy": "dataflow_aware",
+      "semantic_focus": [
+        "variable_declaration",
+        "assignment",
+        "first_use",
+        "control_path"
+      ],
+      "max_depth": 1,
+      "description": "变量未初始化就使用，需要检查声明到使用的路径",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_dataflow"
+    },
+    "cppcheck/shadowVariable": {
+      "slice_strategy": "scope_aware",
+      "semantic_focus": [
+        "variable_name",
+        "outer_scope",
+        "inner_scope",
+        "shadowed_declaration"
+      ],
+      "max_depth": 1,
+      "description": "变量名遮蔽外层同名变量，需要查看嵌套作用域",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_scope"
+    },
+    "cppcheck/variableScope": {
+      "slice_strategy": "scope_aware",
+      "semantic_focus": [
+        "variable_declaration",
+        "usage_range",
+        "block_scope",
+        "first_use",
+        "last_use"
+      ],
+      "max_depth": 1,
+      "description": "变量作用域过大，应移动到更小的作用域内",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_scope"
+    },
+    "cppcheck/redundantAssignment": {
+      "slice_strategy": "dataflow_aware",
+      "semantic_focus": [
+        "assignment",
+        "next_assignment",
+        "usage_between",
+        "control_flow"
+      ],
+      "max_depth": 1,
+      "description": "冗余赋值，值被覆盖前未被使用",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_dataflow"
+    },
+    "===== C++ 函数规则 (3条) =====": "关注函数签名和调用",
+    "cppcheck/functionStatic": {
+      "slice_strategy": "type_aware",
+      "semantic_focus": [
+        "member_function",
+        "this_access",
+        "member_variable_access",
+        "class_definition"
+      ],
+      "max_depth": 1,
+      "description": "成员函数未访问this，可以声明为static",
+      "must_include": [
+        "member_function_definition",
+        "class_declaration",
+        "this_or_member_access_absence"
+      ],
+      "snippet_hints": [
+        "extract_member_function_and_class_header"
+      ],
+      "rule_family": "cppcheck_type"
+    },
+    "cppcheck/missingReturn": {
+      "slice_strategy": "control_flow_aware",
+      "semantic_focus": [
+        "function_body",
+        "return_type",
+        "control_paths",
+        "if_else",
+        "switch",
+        "loop"
+      ],
+      "max_depth": 0,
+      "description": "非void函数缺少return语句，需要分析控制流路径",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_control_flow"
+    },
+    "cppcheck/passedByValue": {
+      "slice_strategy": "type_aware",
+      "semantic_focus": [
+        "function_parameter",
+        "parameter_type",
+        "sizeof",
+        "const_reference"
+      ],
+      "max_depth": 0,
+      "description": "大对象按值传递，应改为const引用",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_type"
+    },
+    "===== C++ 类规则 (1条) =====": "关注构造函数",
+    "cppcheck/noExplicitConstructor": {
+      "slice_strategy": "type_aware",
+      "semantic_focus": [
+        "constructor",
+        "single_parameter",
+        "class_definition"
+      ],
+      "max_depth": 0,
+      "description": "单参数构造函数应声明为explicit防止隐式转换",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_type"
+    },
+    "===== C++ 条件判断规则 (2条) =====": "关注控制流",
+    "cppcheck/knownConditionTrueFalse": {
+      "slice_strategy": "control_flow_aware",
+      "semantic_focus": [
+        "condition_expression",
+        "variable_value",
+        "constant_propagation",
+        "dead_branch"
+      ],
+      "max_depth": 1,
+      "description": "条件表达式恒为真/假，需要分析变量值",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_control_flow"
+    },
+    "cppcheck/identicalInnerCondition": {
+      "slice_strategy": "control_flow_aware",
+      "semantic_focus": [
+        "outer_if",
+        "inner_if",
+        "same_condition",
+        "nested_block"
+      ],
+      "max_depth": 1,
+      "description": "内层条件与外层相同，内层检查冗余",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_control_flow"
+    },
+    "===== C++ STL规则 (2条) =====": "关注STL API用法",
+    "cppcheck/stlIfStrFind": {
+      "slice_strategy": "api_aware",
+      "semantic_focus": [
+        "string::find",
+        "if_condition",
+        "npos",
+        "comparison_operator"
+      ],
+      "max_depth": 0,
+      "description": "string::find返回值检查方式错误，应与npos比较",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_api"
+    },
+    "cppcheck/useStlAlgorithm": {
+      "slice_strategy": "api_aware",
+      "semantic_focus": [
+        "for_loop",
+        "container",
+        "loop_body",
+        "stl_algorithm"
+      ],
+      "max_depth": 0,
+      "description": "手写循环可以用STL算法替代，如std::find/std::count",
+      "must_include": [
+        "alarm_file",
+        "target_line_or_span"
+      ],
+      "snippet_hints": [
+        "extract_enclosing_function",
+        "include_related_declarations"
+      ],
+      "rule_family": "cppcheck_api"
+    },
+    "===== 默认配置 =====": "未知规则的fallback",
+    "_default": {
+      "slice_strategy": "import_only",
+      "semantic_focus": [
+        "import",
+        "export",
+        "target_line"
+      ],
+      "max_depth": 1,
+      "description": "未知规则，使用保守的导入关系切片"
+    }
+  }
+}

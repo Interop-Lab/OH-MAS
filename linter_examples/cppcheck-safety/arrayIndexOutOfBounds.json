@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/arrayIndexOutOfBounds",
+  "examples": [
+    {
+      "buggy_code": "int arr[10];\nfor (int i = 0; i <= 10; i++) {\n    arr[i] = 0;\n}",
+      "fixed_code": "int arr[10];\nfor (int i = 0; i < 10; i++) {\n    arr[i] = 0;\n}"
+    }
+  ],
+  "explanation": "数组访问索引超出了声明的大小。"
+}

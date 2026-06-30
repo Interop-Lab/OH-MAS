@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/usereserve",
+  "examples": [
+    {
+      "buggy_code": "std::vector<int> result;\nfor (int i = 0; i < n; i++) {\n    result.push_back(i);\n}",
+      "fixed_code": "std::vector<int> result;\nresult.reserve(n);\nfor (int i = 0; i < n; i++) {\n    result.push_back(i);\n}"
+    }
+  ],
+  "explanation": "已知元素数量时，vector 应先调用 reserve() 预留空间，避免多次内存分配。"
+}

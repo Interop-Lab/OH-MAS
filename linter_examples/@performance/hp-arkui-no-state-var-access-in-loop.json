@@ -1,0 +1,10 @@
+{
+  "rule_id": "@performance/hp-arkui-no-state-var-access-in-loop",
+  "examples": [
+    {
+      "buggy_code": "import hilog from '@ohos.hilog'\n@Entry\n@Component\nstruct MyComponent{\n  @State message: string = '';\n  build() {\n    Column() {\n      Button('点击打印日志')\n        .onClick(() => {\n          this.message = 'click';\n          for (let i = 0; i < 10; i++) {\n            hilog.info(0x0000, 'TAG', '%{public}s', this.message);\n          }\n        })\n        .width('90%')\n        .backgroundColor(Color.Blue)\n        .fontColor(Color.White)\n        .margin({\n          top: 10\n        })\n    }\n    .justifyContent(FlexAlign.Start)\n    .alignItems(HorizontalAlign.Center)\n    .margin({\n      top: 15\n    })\n  }\n}",
+      "fixed_code": "import hilog from '@ohos.hilog'\n\n@Entry\n@Component\nstruct MyComponent{\n  @State message: string = '';\n  build() {\n    Column() {\n      Button('点击打印日志')\n        .onClick(() => {\n          this.message = 'click';\n          let logMessage: string = this.message;\n          for (let i = 0; i < 10; i++) {\n            hilog.info(0x0000, 'TAG', '%{public}s', logMessage);\n          }\n        })\n        .width('90%')\n        .backgroundColor(Color.Blue)\n        .fontColor(Color.White)\n        .margin({\n          top: 10\n        })\n    }\n    .justifyContent(FlexAlign.Start)\n    .alignItems(HorizontalAlign.Center)\n    .margin({\n      top: 15\n    })\n  }\n}"
+    }
+  ],
+  "explanation": "避免在for、while等循环逻辑中频繁读取状态变量。"
+}

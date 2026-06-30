@@ -1,0 +1,10 @@
+{
+  "rule_id": "@hw-stylistic/quotes",
+  "examples": [
+    {
+      "buggy_code": "export const a = \"hello\";",
+      "fixed_code": "export {a, b};\n\nconst a = 'hello';\nconst b = `hello`;"
+    }
+  ],
+  "explanation": "强制字符串使用单引号。该规则仅检查.ets文件类型。"
+}

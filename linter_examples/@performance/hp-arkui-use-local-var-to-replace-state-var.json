@@ -1,0 +1,10 @@
+{
+  "rule_id": "@performance/hp-arkui-use-local-var-to-replace-state-var",
+  "examples": [
+    {
+      "buggy_code": "@Entry\n@Component\nstruct MyComponent {\n  @State message: string = '';\n  appendMsg(newMsg: String) {\n      this.message += newMsg;\n      this.message += \";\";\n      this.message += \"<br/>\";\n  }\n  build() {\n    // 业务代码...\n  }\n}",
+      "fixed_code": "@Entry\n@Component\nstruct MyComponent {\n  @State message: string = '';\n  appendMsg(newMsg: String) {\n      let message = this.message;\n      message += newMsg;\n      message += \";\";\n      message += \"<br/>\";\n      this.message = message;\n  }\n  build() {\n    Text(this.message)\n  }\n}"
+    }
+  ],
+  "explanation": "建议使用临时变量替换状态变量。"
+}

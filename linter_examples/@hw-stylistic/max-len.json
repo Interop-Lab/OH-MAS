@@ -1,0 +1,10 @@
+{
+  "rule_id": "@hw-stylistic/max-len",
+  "examples": [
+    {
+      "buggy_code": "export const longLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongName = 10;",
+      "fixed_code": "@Entry\n@Component\nstruct Index {\n  message: string = 'hello';\n\n  build() {\n    Text(this.message)\n  }\n}"
+    }
+  ],
+  "explanation": "强制代码行最大长度为120个字符。该规则仅检查.ets文件类型。"
+}

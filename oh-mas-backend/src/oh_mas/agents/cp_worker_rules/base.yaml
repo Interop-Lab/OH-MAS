@@ -1,0 +1,13 @@
+# Base protocol for all CP workers
+# This defines the minimum required editing protocol
+
+rule_pattern: ".*"  # Matches all rules (fallback)
+priority: 0  # Lowest priority (specific rules override)
+
+instructions: |
+  # General Editing Guidelines
+  - Always read files before editing to ensure up-to-date content
+  - Preserve exact indentation and whitespace from original file
+  - Ensure old_str is unique within the target file
+  - Test your understanding before making changes
+  - Follow the code style conventions of the project

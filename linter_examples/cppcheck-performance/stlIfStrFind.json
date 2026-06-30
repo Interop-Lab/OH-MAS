@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/stlIfStrFind",
+  "examples": [
+    {
+      "buggy_code": "if (str.find(\"abc\") != std::string::npos) {\n    doSomething();\n}",
+      "fixed_code": "if (str.find(\"abc\") != std::string::npos) {\n    doSomething();\n}\n// 注意：C++23 可用 str.contains(\"abc\")"
+    }
+  ],
+  "explanation": "用 find() != string::npos 判断子串存在时，如果不需要位置信息，可以考虑更高效的写法。"
+}

@@ -1,0 +1,10 @@
+{
+  "rule_id": "@hw-stylistic/space-infix-ops",
+  "examples": [
+    {
+      "buggy_code": "export function test(size: number) {\n  // Operator '=' must be spaced.\n  // Operator '<' must be spaced.\n  for (let i=0; i<size; i++) {\n    console.info(`${i}`);\n  }\n}\n\nexport function test1(a: boolean, b: boolean, c: boolean) {\n  // Operator '||' must be spaced.\n  // Operator '&&' must be spaced.\n  return a||b&&c;\n}",
+      "fixed_code": "export function test(size: number) {\n  for (let i = 0; i < size; i++) {\n    console.info(`${i}`);\n  }\n}\n\nexport function test1(a: boolean, b: boolean, c: boolean) {\n  return a || (b && c);\n}"
+    }
+  ],
+  "explanation": "强制运算符前后都加空格。该规则仅检查.ets文件类型。"
+}

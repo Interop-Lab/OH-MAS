@@ -1,0 +1,10 @@
+{
+  "rule_id": "cppcheck/variableScope",
+  "examples": [
+    {
+      "buggy_code": "void func() {\n    int result;\n    // ... 100 lines ...\n    if (condition) {\n        result = compute();\n        use(result);\n    }\n}",
+      "fixed_code": "void func() {\n    // ... 100 lines ...\n    if (condition) {\n        int result = compute();\n        use(result);\n    }\n}"
+    }
+  ],
+  "explanation": "变量的作用域过大，应该在首次使用的位置声明以缩小作用域。"
+}
