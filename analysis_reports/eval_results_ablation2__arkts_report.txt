@@ -7,16 +7,15 @@ OVERALL METRICS
 --------------------------------------------------------------------------------
 Total Instances:      100
 Patch Apply Rate:     99.00% (99/100)
-Strict Pass Rate:     75.00% (75/100)
-Secondary Defect Rate: 8.54% (7/82)
-Pass@1:               75.00% (75/100)
+Strict Pass Rate:     74.00% (74/100)
+Pass@1:               74.00% (74/100)
 Average Rounds:       1.00
 Average Cost:         $0.1269
 Total Cost:           $12.69
 
 Failure Breakdown:
   Failed at L1:       3 (3.0%)
-  Failed at L2:       17 (17.0%)
+  Failed at L2:       18 (18.0%)
   Failed at L3:       5 (5.0%)
   Crash:              0 (0.0%)
 

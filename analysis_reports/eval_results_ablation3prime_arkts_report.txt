@@ -6,10 +6,9 @@ Results Directory: OH-MAS_results/ablation3prime/arkts
 OVERALL METRICS
 --------------------------------------------------------------------------------
 Total Instances:      99
-Patch Apply Rate:     96.97% (96/99)
-Strict Pass Rate:     73.74% (73/99)
-Secondary Defect Rate: 19.54% (17/87)
-Pass@1:               55.56% (55/99)
+Patch Apply Rate:     97% (97/100)
+Strict Pass Rate:     73% (73/100)
+Pass@1:               56% (56/100)
 Average Rounds:       1.76
 Average Cost:         $0.1665
 Total Cost:           $16.48
