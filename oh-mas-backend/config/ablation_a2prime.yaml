@@ -32,8 +32,8 @@ oh_kb:
   max_items: 10
   seed_file: oh_kb_seed.json
   graph_root: ../runtime/graph_explore
-  linter_examples_root: ../../linter_examples
-  repair_experiences_path: ../data/repair_experiences.json
+  linter_examples_root: ../../oh-kb
+  repair_experiences_path: ../../oh-kb/repair_experiences.json
 
 ao:
   enable_llm_decision: true

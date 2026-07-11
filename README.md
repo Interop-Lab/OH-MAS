@@ -24,12 +24,11 @@ OH-MAS/
 │   ├── src/oh_mas/
 │   │   ├── agents/          # AO, GW, CP, DA agent implementations
 │   │   ├── core/            # Orchestrator, event bus, workspace, schemas
-│   │   ├── oh_kb/           # Pluggable knowledge base clients
+│   │   ├── oh-kb/           # KB client & graph construction
 │   │   └── run/             # CLI entry point
-│   ├── config/              # YAML configurations (one per experiment)
-│   └── data/                # Repair experience
+│   └── config/              # YAML configurations (one per experiment)
 ├── mini-swe-agent/          # Adapted mini-SWE-agent (CP worker backbone)
-├── linter_examples/         # Rule-keyed repair templates (48 JSON files)
+├── oh-kb/                   # Unified knowledge base (repair templates + experiences)
 ├── data/                    # OH-Bench dataset (ArkTS + C/C++)
 ├── scripts/
 │   ├── sample_ablation_subset.py   # Reproducible stratified sampling for RQ2
@@ -192,14 +191,14 @@ Run `oh_mas.yaml` (P1 pool: Claude Sonnet 4.5, Gemini 2.5 Flash, Kimi K2.5) on t
 Run on the 200-instance stratified subset (`arkts_ablation_subset.json` + `cpp_ablation_subset.json`):
 
 
-| Variant                  | Config file             | Report                                            |
-| -------------------------- | ------------------------- | --------------------------------------------------- |
-| Full (OH-MAS)            | `oh_mas.yaml`           | `eval_results_p1__arkts_report.txt`             |
+| Variant                  | Config file                                                             | Report                                            |
+| -------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
+| Full (OH-MAS)            | `oh_mas.yaml`                                                           | `eval_results_p1__arkts_report.txt`               |
 | A1 (no model pool)       | `ablation1_claude.yaml`、ablation_a1_gemini.yaml、ablation_a1_kimi.yaml | `eval_results_ablation1_claude__arkts_report.txt` |
-| A2 (no typed feedback)   | `ablation2.yaml`        | `eval_results_ablation2__arkts_report.txt`        |
-| A2' (free-form feedback) | `ablation2prime.yaml`   | `eval_results_ablation2prime__arkts_report.txt`   |
-| A3 (no repair contract)  | `ablation3.yaml`        | `eval_results_ablation3__arkts_report.txt`        |
-| A3' (no templates) | `ablation3prime.yaml` | `eval_results_ablation3prime__arkts_report.txt` |
+| A2 (no typed feedback)   | `ablation2.yaml`                                                        | `eval_results_ablation2__arkts_report.txt`        |
+| A2' (free-form feedback) | `ablation2prime.yaml`                                                   | `eval_results_ablation2prime__arkts_report.txt`   |
+| A3 (no repair contract)  | `ablation3.yaml`                                                        | `eval_results_ablation3__arkts_report.txt`        |
+| A3' (no templates)       | `ablation3prime.yaml`                                                   | `eval_results_ablation3prime__arkts_report.txt`   |
 
 ### RQ3 — Cost-effectiveness (Table 4)
 
@@ -255,23 +254,26 @@ Each failed audit returns a **typed** verdict (L1/L2/L3) that the AO converts in
 
 ## Knowledge Base (OH-KB)
 
-The `linter_examples/` directory contains the rule-keyed repair templates used by GW (`allowed transformations`). These are JSON files organized by linter category:
+The `oh-kb/` directory is a unified knowledge base containing pre-built dependency graphs and rule-specialized repair templates used by GW (`allowed transformations`). These are JSON files organized by linter category:
 
 ```
-linter_examples/
-├── @hw-stylistic/     # HarmonyOS style rules
-├── @performance/      # Performance rules
-├── cppcheck-logic/    # C++ logic errors
-├── cppcheck-memory/   # Memory safety
+oh-kb/
+├── repair_experiences.json     # Curated L3 repair experiences
+├── @hw-stylistic/              # HarmonyOS style rules
+├── @performance/               # Performance rules
+├── cppcheck-logic/             # C++ logic errors
+├── cppcheck-safety/            # Memory safety
 └── ...
 ```
 
-Each file contains `rule_id`, `examples` (buggy/fixed code pairs), and `explanation`.
+Each template file contains `rule_id`, `examples` (buggy/fixed code pairs), and `explanation`.
 
-The `oh_kb` module supports multiple providers (set in config):
+The OH-KB supports multiple providers (set in config):
 
-- `null` — no KB, for ablation A3
-- `graph_explore_mock` — uses pre-built dependency graphs + linter_examples (default)
+- `null` — no KB, for ablation A3'
+- `graph_explore_mock` — uses pre-built dependency graphs + oh-kb templates (default)
+
+The KB client implementation and dependency graph construction logic reside in `oh-mas-backend/src/oh_mas/oh_kb/` (a subpackage of `oh_mas`).
 
 ---
 

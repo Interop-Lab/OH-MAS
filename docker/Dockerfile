@@ -11,9 +11,6 @@
    && rm -rf /var/lib/apt/lists/* \
    && rg --version
 
-  # Pre-install Python dependencies to avoid downloading them on every container run.
-# litellm pulls in openai, jinja2, pydantic, python-dotenv, httpx, tiktoken, etc.
-# 'datasets' is excluded — not used at runtime.
 RUN python3 -m pip install --no-cache-dir \
     "litellm>=1.75.5,!=1.82.7,!=1.82.8" \
     pyyaml \
