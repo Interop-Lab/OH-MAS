@@ -35,6 +35,7 @@ OH-MAS/
 │   └── sample_manual_review.py     # Random sampling for manual review
 ├── results/
 │   └── analysis_reports/    # Evaluation result reports
+├── Appendix.pdf       # Supplementary material for this paper
 └── docker/
     └── harmonyrepair-codelinter/Dockerfile
 ```
