@@ -235,6 +235,15 @@ Each template file contains `rule_id`, buggy/fixed code examples, and explanatio
 }
 ```
 
+## Star History
+
+<a href="https://www.star-history.com/?type=date&repos=Interop-Lab%2FOH-MAS">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Interop-Lab/OH-MAS&type=date&theme=dark&legend=top-left&sealed_token=BJpE9PZ31wIn-XPR8GU9DSuGHwBowXAadWP6yZHk3hSxAB39d1tI1cNC_nBQCINVyFi7TLropLMPELbssNk_7JrBRrlk3usx9SHoTU5GvywT2zrbNWmJ2Q" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Interop-Lab/OH-MAS&type=date&legend=top-left&sealed_token=BJpE9PZ31wIn-XPR8GU9DSuGHwBowXAadWP6yZHk3hSxAB39d1tI1cNC_nBQCINVyFi7TLropLMPELbssNk_7JrBRrlk3usx9SHoTU5GvywT2zrbNWmJ2Q" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Interop-Lab/OH-MAS&type=date&legend=top-left&sealed_token=BJpE9PZ31wIn-XPR8GU9DSuGHwBowXAadWP6yZHk3hSxAB39d1tI1cNC_nBQCINVyFi7TLropLMPELbssNk_7JrBRrlk3usx9SHoTU5GvywT2zrbNWmJ2Q" />
+ </picture>
+</a>
 ---
 
 ## Star History
