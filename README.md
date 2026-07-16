@@ -244,12 +244,6 @@ Each template file contains `rule_id`, buggy/fixed code examples, and explanatio
 </a>
 ---
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Interop-Lab/OH-MAS&type=Date)](https://star-history.com/#Interop-Lab/OH-MAS&Date)
-
----
-
 ## License
 
 Source code: MIT. Dataset (OH-Bench): CC BY 4.0. Mini-swe-agent components retain their original Apache-2.0 license.
