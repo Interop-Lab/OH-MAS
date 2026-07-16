@@ -1,18 +1,76 @@
 # OH-MAS: Contracting the Search Space for Static-Analysis Warning Repair
 
-> Artifact for our ICSE 2027 submission. OH-MAS is an automated repair system for OpenHarmony that reaches **77.9% strict pass rate** on 741 real-world static-analysis warnings, outperforming the strongest agent baseline by 30.7 pp.
+[![Stars](https://img.shields.io/github/stars/Interop-Lab/OH-MAS?style=social)](https://github.com/Interop-Lab/OH-MAS)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**OH-MAS** (OpenHarmony Multi-Agent System) is an automated repair system that fixes static-analysis warnings across OpenHarmony's heterogeneous codebase. It reaches a **77.9% strict pass rate** on 741 real-world warnings (382 ArkTS + 359 C/C++), outperforming the strongest agent baseline by **30.7 percentage points**, at $0.25–$0.66 per warning.
 
 ---
 
-## Overview
+## What Makes OH-MAS Different?
 
-Static-analysis linters generate millions of warnings in industrial codebases. Conventional LLM agents leave three decisions implicit: the edit space they explore, what they learn from each rejected attempt, and which model proposes the next fix. OH-MAS (OpenHarmony Multi-Agent System) makes all three explicit:
+Static-analysis tools flag millions of warnings in industrial codebases. Conventional LLM agents treat repair as free-form code generation: they edit whatever they want, react to failures with generic natural-language reflection, and handle every warning with the same model. On heterogeneous, framework-heavy code like OpenHarmony — where C/C++ system code and ArkTS application code coexist under different linters — this unbounded approach breaks down.
 
-1. **Repair Contracts** (Graph Weaver) — bound the edit space with must-fix locations, must-not-touch invariants, and rule-specific transformation templates sliced from the project dependency graph.
-2. **Typed Diagnostic Feedback** (Diagnostic Auditor) — label every failure as L1 (applicability), L2 (target warning), or L3 (regression), and accumulate them as monotonically tightening constraints across rounds.
-3. **Complementarity-aware model pool** (Adaptive Orchestrator + Constrained Patcher) — route each round to a subset of a heterogeneous model pool and widen it as difficulty rises.
+OH-MAS takes a different approach. It casts warning repair as a **bounded search**: each failed attempt is diagnosed with a precise type, and that diagnosis contracts the search space so the next attempt is smaller and better targeted. Three coupled mechanisms make this possible:
 
-The system targets OpenHarmony's two language layers: **ArkTS** (validated by CodeLinter) and **C/C++** (validated by Cppcheck).
+### 1. Repair Contracts — Bounding the Edit Space
+
+The **Graph Weaver** slices the project dependency graph into a typed triple before any code is touched:
+
+- **Must-fix** locations that need to change
+- **Must-not-touch** invariants (public signatures, framework decorators like `@State`/`@Link`, cross-file types)
+- **Allowed transformations** drawn from  an offline knowledge base
+
+The Constrained Patcher may act only inside this contract, which turns free-form generation into constraint-satisfaction within a bounded space.
+
+### 2. Typed Diagnostic Feedback — Contracting the Space
+
+The **Diagnostic Auditor**  labels every failure with a concrete type:
+
+
+| Level  | Meaning                                                 | Constraint                              |
+| -------- | --------------------------------------------------------- | ----------------------------------------- |
+| **L1** | Applicability — patch does not apply cleanly           | Fix the syntactic conflict              |
+| **L2** | Target warning — the original warning is still present | The edit did not address the root cause |
+| **L3** | Regression — a new defect was introduced               | Narrow what may be touched              |
+
+These constraints are **never discarded**. From round t to round t+1, the admissible patch space is non-increasing: Ω_{t+1} ⊆ Ω_t. The same diagnostic that tightens the contract also widens the model pool.
+
+### 3. Complementarity-aware Model Pool — Matching the Generator
+
+The **Adaptive Orchestrator** profiles each warning by rule category, language layer (ArkTS or C/C++),  current mode, and failure tier (L1, L2, or L3), then routes it through a heterogeneous pool of models. As difficulty rises from easy to hard, more models join the search:
+
+```
+easy   → [Claude Sonnet 4.5]
+medium → [Claude Sonnet 4.5, Gemini 2.5 Flash]
+hard   → [Claude Sonnet 4.5, Gemini 2.5 Flash, Kimi K2]
+```
+
+No single model dominates across rule families and language layers; the pool discovers complementarity as a first-class signal.
+
+### The Coupling That Makes It Work
+
+These three mechanisms reinforce each other: the diagnostic that tightens the contract is the same signal that widens the pool, and the contract bounds what every pooled model may do. Each rejection leaves the next attempt both **smaller** (constrained space) and **better aimed** (better-matched model). Free-form retry becomes a search that contracts with every failure.
+
+> **Comparison with existing systems:**
+>
+>
+> | System        | Bounded space | Typed feedback | Multi-model | Target domain      |
+> | --------------- | :-------------: | :--------------: | :-----------: | -------------------- |
+> | SWE-agent     |      ✗      |       ✗       |     ✗     | Python (SWE-bench) |
+> | Agentless     |    partial    |       ✗       |     ✗     | Python (SWE-bench) |
+> | RepairAgent   |      ✗      |       ✗       |     ✗     | Java (Defects4J)   |
+> | AutoCodeRover |    partial    |       ✗       |     ✗     | Python / Java      |
+> | HapRepair     |      ✗      |       ✗       |     ✗     | ArkTS only         |
+> | **OH-MAS**    |    **✓**    |     **✓**     |   **✓**   | **C/C++ + ArkTS**  |
+
+---
+
+## System Overview
+
+[![OH-MAS System Overview](https://img.shields.io/badge/Overview-PDF-blue)](overview.pdf)
+
+Overview of OH-MAS. The Adaptive Orchestrator (AO) profiles the warning and sets the execution mode. The Graph Weaver (GW) slices the dependency graph to extract a Repair Contract comprising must-fix locations, must-not-touch invariants, and allowed transformations. The Constrained Patcher (CP) generates patches within this contract using a heterogeneous model pool. The deterministic Diagnostic Auditor (DA) validates candidates across three hierarchical tiers: applicability (L1), target-warning (L2), and regression (L3). Failed audits return typed evidence, which the AO accumulates as monotonically tightening constraints for the next round.
 
 ---
 
@@ -24,32 +82,33 @@ OH-MAS/
 │   ├── src/oh_mas/
 │   │   ├── agents/          # AO, GW, CP, DA agent implementations
 │   │   ├── core/            # Orchestrator, event bus, workspace, schemas
-│   │   ├── oh-kb/           # KB client & graph construction
+│   │   ├── oh-kb/           # dependency graphs construction
 │   │   └── run/             # CLI entry point
-│   └── config/              # YAML configurations (one per experiment)
+│   └── config/              # YAML configurations
 ├── mini-swe-agent/          # Adapted mini-SWE-agent (CP worker backbone)
 ├── oh-kb/                   # Unified knowledge base (repair templates + experiences)
 ├── data/                    # OH-Bench dataset (ArkTS + C/C++)
 ├── scripts/
-│   ├── sample_ablation_subset.py   # Reproducible stratified sampling for RQ2
+│   ├── sample_ablation_subset.py   # Stratified sampling for ablation
 │   └── sample_manual_review.py     # Random sampling for manual review
 ├── results/
-│   └── analysis_reports/    # Evaluation result reports
-├── Appendix.pdf       # Supplementary material for this paper
-└── docker/
-    └── harmonyrepair-codelinter/Dockerfile
+│   └── analysis_reports/    # Evaluation reports
+├── docker/
+│   └── harmonyrepair-codelinter/Dockerfile
+├── overview.pdf             # System architecture diagram
+└── Appendix.pdf             # Supplementary material
 ```
 
 ---
 
-## Requirements
+## Quick Start
+
+### Requirements
 
 - Python 3.10+
-- Docker (for linter execution; CodeLinter requires the pre-built image)
+- Docker (for linter execution)
 - Git, ripgrep
-- LLM API access (OpenRouter recommended; see Configuration)
-
-### Hardware
+- LLM API access (OpenRouter recommended)
 
 
 | Component | Minimum | Recommended                    |
@@ -58,108 +117,39 @@ OH-MAS/
 | RAM       | 16 GB   | 32 GB                          |
 | Disk      | 50 GB   | 100 GB (repositories + traces) |
 
----
-
-## Installation
+### Installation
 
 ```bash
-# 1. Clone the repository
-git clone <REPO_URL> OH-MAS && cd OH-MAS
+git clone https://github.com/Interop-Lab/OH-MAS.git && cd OH-MAS
 
-# 2. Create a virtual environment
-python3 -m venv vene
-source vene/bin/activate
+# Create virtual environment
+python3 -m venv venv && source venv/bin/activate
 
-# 3. Install oh-mas-backend and its mini-swe-agent dependency
+# Install dependencies
 pip install -e mini-swe-agent/
 pip install -e oh-mas-backend/
 
-# 4. Build the Docker image (needed for linter-based validation)
+# Build Docker image for linter validation
 cd docker/harmonyrepair-codelinter
 docker build -t harmonyrepair:with-codelinter .
 cd ../..
 ```
 
----
+### Example: Repairing an ArkTS Warning
 
-## Dataset (OH-Bench)
-
-The `data/` directory contains OH-Bench, a repository-level benchmark of **741 real-world warnings** from 39 industrial OpenHarmony repositories:
-
-
-| File                              | Instances | Language | Purpose                        |
-| ----------------------------------- | ----------- | ---------- | -------------------------------- |
-| `arkts_dataset_final.json`        | 382       | ArkTS    | Full benchmark (RQ1, RQ3)      |
-| `cpp_dataset_final.json`          | 359       | C/C++    | Full benchmark (RQ1, RQ3)      |
-| `arkts_ablation_subset.json`      | 100       | ArkTS    | Stratified subset (RQ2)        |
-| `cpp_ablation_subset.json`        | 100       | C/C++    | Stratified subset (RQ2)        |
-| `arkts_manual_review_subset.json` | 50        | ArkTS    | Manual review / error analysis |
-| `cpp_manual_review_subset.json`   | 50        | C/C++    | Manual review / error analysis |
-
-Each instance in the main benchmark contains: `instance_id`, alarm metadata (file, line, rule, message), the buggy repository at a fixed commit, and the reference patch.
-
-The manual review subsets (`*_manual_review_subset.json`) are 50-instance samples drawn from the full benchmark for qualitative error analysis. They include additional fields — `input_snippet`, `code_lines`, and `category` — to support case-by-case inspection of repair failures.
-
-All subsets are fully reproducible from the full benchmark using the provided scripts (both use `seed=42`):
-
-```bash
-# Regenerate ablation subset (100 ArkTS + 100 C/C++, stratified by rule_id)
-python scripts/sample_ablation_subset.py
-
-# Regenerate manual review subset (50 ArkTS + 50 C/C++, simple random sample)
-python scripts/sample_manual_review.py
-```
-
-> **Note:** The 39 source repositories are not included due to size and third-party licensing. Each instance records the full 40-character commit hash; repositories can be cloned from OpenHarmony Gitee and checked out at the recorded commit. See `data/arkts_dataset_final.json` → `commit_hash` field.
-
----
-
-## Configuration
-
-Copy and edit the example config:
+1. **Prepare a configuration file:**
 
 ```bash
 cp oh-mas-backend/config/oh_mas.yaml oh-mas-backend/config/my_run.yaml
 ```
 
-Key settings:
-
-```yaml
-runtime:
-  repositories_root: ../../repositories   # cloned OH repos
-  execution_mode: docker_whole            # docker_whole | host
-
-oh_kb:
-  provider: graph_explore_mock            # null | local_seed | graph_explore_mock
-
-ao:
-  llm_model: openrouter/google/gemini-2.5-flash
-
-gw:
-  llm_model: openrouter/anthropic/claude-sonnet-4.5
-
-cp:
-  max_parallel_workers: 3
-  mode_strategy:
-    easy:   [openrouter/anthropic/claude-sonnet-4.5]
-    medium: [openrouter/anthropic/claude-sonnet-4.5, openrouter/google/gemini-2.5-flash]
-    hard:   [openrouter/anthropic/claude-sonnet-4.5, openrouter/google/gemini-2.5-flash,
-             openrouter/moonshot-ai/kimi-k2]
-```
-
-Set your API key:
+2. **Set your API key:**
 
 ```bash
 export OPENROUTER_API_KEY=sk-...
-# or
-export ANTHROPIC_API_KEY=sk-...
 ```
 
----
-
-## Running OH-MAS
-
-### Single instance
+3. **Run OH-MAS on a single warning:**
 
 ```bash
 cd oh-mas-backend
@@ -171,91 +161,54 @@ PYTHONPATH=src python3 -m oh_mas.run.oh_mas run \
   --alarm-message "LazyForEach child component should be @Reusable"
 ```
 
----
+The system will profile the warning, emit a Repair Contract, and iterate through the model pool until the patch passes all three audit levels (L1/L2/L3) or the maximum retry budget is exhausted.
 
-## Reproducing Paper Results
+For key configuration options, see the default `oh-mas-backend/config/oh_mas.yaml`:
 
-### RQ1 — Main effectiveness (Table 2)
+```yaml
+runtime:
+  execution_mode: docker_whole            # docker_whole | host
 
-Run `oh_mas.yaml` (P1 pool: Claude Sonnet 4.5, Gemini 2.5 Flash, Kimi K2.5) on the full 741-instance benchmark. Pre-computed results are in `results/analysis_reports/`:
+ao:
+  llm_model: openrouter/google/gemini-2.5-flash
 
-
-| File                   | Content                       |
-| ------------------------ | ------------------------------- |
-| `p1__arkts_report.txt` | ArkTS full benchmark, pool P1 |
-| `p1__cpp_report.txt`   | C/C++ full benchmark, pool P1 |
-| `p2__arkts_report.txt` | Pool P2 (cost-effective)      |
-| `p3__arkts_report.txt` | Pool P3 (frontier)            |
-
-### RQ2 — Ablation study (Table 3)
-
-Run on the 200-instance stratified subset (`arkts_ablation_subset.json` + `cpp_ablation_subset.json`):
-
-
-| Variant                  | Config file                                                             | Report                                            |
-| -------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
-| Full (OH-MAS)            | `oh_mas.yaml`                                                           | `eval_results_p1__arkts_report.txt`               |
-| A1 (no model pool)       | `ablation1_claude.yaml`、ablation_a1_gemini.yaml、ablation_a1_kimi.yaml | `eval_results_ablation1_claude__arkts_report.txt` |
-| A2 (no typed feedback)   | `ablation2.yaml`                                                        | `eval_results_ablation2__arkts_report.txt`        |
-| A2' (free-form feedback) | `ablation2prime.yaml`                                                   | `eval_results_ablation2prime__arkts_report.txt`   |
-| A3 (no repair contract)  | `ablation3.yaml`                                                        | `eval_results_ablation3__arkts_report.txt`        |
-| A3' (no templates)       | `ablation3prime.yaml`                                                   | `eval_results_ablation3prime__arkts_report.txt`   |
-
-### RQ3 — Cost-effectiveness (Table 4)
-
-Pre-computed in `results/analysis_reports/p2__*_report.txt` and `p3__*_report.txt`.
-
----
-
-## Architecture
-
-```
-Alarm Input
-    │
-    ▼
-┌─────────────────────────────────────────────────────┐
-│  AO (Adaptive Orchestrator)                          │
-│  · Profiles alarm (language, rule category)          │
-│  · Selects mode: easy → medium → hard               │
-│  · Accumulates typed constraints across rounds       │
-└──────────────────────┬──────────────────────────────┘
-                       │ TaskProfiledEvent
-                       ▼
-┌─────────────────────────────────────────────────────┐
-│  GW (Graph Weaver)                                   │
-│  · Slices project dependency graph                   │
-│  · Emits Repair Contract: must-fix / must-not-touch  │
-│    / allowed transformations                         │
-└──────────────────────┬──────────────────────────────┘
-                       │ ContextReadyEvent
-                       ▼
-┌─────────────────────────────────────────────────────┐
-│  CP (Constrained Patcher)                            │
-│  · Queries heterogeneous model pool in parallel      │
-│  · Each worker runs a mini-swe-agent loop            │
-│  · Constrained by the Repair Contract                │
-└──────────────────────┬──────────────────────────────┘
-                       │ PatchesReadyEvent
-                       ▼
-┌─────────────────────────────────────────────────────┐
-│  DA (Diagnostic Auditor)  [deterministic]            │
-│  · L1: patch applies cleanly?                        │
-│  · L2: target warning eliminated?                    │
-│  · L3: no regressions introduced?                    │
-└──────────────────────┬──────────────────────────────┘
-                       │ AuditDoneEvent
-                       ▼
-              Pass → Done   |   Fail → retry (max 2)
-                                  ↑ typed constraint appended
+cp:
+  max_parallel_workers: 3
+  mode_strategy:
+    easy:   [openrouter/anthropic/claude-sonnet-4.5]
+    medium: [openrouter/anthropic/claude-sonnet-4.5, openrouter/google/gemini-2.5-flash]
+    hard:   [openrouter/anthropic/claude-sonnet-4.5, openrouter/google/gemini-2.5-flash,
+             openrouter/moonshot-ai/kimi-k2]
 ```
 
-Each failed audit returns a **typed** verdict (L1/L2/L3) that the AO converts into a hard constraint and permanently appends to the prompt, so the admissible patch space `Ω` is non-increasing across rounds: `Ω_{t+1} ⊆ Ω_t`.
-
 ---
+
+## Dataset (OH-Bench)
+
+OH-Bench is a repository-level benchmark of **741 real-world static-analysis warnings** from 39 industrial OpenHarmony repositories, spanning two language layers:
+
+
+| File                              | Instances | Language | Purpose        |
+| ----------------------------------- | ----------- | ---------- | ---------------- |
+| `arkts_dataset_final.json`        | 382       | ArkTS    | Full benchmark |
+| `cpp_dataset_final.json`          | 359       | C/C++    | Full benchmark |
+| `arkts_ablation_subset.json`      | 100       | ArkTS    | Ablation study |
+| `cpp_ablation_subset.json`        | 100       | C/C++    | Ablation study |
+| `arkts_manual_review_subset.json` | 50        | ArkTS    | Manual review  |
+| `cpp_manual_review_subset.json`   | 50        | C/C++    | Manual review  |
+
+Each instance includes: `instance_id`, alarm metadata (file, line, rule, message), the buggy repository at a fixed commit, and the reference patch. The subsets are fully reproducible (seed=42):
+
+```bash
+python scripts/sample_ablation_subset.py
+python scripts/sample_manual_review.py
+```
+
+> The 39 source repositories are not bundled due to size and third-party licensing. Each instance records the full commit hash; repositories can be cloned from [OpenHarmony Gitee](https://gitee.com/openharmony) and checked out at the recorded commit.
 
 ## Knowledge Base (OH-KB)
 
-The `oh-kb/` directory is a unified knowledge base containing pre-built dependency graphs and rule-specialized repair templates used by GW (`allowed transformations`). These are JSON files organized by linter category:
+The `oh-kb/` directory contains pre-built dependency graphs and rule-specialized repair templates used by the Graph Weaver. Templates are organized by linter category:
 
 ```
 oh-kb/
@@ -267,26 +220,7 @@ oh-kb/
 └── ...
 ```
 
-Each template file contains `rule_id`, `examples` (buggy/fixed code pairs), and `explanation`.
-
-The OH-KB supports multiple providers (set in config):
-
-- `null` — no KB, for ablation A3'
-- `graph_explore_mock` — uses pre-built dependency graphs + oh-kb templates (default)
-
-The KB client implementation and dependency graph construction logic reside in `oh-mas-backend/src/oh_mas/oh_kb/` (a subpackage of `oh_mas`).
-
----
-
-## Docker Image
-
-The `docker/harmonyrepair-codelinter/Dockerfile` builds the linter execution environment:
-
-```bash
-docker build -t harmonyrepair:with-codelinter docker/harmonyrepair-codelinter/
-```
-
-This image contains CodeLinter (OpenHarmony's official ArkTS static analyzer) and Cppcheck. The DA agent mounts each repository into `/workspace/repo` and runs linters in isolation.
+Each template file contains `rule_id`, buggy/fixed code examples, and explanations.The KB client implementation and dependency graph construction logic reside in `oh-mas-backend/src/oh_mas/oh_kb/` (a subpackage of `oh_mas`).
 
 ---
 
@@ -300,6 +234,12 @@ This image contains CodeLinter (OpenHarmony's official ArkTS static analyzer) an
   year      = {2027},
 }
 ```
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Interop-Lab/OH-MAS&type=Date)](https://star-history.com/#Interop-Lab/OH-MAS&Date)
 
 ---
 
