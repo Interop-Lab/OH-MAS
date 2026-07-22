@@ -5,7 +5,7 @@
 
 **OH-MAS** (OpenHarmony Multi-Agent System) is an automated repair system that fixes static-analysis warnings across OpenHarmony's heterogeneous codebase. It reaches a **77.9% strict pass rate** on 741 real-world warnings (382 ArkTS + 359 C/C++), outperforming the strongest agent baseline by **30.7 percentage points**, at $0.25–$0.66 per warning.
 
-### Performance comparison between our system (backed by a multi-LLM pool of Claude Sonnet 4.5, Kimi K2.5, and Gemini 2.5 Flash) and state-of-the-art baselines
+Performance comparison between our system (backed by a multi-LLM pool of Claude Sonnet 4.5, Kimi K2.5, and Gemini 2.5 Flash) and state-of-the-art baselines
 
 | System | ArkTS PAR | ArkTS SPR | C/C++ PAR | C/C++ SPR | Overall SPR |
 | --- | --- | --- | --- | --- | --- |
