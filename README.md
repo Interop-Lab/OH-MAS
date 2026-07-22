@@ -5,6 +5,26 @@
 
 **OH-MAS** (OpenHarmony Multi-Agent System) is an automated repair system that fixes static-analysis warnings across OpenHarmony's heterogeneous codebase. It reaches a **77.9% strict pass rate** on 741 real-world warnings (382 ArkTS + 359 C/C++), outperforming the strongest agent baseline by **30.7 percentage points**, at $0.25–$0.66 per warning.
 
+### Performance comparison between our system (backed by a multi-LLM pool of Claude Sonnet 4.5, Kimi K2.5, and Gemini 2.5 Flash) and state-of-the-art baselines
+
+| System | ArkTS PAR | ArkTS SPR | C/C++ PAR | C/C++ SPR | Overall SPR |
+| --- | --- | --- | --- | --- | --- |
+| ***LLMs -- Native input*** |  |  |  |  |  |
+| Claude Opus 4.5 | 90.1 | 46.6 | 99.2 | 33.2 | 40.1 |
+| Claude Opus 4.8 | 96.9 | **56.3** | 99.2 | **55.4** | **55.9** |
+| Claude Sonnet 4.5 | 92.7 | 45.3 | 97.2 | 36.8 | 41.2 |
+| GPT-5.5 | 91.9 | 56.0 | 94.7 | 55.2 | 55.6 |
+| Gemini 2.5 Flash | 78.0 | 51.1 | 96.9 | 39.3 | 45.3 |
+| Kimi K2.5 | 80.9 | 41.9 | 97.8 | 36.8 | 39.4 |
+| MiniMax M2.5 | 50.3 | 29.6 | 84.1 | 24.2 | 27.0 |
+| ***Agents (backend: Claude Sonnet 4.5)*** |  |  |  |  |  |
+| Agentless | 95.0 | 54.7 | 97.5 | 30.6 | 43.0 |
+| SWE-agent | 87.2 | 48.2 | 86.6 | **37.3** | 42.9 |
+| Moatless | 98.4 | **58.4** | 96.7 | 35.4 | **47.2** |
+| Claude Code | 98.4 | 45.8 | 92.2 | 32.9 | 39.5 |
+| OpenCode | 91.4 | 42.9 | 87.2 | 30.6 | 36.9 |
+| **OH-MAS (Ours)** | **93.5** | **81.4** | **96.7** | **74.1** | **77.9** |
+
 ---
 
 ## What Makes OH-MAS Different?
