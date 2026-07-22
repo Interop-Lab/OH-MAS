@@ -1,6 +1,7 @@
 # OH-MAS: Contracting the Search Space for Static-Analysis Warning Repair
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Star History Chart](https://api.star-history.com/svg?repos=Interop-Lab/OH-MAS&type=date)](https://www.star-history.com/?type=date&repos=Interop-Lab%2FOH-MAS)
 
 **OH-MAS** (OpenHarmony Multi-Agent System) is an automated repair system that fixes static-analysis warnings across OpenHarmony's heterogeneous codebase. It reaches a **77.9% strict pass rate** on 741 real-world warnings (382 ArkTS + 359 C/C++), outperforming the strongest agent baseline by **30.7 percentage points**, at $0.25–$0.66 per warning.
 
@@ -234,15 +235,6 @@ Each template file contains `rule_id`, buggy/fixed code examples, and explanatio
 }
 ```
 
-## Star History
-
-<a href="https://www.star-history.com/?type=date&repos=Interop-Lab%2FOH-MAS">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Interop-Lab/OH-MAS&type=date&theme=dark&legend=top-left&sealed_token=BJpE9PZ31wIn-XPR8GU9DSuGHwBowXAadWP6yZHk3hSxAB39d1tI1cNC_nBQCINVyFi7TLropLMPELbssNk_7JrBRrlk3usx9SHoTU5GvywT2zrbNWmJ2Q" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Interop-Lab/OH-MAS&type=date&legend=top-left&sealed_token=BJpE9PZ31wIn-XPR8GU9DSuGHwBowXAadWP6yZHk3hSxAB39d1tI1cNC_nBQCINVyFi7TLropLMPELbssNk_7JrBRrlk3usx9SHoTU5GvywT2zrbNWmJ2Q" />
- </picture>
-</a>
----
 
 ## License
 
