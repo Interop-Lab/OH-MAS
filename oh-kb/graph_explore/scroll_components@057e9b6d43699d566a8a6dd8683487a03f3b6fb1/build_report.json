@@ -1,0 +1,29 @@
+{
+  "repo_name": "scroll_components",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/scroll_components",
+  "language": "arkts",
+  "commit_hash": "057e9b6d43699d566a8a6dd8683487a03f3b6fb1",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/scroll_components@057e9b6d43699d566a8a6dd8683487a03f3b6fb1/graph_full.json",
+  "build_time_ms": 249.291,
+  "files_scanned": 146,
+  "parse_failed_files": 0,
+  "file_node_count": 146,
+  "external_node_count": 22,
+  "edge_count": 468,
+  "unresolved_local_edges": 0,
+  "external_edges": 185,
+  "edge_type_counts": {
+    "import_external": 184,
+    "export_from": 8,
+    "import": 276,
+    "export_external": 1
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 185,
+    "relative": 284
+  },
+  "module_dep_count": 2,
+  "file_to_file_edge_count": 283,
+  "file_to_external_edge_count": 185,
+  "extractor_version": "v0.6"
+}

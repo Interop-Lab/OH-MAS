@@ -1,0 +1,25 @@
+{
+  "repo_name": "distributedhardware_device_manager",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/distributedhardware_device_manager",
+  "language": "cpp",
+  "commit_hash": "c3d58ed65cf78bc243147c215e6428a901deea0a",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/distributedhardware_device_manager@c3d58ed65cf78bc243147c215e6428a901deea0a/graph_full.json",
+  "build_time_ms": 9437.109,
+  "files_scanned": 884,
+  "parse_failed_files": 0,
+  "file_node_count": 884,
+  "external_node_count": 64,
+  "edge_count": 2033,
+  "unresolved_local_edges": 3291,
+  "external_edges": 1234,
+  "edge_type_counts": {
+    "include_system_external": 1234,
+    "include_local": 400,
+    "same_module_include": 400
+  },
+  "module_dep_count": 428,
+  "build_gn_dep_refs": 2529,
+  "file_to_file_edge_count": 800,
+  "file_to_external_edge_count": 1233,
+  "extractor_version": "v0.6"
+}

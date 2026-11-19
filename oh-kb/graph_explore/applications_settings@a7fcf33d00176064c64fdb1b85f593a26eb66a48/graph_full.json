@@ -1,0 +1,1534 @@
+{
+  "meta": {
+    "language": "cpp",
+    "build_time_ms": 614.205,
+    "files_scanned": 46,
+    "parse_failed_files": 0,
+    "file_node_count": 46,
+    "external_node_count": 14,
+    "edge_count": 148,
+    "unresolved_local_edges": 107,
+    "external_edges": 46,
+    "edge_type_counts": {
+      "include_local": 51,
+      "same_module_include": 51,
+      "include_system_external": 46
+    },
+    "module_dep_count": 50,
+    "build_gn_dep_refs": 82,
+    "file_to_file_edge_count": 102,
+    "file_to_external_edge_count": 46,
+    "repo_name": "applications_settings",
+    "commit_hash": "a7fcf33d00176064c64fdb1b85f593a26eb66a48",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:0fdd60eca8e5",
+        "path": "native/settings/src/napi_sys_event_util.cpp",
+        "name": "napi_sys_event_util.cpp"
+      },
+      {
+        "id": "file:d28344de12da",
+        "path": "native/settings/src/napi_bundle_util.cpp",
+        "name": "napi_bundle_util.cpp"
+      },
+      {
+        "id": "file:af972abe6c86",
+        "path": "native/settings/src/include/napi_settings_log.h",
+        "name": "napi_settings_log.h"
+      },
+      {
+        "id": "file:3b8ccdc90190",
+        "path": "native/settings/src/include/napi_sys_event_util.h",
+        "name": "napi_sys_event_util.h"
+      },
+      {
+        "id": "file:6b11e2031562",
+        "path": "native/settings/src/include/napi_bundle_util.h",
+        "name": "napi_bundle_util.h"
+      },
+      {
+        "id": "file:e3395e5b9ceb",
+        "path": "napi/intelligentscene/napi_nodisturb.cpp",
+        "name": "napi_nodisturb.cpp"
+      },
+      {
+        "id": "file:a1a83cc74aab",
+        "path": "napi/intelligentscene/napi_nodisturb.h",
+        "name": "napi_nodisturb.h"
+      },
+      {
+        "id": "file:c12f006e5587",
+        "path": "napi/intelligentscene/native_module.cpp",
+        "name": "native_module.cpp"
+      },
+      {
+        "id": "file:346e293658db",
+        "path": "napi/settings/napi_settings_observer.h",
+        "name": "napi_settings_observer.h"
+      },
+      {
+        "id": "file:380aec964659",
+        "path": "napi/settings/napi_settings_init.cpp",
+        "name": "napi_settings_init.cpp"
+      },
+      {
+        "id": "file:83dbab805c87",
+        "path": "napi/settings/napi_settings.h",
+        "name": "napi_settings.h"
+      },
+      {
+        "id": "file:f0501c2de0be",
+        "path": "napi/settings/napi_settings_observer.cpp",
+        "name": "napi_settings_observer.cpp"
+      },
+      {
+        "id": "file:8fc2fbdaa41f",
+        "path": "napi/settings/napi_settings.cpp",
+        "name": "napi_settings.cpp"
+      },
+      {
+        "id": "file:8d8c1a5b8f5a",
+        "path": "napi/settings/native_module.cpp",
+        "name": "native_module.cpp"
+      },
+      {
+        "id": "file:a4a9aee7d371",
+        "path": "napi/intelligentscene/common/common_utils.cpp",
+        "name": "common_utils.cpp"
+      },
+      {
+        "id": "file:1478cee85445",
+        "path": "napi/intelligentscene/common/intelligence_inner_errors.cpp",
+        "name": "intelligence_inner_errors.cpp"
+      },
+      {
+        "id": "file:4b138ef2d3e9",
+        "path": "napi/intelligentscene/common/napi_intelligent_scene_log.h",
+        "name": "napi_intelligent_scene_log.h"
+      },
+      {
+        "id": "file:3bbc8984c57d",
+        "path": "napi/intelligentscene/common/common.h",
+        "name": "common.h"
+      },
+      {
+        "id": "file:39fbfc2c3f15",
+        "path": "napi/intelligentscene/common/intelligence_inner_errors.h",
+        "name": "intelligence_inner_errors.h"
+      },
+      {
+        "id": "file:93c54c158711",
+        "path": "napi/settings/open_network_settings/napi_open_settings_page_util.h",
+        "name": "napi_open_settings_page_util.h"
+      },
+      {
+        "id": "file:6e4a05872f6f",
+        "path": "napi/settings/open_network_settings/napi_open_network_settings.cpp",
+        "name": "napi_open_network_settings.cpp"
+      },
+      {
+        "id": "file:87a69515ace2",
+        "path": "napi/settings/open_network_settings/napi_open_settings_page_util.cpp",
+        "name": "napi_open_settings_page_util.cpp"
+      },
+      {
+        "id": "file:931f73de9992",
+        "path": "napi/settings/open_network_settings/napi_open_network_settings.h",
+        "name": "napi_open_network_settings.h"
+      },
+      {
+        "id": "file:296dd711479d",
+        "path": "cj/settings/src/cj_settings_log.h",
+        "name": "cj_settings_log.h"
+      },
+      {
+        "id": "file:d05e44f23b80",
+        "path": "cj/settings/src/cj_settings_observer.cpp",
+        "name": "cj_settings_observer.cpp"
+      },
+      {
+        "id": "file:c391d45e3a97",
+        "path": "cj/settings/src/settings_ffi.h",
+        "name": "settings_ffi.h"
+      },
+      {
+        "id": "file:109471ccee3b",
+        "path": "cj/settings/src/settings_ffi.cpp",
+        "name": "settings_ffi.cpp"
+      },
+      {
+        "id": "file:01bf3752a527",
+        "path": "cj/settings/src/cj_settings.cpp",
+        "name": "cj_settings.cpp"
+      },
+      {
+        "id": "file:61f682b08735",
+        "path": "cj/settings/src/cj_settings_utils.h",
+        "name": "cj_settings_utils.h"
+      },
+      {
+        "id": "file:9e3c8920f358",
+        "path": "cj/settings/src/cj_settings.h",
+        "name": "cj_settings.h"
+      },
+      {
+        "id": "file:0fe9676dc548",
+        "path": "cj/settings/src/cj_settings_observer.h",
+        "name": "cj_settings_observer.h"
+      },
+      {
+        "id": "file:979a4cb20933",
+        "path": "ani/intelligentscene/ani_init_module.cpp",
+        "name": "ani_init_module.cpp"
+      },
+      {
+        "id": "file:41324290fba9",
+        "path": "ani/intelligentscene/ani_nodisturb.cpp",
+        "name": "ani_nodisturb.cpp"
+      },
+      {
+        "id": "file:f657bb5de8df",
+        "path": "ani/intelligentscene/ani_nodisturb.h",
+        "name": "ani_nodisturb.h"
+      },
+      {
+        "id": "file:57a13fcfac02",
+        "path": "ani/settings/ani_settings.cpp",
+        "name": "ani_settings.cpp"
+      },
+      {
+        "id": "file:3f3f618fe77b",
+        "path": "ani/settings/ani_settings_observer.cpp",
+        "name": "ani_settings_observer.cpp"
+      },
+      {
+        "id": "file:8f5d47548284",
+        "path": "ani/settings/ani_settings.h",
+        "name": "ani_settings.h"
+      },
+      {
+        "id": "file:c36d10b9bca6",
+        "path": "ani/settings/ani_settings_observer.h",
+        "name": "ani_settings_observer.h"
+      },
+      {
+        "id": "file:98ad14054b9f",
+        "path": "ani/intelligentscene/common/ani_intelligent_scene_log.h",
+        "name": "ani_intelligent_scene_log.h"
+      },
+      {
+        "id": "file:4bde7bcbe598",
+        "path": "ani/intelligentscene/common/ani_throw_error.cpp",
+        "name": "ani_throw_error.cpp"
+      },
+      {
+        "id": "file:5b02086cd634",
+        "path": "ani/intelligentscene/common/ani_throw_error.h",
+        "name": "ani_throw_error.h"
+      },
+      {
+        "id": "file:37c2e24dbc31",
+        "path": "ani/intelligentscene/common/ani_common.h",
+        "name": "ani_common.h"
+      },
+      {
+        "id": "file:7d982ed3ac96",
+        "path": "ani/settings/open_network_settings/api_open_settings_page_util.h",
+        "name": "api_open_settings_page_util.h"
+      },
+      {
+        "id": "file:038c9ba5f629",
+        "path": "ani/settings/open_network_settings/api_open_settings_page_util.cpp",
+        "name": "api_open_settings_page_util.cpp"
+      },
+      {
+        "id": "file:d6410e90ab74",
+        "path": "ani/settings/open_network_settings/ani_open_network_settings.h",
+        "name": "ani_open_network_settings.h"
+      },
+      {
+        "id": "file:3f42e1fc6a00",
+        "path": "ani/settings/open_network_settings/ani_open_network_settings.cpp",
+        "name": "ani_open_network_settings.cpp"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:22d8c4037e38",
+        "name": "string"
+      },
+      {
+        "id": "external:750c1962ef97",
+        "name": "pthread.h"
+      },
+      {
+        "id": "external:14623c347665",
+        "name": "unistd.h"
+      },
+      {
+        "id": "external:2d193647acd0",
+        "name": "map"
+      },
+      {
+        "id": "external:1dfa8e97b9eb",
+        "name": "vector"
+      },
+      {
+        "id": "external:0ed7fca574bd",
+        "name": "sstream"
+      },
+      {
+        "id": "external:f09607679815",
+        "name": "unordered_set"
+      },
+      {
+        "id": "external:16bd94b2323d",
+        "name": "json/json.h"
+      },
+      {
+        "id": "external:cf5ae9a72f95",
+        "name": "mutex"
+      },
+      {
+        "id": "external:b7d045fd51e2",
+        "name": "cstdint"
+      },
+      {
+        "id": "external:fc0fa5912f3f",
+        "name": "memory"
+      },
+      {
+        "id": "external:022b388aa1f1",
+        "name": "functional"
+      },
+      {
+        "id": "external:1ab865ad63fc",
+        "name": "array"
+      },
+      {
+        "id": "external:63f17c836db6",
+        "name": "ani.h"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:0fdd60eca8e5",
+          "to": "file:3b8ccdc90190",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0fdd60eca8e5",
+          "to": "file:3b8ccdc90190",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d28344de12da",
+          "to": "file:6b11e2031562",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d28344de12da",
+          "to": "file:6b11e2031562",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3b8ccdc90190",
+          "to": "file:af972abe6c86",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3b8ccdc90190",
+          "to": "file:af972abe6c86",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3b8ccdc90190",
+          "to": "file:6b11e2031562",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3b8ccdc90190",
+          "to": "file:6b11e2031562",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6b11e2031562",
+          "to": "file:af972abe6c86",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6b11e2031562",
+          "to": "file:af972abe6c86",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:a1a83cc74aab",
+          "type": "include_local"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:a1a83cc74aab",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:4b138ef2d3e9",
+          "type": "include_local"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:4b138ef2d3e9",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:39fbfc2c3f15",
+          "type": "include_local"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:39fbfc2c3f15",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:3bbc8984c57d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:e3395e5b9ceb",
+          "to": "file:3bbc8984c57d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:a1a83cc74aab",
+          "to": "file:3bbc8984c57d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:a1a83cc74aab",
+          "to": "file:3bbc8984c57d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:c12f006e5587",
+          "to": "file:4b138ef2d3e9",
+          "type": "include_local"
+        },
+        {
+          "from": "file:c12f006e5587",
+          "to": "file:4b138ef2d3e9",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:c12f006e5587",
+          "to": "file:a1a83cc74aab",
+          "type": "include_local"
+        },
+        {
+          "from": "file:c12f006e5587",
+          "to": "file:a1a83cc74aab",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:346e293658db",
+          "to": "file:83dbab805c87",
+          "type": "include_local"
+        },
+        {
+          "from": "file:346e293658db",
+          "to": "file:83dbab805c87",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:380aec964659",
+          "to": "file:83dbab805c87",
+          "type": "include_local"
+        },
+        {
+          "from": "file:380aec964659",
+          "to": "file:83dbab805c87",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:f0501c2de0be",
+          "to": "file:346e293658db",
+          "type": "include_local"
+        },
+        {
+          "from": "file:f0501c2de0be",
+          "to": "file:346e293658db",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8fc2fbdaa41f",
+          "to": "file:83dbab805c87",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8fc2fbdaa41f",
+          "to": "file:83dbab805c87",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8fc2fbdaa41f",
+          "to": "file:346e293658db",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8fc2fbdaa41f",
+          "to": "file:346e293658db",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8d8c1a5b8f5a",
+          "to": "file:83dbab805c87",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8d8c1a5b8f5a",
+          "to": "file:83dbab805c87",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:a4a9aee7d371",
+          "to": "file:3bbc8984c57d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:a4a9aee7d371",
+          "to": "file:3bbc8984c57d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:a4a9aee7d371",
+          "to": "file:4b138ef2d3e9",
+          "type": "include_local"
+        },
+        {
+          "from": "file:a4a9aee7d371",
+          "to": "file:4b138ef2d3e9",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:a4a9aee7d371",
+          "to": "file:39fbfc2c3f15",
+          "type": "include_local"
+        },
+        {
+          "from": "file:a4a9aee7d371",
+          "to": "file:39fbfc2c3f15",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:1478cee85445",
+          "to": "file:39fbfc2c3f15",
+          "type": "include_local"
+        },
+        {
+          "from": "file:1478cee85445",
+          "to": "file:39fbfc2c3f15",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:1478cee85445",
+          "to": "file:4b138ef2d3e9",
+          "type": "include_local"
+        },
+        {
+          "from": "file:1478cee85445",
+          "to": "file:4b138ef2d3e9",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6e4a05872f6f",
+          "to": "file:931f73de9992",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6e4a05872f6f",
+          "to": "file:931f73de9992",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6e4a05872f6f",
+          "to": "file:83dbab805c87",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6e4a05872f6f",
+          "to": "file:83dbab805c87",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:87a69515ace2",
+          "to": "file:93c54c158711",
+          "type": "include_local"
+        },
+        {
+          "from": "file:87a69515ace2",
+          "to": "file:93c54c158711",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:931f73de9992",
+          "to": "file:93c54c158711",
+          "type": "include_local"
+        },
+        {
+          "from": "file:931f73de9992",
+          "to": "file:93c54c158711",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:0fe9676dc548",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:0fe9676dc548",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:9e3c8920f358",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:9e3c8920f358",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:296dd711479d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:296dd711479d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:61f682b08735",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "file:61f682b08735",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:109471ccee3b",
+          "to": "file:c391d45e3a97",
+          "type": "include_local"
+        },
+        {
+          "from": "file:109471ccee3b",
+          "to": "file:c391d45e3a97",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:109471ccee3b",
+          "to": "file:9e3c8920f358",
+          "type": "include_local"
+        },
+        {
+          "from": "file:109471ccee3b",
+          "to": "file:9e3c8920f358",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:109471ccee3b",
+          "to": "file:0fe9676dc548",
+          "type": "include_local"
+        },
+        {
+          "from": "file:109471ccee3b",
+          "to": "file:0fe9676dc548",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "file:9e3c8920f358",
+          "type": "include_local"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "file:9e3c8920f358",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "file:296dd711479d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "file:296dd711479d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "file:61f682b08735",
+          "type": "include_local"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "file:61f682b08735",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0fe9676dc548",
+          "to": "file:61f682b08735",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0fe9676dc548",
+          "to": "file:61f682b08735",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:979a4cb20933",
+          "to": "file:f657bb5de8df",
+          "type": "include_local"
+        },
+        {
+          "from": "file:979a4cb20933",
+          "to": "file:f657bb5de8df",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:41324290fba9",
+          "to": "file:37c2e24dbc31",
+          "type": "include_local"
+        },
+        {
+          "from": "file:41324290fba9",
+          "to": "file:37c2e24dbc31",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:41324290fba9",
+          "to": "file:5b02086cd634",
+          "type": "include_local"
+        },
+        {
+          "from": "file:41324290fba9",
+          "to": "file:5b02086cd634",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:57a13fcfac02",
+          "to": "file:8f5d47548284",
+          "type": "include_local"
+        },
+        {
+          "from": "file:57a13fcfac02",
+          "to": "file:8f5d47548284",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:57a13fcfac02",
+          "to": "file:c36d10b9bca6",
+          "type": "include_local"
+        },
+        {
+          "from": "file:57a13fcfac02",
+          "to": "file:c36d10b9bca6",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3f3f618fe77b",
+          "to": "file:c36d10b9bca6",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3f3f618fe77b",
+          "to": "file:c36d10b9bca6",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:c36d10b9bca6",
+          "to": "file:8f5d47548284",
+          "type": "include_local"
+        },
+        {
+          "from": "file:c36d10b9bca6",
+          "to": "file:8f5d47548284",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:4bde7bcbe598",
+          "to": "file:5b02086cd634",
+          "type": "include_local"
+        },
+        {
+          "from": "file:4bde7bcbe598",
+          "to": "file:5b02086cd634",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:4bde7bcbe598",
+          "to": "file:98ad14054b9f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:4bde7bcbe598",
+          "to": "file:98ad14054b9f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:038c9ba5f629",
+          "to": "file:7d982ed3ac96",
+          "type": "include_local"
+        },
+        {
+          "from": "file:038c9ba5f629",
+          "to": "file:7d982ed3ac96",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d6410e90ab74",
+          "to": "file:7d982ed3ac96",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d6410e90ab74",
+          "to": "file:7d982ed3ac96",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3f42e1fc6a00",
+          "to": "file:d6410e90ab74",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3f42e1fc6a00",
+          "to": "file:d6410e90ab74",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3f42e1fc6a00",
+          "to": "file:8f5d47548284",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3f42e1fc6a00",
+          "to": "file:8f5d47548284",
+          "type": "same_module_include"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:3b8ccdc90190",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:6b11e2031562",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c12f006e5587",
+          "to": "external:750c1962ef97",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c12f006e5587",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:380aec964659",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:380aec964659",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:83dbab805c87",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0501c2de0be",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8fc2fbdaa41f",
+          "to": "external:750c1962ef97",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8fc2fbdaa41f",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8d8c1a5b8f5a",
+          "to": "external:750c1962ef97",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8d8c1a5b8f5a",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:39fbfc2c3f15",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:39fbfc2c3f15",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:93c54c158711",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:93c54c158711",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:93c54c158711",
+          "to": "external:f09607679815",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:6e4a05872f6f",
+          "to": "external:16bd94b2323d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:931f73de9992",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d05e44f23b80",
+          "to": "external:cf5ae9a72f95",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c391d45e3a97",
+          "to": "external:b7d045fd51e2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "external:b7d045fd51e2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:01bf3752a527",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:61f682b08735",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:61f682b08735",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:9e3c8920f358",
+          "to": "external:b7d045fd51e2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:9e3c8920f358",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0fe9676dc548",
+          "to": "external:022b388aa1f1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:979a4cb20933",
+          "to": "external:1ab865ad63fc",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:979a4cb20933",
+          "to": "external:63f17c836db6",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:41324290fba9",
+          "to": "external:63f17c836db6",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f657bb5de8df",
+          "to": "external:63f17c836db6",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:57a13fcfac02",
+          "to": "external:750c1962ef97",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:57a13fcfac02",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:3f3f618fe77b",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8f5d47548284",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8f5d47548284",
+          "to": "external:63f17c836db6",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5b02086cd634",
+          "to": "external:63f17c836db6",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5b02086cd634",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5b02086cd634",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:7d982ed3ac96",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:7d982ed3ac96",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:7d982ed3ac96",
+          "to": "external:f09607679815",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d6410e90ab74",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:3f42e1fc6a00",
+          "to": "external:16bd94b2323d",
+          "type": "include_system_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "napi",
+          "to_module": "applications/standard/settings/napi/settings",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi",
+          "to_module": "applications/standard/settings/napi/intelligentscene",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "native/settings",
+          "to_module": "ability_runtime",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "native/settings",
+          "to_module": "hilog",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "native/settings",
+          "to_module": "hisysevent",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "native/settings",
+          "to_module": "samgr",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/intelligentscene",
+          "to_module": "ability_base",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/intelligentscene",
+          "to_module": "napi",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/intelligentscene",
+          "to_module": "os_account",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/intelligentscene",
+          "to_module": "distributed_notification_service",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/intelligentscene",
+          "to_module": "access_token",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "native/settings",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "ability_base",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "ability_runtime",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "ace_engine",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "c_utils",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "data_share",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "hilog",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "ipc",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "napi",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "os_account",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "relational_store",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "hisysevent",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "napi/settings",
+          "to_module": "samgr",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "cj/settings",
+          "to_module": "ability_runtime",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "cj/settings",
+          "to_module": "data_share",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "cj/settings",
+          "to_module": "hilog",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "cj/settings",
+          "to_module": "ipc",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "cj/settings",
+          "to_module": "napi",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "cj/settings",
+          "to_module": "os_account",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/intelligentscene",
+          "to_module": "ability_base",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/intelligentscene",
+          "to_module": "runtime_core",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/intelligentscene",
+          "to_module": "os_account",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/intelligentscene",
+          "to_module": "distributed_notification_service",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/intelligentscene",
+          "to_module": "access_token",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/intelligentscene",
+          "to_module": "ani/intelligentscene",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "native/settings",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "ability_base",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "ability_runtime",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "ace_engine",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "c_utils",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "data_share",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "hilog",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "ipc",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "os_account",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "relational_store",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "runtime_core",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "hisysevent",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "samgr",
+          "type": "gn_build_dep"
+        },
+        {
+          "from_module": "ani/settings",
+          "to_module": "ani/settings",
+          "type": "gn_build_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "symbol_profiles": [
+        {
+          "file": "native/settings/src/napi_sys_event_util.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "native/settings/src/napi_bundle_util.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "native/settings/src/include/napi_settings_log.h",
+          "namespace_count": 1,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "native/settings/src/include/napi_sys_event_util.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "native/settings/src/include/napi_bundle_util.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "napi/intelligentscene/napi_nodisturb.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/intelligentscene/napi_nodisturb.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "napi/intelligentscene/native_module.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/settings/napi_settings_observer.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "napi/settings/napi_settings_init.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 12
+        },
+        {
+          "file": "napi/settings/napi_settings.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "napi/settings/napi_settings_observer.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/settings/napi_settings.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/settings/native_module.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/intelligentscene/common/common_utils.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/intelligentscene/common/intelligence_inner_errors.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/intelligentscene/common/napi_intelligent_scene_log.h",
+          "namespace_count": 1,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/intelligentscene/common/common.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "napi/intelligentscene/common/intelligence_inner_errors.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/settings/open_network_settings/napi_open_settings_page_util.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "napi/settings/open_network_settings/napi_open_network_settings.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/settings/open_network_settings/napi_open_settings_page_util.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "napi/settings/open_network_settings/napi_open_network_settings.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 3
+        },
+        {
+          "file": "cj/settings/src/cj_settings_observer.cpp",
+          "namespace_count": 3,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "cj/settings/src/settings_ffi.cpp",
+          "namespace_count": 3,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "cj/settings/src/cj_settings.cpp",
+          "namespace_count": 3,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "cj/settings/src/cj_settings_utils.h",
+          "namespace_count": 3,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "cj/settings/src/cj_settings.h",
+          "namespace_count": 3,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "cj/settings/src/cj_settings_observer.h",
+          "namespace_count": 3,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "ani/intelligentscene/ani_nodisturb.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/intelligentscene/ani_nodisturb.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/settings/ani_settings.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/settings/ani_settings_observer.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/settings/ani_settings.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "ani/settings/ani_settings_observer.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "ani/intelligentscene/common/ani_intelligent_scene_log.h",
+          "namespace_count": 1,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/intelligentscene/common/ani_throw_error.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/intelligentscene/common/ani_throw_error.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "ani/intelligentscene/common/ani_common.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/settings/open_network_settings/api_open_settings_page_util.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "ani/settings/open_network_settings/api_open_settings_page_util.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "ani/settings/open_network_settings/ani_open_network_settings.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 3
+        },
+        {
+          "file": "ani/settings/open_network_settings/ani_open_network_settings.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        }
+      ]
+    }
+  }
+}

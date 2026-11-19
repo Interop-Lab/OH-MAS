@@ -1,0 +1,601 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 59.529,
+    "files_scanned": 22,
+    "parse_failed_files": 0,
+    "file_node_count": 22,
+    "external_node_count": 13,
+    "edge_count": 73,
+    "unresolved_local_edges": 0,
+    "external_edges": 35,
+    "edge_type_counts": {
+      "export_external": 2,
+      "import": 38,
+      "import_external": 33
+    },
+    "resolve_mode_counts": {
+      "alias_or_package": 35,
+      "relative": 38
+    },
+    "module_dep_count": 0,
+    "file_to_file_edge_count": 38,
+    "file_to_external_edge_count": 35,
+    "repo_name": "applications_auth_widget",
+    "commit_hash": "599d7e9c0c1de72cf08da260b569cacd93914190",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:14bdce224fa0",
+        "path": "hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:9a06e71cbd13",
+        "path": "entry/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:4000bf6aead7",
+        "path": "entry/src/main/ets/extensionability/UserAuthAbility.ts",
+        "name": "UserAuthAbility.ts"
+      },
+      {
+        "id": "file:15891f703019",
+        "path": "entry/src/main/ets/pages/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:63775494213c",
+        "path": "entry/src/main/ets/mainability/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:3fa14d002305",
+        "path": "entry/src/main/ets/pages/components/FaceAuth.ets",
+        "name": "FaceAuth.ets"
+      },
+      {
+        "id": "file:4c24c3f52a63",
+        "path": "entry/src/main/ets/pages/components/PasswordAuth.ets",
+        "name": "PasswordAuth.ets"
+      },
+      {
+        "id": "file:13a55bbfd09b",
+        "path": "entry/src/main/ets/pages/components/CustomPassword.ets",
+        "name": "CustomPassword.ets"
+      },
+      {
+        "id": "file:d22b1535a119",
+        "path": "entry/src/main/ets/pages/components/FingerprintAuth.ets",
+        "name": "FingerprintAuth.ets"
+      },
+      {
+        "id": "file:643cb3b7d3a2",
+        "path": "entry/src/main/ets/common/utils/LogUtils.ts",
+        "name": "LogUtils.ts"
+      },
+      {
+        "id": "file:f9d2b2ebb172",
+        "path": "entry/src/main/ets/common/utils/AuthUtils.ts",
+        "name": "AuthUtils.ts"
+      },
+      {
+        "id": "file:eb84865281dc",
+        "path": "entry/src/main/ets/common/utils/TimeUtils.ts",
+        "name": "TimeUtils.ts"
+      },
+      {
+        "id": "file:fc55b1267052",
+        "path": "entry/src/main/ets/common/components/SixPwd.ets",
+        "name": "SixPwd.ets"
+      },
+      {
+        "id": "file:3c235f504c51",
+        "path": "entry/src/main/ets/common/components/CustomPSD.ets",
+        "name": "CustomPSD.ets"
+      },
+      {
+        "id": "file:71e006ad1c7e",
+        "path": "entry/src/main/ets/common/components/Pwd.ets",
+        "name": "Pwd.ets"
+      },
+      {
+        "id": "file:5d1e20c4eed7",
+        "path": "entry/src/main/ets/common/components/NumkeyBoard.ets",
+        "name": "NumkeyBoard.ets"
+      },
+      {
+        "id": "file:25755a1471ba",
+        "path": "entry/src/main/ets/common/vm/Constants.ts",
+        "name": "Constants.ts"
+      },
+      {
+        "id": "file:6413a04fbe08",
+        "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:ea8152509907",
+        "path": "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "name": "TestAbility.ets"
+      },
+      {
+        "id": "file:33c4849d6fa8",
+        "path": "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "name": "Index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:442df9cd2e89",
+        "name": "@ohos/hvigor-ohos-plugin"
+      },
+      {
+        "id": "external:dc100860c115",
+        "name": "@ohos.app.ability.UserAuthExtensionAbility"
+      },
+      {
+        "id": "external:71e1dd29953b",
+        "name": "@ohos.userIAM.userAuth"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:67941a1352a3",
+        "name": "@ohos.app.ability.UIAbility"
+      },
+      {
+        "id": "external:73aaffd50579",
+        "name": "@ohos.account.osAccount"
+      },
+      {
+        "id": "external:66bcc4753091",
+        "name": "@ohos.util"
+      },
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:9704b12b521b",
+        "name": "@ohos.screen"
+      },
+      {
+        "id": "external:98d0aae4f1ca",
+        "name": "@ohos.deviceInfo"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:804207546e94",
+        "name": "@ohos.app.ability.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:4000bf6aead7",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:13a55bbfd09b",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:3fa14d002305",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:d22b1535a119",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:4c24c3f52a63",
+          "type": "import"
+        },
+        {
+          "from": "file:63775494213c",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:71e006ad1c7e",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:fc55b1267052",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:71e006ad1c7e",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:fc55b1267052",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "file:3c235f504c51",
+          "type": "import"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:71e006ad1c7e",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:fc55b1267052",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:5d1e20c4eed7",
+          "type": "import"
+        },
+        {
+          "from": "file:71e006ad1c7e",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:5d1e20c4eed7",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:5d1e20c4eed7",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:14bdce224fa0",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:9a06e71cbd13",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:4000bf6aead7",
+          "to": "external:dc100860c115",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:63775494213c",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:63775494213c",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:643cb3b7d3a2",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "external:9704b12b521b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5d1e20c4eed7",
+          "to": "external:98d0aae4f1ca",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/common/components/CustomPSD.ets",
+        "entry/src/main/ets/common/components/NumkeyBoard.ets",
+        "entry/src/main/ets/common/components/Pwd.ets",
+        "entry/src/main/ets/common/components/SixPwd.ets",
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/pages/components/CustomPassword.ets",
+        "entry/src/main/ets/pages/components/FaceAuth.ets",
+        "entry/src/main/ets/pages/components/FingerprintAuth.ets",
+        "entry/src/main/ets/pages/components/PasswordAuth.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/common/utils/AuthUtils.ts",
+        "entry/src/main/ets/common/utils/LogUtils.ts",
+        "entry/src/main/ets/common/utils/TimeUtils.ts",
+        "entry/src/main/ets/common/vm/Constants.ts",
+        "entry/src/main/ets/extensionability/UserAuthAbility.ts",
+        "entry/src/main/ets/mainability/MainAbility.ts",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts"
+      ]
+    }
+  }
+}

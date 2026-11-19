@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "language": "cpp",
+    "build_time_ms": 14.034,
+    "files_scanned": 0,
+    "parse_failed_files": 0,
+    "file_node_count": 0,
+    "external_node_count": 0,
+    "edge_count": 0,
+    "unresolved_local_edges": 0,
+    "external_edges": 0,
+    "edge_type_counts": {},
+    "module_dep_count": 0,
+    "build_gn_dep_refs": 0,
+    "file_to_file_edge_count": 0,
+    "file_to_external_edge_count": 0,
+    "repo_name": "applications_camera",
+    "commit_hash": "23d62899b219d6eb961d50bfcae1df41023e475e",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [],
+    "external_modules": [],
+    "relations": {
+      "file_to_file": [],
+      "file_to_external": [],
+      "module_to_module": []
+    },
+    "anchors": {
+      "symbol_profiles": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "repo_name": "swipe_player",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/swipe_player",
+  "language": "arkts",
+  "commit_hash": "4cf35f18a5df90834ad8351555a5661e4b7e0782",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/swipe_player@4cf35f18a5df90834ad8351555a5661e4b7e0782/graph_full.json",
+  "build_time_ms": 56.894,
+  "files_scanned": 39,
+  "parse_failed_files": 0,
+  "file_node_count": 39,
+  "external_node_count": 11,
+  "edge_count": 102,
+  "unresolved_local_edges": 0,
+  "external_edges": 37,
+  "edge_type_counts": {
+    "import_external": 37,
+    "export_from": 5,
+    "import": 61
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 40,
+    "relative": 63
+  },
+  "module_dep_count": 2,
+  "file_to_file_edge_count": 65,
+  "file_to_external_edge_count": 37,
+  "extractor_version": "v0.6"
+}

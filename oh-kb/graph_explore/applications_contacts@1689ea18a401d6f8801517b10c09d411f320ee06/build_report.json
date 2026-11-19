@@ -1,0 +1,28 @@
+{
+  "repo_name": "applications_contacts",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_contacts",
+  "language": "arkts",
+  "commit_hash": "1689ea18a401d6f8801517b10c09d411f320ee06",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_contacts@1689ea18a401d6f8801517b10c09d411f320ee06/graph_full.json",
+  "build_time_ms": 257.923,
+  "files_scanned": 128,
+  "parse_failed_files": 0,
+  "file_node_count": 128,
+  "external_node_count": 13,
+  "edge_count": 375,
+  "unresolved_local_edges": 12,
+  "external_edges": 37,
+  "edge_type_counts": {
+    "import": 352,
+    "import_external": 35,
+    "export_external": 2
+  },
+  "resolve_mode_counts": {
+    "relative": 364,
+    "alias_or_package": 37
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 338,
+  "file_to_external_edge_count": 37,
+  "extractor_version": "v0.6"
+}

@@ -1,0 +1,30 @@
+{
+  "repo_name": "RocketChat",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/RocketChat",
+  "language": "arkts",
+  "commit_hash": "c52c496709ee9e7bab0135b38760718230b225f9",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/RocketChat@c52c496709ee9e7bab0135b38760718230b225f9/graph_full.json",
+  "build_time_ms": 54.313,
+  "files_scanned": 14,
+  "parse_failed_files": 0,
+  "file_node_count": 14,
+  "external_node_count": 12,
+  "edge_count": 26,
+  "unresolved_local_edges": 0,
+  "external_edges": 21,
+  "edge_type_counts": {
+    "export_external": 3,
+    "export_star": 1,
+    "re_export": 1,
+    "import": 3,
+    "import_external": 18
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 21,
+    "relative": 4
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 5,
+  "file_to_external_edge_count": 21,
+  "extractor_version": "v0.6"
+}

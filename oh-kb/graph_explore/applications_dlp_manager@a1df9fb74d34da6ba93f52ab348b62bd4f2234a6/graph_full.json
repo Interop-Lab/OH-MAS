@@ -1,0 +1,524 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 51.939,
+    "files_scanned": 18,
+    "parse_failed_files": 0,
+    "file_node_count": 18,
+    "external_node_count": 16,
+    "edge_count": 58,
+    "unresolved_local_edges": 1,
+    "external_edges": 35,
+    "edge_type_counts": {
+      "import": 24,
+      "import_external": 35
+    },
+    "resolve_mode_counts": {
+      "relative": 25,
+      "alias_or_package": 35
+    },
+    "module_dep_count": 0,
+    "file_to_file_edge_count": 24,
+    "file_to_external_edge_count": 34,
+    "repo_name": "applications_dlp_manager",
+    "commit_hash": "a1df9fb74d34da6ba93f52ab348b62bd4f2234a6",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:120bda15614e",
+        "path": "@ohos.dlpPermission.d.ts",
+        "name": "@ohos.dlpPermission.d.ts"
+      },
+      {
+        "id": "file:9cf1e62ac7b3",
+        "path": "entry/src/main/ets/pages/alert.ets",
+        "name": "alert.ets"
+      },
+      {
+        "id": "file:6c88cec514bb",
+        "path": "entry/src/main/ets/pages/encryptionSuccess.ets",
+        "name": "encryptionSuccess.ets"
+      },
+      {
+        "id": "file:87a850b4ccc3",
+        "path": "entry/src/main/ets/pages/changeEncryption.ets",
+        "name": "changeEncryption.ets"
+      },
+      {
+        "id": "file:803d8a21384a",
+        "path": "entry/src/main/ets/pages/encryptionProtection.ets",
+        "name": "encryptionProtection.ets"
+      },
+      {
+        "id": "file:15d2ac2e562b",
+        "path": "entry/src/main/ets/pages/permissionStatus.ets",
+        "name": "permissionStatus.ets"
+      },
+      {
+        "id": "file:4e39a3b49a4c",
+        "path": "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:70a4aaf1148c",
+        "path": "entry/src/main/ets/Application/AbilityStage.ts",
+        "name": "AbilityStage.ts"
+      },
+      {
+        "id": "file:3393867ace24",
+        "path": "entry/src/main/ets/DataAbility/DataAbility.ts",
+        "name": "DataAbility.ts"
+      },
+      {
+        "id": "file:909dcfad6715",
+        "path": "entry/src/main/ets/ViewAbility/ViewAbility.ts",
+        "name": "ViewAbility.ts"
+      },
+      {
+        "id": "file:7b3611775664",
+        "path": "entry/src/main/ets/common/constant.ets",
+        "name": "constant.ets"
+      },
+      {
+        "id": "file:799a19191395",
+        "path": "entry/src/main/ets/common/utils.ets",
+        "name": "utils.ets"
+      },
+      {
+        "id": "file:92dd3897b2ca",
+        "path": "entry/src/main/ets/AlertAbility/AlertAbility.ts",
+        "name": "AlertAbility.ts"
+      },
+      {
+        "id": "file:3b5bccef3ef7",
+        "path": "entry/src/main/ets/common/encryptionComponents/encrypting.ets",
+        "name": "encrypting.ets"
+      },
+      {
+        "id": "file:189d3c5fc163",
+        "path": "entry/src/main/ets/common/encryptionComponents/AddStaff.ets",
+        "name": "AddStaff.ets"
+      },
+      {
+        "id": "file:94ba7a46d2f7",
+        "path": "entry/src/main/ets/common/encryptionComponents/permission_type_select.ets",
+        "name": "permission_type_select.ets"
+      },
+      {
+        "id": "file:01a4da439548",
+        "path": "entry/src/main/ets/common/encryptionComponents/staff.ets",
+        "name": "staff.ets"
+      },
+      {
+        "id": "file:d3e5d2d7c4fe",
+        "path": "entry/src/main/ets/common/components/dlp_alert_dialog.ets",
+        "name": "dlp_alert_dialog.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      },
+      {
+        "id": "external:f7477ed1be7c",
+        "name": "@ohos.multimedia.mediaLibrary"
+      },
+      {
+        "id": "external:c8301d6eb8e2",
+        "name": "@ohos.dlpPermission"
+      },
+      {
+        "id": "external:a33af876988c",
+        "name": "@ohos.file.picker"
+      },
+      {
+        "id": "external:bb1a0fa97479",
+        "name": "@ohos.hiSysEvent"
+      },
+      {
+        "id": "external:da193028fd81",
+        "name": "@ohos.hiTraceMeter"
+      },
+      {
+        "id": "external:52bd843b9006",
+        "name": "@ohos.fileio"
+      },
+      {
+        "id": "external:67941a1352a3",
+        "name": "@ohos.app.ability.UIAbility"
+      },
+      {
+        "id": "external:a7d103f28bd3",
+        "name": "@ohos.file.fileAccess"
+      },
+      {
+        "id": "external:624ac69127f8",
+        "name": "@ohos.abilityAccessCtrl"
+      },
+      {
+        "id": "external:0a2a2fdf4c66",
+        "name": "@ohos.app.ability.AbilityStage"
+      },
+      {
+        "id": "external:328acb35ea1d",
+        "name": "@ohos.app.ability.ServiceExtensionAbility"
+      },
+      {
+        "id": "external:6ecd634aa752",
+        "name": "@ohos.app.ability.Want"
+      },
+      {
+        "id": "external:a273b9797c63",
+        "name": "@ohos.commonEvent"
+      },
+      {
+        "id": "external:73aaffd50579",
+        "name": "@ohos.account.osAccount"
+      },
+      {
+        "id": "external:a14c083a527e",
+        "name": "@ohos.bundle.bundleManager"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:9cf1e62ac7b3",
+          "to": "file:d3e5d2d7c4fe",
+          "type": "import"
+        },
+        {
+          "from": "file:6c88cec514bb",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:6c88cec514bb",
+          "to": "file:01a4da439548",
+          "type": "import"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "file:01a4da439548",
+          "type": "import"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "file:799a19191395",
+          "type": "import"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "file:d3e5d2d7c4fe",
+          "type": "import"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "file:189d3c5fc163",
+          "type": "import"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "file:3b5bccef3ef7",
+          "type": "import"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "file:d3e5d2d7c4fe",
+          "type": "import"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "file:799a19191395",
+          "type": "import"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "file:94ba7a46d2f7",
+          "type": "import"
+        },
+        {
+          "from": "file:15d2ac2e562b",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "file:799a19191395",
+          "type": "import"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "file:799a19191395",
+          "type": "import"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:799a19191395",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:3b5bccef3ef7",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:189d3c5fc163",
+          "to": "file:01a4da439548",
+          "type": "import"
+        },
+        {
+          "from": "file:189d3c5fc163",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:94ba7a46d2f7",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:01a4da439548",
+          "to": "file:7b3611775664",
+          "type": "import"
+        },
+        {
+          "from": "file:d3e5d2d7c4fe",
+          "to": "file:7b3611775664",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:6c88cec514bb",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6c88cec514bb",
+          "to": "external:f7477ed1be7c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "external:c8301d6eb8e2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "external:f7477ed1be7c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:87a850b4ccc3",
+          "to": "external:a33af876988c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "external:c8301d6eb8e2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "external:bb1a0fa97479",
+          "type": "import_external"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "external:f7477ed1be7c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "external:a33af876988c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "external:da193028fd81",
+          "type": "import_external"
+        },
+        {
+          "from": "file:803d8a21384a",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:a7d103f28bd3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:c8301d6eb8e2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:70a4aaf1148c",
+          "to": "external:0a2a2fdf4c66",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3393867ace24",
+          "to": "external:328acb35ea1d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3393867ace24",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3393867ace24",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3393867ace24",
+          "to": "external:c8301d6eb8e2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "external:328acb35ea1d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "external:c8301d6eb8e2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "external:a273b9797c63",
+          "type": "import_external"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "external:da193028fd81",
+          "type": "import_external"
+        },
+        {
+          "from": "file:909dcfad6715",
+          "to": "external:bb1a0fa97479",
+          "type": "import_external"
+        },
+        {
+          "from": "file:799a19191395",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:799a19191395",
+          "to": "external:c8301d6eb8e2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:799a19191395",
+          "to": "external:a14c083a527e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:92dd3897b2ca",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:189d3c5fc163",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/alert.ets",
+        "entry/src/main/ets/pages/changeEncryption.ets",
+        "entry/src/main/ets/pages/encryptionProtection.ets",
+        "entry/src/main/ets/pages/encryptionSuccess.ets",
+        "entry/src/main/ets/pages/permissionStatus.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/common/encryptionComponents/AddStaff.ets",
+        "entry/src/main/ets/common/encryptionComponents/encrypting.ets",
+        "entry/src/main/ets/common/encryptionComponents/permission_type_select.ets",
+        "entry/src/main/ets/common/encryptionComponents/staff.ets",
+        "entry/src/main/ets/pages/alert.ets",
+        "entry/src/main/ets/pages/changeEncryption.ets",
+        "entry/src/main/ets/pages/encryptionProtection.ets",
+        "entry/src/main/ets/pages/encryptionSuccess.ets",
+        "entry/src/main/ets/pages/permissionStatus.ets"
+      ],
+      "builders": [
+        "entry/src/main/ets/pages/changeEncryption.ets",
+        "entry/src/main/ets/pages/encryptionProtection.ets",
+        "entry/src/main/ets/pages/encryptionSuccess.ets",
+        "entry/src/main/ets/pages/permissionStatus.ets"
+      ],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "@ohos.dlpPermission.d.ts",
+        "entry/src/main/ets/AlertAbility/AlertAbility.ts",
+        "entry/src/main/ets/Application/AbilityStage.ts",
+        "entry/src/main/ets/DataAbility/DataAbility.ts",
+        "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "entry/src/main/ets/ViewAbility/ViewAbility.ts",
+        "entry/src/main/ets/common/constant.ets",
+        "entry/src/main/ets/common/encryptionComponents/AddStaff.ets",
+        "entry/src/main/ets/common/encryptionComponents/permission_type_select.ets",
+        "entry/src/main/ets/common/encryptionComponents/staff.ets"
+      ]
+    }
+  }
+}

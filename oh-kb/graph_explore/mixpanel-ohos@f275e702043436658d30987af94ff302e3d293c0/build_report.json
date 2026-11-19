@@ -1,0 +1,28 @@
+{
+  "repo_name": "mixpanel-ohos",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/mixpanel-ohos",
+  "language": "arkts",
+  "commit_hash": "f275e702043436658d30987af94ff302e3d293c0",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/mixpanel-ohos@f275e702043436658d30987af94ff302e3d293c0/graph_full.json",
+  "build_time_ms": 26.866,
+  "files_scanned": 12,
+  "parse_failed_files": 0,
+  "file_node_count": 12,
+  "external_node_count": 10,
+  "edge_count": 26,
+  "unresolved_local_edges": 1,
+  "external_edges": 23,
+  "edge_type_counts": {
+    "export_external": 3,
+    "import_external": 20,
+    "import": 3
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 23,
+    "relative": 4
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 3,
+  "file_to_external_edge_count": 23,
+  "extractor_version": "v0.6"
+}

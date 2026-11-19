@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 54.313,
+    "files_scanned": 14,
+    "parse_failed_files": 0,
+    "file_node_count": 14,
+    "external_node_count": 12,
+    "edge_count": 26,
+    "unresolved_local_edges": 0,
+    "external_edges": 21,
+    "edge_type_counts": {
+      "export_external": 3,
+      "export_star": 1,
+      "re_export": 1,
+      "import": 3,
+      "import_external": 18
+    },
+    "resolve_mode_counts": {
+      "alias_or_package": 21,
+      "relative": 4
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 5,
+    "file_to_external_edge_count": 21,
+    "repo_name": "RocketChat",
+    "commit_hash": "c52c496709ee9e7bab0135b38760718230b225f9",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:14bdce224fa0",
+        "path": "hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:9d223a76e946",
+        "path": "rocketchat/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:c9c65a493a26",
+        "path": "rocketchat/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:9a06e71cbd13",
+        "path": "entry/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:2918f56fe866",
+        "path": "rocketchat/src/main/ets/components/rest/RestAPI.ets",
+        "name": "RestAPI.ets"
+      },
+      {
+        "id": "file:3fdd311d1d11",
+        "path": "rocketchat/src/main/ets/components/rest/core/HttpRequestConnector.ets",
+        "name": "HttpRequestConnector.ets"
+      },
+      {
+        "id": "file:20c30e69fe1e",
+        "path": "entry/src/main/ets/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:5be649b90e33",
+        "path": "entry/src/main/ets/pages/restApiSample.ets",
+        "name": "restApiSample.ets"
+      },
+      {
+        "id": "file:ef3d340f1577",
+        "path": "entry/src/main/ets/entryability/EntryAbility.ts",
+        "name": "EntryAbility.ts"
+      },
+      {
+        "id": "file:6413a04fbe08",
+        "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:efa835106427",
+        "path": "entry/src/ohosTest/ets/test/RestApiJsUnit.test.ets",
+        "name": "RestApiJsUnit.test.ets"
+      },
+      {
+        "id": "file:ea8152509907",
+        "path": "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "name": "TestAbility.ets"
+      },
+      {
+        "id": "file:33c4849d6fa8",
+        "path": "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "name": "Index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:442df9cd2e89",
+        "name": "@ohos/hvigor-ohos-plugin"
+      },
+      {
+        "id": "external:10583baab28e",
+        "name": "@ohos.net.http"
+      },
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      },
+      {
+        "id": "external:567ee22c9228",
+        "name": "@system.prompt"
+      },
+      {
+        "id": "external:a362426f9e82",
+        "name": "@ohos/rocketchat"
+      },
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:359fa699ecf4",
+        "name": "@ohos.application.Ability"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:d64ccc4e2fa9",
+        "name": "@ohos.application.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      },
+      {
+        "id": "external:e4cbbbc6de62",
+        "name": "rocketchat_ohos"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:c9c65a493a26",
+          "to": "file:2918f56fe866",
+          "type": "export_star"
+        },
+        {
+          "from": "file:c9c65a493a26",
+          "to": "file:2918f56fe866",
+          "type": "re_export"
+        },
+        {
+          "from": "file:2918f56fe866",
+          "to": "file:3fdd311d1d11",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:efa835106427",
+          "type": "import"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:14bdce224fa0",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:9d223a76e946",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:9a06e71cbd13",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:3fdd311d1d11",
+          "to": "external:10583baab28e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5be649b90e33",
+          "to": "external:567ee22c9228",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5be649b90e33",
+          "to": "external:a362426f9e82",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:efa835106427",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:efa835106427",
+          "to": "external:e4cbbbc6de62",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "rocketchat",
+          "to_module": "rocketchat/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/restApiSample.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/restApiSample.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/entryability/EntryAbility.ts",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/test/RestApiJsUnit.test.ets",
+        "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts"
+      ]
+    }
+  }
+}

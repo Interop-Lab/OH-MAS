@@ -1,0 +1,31 @@
+{
+  "repo_name": "dialoghub",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/dialoghub",
+  "language": "arkts",
+  "commit_hash": "222d27dd8d772a6d965bb6af8abb0ed9ecd67484",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/dialoghub@222d27dd8d77/graph_full.json",
+  "build_time_ms": 332.735,
+  "files_scanned": 168,
+  "parse_failed_files": 0,
+  "file_node_count": 168,
+  "external_node_count": 26,
+  "edge_count": 733,
+  "unresolved_local_edges": 1,
+  "external_edges": 122,
+  "edge_type_counts": {
+    "import_external": 116,
+    "export_star": 2,
+    "re_export": 2,
+    "import": 579,
+    "export_external": 6,
+    "export_from": 32
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 122,
+    "relative": 614
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 611,
+  "file_to_external_edge_count": 122,
+  "extractor_version": "v0.6"
+}

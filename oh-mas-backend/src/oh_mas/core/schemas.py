@@ -5,6 +5,26 @@ from typing import Literal
 
 Mode = Literal["easy", "medium", "hard"]
 
+FREE_TEXT_FEEDBACK_MODES = frozenset({"free_text_nonaccumulative", "free_text_accumulative"})
+
+
+def _typed_dict(obj) -> dict:
+    """asdict() minus the free-text-ablation bookkeeping fields while they hold their defaults.
+
+    Typed (default) runs then serialise exactly as the original main version did.
+    """
+
+    def clean(value):
+        if isinstance(value, dict):
+            return {k: clean(v) for k, v in value.items()
+                    if not (k in ("raw_linter_output", "raw_audit_feedback", "constraint_ledger") and not v)
+                    and not (k == "feedback_mode" and v == "typed_accumulative")}
+        if isinstance(value, list):
+            return [clean(v) for v in value]
+        return value
+
+    return clean(asdict(obj))
+
 
 @dataclass
 class Alarm:
@@ -45,6 +65,25 @@ class RepairContract:
 
 
 @dataclass
+class TypedConstraint:
+    """One entry of the cumulative constraint set H_t, derived deterministically from a failed audit."""
+    key: str
+    level: Literal["L1", "L2", "L3"]
+    round_added: int  # attempt index t whose failure F_t produced this entry
+    rule: str = ""
+    file: str = ""
+    line: int | None = None
+    statement: str = ""
+    evidence: str = ""
+    patch_id: str = ""
+    last_seen_round: int = 0
+    times_seen: int = 1
+
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+
+@dataclass
 class GWProfileInput:
     """Projected input for GW Agent - only what GW needs from TaskProfiledEvent."""
     task_id: str
@@ -54,9 +93,11 @@ class GWProfileInput:
     retry_index: int = 0
     introduced_rules: list[str] = field(default_factory=list)
     previous_audit_feedback: "PreviousAuditFeedback | None" = None
+    raw_audit_feedback: str = ""  # A2' ablation: free-text replacement for previous_audit_feedback
+    constraint_ledger: list[TypedConstraint] = field(default_factory=list)  # cumulative H_t (ledger runs only)
 
     def to_dict(self) -> dict:
-        return asdict(self)
+        return _typed_dict(self)
 
 
 @dataclass
@@ -160,9 +201,10 @@ class PreviousAuditFeedback:
     reason: str
     failed_patches: list[str] = field(default_factory=list)
     patch_diagnostics: list[PatchDiagnostic] = field(default_factory=list)
+    raw_linter_output: str = ""  # raw checker stdout/stderr, carried for A2' free-text feedback
 
     def to_dict(self) -> dict:
-        return asdict(self)
+        return _typed_dict(self)
 
 
 @dataclass
@@ -174,10 +216,12 @@ class TaskProfiledEvent:
     gw_input: GWInput
     cp_input: CPInput
     previous_audit_feedback: PreviousAuditFeedback | None = None
+    feedback_mode: str = "typed_accumulative"
+    constraint_ledger: list[TypedConstraint] = field(default_factory=list)  # cumulative H_t (ledger runs only)
     event: str = "task.profiled"
 
     def to_dict(self) -> dict:
-        return asdict(self)
+        return _typed_dict(self)
 
 
 @dataclass
@@ -271,7 +315,6 @@ class PreciseContextSlice:
     mode: Mode
     repair_contract: RepairContract = field(default_factory=RepairContract)
     raw_graph_slice: dict = field(default_factory=dict)
-    rule_context_mode: str = ""
     slicing_strategy: str = "bfs_only"
     llm_reasoning: str = ""
     agent_confidence: float = 0.0
@@ -373,11 +416,12 @@ class AuditDoneFailedEvent:
     reason: str
     failed_patches: list[str] = field(default_factory=list)
     patch_diagnostics: list[PatchDiagnostic] = field(default_factory=list)
+    raw_linter_output: str = ""
     event: str = "audit.done"
     result: str = "failed"
 
     def to_dict(self) -> dict:
-        return asdict(self)
+        return _typed_dict(self)
 
 
 AuditDoneEvent = AuditDonePassedEvent | AuditDoneFailedEvent

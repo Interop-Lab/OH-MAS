@@ -1,0 +1,27 @@
+{
+  "repo_name": "applications_filepicker",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_filepicker",
+  "language": "arkts",
+  "commit_hash": "30e30ca21387b7bfe00bc0c19df0b06dced70949",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_filepicker@30e30ca21387b7bfe00bc0c19df0b06dced70949/graph_full.json",
+  "build_time_ms": 87.967,
+  "files_scanned": 41,
+  "parse_failed_files": 0,
+  "file_node_count": 41,
+  "external_node_count": 20,
+  "edge_count": 133,
+  "unresolved_local_edges": 0,
+  "external_edges": 35,
+  "edge_type_counts": {
+    "import": 99,
+    "import_external": 35
+  },
+  "resolve_mode_counts": {
+    "relative": 99,
+    "alias_or_package": 35
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 99,
+  "file_to_external_edge_count": 34,
+  "extractor_version": "v0.6"
+}

@@ -1,0 +1,28 @@
+{
+  "repo_name": "applications_mms",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_mms",
+  "language": "arkts",
+  "commit_hash": "12a79ede3a7dc83c354fbc37fa90076f14a222c3",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_mms@12a79ede3a7dc83c354fbc37fa90076f14a222c3/graph_full.json",
+  "build_time_ms": 2530.684,
+  "files_scanned": 565,
+  "parse_failed_files": 0,
+  "file_node_count": 565,
+  "external_node_count": 152,
+  "edge_count": 5032,
+  "unresolved_local_edges": 0,
+  "external_edges": 1527,
+  "edge_type_counts": {
+    "import_external": 1502,
+    "import": 3636,
+    "export_external": 25
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 1527,
+    "relative": 3636
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 3555,
+  "file_to_external_edge_count": 1477,
+  "extractor_version": "v0.6"
+}

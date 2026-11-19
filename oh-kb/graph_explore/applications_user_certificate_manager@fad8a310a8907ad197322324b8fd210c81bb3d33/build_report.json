@@ -1,0 +1,27 @@
+{
+  "repo_name": "applications_user_certificate_manager",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_user_certificate_manager",
+  "language": "arkts",
+  "commit_hash": "fad8a310a8907ad197322324b8fd210c81bb3d33",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_user_certificate_manager@fad8a310a8907ad197322324b8fd210c81bb3d33/graph_full.json",
+  "build_time_ms": 171.388,
+  "files_scanned": 63,
+  "parse_failed_files": 0,
+  "file_node_count": 63,
+  "external_node_count": 32,
+  "edge_count": 284,
+  "unresolved_local_edges": 1,
+  "external_edges": 100,
+  "edge_type_counts": {
+    "import_external": 100,
+    "import": 192
+  },
+  "resolve_mode_counts": {
+    "relative": 193,
+    "alias_or_package": 100
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 184,
+  "file_to_external_edge_count": 100,
+  "extractor_version": "v0.6"
+}

@@ -1,0 +1,29 @@
+{
+  "repo_name": "ohos_banner",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_banner",
+  "language": "arkts",
+  "commit_hash": "d2eef6f378999cad8e9cf38d8f912834c7c7873a",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_banner@d2eef6f378999cad8e9cf38d8f912834c7c7873a/graph_full.json",
+  "build_time_ms": 171.38,
+  "files_scanned": 27,
+  "parse_failed_files": 0,
+  "file_node_count": 27,
+  "external_node_count": 17,
+  "edge_count": 69,
+  "unresolved_local_edges": 0,
+  "external_edges": 39,
+  "edge_type_counts": {
+    "export_external": 3,
+    "export_from": 13,
+    "import_external": 36,
+    "import": 23
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 39,
+    "relative": 36
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 34,
+  "file_to_external_edge_count": 35,
+  "extractor_version": "v0.6"
+}

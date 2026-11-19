@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import shutil
 import subprocess
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -39,7 +40,10 @@ def prepare_isolated_workspace(
                 func(path)
             else:
                 raise
-        shutil.rmtree(workspace_root, onexc=handle_remove_readonly)
+        try:
+            shutil.rmtree(workspace_root, onexc=handle_remove_readonly)
+        except OSError:
+            workspace_root.rename(workspace_root.with_name(f"{workspace_root.name}.stale-{int(time.time())}"))
 
     workspace_root.mkdir(parents=True, exist_ok=True)
 
@@ -58,8 +62,7 @@ def prepare_isolated_workspace(
     )
 
     # 如果指定了commit_hash，checkout到该commit
-    # 跳过 "latest" 标记，表示使用当前HEAD
-    if commit_hash and commit_hash != "latest":
+    if commit_hash:
         subprocess.run(
             ["git", "-C", str(repo_path), "checkout", "--quiet", commit_hash],
             check=True,

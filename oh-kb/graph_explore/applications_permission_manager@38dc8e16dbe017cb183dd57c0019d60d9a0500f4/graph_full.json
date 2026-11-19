@@ -1,0 +1,682 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 83.625,
+    "files_scanned": 23,
+    "parse_failed_files": 0,
+    "file_node_count": 23,
+    "external_node_count": 11,
+    "edge_count": 87,
+    "unresolved_local_edges": 0,
+    "external_edges": 41,
+    "edge_type_counts": {
+      "import": 49,
+      "import_external": 41
+    },
+    "resolve_mode_counts": {
+      "relative": 49,
+      "alias_or_package": 41
+    },
+    "module_dep_count": 0,
+    "file_to_file_edge_count": 46,
+    "file_to_external_edge_count": 41,
+    "repo_name": "applications_permission_manager",
+    "commit_hash": "38dc8e16dbe017cb183dd57c0019d60d9a0500f4",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:d02243dc490a",
+        "path": "permissionmanager/src/main/ets/pages/application-tertiary.ets",
+        "name": "application-tertiary.ets"
+      },
+      {
+        "id": "file:e9b43fd030ae",
+        "path": "permissionmanager/src/main/ets/pages/permission-access-record.ets",
+        "name": "permission-access-record.ets"
+      },
+      {
+        "id": "file:9dd0248fe212",
+        "path": "permissionmanager/src/main/ets/pages/authority-management.ets",
+        "name": "authority-management.ets"
+      },
+      {
+        "id": "file:5fdbc87d2ba5",
+        "path": "permissionmanager/src/main/ets/pages/authority-tertiary.ets",
+        "name": "authority-tertiary.ets"
+      },
+      {
+        "id": "file:2e586ff7d526",
+        "path": "permissionmanager/src/main/ets/pages/authority-tertiary-groups.ets",
+        "name": "authority-tertiary-groups.ets"
+      },
+      {
+        "id": "file:6472cadef081",
+        "path": "permissionmanager/src/main/ets/pages/dialogPlus.ets",
+        "name": "dialogPlus.ets"
+      },
+      {
+        "id": "file:e058c627725f",
+        "path": "permissionmanager/src/main/ets/pages/other-permissions.ets",
+        "name": "other-permissions.ets"
+      },
+      {
+        "id": "file:1f043049223d",
+        "path": "permissionmanager/src/main/ets/pages/authority-secondary.ets",
+        "name": "authority-secondary.ets"
+      },
+      {
+        "id": "file:bf8611a98519",
+        "path": "permissionmanager/src/main/ets/pages/application-secondary.ets",
+        "name": "application-secondary.ets"
+      },
+      {
+        "id": "file:92053edc2271",
+        "path": "permissionmanager/src/main/ets/MainAbility/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:3650dd23a064",
+        "path": "permissionmanager/src/main/ets/Application/AbilityStage.ts",
+        "name": "AbilityStage.ts"
+      },
+      {
+        "id": "file:8a74fbc5be20",
+        "path": "permissionmanager/src/main/ets/ServiceExtAbility/ServiceExtAbility.ts",
+        "name": "ServiceExtAbility.ts"
+      },
+      {
+        "id": "file:ffcad839ea59",
+        "path": "permissionmanager/src/main/ets/common/utils/constant.ets",
+        "name": "constant.ets"
+      },
+      {
+        "id": "file:223358d998a3",
+        "path": "permissionmanager/src/main/ets/common/utils/utils.ets",
+        "name": "utils.ets"
+      },
+      {
+        "id": "file:23f2eba99ee0",
+        "path": "permissionmanager/src/main/ets/common/model/permissionGroup.ets",
+        "name": "permissionGroup.ets"
+      },
+      {
+        "id": "file:df3404ac3e11",
+        "path": "permissionmanager/src/main/ets/common/model/bundle.ets",
+        "name": "bundle.ets"
+      },
+      {
+        "id": "file:b02dbae2e7d1",
+        "path": "permissionmanager/src/main/ets/common/components/backBar.ets",
+        "name": "backBar.ets"
+      },
+      {
+        "id": "file:42c2400af817",
+        "path": "permissionmanager/src/main/ets/common/components/search.ets",
+        "name": "search.ets"
+      },
+      {
+        "id": "file:41c860615266",
+        "path": "permissionmanager/src/main/ets/common/components/dialog.ets",
+        "name": "dialog.ets"
+      },
+      {
+        "id": "file:007d24d02aa8",
+        "path": "permissionmanager/src/main/ets/common/components/alphabeticalIndex.ets",
+        "name": "alphabeticalIndex.ets"
+      },
+      {
+        "id": "file:20c30e69fe1e",
+        "path": "entry/src/main/ets/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:4e39a3b49a4c",
+        "path": "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:70a4aaf1148c",
+        "path": "entry/src/main/ets/Application/AbilityStage.ts",
+        "name": "AbilityStage.ts"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:eb2898f50c8f",
+        "name": "@system.router"
+      },
+      {
+        "id": "external:7ca1d79ae43c",
+        "name": "@ohos.bundle"
+      },
+      {
+        "id": "external:624ac69127f8",
+        "name": "@ohos.abilityAccessCtrl"
+      },
+      {
+        "id": "external:f94df28743e4",
+        "name": "@ohos.resourceManager"
+      },
+      {
+        "id": "external:6b013945e817",
+        "name": "@ohos.privacyManager"
+      },
+      {
+        "id": "external:39c5f894eff3",
+        "name": "@ohos.rpc"
+      },
+      {
+        "id": "external:359fa699ecf4",
+        "name": "@ohos.application.Ability"
+      },
+      {
+        "id": "external:eb1cf1dae649",
+        "name": "@ohos.application.AbilityStage"
+      },
+      {
+        "id": "external:1c764c2e6a61",
+        "name": "@ohos.application.ServiceExtensionAbility"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:0c6658fd6b99",
+        "name": "@ohos.display"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:d02243dc490a",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:d02243dc490a",
+          "to": "file:223358d998a3",
+          "type": "import"
+        },
+        {
+          "from": "file:d02243dc490a",
+          "to": "file:41c860615266",
+          "type": "import"
+        },
+        {
+          "from": "file:d02243dc490a",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:d02243dc490a",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "file:223358d998a3",
+          "type": "import"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "file:007d24d02aa8",
+          "type": "import"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "file:42c2400af817",
+          "type": "import"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "file:223358d998a3",
+          "type": "import"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "file:007d24d02aa8",
+          "type": "import"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "file:42c2400af817",
+          "type": "import"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "file:223358d998a3",
+          "type": "import"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "file:41c860615266",
+          "type": "import"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "file:007d24d02aa8",
+          "type": "import"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "file:42c2400af817",
+          "type": "import"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "file:223358d998a3",
+          "type": "import"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "file:41c860615266",
+          "type": "import"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "file:223358d998a3",
+          "type": "import"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "file:df3404ac3e11",
+          "type": "import"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:e058c627725f",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:e058c627725f",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:e058c627725f",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:1f043049223d",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:1f043049223d",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:1f043049223d",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:bf8611a98519",
+          "to": "file:b02dbae2e7d1",
+          "type": "import"
+        },
+        {
+          "from": "file:bf8611a98519",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:bf8611a98519",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:223358d998a3",
+          "to": "file:23f2eba99ee0",
+          "type": "import"
+        },
+        {
+          "from": "file:223358d998a3",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:b02dbae2e7d1",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:42c2400af817",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:41c860615266",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        },
+        {
+          "from": "file:007d24d02aa8",
+          "to": "file:ffcad839ea59",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:d02243dc490a",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d02243dc490a",
+          "to": "external:7ca1d79ae43c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d02243dc490a",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d02243dc490a",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "external:7ca1d79ae43c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e9b43fd030ae",
+          "to": "external:6b013945e817",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "external:7ca1d79ae43c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9dd0248fe212",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "external:7ca1d79ae43c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5fdbc87d2ba5",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "external:7ca1d79ae43c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2e586ff7d526",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "external:7ca1d79ae43c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6472cadef081",
+          "to": "external:39c5f894eff3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e058c627725f",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e058c627725f",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1f043049223d",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:bf8611a98519",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:bf8611a98519",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:92053edc2271",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3650dd23a064",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8a74fbc5be20",
+          "to": "external:1c764c2e6a61",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8a74fbc5be20",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8a74fbc5be20",
+          "to": "external:0c6658fd6b99",
+          "type": "import_external"
+        },
+        {
+          "from": "file:223358d998a3",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:223358d998a3",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:b02dbae2e7d1",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:b02dbae2e7d1",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:70a4aaf1148c",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/index.ets",
+        "permissionmanager/src/main/ets/pages/application-secondary.ets",
+        "permissionmanager/src/main/ets/pages/application-tertiary.ets",
+        "permissionmanager/src/main/ets/pages/authority-management.ets",
+        "permissionmanager/src/main/ets/pages/authority-secondary.ets",
+        "permissionmanager/src/main/ets/pages/authority-tertiary-groups.ets",
+        "permissionmanager/src/main/ets/pages/authority-tertiary.ets",
+        "permissionmanager/src/main/ets/pages/dialogPlus.ets",
+        "permissionmanager/src/main/ets/pages/other-permissions.ets",
+        "permissionmanager/src/main/ets/pages/permission-access-record.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/index.ets",
+        "permissionmanager/src/main/ets/common/components/alphabeticalIndex.ets",
+        "permissionmanager/src/main/ets/common/components/backBar.ets",
+        "permissionmanager/src/main/ets/common/components/search.ets",
+        "permissionmanager/src/main/ets/pages/application-secondary.ets",
+        "permissionmanager/src/main/ets/pages/application-tertiary.ets",
+        "permissionmanager/src/main/ets/pages/authority-management.ets",
+        "permissionmanager/src/main/ets/pages/authority-secondary.ets",
+        "permissionmanager/src/main/ets/pages/authority-tertiary-groups.ets",
+        "permissionmanager/src/main/ets/pages/authority-tertiary.ets",
+        "permissionmanager/src/main/ets/pages/dialogPlus.ets",
+        "permissionmanager/src/main/ets/pages/other-permissions.ets",
+        "permissionmanager/src/main/ets/pages/permission-access-record.ets"
+      ],
+      "builders": [
+        "permissionmanager/src/main/ets/pages/application-secondary.ets",
+        "permissionmanager/src/main/ets/pages/authority-management.ets",
+        "permissionmanager/src/main/ets/pages/authority-secondary.ets",
+        "permissionmanager/src/main/ets/pages/authority-tertiary-groups.ets",
+        "permissionmanager/src/main/ets/pages/authority-tertiary.ets",
+        "permissionmanager/src/main/ets/pages/other-permissions.ets",
+        "permissionmanager/src/main/ets/pages/permission-access-record.ets"
+      ],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/Application/AbilityStage.ts",
+        "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "permissionmanager/src/main/ets/Application/AbilityStage.ts",
+        "permissionmanager/src/main/ets/MainAbility/MainAbility.ts",
+        "permissionmanager/src/main/ets/ServiceExtAbility/ServiceExtAbility.ts",
+        "permissionmanager/src/main/ets/common/utils/constant.ets"
+      ]
+    }
+  }
+}

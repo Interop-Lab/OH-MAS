@@ -1,0 +1,29 @@
+{
+  "repo_name": "ohrouter",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohrouter",
+  "language": "arkts",
+  "commit_hash": "cc38c771190d20622fb42a5751030a0c41b6792c",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohrouter@cc38c771190d20622fb42a5751030a0c41b6792c/graph_full.json",
+  "build_time_ms": 392.068,
+  "files_scanned": 291,
+  "parse_failed_files": 5,
+  "file_node_count": 291,
+  "external_node_count": 25,
+  "edge_count": 726,
+  "unresolved_local_edges": 12,
+  "external_edges": 252,
+  "edge_type_counts": {
+    "import_external": 248,
+    "export_from": 25,
+    "import": 456,
+    "export_external": 4
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 252,
+    "relative": 493
+  },
+  "module_dep_count": 2,
+  "file_to_file_edge_count": 481,
+  "file_to_external_edge_count": 245,
+  "extractor_version": "v0.6"
+}

@@ -1,0 +1,29 @@
+{
+  "repo_name": "ohos_video_trimmer",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_video_trimmer",
+  "language": "arkts",
+  "commit_hash": "2370bb8ec30fbdf7dbc5c1d683e7f0b7fb7e90fd",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_video_trimmer@2370bb8ec30fbdf7dbc5c1d683e7f0b7fb7e90fd/graph_full.json",
+  "build_time_ms": 38.179,
+  "files_scanned": 20,
+  "parse_failed_files": 0,
+  "file_node_count": 20,
+  "external_node_count": 14,
+  "edge_count": 40,
+  "unresolved_local_edges": 0,
+  "external_edges": 28,
+  "edge_type_counts": {
+    "export_external": 3,
+    "export_from": 2,
+    "import": 11,
+    "import_external": 25
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 28,
+    "relative": 13
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 13,
+  "file_to_external_edge_count": 27,
+  "extractor_version": "v0.6"
+}

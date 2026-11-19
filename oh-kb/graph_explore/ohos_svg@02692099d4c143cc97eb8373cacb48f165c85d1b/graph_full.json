@@ -1,0 +1,456 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 44.482,
+    "files_scanned": 27,
+    "parse_failed_files": 0,
+    "file_node_count": 27,
+    "external_node_count": 10,
+    "edge_count": 39,
+    "unresolved_local_edges": 4,
+    "external_edges": 15,
+    "edge_type_counts": {
+      "export_from": 3,
+      "import_external": 15,
+      "import": 22
+    },
+    "resolve_mode_counts": {
+      "relative": 29,
+      "alias_or_package": 15
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 25,
+    "file_to_external_edge_count": 14,
+    "repo_name": "ohos_svg",
+    "commit_hash": "02692099d4c143cc97eb8373cacb48f165c85d1b",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:1d6152512f68",
+        "path": "ohos_svg/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:549ab5473c38",
+        "path": "ohos_svg/src/main/ets/components/SVGImageView.ets",
+        "name": "SVGImageView.ets"
+      },
+      {
+        "id": "file:6370c06cc390",
+        "path": "ohos_svg/src/main/ets/components/model/PolyLineView.ets",
+        "name": "PolyLineView.ets"
+      },
+      {
+        "id": "file:f3d7adeddf2b",
+        "path": "ohos_svg/src/main/ets/components/model/LineView.ets",
+        "name": "LineView.ets"
+      },
+      {
+        "id": "file:dbfd92c9a88c",
+        "path": "ohos_svg/src/main/ets/components/model/PolygonView.ets",
+        "name": "PolygonView.ets"
+      },
+      {
+        "id": "file:5254d5f690f4",
+        "path": "ohos_svg/src/main/ets/components/model/ImageSvg.ets",
+        "name": "ImageSvg.ets"
+      },
+      {
+        "id": "file:e443e215762c",
+        "path": "ohos_svg/src/main/ets/components/model/PathView.ets",
+        "name": "PathView.ets"
+      },
+      {
+        "id": "file:81f99c6a91ea",
+        "path": "ohos_svg/src/main/ets/components/model/CircleView.ets",
+        "name": "CircleView.ets"
+      },
+      {
+        "id": "file:f0904e4c6f62",
+        "path": "ohos_svg/src/main/ets/components/model/RectView.ets",
+        "name": "RectView.ets"
+      },
+      {
+        "id": "file:b2f5060bcf28",
+        "path": "ohos_svg/src/main/ets/components/model/SVG.ets",
+        "name": "SVG.ets"
+      },
+      {
+        "id": "file:a346969e9402",
+        "path": "ohos_svg/src/main/ets/components/model/EllipseView.ets",
+        "name": "EllipseView.ets"
+      },
+      {
+        "id": "file:37ef64fd518b",
+        "path": "ohos_svg/src/main/ets/components/model/Group.ets",
+        "name": "Group.ets"
+      },
+      {
+        "id": "file:f8b06bdba978",
+        "path": "ohos_svg/src/main/ets/components/common/SVGManager.ts",
+        "name": "SVGManager.ts"
+      },
+      {
+        "id": "file:ecd1828fe4ed",
+        "path": "ohos_svg/src/main/ets/components/common/SVGXMLChecker.ts",
+        "name": "SVGXMLChecker.ts"
+      },
+      {
+        "id": "file:cdc3c70eae8e",
+        "path": "ohos_svg/src/main/ets/components/common/constants/SVGExample.ts",
+        "name": "SVGExample.ts"
+      },
+      {
+        "id": "file:93aa9778c693",
+        "path": "ohos_svg/src/main/ets/components/common/constants/SVGAttrConstants.ts",
+        "name": "SVGAttrConstants.ts"
+      },
+      {
+        "id": "file:794d031f4023",
+        "path": "ohos_svg/src/main/ets/components/common/constants/SVGXMLConstants.ts",
+        "name": "SVGXMLConstants.ts"
+      },
+      {
+        "id": "file:20c30e69fe1e",
+        "path": "entry/src/main/ets/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:17e2d4c7073b",
+        "path": "entry/src/main/ets/pages/second.ets",
+        "name": "second.ets"
+      },
+      {
+        "id": "file:4e39a3b49a4c",
+        "path": "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:70a4aaf1148c",
+        "path": "entry/src/main/ets/Application/AbilityStage.ts",
+        "name": "AbilityStage.ts"
+      },
+      {
+        "id": "file:7d780571c012",
+        "path": "entry/src/ohosTest/ets/TestRunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:28f956b079a3",
+        "path": "entry/src/ohosTest/ets/TestAbility/TestAbility.ts",
+        "name": "TestAbility.ts"
+      },
+      {
+        "id": "file:2cda739f46c8",
+        "path": "entry/src/ohosTest/ets/Application/AbilityStage.ts",
+        "name": "AbilityStage.ts"
+      },
+      {
+        "id": "file:4753d5e92854",
+        "path": "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "name": "index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:0c6658fd6b99",
+        "name": "@ohos.display"
+      },
+      {
+        "id": "external:94bab56730c4",
+        "name": "@ohos.convertxml"
+      },
+      {
+        "id": "external:ac6df745ae80",
+        "name": "@ohos/ohos-svg"
+      },
+      {
+        "id": "external:d09567cb01fe",
+        "name": "@ohos.matrix4"
+      },
+      {
+        "id": "external:359fa699ecf4",
+        "name": "@ohos.application.Ability"
+      },
+      {
+        "id": "external:eb1cf1dae649",
+        "name": "@ohos.application.AbilityStage"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:d64ccc4e2fa9",
+        "name": "@ohos.application.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      },
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:1d6152512f68",
+          "to": "file:cdc3c70eae8e",
+          "type": "export_from"
+        },
+        {
+          "from": "file:1d6152512f68",
+          "to": "file:f8b06bdba978",
+          "type": "export_from"
+        },
+        {
+          "from": "file:1d6152512f68",
+          "to": "file:549ab5473c38",
+          "type": "export_from"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:37ef64fd518b",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:81f99c6a91ea",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:a346969e9402",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:f3d7adeddf2b",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:6370c06cc390",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:dbfd92c9a88c",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:e443e215762c",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:f0904e4c6f62",
+          "type": "import"
+        },
+        {
+          "from": "file:549ab5473c38",
+          "to": "file:5254d5f690f4",
+          "type": "import"
+        },
+        {
+          "from": "file:6370c06cc390",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:f3d7adeddf2b",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:dbfd92c9a88c",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:5254d5f690f4",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:e443e215762c",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:81f99c6a91ea",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:f0904e4c6f62",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:a346969e9402",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:37ef64fd518b",
+          "to": "file:b2f5060bcf28",
+          "type": "import"
+        },
+        {
+          "from": "file:f8b06bdba978",
+          "to": "file:ecd1828fe4ed",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:549ab5473c38",
+          "to": "external:0c6658fd6b99",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f8b06bdba978",
+          "to": "external:94bab56730c4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:ac6df745ae80",
+          "type": "import_external"
+        },
+        {
+          "from": "file:17e2d4c7073b",
+          "to": "external:d09567cb01fe",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:70a4aaf1148c",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d780571c012",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d780571c012",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2cda739f46c8",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4753d5e92854",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "ohos_svg",
+          "to_module": "ohos_svg/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/second.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/second.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "ohos_svg/src/main/ets/components/SVGImageView.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/Application/AbilityStage.ts",
+        "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "entry/src/ohosTest/ets/Application/AbilityStage.ts",
+        "entry/src/ohosTest/ets/TestAbility/TestAbility.ts",
+        "entry/src/ohosTest/ets/TestRunner/OpenHarmonyTestRunner.ts",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "ohos_svg/src/main/ets/components/SVGImageView.ets",
+        "ohos_svg/src/main/ets/components/common/constants/SVGAttrConstants.ts",
+        "ohos_svg/src/main/ets/components/common/constants/SVGExample.ts",
+        "ohos_svg/src/main/ets/components/common/constants/SVGXMLConstants.ts",
+        "ohos_svg/src/main/ets/components/model/CircleView.ets",
+        "ohos_svg/src/main/ets/components/model/EllipseView.ets",
+        "ohos_svg/src/main/ets/components/model/Group.ets",
+        "ohos_svg/src/main/ets/components/model/ImageSvg.ets",
+        "ohos_svg/src/main/ets/components/model/LineView.ets",
+        "ohos_svg/src/main/ets/components/model/PathView.ets",
+        "ohos_svg/src/main/ets/components/model/PolyLineView.ets",
+        "ohos_svg/src/main/ets/components/model/PolygonView.ets",
+        "ohos_svg/src/main/ets/components/model/RectView.ets",
+        "ohos_svg/src/main/ets/components/model/SVG.ets"
+      ]
+    }
+  }
+}

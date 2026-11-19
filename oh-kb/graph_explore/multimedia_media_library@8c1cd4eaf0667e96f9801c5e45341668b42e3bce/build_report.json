@@ -1,0 +1,25 @@
+{
+  "repo_name": "multimedia_media_library",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/multimedia_media_library",
+  "language": "cpp",
+  "commit_hash": "8c1cd4eaf0667e96f9801c5e45341668b42e3bce",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/multimedia_media_library@8c1cd4eaf066/graph_full.json",
+  "build_time_ms": 31957.378,
+  "files_scanned": 3187,
+  "parse_failed_files": 0,
+  "file_node_count": 3187,
+  "external_node_count": 125,
+  "edge_count": 6285,
+  "unresolved_local_edges": 17140,
+  "external_edges": 4599,
+  "edge_type_counts": {
+    "include_system_external": 4599,
+    "include_local": 846,
+    "same_module_include": 846
+  },
+  "module_dep_count": 379,
+  "build_gn_dep_refs": 7118,
+  "file_to_file_edge_count": 1690,
+  "file_to_external_edge_count": 4595,
+  "extractor_version": "v0.6"
+}

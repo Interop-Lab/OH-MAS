@@ -19,19 +19,16 @@ from oh_mas.agents.gw_tools import (
     list_neighbors,
     read_lines,
     read_symbol,
-    run_arkts_generic_slicer,
-    run_rule_slicer,
     set_allowed_transformations,
     set_must_fix,
     set_must_not_touch,
     show_alarm,
     show_graph_overview,
     show_knowledge,
-    show_rule_mode,
     view_file_structure,
 )
+from oh_mas.core.constraint_ledger import merge_into_contract
 from oh_mas.core.schemas import GWProfileInput, KnowledgePack, PreciseContextSlice
-from oh_mas.gw_context_lib import get_context_mode
 
 
 @dataclass
@@ -46,6 +43,7 @@ class GWWorkerConfig:
     deterministic_fallback: bool = True
     llm_max_retries: int = 3  # LLM 请求重试次数
     llm_retry_delay: float = 1.0  # 重试间隔基数（秒），指数退避
+    merge_ledger: bool = False  # union the cumulative typed-constraint ledger into the contract after synthesis
 
 
 @dataclass
@@ -54,6 +52,7 @@ class GWWorkerResult:
     trace_steps: list[dict] = field(default_factory=list)
     llm_traces: list[dict] = field(default_factory=list)
     mode: str = "deterministic"
+    ledger_merge: dict = field(default_factory=dict)
 
 
 class GWWorker:
@@ -62,7 +61,25 @@ class GWWorker:
     def __init__(self, config: GWWorkerConfig | None = None):
         self.config = config or GWWorkerConfig()
 
-    def run(
+    def run(self, *, gw_input: GWProfileInput, **kwargs) -> GWWorkerResult:
+        result = self._run_core(gw_input=gw_input, **kwargs)
+        ledger = getattr(gw_input, "constraint_ledger", None)
+        if self.config.merge_ledger and ledger:
+            # Deterministic, after the LLM: ledger items are always present, whatever the LLM wrote.
+            stats = merge_into_contract(result.precise_slice.repair_contract, ledger)
+            result.ledger_merge = stats
+            result.trace_steps.append(
+                {
+                    "step": len(result.trace_steps) + 1,
+                    "phase": "ledger",
+                    "tool": "merge_constraint_ledger",
+                    "input": {"ledger_size": len(ledger)},
+                    "output": stats,
+                }
+            )
+        return result
+
+    def _run_core(
         self,
         *,
         gw_input: GWProfileInput,
@@ -72,10 +89,10 @@ class GWWorker:
         retry_index: int = 0,
         introduced_rules: list[str] | None = None,
     ) -> GWWorkerResult:
-        rule_mode = get_context_mode(gw_input.alarm.rule)
         introduced_rules = introduced_rules or []
 
         previous_audit_feedback = getattr(gw_input, "previous_audit_feedback", None)
+        raw_audit_feedback = getattr(gw_input, "raw_audit_feedback", "")
 
         if self.config.enable_llm and self.config.llm_model:
             # 尝试 LLM 驱动模式
@@ -84,13 +101,13 @@ class GWWorker:
                 mode=gw_input.mode,
                 alarm=gw_input.alarm,
                 graph_data=graph_data,
-                rule_mode=rule_mode,
                 knowledge_pack=knowledge_pack,
                 repo_root=repo_root,
                 phase="llm",
                 retry_index=retry_index,
                 introduced_rules=introduced_rules,
                 previous_audit_feedback=previous_audit_feedback,
+                raw_audit_feedback=raw_audit_feedback,
             )
             try:
                 precise, llm_traces = self._run_llm_loop(llm_ctx)
@@ -116,10 +133,10 @@ class GWWorker:
                     mode=gw_input.mode,
                     alarm=gw_input.alarm,
                     graph_data=graph_data,
-                    rule_mode=rule_mode,
                     knowledge_pack=knowledge_pack,
                     repo_root=repo_root,
                     phase="fallback",
+                    raw_audit_feedback=raw_audit_feedback,
                 )
                 # 记录 fallback 原因
                 fallback_ctx.record_step("llm_fallback_triggered", {
@@ -141,13 +158,13 @@ class GWWorker:
             mode=gw_input.mode,
             alarm=gw_input.alarm,
             graph_data=graph_data,
-            rule_mode=rule_mode,
             knowledge_pack=knowledge_pack,
             repo_root=repo_root,
             phase="deterministic",
             retry_index=retry_index,
             introduced_rules=introduced_rules,
             previous_audit_feedback=previous_audit_feedback,
+            raw_audit_feedback=raw_audit_feedback,
         )
         precise = self._run_deterministic_policy(ctx)
         return GWWorkerResult(precise_slice=precise, trace_steps=list(ctx.trace_steps), mode="deterministic")
@@ -220,183 +237,24 @@ class GWWorker:
             )
         return finalized, llm_traces
 
-    @staticmethod
-    def _format_rule_specific_section(alarm_rule: str) -> str:
-        """Build rule-specific protocol section for systemic C++ patterns.
+    def _format_previous_failure_section(self, ctx: GWToolContext) -> str:
+        """Build a failure-context section for the GW system prompt.
 
-        For cppcheck rules where the same pattern appears 10-30 times in a single
-        file, the default GW flow (read alarm location → write contract) is
-        insufficient: must_fix ends up covering only the alarmed line, leaving the
-        rest unfixed and causing DA L2 failure on every attempt.
-
-        This section is injected into the GW system prompt ONLY for these rules,
-        giving GW explicit grep-first, enumerate-all, verify-zero instructions.
+        In free_text_mode (A2' ablation), ctx.previous_audit_feedback is None and
+        ctx.raw_audit_feedback contains plain text — renders that directly.
+        In normal mode, converts structured PreviousAuditFeedback into actionable
+        contract guidance so GW can reason about what went wrong.
         """
-        SYSTEMIC_RULES = {
-            "cppcheck/knownConditionTrueFalse",
-            "cppcheck/passedByValue",
-            "cppcheck/variableScope",
-            "cppcheck/useStlAlgorithm",
-            "cppcheck/stlIfStrFind",
-            "cppcheck/memleak",
-        }
-        if alarm_rule not in SYSTEMIC_RULES:
+        # A2' ablation: no structured feedback, only raw text
+        if ctx.previous_audit_feedback is None:
+            if ctx.raw_audit_feedback:
+                return (
+                    f"\n## PREVIOUS ATTEMPT FAILURE (retry_index={ctx.retry_index})\n"
+                    f"{ctx.raw_audit_feedback}\n"
+                )
             return ""
 
-        # Per-rule: grep pattern(s) and must_fix item template
-        RULE_DETAILS: dict[str, dict] = {
-            "cppcheck/knownConditionTrueFalse": {
-                "summary": "redundant always-true/false condition (null-check or unsigned >= 0)",
-                "grep_advice": (
-                    'Extract the variable name from the alarm message, then:\n'
-                    '  grep_file(file=alarm_file, pattern=r"if \\(VARNAME != nullptr\\)", max_matches=50)\n'
-                    '  grep_file(file=alarm_file, pattern=r"if \\(VARNAME != NULL\\)", max_matches=50)\n'
-                    "Replace VARNAME with the actual variable. Also search for the condition pattern\n"
-                    "from the alarm message directly."
-                ),
-                "must_fix_template": (
-                    '"<file>:<line> — if (VARNAME != nullptr) is always true here; '
-                    "remove the guard and keep the body unconditionally"
-                    '"  ← one entry per matching line'
-                ),
-                "allowed_tx": (
-                    "Remove the `if (ptr != nullptr)` guard at EVERY matched line; "
-                    "keep the body (delete/free/cleanup) executing unconditionally. "
-                    "Safe because cppcheck's dataflow analysis proves the pointer is "
-                    "always non-null at those points."
-                ),
-            },
-            "cppcheck/passedByValue": {
-                "summary": "expensive copy of std::string / std::vector / std::map parameter",
-                "grep_advice": (
-                    "  grep_file(file=alarm_file, pattern=r'std::string [a-zA-Z]', max_matches=50)\n"
-                    "  grep_file(file=alarm_file, pattern=r'std::vector<', max_matches=50)\n"
-                    "  grep_file(file=alarm_file, pattern=r'std::map<', max_matches=50)\n"
-                    "Also grep the corresponding header (.h) for declarations."
-                ),
-                "must_fix_template": (
-                    '"<file>:<line> — parameter `NAME` (std::TYPE) should be const TYPE&; '
-                    "change both declaration and definition"
-                    '"  ← one entry per parameter'
-                ),
-                "allowed_tx": (
-                    "Change `std::string NAME` → `const std::string& NAME` (likewise for "
-                    "vector/map). Apply to BOTH the .h declaration and .cpp definition. "
-                    "Skip parameters that are modified inside the function body or moved."
-                ),
-            },
-            "cppcheck/variableScope": {
-                "summary": "variable declared at function top but only used in an inner block",
-                "grep_advice": (
-                    "Read the full alarm file with read_lines(file, 1, <large_N>). "
-                    "For each function that contains the alarm line, scan all variable "
-                    "declarations at function scope and check whether the variable is used "
-                    "only in one nested block (if/for/while)."
-                ),
-                "must_fix_template": (
-                    '"<file>:<line> — variable `NAME` declared at function scope but only '
-                    "used inside the following if/for block; move declaration to first use"
-                    '"  ← one entry per variable'
-                ),
-                "allowed_tx": (
-                    "Move variable declaration from function top to just before its first use, "
-                    "or into the innermost block that contains all its uses. "
-                    "For C89-style files (declarations-at-top), check if C99 inline "
-                    "declarations are allowed before changing style."
-                ),
-            },
-            "cppcheck/useStlAlgorithm": {
-                "summary": "raw loop replaceable by a standard STL algorithm",
-                "grep_advice": (
-                    "  grep_file(file=alarm_file, pattern=r'for.*push_back', max_matches=50)\n"
-                    "  grep_file(file=alarm_file, pattern=r'\\.begin\\(\\).*\\.end\\(\\)', max_matches=50)\n"
-                    "  grep_file(file=alarm_file, pattern=r'for.*\\.size\\(\\)', max_matches=50)"
-                ),
-                "must_fix_template": (
-                    '"<file>:<line> — raw for-loop over container; replace with '
-                    "std::transform / std::find_if / std::count_if / std::all_of"
-                    '"  ← one entry per loop'
-                ),
-                "allowed_tx": (
-                    "Replace raw loops with the matching STL algorithm: "
-                    "push_back loops → std::transform + std::back_inserter; "
-                    "search-and-break → std::find_if; counting loops → std::count_if; "
-                    "all-satisfy loops → std::all_of. "
-                    "Add #include <algorithm> (and <numeric> for accumulate) if absent."
-                ),
-            },
-            "cppcheck/stlIfStrFind": {
-                "summary": "string::find() used in a condition where starts_with/ends_with is clearer",
-                "grep_advice": (
-                    "  grep_file(file=alarm_file, pattern=r'\\.find\\(', max_matches=50)\n"
-                    "Then filter hits for patterns: `== 0`, `== size()`, `>= 0`, `!= 0` in the same line."
-                ),
-                "must_fix_template": (
-                    '"<file>:<line> — `str.find(X) == 0` should be `str.starts_with(X)` (C++20); '
-                    "or `str.rfind(X) == str.size()-N` should be `str.ends_with(X)`"
-                    '"  ← one entry per occurrence'
-                ),
-                "allowed_tx": (
-                    "Replace `find(x) == 0` with `starts_with(x)` and "
-                    "`rfind(x) == size-N` with `ends_with(x)` (requires C++20). "
-                    "Do NOT change `find(x) != npos` — that is a different pattern."
-                ),
-            },
-            "cppcheck/memleak": {
-                "summary": "heap allocation leaks on some exit paths",
-                "grep_advice": (
-                    "  grep_file(file=alarm_file, pattern=r'\\bnew\\b', max_matches=50)\n"
-                    "  grep_file(file=alarm_file, pattern=r'malloc\\(|calloc\\(|realloc\\(', max_matches=50)\n"
-                    "For EACH allocation site, read the enclosing function and trace "
-                    "every return / goto / early-exit path."
-                ),
-                "must_fix_template": (
-                    '"<file>:<line> — early return / error path does not free `NAME` allocated at line N; '
-                    "add delete/free before this return"
-                    '"  ← one entry per leaking exit path'
-                ),
-                "allowed_tx": (
-                    "Add `free(ptr)` / `delete ptr` on every exit path that currently skips it. "
-                    "Also check for pointer reassignment without freeing the old value first. "
-                    "Consider RAII (std::unique_ptr) if the function is complex."
-                ),
-            },
-        }
-
-        details = RULE_DETAILS[alarm_rule]
-        return (
-            f"\n## ⚠️ SYSTEMIC PATTERN PROTOCOL — `{alarm_rule}`\n\n"
-            f"**Pattern type:** {details['summary']}\n\n"
-            "This rule flags a **file-level pattern**: the alarm line is the *first* instance\n"
-            "cppcheck detected, but the same file typically has **10–30 more occurrences**.\n"
-            "If must_fix covers only the alarm line, DA L2 will fail because cppcheck will\n"
-            "report the remaining unfixed instances at different line numbers.\n\n"
-            "### Mandatory workflow for this rule\n\n"
-            "**Step 1 — grep BEFORE writing must_fix**\n"
-            f"{details['grep_advice']}\n\n"
-            "Use `max_matches=50` to avoid truncation on large files (default is 20).\n\n"
-            "**Step 2 — must_fix: one entry per instance**\n"
-            f"Template: {details['must_fix_template']}\n\n"
-            "Every line returned by grep_file that matches the pattern MUST appear in\n"
-            "must_fix. Do NOT summarise as 'fix all occurrences' — CP cannot act on vague items.\n\n"
-            "**Step 3 — allowed_transformations**\n"
-            f"{details['allowed_tx']}\n\n"
-            "**Step 4 — verify**\n"
-            "After setting must_fix, call grep_file once more with the same pattern and confirm\n"
-            "that every returned line number is already listed in must_fix. If any are missing,\n"
-            "call set_must_fix again with the complete list before finalize_context.\n"
-        )
-
-    @staticmethod
-    def _format_previous_failure_section(ctx: GWToolContext) -> str:
-        """Build a structured failure-context section for the GW system prompt.
-
-        Converts the previous_audit_feedback into actionable contract guidance so
-        GW can reason about what went wrong and avoid repeating the same mistakes.
-        """
         fb = ctx.previous_audit_feedback
-        if fb is None:
-            return ""
 
         lines: list[str] = [
             f"\n## ⚠️ PREVIOUS ATTEMPT FAILURE (retry_index={ctx.retry_index})",
@@ -423,21 +281,9 @@ class GWWorker:
                                 lines.append("  ```")
             lines.append("")
             lines.append("**Contract guidance for L2 failure:**")
-            _SYSTEMIC_CPP = {
-                "cppcheck/knownConditionTrueFalse", "cppcheck/passedByValue",
-                "cppcheck/variableScope", "cppcheck/useStlAlgorithm",
-                "cppcheck/stlIfStrFind", "cppcheck/memleak",
-            }
-            if fb_rule := getattr(ctx.alarm, "rule", ""):
-                if fb_rule in _SYSTEMIC_CPP:
-                    lines.append("- The residual locations above are ADDITIONAL instances of the same file-level pattern.")
-                    lines.append("- Use grep_file (max_matches=50) on the alarm file to enumerate ALL remaining instances.")
-                    lines.append("- must_fix MUST list every line returned by grep_file — not just the residual lines above.")
-                    lines.append("- The SYSTEMIC PATTERN PROTOCOL section above specifies the exact grep patterns to use.")
-                else:
-                    lines.append("- Each residual alarm line above is a SEPARATE callsite that needs its own fix.")
-                    lines.append("- Scan the ENTIRE alarm file for all occurrences — the previous contract likely missed some.")
-                    lines.append("- must_fix must enumerate EVERY occurrence in the file, not just the alarm line.")
+            lines.append("- Each residual alarm line above is a SEPARATE callsite that needs its own fix.")
+            lines.append("- Scan the ENTIRE alarm file for all occurrences — the previous contract likely missed some.")
+            lines.append("- must_fix must enumerate EVERY occurrence in the file, not just the alarm line.")
 
         elif fb.failed_level == "L3":
             intro_list = "\n".join(f"  - {r}" for r in ctx.introduced_rules) if ctx.introduced_rules else "  (none)"
@@ -463,10 +309,6 @@ class GWWorker:
             lines.append("- must_fix must now include items for BOTH the original alarm AND each introduced rule above.")
             lines.append("- must_not_touch should be stricter — previous patch already caused regressions.")
             lines.append("- allowed_transformations must include patterns from knowledge_pack for each introduced rule.")
-            lines.append("- For `suggest-reuseid-for-if-else-reusable-component`: eliminate ALL if-else from @Reusable")
-            lines.append("  struct methods (including @Builder) by replacing with .visibility() ternary.")
-            lines.append("- For `replace-nested-reusable-component-by-builder`: inline nested custom components")
-            lines.append("  completely into @Builder methods; @Builder must contain ONLY built-in UI components.")
 
         return "\n".join(lines)
 
@@ -488,25 +330,28 @@ class GWWorker:
             )
             retry_section += self._format_previous_failure_section(ctx)
 
-        rule_specific_section = self._format_rule_specific_section(ctx.alarm.rule)
+        knowledge_desc = (
+            "- **knowledge_pack** — how to fix: `rule_templates` give concrete buggy→fixed patterns to base\n"
+            "  `allowed_transformations` on; `experiences` warn about known regression risks that must inform\n"
+            "  `must_not_touch`.\n"
+        )
+
+        how_to_start = (
+            "Read the alarm description first, then navigate to the alarm location and\n"
+            "verify the code before writing the contract. Use the dependency graph (`show_graph_overview`)\n"
+            "to identify related files and code elements that may be affected.\n\n"
+        )
 
         system_prompt = (
             "You are GW (Graph Weaver), a contract synthesis agent in OH-MAS (OpenHarmony Multi-Agent System).\n"
             + retry_section
-            + rule_specific_section +
+            +
             "\n## Your PRIMARY Mission: Repair Contract Synthesis\n"
-            "Your user message contains three pre-loaded inputs:\n\n"
-            "- **alarm** — where to start: `file` + `line_start` is the exact location to read first.\n"
-            "- **rule_mode** — what to look for: `description` explains the full fix semantics and cascade traps;\n"
-            "  `must_include` lists the code elements your contract MUST cover;\n"
-            "  `snippet_hints` tells you which code blocks to read;\n"
-            "  `slice_strategy` tells you whether cross-file graph analysis is needed.\n"
-            "- **knowledge_pack** — how to fix: `rule_templates` give concrete buggy→fixed patterns to base\n"
-            "  `allowed_transformations` on; `experiences` warn about known regression risks that must inform\n"
-            "  `must_not_touch`.\n\n"
-            "Read `rule_mode.description` and `knowledge_pack` first, then navigate to the alarm location and\n"
-            "verify each item in `rule_mode.must_include` against actual code before writing the contract.\n\n"
-            f"## Step Limit\n\u26a0\ufe0f Maximum {max_steps} steps.\n"
+            + "Your user message contains pre-loaded inputs:\n\n"
+            + "- **alarm** — where to start: `file` + `line_start` is the exact location to read first.\n"
+            + knowledge_desc
+            + how_to_start
+            + f"## Step Limit\n\u26a0\ufe0f Maximum {max_steps} steps.\n"
             "Flow: 2-3 steps reading code \u2192 1 step building contract \u2192 1 step finalize\n\n"
             "## Available Tools\n\n"
             "### Phase 1 \u2014 Code Verification:\n"
@@ -521,10 +366,10 @@ class GWWorker:
             "## Response Format\n"
             'Return exactly ONE JSON object per turn: {"tool": "tool_name", "args": {...}}\n\n'
             "## Quality Criteria\n"
-            "\u2705 GOOD must_fix: \"Index.ets:42 \u2014 LazyForEach iterates VideoItem but VideoItemComponent lacks @Reusable\"\n"
+            "\u2705 GOOD must_fix: \"<file>:<line> \u2014 <concrete pattern at this line and why it triggers the rule>\"\n"
             "\u274c BAD must_fix: \"fix the alarm\"\n\n"
-            "\u2705 GOOD allowed_transformations: \"Add @Reusable to VideoItemComponent; add aboutToReuse(params) to reset @State props\"\n"
-            "\u274c BAD allowed_transformations: \"use @Reusable\"\n\n"
+            "\u2705 GOOD allowed_transformations: \"<concrete edit derived from a rule template or experience, naming the symbols involved>\"\n"
+            "\u274c BAD allowed_transformations: \"apply the template\"\n\n"
             "## Anti-Patterns\n"
             "- \u274c Starting with graph exploration before reading alarm location code\n"
             "- \u274c Writing vague contract items without file:line evidence\n"
@@ -537,18 +382,17 @@ class GWWorker:
         # Pre-execute info tools and record steps so trace stays complete
         alarm_data = show_alarm(ctx)
         knowledge_data = show_knowledge(ctx)
-        rule_mode_data = show_rule_mode(ctx)
 
         payload: dict = {
             "alarm": alarm_data,
-            "rule_mode": rule_mode_data,
             "knowledge_pack": knowledge_data,
             "mode": ctx.mode,
             "retry_index": ctx.retry_index,
             "introduced_rules": ctx.introduced_rules,
             "previous_audit_feedback": (
                 ctx.previous_audit_feedback.to_dict()
-                if ctx.previous_audit_feedback is not None else None
+                if ctx.previous_audit_feedback is not None
+                else ({"raw_feedback": ctx.raw_audit_feedback} if ctx.raw_audit_feedback else None)
             ),
             "graph_meta": ctx.graph_data.get("meta", {}),
             "repo_root_available": bool(ctx.repo_root),
@@ -638,8 +482,6 @@ class GWWorker:
     def _execute_tool(self, ctx: GWToolContext, tool_name: str, args: dict) -> Any:
         if tool_name == "show_alarm":
             return show_alarm(ctx)
-        if tool_name == "show_rule_mode":
-            return show_rule_mode(ctx)
         if tool_name == "show_knowledge":
             return show_knowledge(ctx)
         if tool_name == "show_graph_overview":

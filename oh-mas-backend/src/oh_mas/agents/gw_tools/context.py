@@ -13,13 +13,13 @@ class GWToolContext:
     mode: Mode
     alarm: Alarm
     graph_data: dict
-    rule_mode: dict
     knowledge_pack: KnowledgePack | None = None
     repo_root: str = ""
     phase: str = "main"  # "llm" | "fallback" | "main" - 标记当前执行阶段
     retry_index: int = 0
     introduced_rules: list[str] = field(default_factory=list)
     previous_audit_feedback: PreviousAuditFeedback | None = None
+    raw_audit_feedback: str = ""  # A2' ablation: free-text replacement for previous_audit_feedback
     trace_steps: list[dict[str, Any]] = field(default_factory=list)
     repair_contract: RepairContract = field(default_factory=RepairContract)
 

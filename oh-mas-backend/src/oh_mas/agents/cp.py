@@ -41,6 +41,28 @@ class CPConfig:
         return self.step_limit
 
 
+def normalize_patch(diff: str) -> str:
+    """Whitespace- and header-insensitive form of a unified diff, for comparing parallel candidates."""
+    kept = []
+    for line in (diff or "").splitlines():
+        if line.startswith(("diff --git", "index ", "--- ", "+++ ", "@@")):
+            continue
+        line = " ".join(line.split())
+        if line:
+            kept.append(line)
+    return "\n".join(kept)
+
+
+def summarize_patches(diffs: list[str], model_ids: list[str] | None = None) -> dict:
+    normalized = [normalize_patch(d) for d in diffs if d and d.strip()]
+    return {
+        "n_workers": len(diffs),
+        "n_with_patch": len(normalized),
+        "n_distinct_patches": len(set(normalized)),
+        "models": list(model_ids or []),
+    }
+
+
 class CPAgent:
     def __init__(self, config: CPConfig | None = None):
         self.config = config or CPConfig()
@@ -53,10 +75,12 @@ class CPAgent:
             step_limit=self.config.step_limit,
             cost_limit=self.config.cost_limit,
         )
+        self.last_round_summary: dict = {}
 
     def generate(self, *, profiled: TaskProfiledEvent, context: ContextReadyEvent) -> PatchesReadyEvent:
         self.last_debug = []
         self.last_llm_traces = []
+        self.last_round_summary = {}
         model_ids = list(profiled.cp_input.models)
         if not model_ids:
             return PatchesReadyEvent(task_id=profiled.task_id, mode=profiled.mode, patches=[])
@@ -106,6 +130,7 @@ class CPAgent:
             self.last_debug.append(debug)
             self.last_llm_traces.append(trace_ref)
 
+        self.last_round_summary = summarize_patches([p.diff for p in patches], [p.model_id for p in patches])
         return PatchesReadyEvent(task_id=profiled.task_id, mode=profiled.mode, patches=patches)
 
     def _run_worker_by_index(

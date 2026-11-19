@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 64.765,
+    "files_scanned": 28,
+    "parse_failed_files": 0,
+    "file_node_count": 28,
+    "external_node_count": 5,
+    "edge_count": 28,
+    "unresolved_local_edges": 0,
+    "external_edges": 37,
+    "edge_type_counts": {
+      "export_from": 15,
+      "import_external": 37,
+      "import": 2
+    },
+    "resolve_mode_counts": {
+      "relative": 17,
+      "alias_or_package": 37
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 17,
+    "file_to_external_edge_count": 11,
+    "repo_name": "ohos_vlayout",
+    "commit_hash": "e7d9ae087f9f02a1990b6d56ae9ac0f23b9a3eee",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:5e3173bb3cc7",
+        "path": "vlayout/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:8409adfd19dd",
+        "path": "vlayout/src/main/ets/components/MainPage/MainPage.ets",
+        "name": "MainPage.ets"
+      },
+      {
+        "id": "file:685139d23f89",
+        "path": "vlayout/src/main/ets/components/common/GridLayoutHelper.ets",
+        "name": "GridLayoutHelper.ets"
+      },
+      {
+        "id": "file:a89aa1879307",
+        "path": "vlayout/src/main/ets/components/common/OnePlusNLayoutHelper.ets",
+        "name": "OnePlusNLayoutHelper.ets"
+      },
+      {
+        "id": "file:ee542bb5d2ca",
+        "path": "vlayout/src/main/ets/components/common/RangeGridLayoutHelper.ets",
+        "name": "RangeGridLayoutHelper.ets"
+      },
+      {
+        "id": "file:b9b818018a34",
+        "path": "vlayout/src/main/ets/components/common/StaggeredGridLayoutHelper.ets",
+        "name": "StaggeredGridLayoutHelper.ets"
+      },
+      {
+        "id": "file:67597122575c",
+        "path": "vlayout/src/main/ets/components/common/BannerLayoutHelper.ets",
+        "name": "BannerLayoutHelper.ets"
+      },
+      {
+        "id": "file:37a155776d93",
+        "path": "vlayout/src/main/ets/components/common/ColumnLayoutHelper.ets",
+        "name": "ColumnLayoutHelper.ets"
+      },
+      {
+        "id": "file:5782bd6fed71",
+        "path": "vlayout/src/main/ets/components/common/JumpBar.ets",
+        "name": "JumpBar.ets"
+      },
+      {
+        "id": "file:456d326e43ee",
+        "path": "vlayout/src/main/ets/components/common/DefaultLayoutHelper.ets",
+        "name": "DefaultLayoutHelper.ets"
+      },
+      {
+        "id": "file:784a2bff260f",
+        "path": "vlayout/src/main/ets/components/common/OnePlusNLayoutHelperEx.ets",
+        "name": "OnePlusNLayoutHelperEx.ets"
+      },
+      {
+        "id": "file:589cc6f77112",
+        "path": "vlayout/src/main/ets/components/common/StickyLayoutHelper.ets",
+        "name": "StickyLayoutHelper.ets"
+      },
+      {
+        "id": "file:46730d305181",
+        "path": "vlayout/src/main/ets/components/common/LinearLayoutHelper.ets",
+        "name": "LinearLayoutHelper.ets"
+      },
+      {
+        "id": "file:91072f1513a4",
+        "path": "vlayout/src/main/ets/components/common/FloatLayoutHelper.ets",
+        "name": "FloatLayoutHelper.ets"
+      },
+      {
+        "id": "file:e8252ad194b5",
+        "path": "vlayout/src/main/ets/components/common/ScrollFixLayoutHelper.ets",
+        "name": "ScrollFixLayoutHelper.ets"
+      },
+      {
+        "id": "file:c951f712873d",
+        "path": "vlayout/src/main/ets/components/common/FixLayoutHelper.ets",
+        "name": "FixLayoutHelper.ets"
+      },
+      {
+        "id": "file:018996773c2e",
+        "path": "vlayout/src/main/ets/components/common/SingleLayoutHelper.ets",
+        "name": "SingleLayoutHelper.ets"
+      },
+      {
+        "id": "file:0ad156670baa",
+        "path": "entry/src/main/ets/MainAbility/app.ets",
+        "name": "app.ets"
+      },
+      {
+        "id": "file:edc4ba2f1493",
+        "path": "entry/src/main/ets/MainAbility/pages/MainSample.ets",
+        "name": "MainSample.ets"
+      },
+      {
+        "id": "file:94793269f99a",
+        "path": "entry/src/main/ets/MainAbility/pages/TestSample.ets",
+        "name": "TestSample.ets"
+      },
+      {
+        "id": "file:6c5d65a84ab8",
+        "path": "entry/src/main/ets/MainAbility/pages/VLayoutSample.ets",
+        "name": "VLayoutSample.ets"
+      },
+      {
+        "id": "file:186b3087c734",
+        "path": "entry/src/main/ets/MainAbility/pages/DebugSample.ets",
+        "name": "DebugSample.ets"
+      },
+      {
+        "id": "file:1ef336c6881b",
+        "path": "entry/src/main/ets/MainAbility/pages/RootSample.ets",
+        "name": "RootSample.ets"
+      },
+      {
+        "id": "file:13c3ed900bc3",
+        "path": "entry/src/main/ets/MainAbility/pages/OnePlusNLayoutSample.ets",
+        "name": "OnePlusNLayoutSample.ets"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:e2ca27e99fb8",
+        "path": "entry/src/ohosTest/ets/TestAbility/app.ets",
+        "name": "app.ets"
+      },
+      {
+        "id": "file:4753d5e92854",
+        "path": "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "name": "index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:0c6658fd6b99",
+        "name": "@ohos.display"
+      },
+      {
+        "id": "external:8032eea8eb00",
+        "name": "@ohos/vlayout"
+      },
+      {
+        "id": "external:eb2898f50c8f",
+        "name": "@system.router"
+      },
+      {
+        "id": "external:b4b7428b3b59",
+        "name": "hypium/index"
+      },
+      {
+        "id": "external:d64ccc4e2fa9",
+        "name": "@ohos.application.abilityDelegatorRegistry"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:67597122575c",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:37a155776d93",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:456d326e43ee",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:c951f712873d",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:91072f1513a4",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:685139d23f89",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:5782bd6fed71",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:46730d305181",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:a89aa1879307",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:784a2bff260f",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:ee542bb5d2ca",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:e8252ad194b5",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:018996773c2e",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:b9b818018a34",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5e3173bb3cc7",
+          "to": "file:589cc6f77112",
+          "type": "export_from"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:e2ca27e99fb8",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:91072f1513a4",
+          "to": "external:0c6658fd6b99",
+          "type": "import_external"
+        },
+        {
+          "from": "file:edc4ba2f1493",
+          "to": "external:8032eea8eb00",
+          "type": "import_external"
+        },
+        {
+          "from": "file:94793269f99a",
+          "to": "external:8032eea8eb00",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6c5d65a84ab8",
+          "to": "external:8032eea8eb00",
+          "type": "import_external"
+        },
+        {
+          "from": "file:186b3087c734",
+          "to": "external:8032eea8eb00",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1ef336c6881b",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:13c3ed900bc3",
+          "to": "external:8032eea8eb00",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:b4b7428b3b59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e2ca27e99fb8",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e2ca27e99fb8",
+          "to": "external:b4b7428b3b59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4753d5e92854",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "vlayout",
+          "to_module": "vlayout/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/MainAbility/pages/DebugSample.ets",
+        "entry/src/main/ets/MainAbility/pages/MainSample.ets",
+        "entry/src/main/ets/MainAbility/pages/OnePlusNLayoutSample.ets",
+        "entry/src/main/ets/MainAbility/pages/RootSample.ets",
+        "entry/src/main/ets/MainAbility/pages/TestSample.ets",
+        "entry/src/main/ets/MainAbility/pages/VLayoutSample.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "vlayout/src/main/ets/components/MainPage/MainPage.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/MainAbility/pages/DebugSample.ets",
+        "entry/src/main/ets/MainAbility/pages/MainSample.ets",
+        "entry/src/main/ets/MainAbility/pages/OnePlusNLayoutSample.ets",
+        "entry/src/main/ets/MainAbility/pages/RootSample.ets",
+        "entry/src/main/ets/MainAbility/pages/TestSample.ets",
+        "entry/src/main/ets/MainAbility/pages/VLayoutSample.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "vlayout/src/main/ets/components/MainPage/MainPage.ets",
+        "vlayout/src/main/ets/components/common/BannerLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/ColumnLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/DefaultLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/FixLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/FloatLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/GridLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/JumpBar.ets",
+        "vlayout/src/main/ets/components/common/LinearLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/OnePlusNLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/OnePlusNLayoutHelperEx.ets",
+        "vlayout/src/main/ets/components/common/RangeGridLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/ScrollFixLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/SingleLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/StaggeredGridLayoutHelper.ets",
+        "vlayout/src/main/ets/components/common/StickyLayoutHelper.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/MainAbility/app.ets",
+        "entry/src/ohosTest/ets/TestAbility/app.ets",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets"
+      ]
+    }
+  }
+}

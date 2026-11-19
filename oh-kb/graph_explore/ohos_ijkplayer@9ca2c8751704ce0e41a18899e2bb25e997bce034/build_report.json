@@ -1,0 +1,25 @@
+{
+  "repo_name": "ohos_ijkplayer",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_ijkplayer",
+  "language": "cpp",
+  "commit_hash": "9ca2c8751704ce0e41a18899e2bb25e997bce034",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_ijkplayer@9ca2c8751704ce0e41a18899e2bb25e997bce034/graph_full.json",
+  "build_time_ms": 1004.482,
+  "files_scanned": 153,
+  "parse_failed_files": 0,
+  "file_node_count": 153,
+  "external_node_count": 67,
+  "edge_count": 662,
+  "unresolved_local_edges": 159,
+  "external_edges": 188,
+  "edge_type_counts": {
+    "include_local": 239,
+    "same_module_include": 239,
+    "include_system_external": 188
+  },
+  "module_dep_count": 3,
+  "build_gn_dep_refs": 5,
+  "file_to_file_edge_count": 478,
+  "file_to_external_edge_count": 184,
+  "extractor_version": "v0.6"
+}

@@ -1,0 +1,27 @@
+{
+  "repo_name": "applications_permission_manager",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_permission_manager",
+  "language": "arkts",
+  "commit_hash": "701d6fe04c4170be3484dbfce64283543531537f",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_permission_manager@701d6fe04c4170be3484dbfce64283543531537f/graph_full.json",
+  "build_time_ms": 225.633,
+  "files_scanned": 73,
+  "parse_failed_files": 0,
+  "file_node_count": 73,
+  "external_node_count": 34,
+  "edge_count": 383,
+  "unresolved_local_edges": 0,
+  "external_edges": 130,
+  "edge_type_counts": {
+    "import_external": 130,
+    "import": 254
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 130,
+    "relative": 254
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 254,
+  "file_to_external_edge_count": 129,
+  "extractor_version": "v0.6"
+}

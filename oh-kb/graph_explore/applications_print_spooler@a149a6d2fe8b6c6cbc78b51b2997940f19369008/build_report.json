@@ -1,0 +1,29 @@
+{
+  "repo_name": "applications_print_spooler",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_print_spooler",
+  "language": "arkts",
+  "commit_hash": "a149a6d2fe8b6c6cbc78b51b2997940f19369008",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_print_spooler@a149a6d2fe8b6c6cbc78b51b2997940f19369008/graph_full.json",
+  "build_time_ms": 190.591,
+  "files_scanned": 89,
+  "parse_failed_files": 0,
+  "file_node_count": 89,
+  "external_node_count": 45,
+  "edge_count": 325,
+  "unresolved_local_edges": 0,
+  "external_edges": 247,
+  "edge_type_counts": {
+    "export_from": 35,
+    "import_external": 242,
+    "import": 130,
+    "export_external": 5
+  },
+  "resolve_mode_counts": {
+    "relative": 165,
+    "alias_or_package": 247
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 160,
+  "file_to_external_edge_count": 165,
+  "extractor_version": "v0.6"
+}

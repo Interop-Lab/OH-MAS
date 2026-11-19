@@ -1,0 +1,1593 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 112.851,
+    "files_scanned": 57,
+    "parse_failed_files": 0,
+    "file_node_count": 57,
+    "external_node_count": 25,
+    "edge_count": 218,
+    "unresolved_local_edges": 0,
+    "external_edges": 98,
+    "edge_type_counts": {
+      "import_external": 98,
+      "export_from": 31,
+      "import": 123
+    },
+    "resolve_mode_counts": {
+      "alias_or_package": 98,
+      "relative": 154
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 154,
+    "file_to_external_edge_count": 64,
+    "repo_name": "FastBle",
+    "commit_hash": "10032992a747afbcc590d8377974170549a3fd0a",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:14bdce224fa0",
+        "path": "hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:83ff95d1316f",
+        "path": "library/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:f48f3a4081f2",
+        "path": "library/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:9a06e71cbd13",
+        "path": "entry/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:9e7e90a3f18b",
+        "path": "library/src/main/ets/BleManager.ets",
+        "name": "BleManager.ets"
+      },
+      {
+        "id": "file:310270e39893",
+        "path": "library/src/main/ets/scan/BleScanRuleConfig.ets",
+        "name": "BleScanRuleConfig.ets"
+      },
+      {
+        "id": "file:793c403f6d37",
+        "path": "library/src/main/ets/scan/BleScanPresenter.ets",
+        "name": "BleScanPresenter.ets"
+      },
+      {
+        "id": "file:467a6835988c",
+        "path": "library/src/main/ets/scan/BleScanner.ets",
+        "name": "BleScanner.ets"
+      },
+      {
+        "id": "file:59072a981875",
+        "path": "library/src/main/ets/utils/TextUtils.ets",
+        "name": "TextUtils.ets"
+      },
+      {
+        "id": "file:68bcec2c8967",
+        "path": "library/src/main/ets/utils/BluetoothConsts.ets",
+        "name": "BluetoothConsts.ets"
+      },
+      {
+        "id": "file:3ca4205a5967",
+        "path": "library/src/main/ets/utils/ArrayUtils.ets",
+        "name": "ArrayUtils.ets"
+      },
+      {
+        "id": "file:9d46ba7bbcf9",
+        "path": "library/src/main/ets/utils/BleLog.ets",
+        "name": "BleLog.ets"
+      },
+      {
+        "id": "file:e6629310760b",
+        "path": "library/src/main/ets/utils/Handler.ets",
+        "name": "Handler.ets"
+      },
+      {
+        "id": "file:ff0e92754c63",
+        "path": "library/src/main/ets/utils/HexUtil.ets",
+        "name": "HexUtil.ets"
+      },
+      {
+        "id": "file:9dbd3f474d35",
+        "path": "library/src/main/ets/utils/BleLruHashMap.ets",
+        "name": "BleLruHashMap.ets"
+      },
+      {
+        "id": "file:627fd12a761b",
+        "path": "library/src/main/ets/utils/Queue.ets",
+        "name": "Queue.ets"
+      },
+      {
+        "id": "file:ed599c57d990",
+        "path": "library/src/main/ets/bluetooth/BleConnector.ets",
+        "name": "BleConnector.ets"
+      },
+      {
+        "id": "file:04f0a277a587",
+        "path": "library/src/main/ets/bluetooth/MultipleBluetoothController.ets",
+        "name": "MultipleBluetoothController.ets"
+      },
+      {
+        "id": "file:4ccef15f000a",
+        "path": "library/src/main/ets/bluetooth/SplitWriter.ets",
+        "name": "SplitWriter.ets"
+      },
+      {
+        "id": "file:1ecc9a3776ff",
+        "path": "library/src/main/ets/bluetooth/MockBluetooth.ets",
+        "name": "MockBluetooth.ets"
+      },
+      {
+        "id": "file:9e08da2b7957",
+        "path": "library/src/main/ets/bluetooth/BleBluetooth.ets",
+        "name": "BleBluetooth.ets"
+      },
+      {
+        "id": "file:d75cefb217d4",
+        "path": "library/src/main/ets/exception/BleException.ets",
+        "name": "BleException.ets"
+      },
+      {
+        "id": "file:56015e3765cf",
+        "path": "library/src/main/ets/exception/GattException.ets",
+        "name": "GattException.ets"
+      },
+      {
+        "id": "file:3d50e661a0f9",
+        "path": "library/src/main/ets/exception/OtherException.ets",
+        "name": "OtherException.ets"
+      },
+      {
+        "id": "file:cd58fb692af4",
+        "path": "library/src/main/ets/exception/TimeoutException.ets",
+        "name": "TimeoutException.ets"
+      },
+      {
+        "id": "file:730b880ba81b",
+        "path": "library/src/main/ets/exception/ConnectException.ets",
+        "name": "ConnectException.ets"
+      },
+      {
+        "id": "file:7c9d8c374c0a",
+        "path": "library/src/main/ets/callback/BleWriteCallback.ets",
+        "name": "BleWriteCallback.ets"
+      },
+      {
+        "id": "file:4340d287fd31",
+        "path": "library/src/main/ets/callback/BleGattCallback.ets",
+        "name": "BleGattCallback.ets"
+      },
+      {
+        "id": "file:da8134085888",
+        "path": "library/src/main/ets/callback/BleRssiCallback.ets",
+        "name": "BleRssiCallback.ets"
+      },
+      {
+        "id": "file:05f10ef83d6a",
+        "path": "library/src/main/ets/callback/BleScanAndConnectCallback.ets",
+        "name": "BleScanAndConnectCallback.ets"
+      },
+      {
+        "id": "file:0e493df0e1ff",
+        "path": "library/src/main/ets/callback/BleBaseCallback.ets",
+        "name": "BleBaseCallback.ets"
+      },
+      {
+        "id": "file:d6a03a737dd2",
+        "path": "library/src/main/ets/callback/BleScanPresenterImp.ets",
+        "name": "BleScanPresenterImp.ets"
+      },
+      {
+        "id": "file:ec4d961356ca",
+        "path": "library/src/main/ets/callback/BleScanCallback.ets",
+        "name": "BleScanCallback.ets"
+      },
+      {
+        "id": "file:68622c360e63",
+        "path": "library/src/main/ets/callback/BleMtuChangedCallback.ets",
+        "name": "BleMtuChangedCallback.ets"
+      },
+      {
+        "id": "file:1198ebcc0ae2",
+        "path": "library/src/main/ets/callback/BleIndicateCallback.ets",
+        "name": "BleIndicateCallback.ets"
+      },
+      {
+        "id": "file:5e57b4d0c432",
+        "path": "library/src/main/ets/callback/BleNotifyCallback.ets",
+        "name": "BleNotifyCallback.ets"
+      },
+      {
+        "id": "file:d9ac6eadfb59",
+        "path": "library/src/main/ets/callback/BleReadCallback.ets",
+        "name": "BleReadCallback.ets"
+      },
+      {
+        "id": "file:ae91b5da00fa",
+        "path": "library/src/main/ets/data/BleWriteState.ets",
+        "name": "BleWriteState.ets"
+      },
+      {
+        "id": "file:ee050f2be153",
+        "path": "library/src/main/ets/data/BleConnectStateParameter.ets",
+        "name": "BleConnectStateParameter.ets"
+      },
+      {
+        "id": "file:89c169d59552",
+        "path": "library/src/main/ets/data/BleDevice.ets",
+        "name": "BleDevice.ets"
+      },
+      {
+        "id": "file:214110e3f308",
+        "path": "library/src/main/ets/data/BleScanState.ets",
+        "name": "BleScanState.ets"
+      },
+      {
+        "id": "file:a8fee11fdc1b",
+        "path": "library/src/main/ets/data/BleMsg.ets",
+        "name": "BleMsg.ets"
+      },
+      {
+        "id": "file:a65e1b141440",
+        "path": "entry/src/main/ets/pages/CharacteristicOperationPage.ets",
+        "name": "CharacteristicOperationPage.ets"
+      },
+      {
+        "id": "file:34abf5b2dca5",
+        "path": "entry/src/main/ets/pages/ListDialog.ets",
+        "name": "ListDialog.ets"
+      },
+      {
+        "id": "file:300b5c33ccb6",
+        "path": "entry/src/main/ets/pages/Utils.ets",
+        "name": "Utils.ets"
+      },
+      {
+        "id": "file:8559ba17c0a1",
+        "path": "entry/src/main/ets/pages/CharacteristicConsts.ets",
+        "name": "CharacteristicConsts.ets"
+      },
+      {
+        "id": "file:ee40f1c8b365",
+        "path": "entry/src/main/ets/pages/ProgressDialog.ets",
+        "name": "ProgressDialog.ets"
+      },
+      {
+        "id": "file:1b1aa5c69169",
+        "path": "entry/src/main/ets/pages/CharacteristicListPage.ets",
+        "name": "CharacteristicListPage.ets"
+      },
+      {
+        "id": "file:822d523c416d",
+        "path": "entry/src/main/ets/pages/GlobalContext.ts",
+        "name": "GlobalContext.ts"
+      },
+      {
+        "id": "file:15891f703019",
+        "path": "entry/src/main/ets/pages/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:9bbaf54a912f",
+        "path": "entry/src/main/ets/pages/ServiceListPage.ets",
+        "name": "ServiceListPage.ets"
+      },
+      {
+        "id": "file:ef3d340f1577",
+        "path": "entry/src/main/ets/entryability/EntryAbility.ts",
+        "name": "EntryAbility.ts"
+      },
+      {
+        "id": "file:6413a04fbe08",
+        "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:07bf5526695c",
+        "path": "entry/src/ohosTest/ets/test/FastBle.test.ets",
+        "name": "FastBle.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:ea8152509907",
+        "path": "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "name": "TestAbility.ets"
+      },
+      {
+        "id": "file:33c4849d6fa8",
+        "path": "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "name": "Index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:442df9cd2e89",
+        "name": "@ohos/hvigor-ohos-plugin"
+      },
+      {
+        "id": "external:279cc01623c5",
+        "name": "@ohos.base"
+      },
+      {
+        "id": "external:86c3bc139ded",
+        "name": "@ohos.bluetooth.ble"
+      },
+      {
+        "id": "external:0637a95d2a0d",
+        "name": "@ohos.bluetooth.access"
+      },
+      {
+        "id": "external:0fb82a5a9277",
+        "name": "@ohos.bluetooth.connection"
+      },
+      {
+        "id": "external:c5528dbb2102",
+        "name": "@kit.BasicServicesKit"
+      },
+      {
+        "id": "external:1e1b7f9bdb63",
+        "name": "@kit.ConnectivityKit"
+      },
+      {
+        "id": "external:e9aee79b97ea",
+        "name": "@kit.ArkTS"
+      },
+      {
+        "id": "external:74f8221059ba",
+        "name": "@kit.PerformanceAnalysisKit"
+      },
+      {
+        "id": "external:a67b80e4ed2d",
+        "name": "@ohos.bluetooth.constant"
+      },
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      },
+      {
+        "id": "external:5c73eea138dd",
+        "name": "@ohos/fastble"
+      },
+      {
+        "id": "external:f94df28743e4",
+        "name": "@ohos.resourceManager"
+      },
+      {
+        "id": "external:567ee22c9228",
+        "name": "@system.prompt"
+      },
+      {
+        "id": "external:34f220ef0980",
+        "name": "@ohos.app.ability.common"
+      },
+      {
+        "id": "external:624ac69127f8",
+        "name": "@ohos.abilityAccessCtrl"
+      },
+      {
+        "id": "external:035f74eab960",
+        "name": "@kit.LocationKit"
+      },
+      {
+        "id": "external:f496bc7264a6",
+        "name": "@ohos.app.ability.AbilityConstant"
+      },
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:67941a1352a3",
+        "name": "@ohos.app.ability.UIAbility"
+      },
+      {
+        "id": "external:6ecd634aa752",
+        "name": "@ohos.app.ability.Want"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:804207546e94",
+        "name": "@ohos.app.ability.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:9e7e90a3f18b",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:9e08da2b7957",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:ed599c57d990",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:04f0a277a587",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:4ccef15f000a",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:0e493df0e1ff",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:4340d287fd31",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:1198ebcc0ae2",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:68622c360e63",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:5e57b4d0c432",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:d9ac6eadfb59",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:da8134085888",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:05f10ef83d6a",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:ec4d961356ca",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:7c9d8c374c0a",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:ee050f2be153",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:89c169d59552",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:a8fee11fdc1b",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:214110e3f308",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:ae91b5da00fa",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:d75cefb217d4",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:730b880ba81b",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:56015e3765cf",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:3d50e661a0f9",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:cd58fb692af4",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:467a6835988c",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:793c403f6d37",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:310270e39893",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:68bcec2c8967",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:ff0e92754c63",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f48f3a4081f2",
+          "to": "file:59072a981875",
+          "type": "export_from"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:9e08da2b7957",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:04f0a277a587",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:4ccef15f000a",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:4340d287fd31",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:1198ebcc0ae2",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:68622c360e63",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:5e57b4d0c432",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:d9ac6eadfb59",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:da8134085888",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:05f10ef83d6a",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:ec4d961356ca",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:7c9d8c374c0a",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:214110e3f308",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:3d50e661a0f9",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:310270e39893",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:467a6835988c",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:9d46ba7bbcf9",
+          "type": "import"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "file:1ecc9a3776ff",
+          "type": "import"
+        },
+        {
+          "from": "file:310270e39893",
+          "to": "file:9e7e90a3f18b",
+          "type": "import"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "file:467a6835988c",
+          "type": "import"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "file:d6a03a737dd2",
+          "type": "import"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "file:9d46ba7bbcf9",
+          "type": "import"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "file:ff0e92754c63",
+          "type": "import"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "file:59072a981875",
+          "type": "import"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "file:3ca4205a5967",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:9e7e90a3f18b",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:214110e3f308",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:d6a03a737dd2",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:ec4d961356ca",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:05f10ef83d6a",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:793c403f6d37",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "file:9d46ba7bbcf9",
+          "type": "import"
+        },
+        {
+          "from": "file:ff0e92754c63",
+          "to": "file:59072a981875",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:9e7e90a3f18b",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:9e08da2b7957",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:1198ebcc0ae2",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:68622c360e63",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:5e57b4d0c432",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:d9ac6eadfb59",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:da8134085888",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:7c9d8c374c0a",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:a8fee11fdc1b",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:ae91b5da00fa",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:56015e3765cf",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:3d50e661a0f9",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:cd58fb692af4",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:e6629310760b",
+          "type": "import"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "file:9d46ba7bbcf9",
+          "type": "import"
+        },
+        {
+          "from": "file:04f0a277a587",
+          "to": "file:9e7e90a3f18b",
+          "type": "import"
+        },
+        {
+          "from": "file:04f0a277a587",
+          "to": "file:9e08da2b7957",
+          "type": "import"
+        },
+        {
+          "from": "file:04f0a277a587",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:04f0a277a587",
+          "to": "file:9dbd3f474d35",
+          "type": "import"
+        },
+        {
+          "from": "file:04f0a277a587",
+          "to": "file:59072a981875",
+          "type": "import"
+        },
+        {
+          "from": "file:04f0a277a587",
+          "to": "file:3ca4205a5967",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:9e7e90a3f18b",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:9e08da2b7957",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:7c9d8c374c0a",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:a8fee11fdc1b",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:3d50e661a0f9",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:9d46ba7bbcf9",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:e6629310760b",
+          "type": "import"
+        },
+        {
+          "from": "file:4ccef15f000a",
+          "to": "file:627fd12a761b",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:9e7e90a3f18b",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:ed599c57d990",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:4340d287fd31",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:1198ebcc0ae2",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:68622c360e63",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:5e57b4d0c432",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:d9ac6eadfb59",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:da8134085888",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:7c9d8c374c0a",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:ee050f2be153",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:a8fee11fdc1b",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:730b880ba81b",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:3d50e661a0f9",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:cd58fb692af4",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:9d46ba7bbcf9",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:59072a981875",
+          "type": "import"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "file:e6629310760b",
+          "type": "import"
+        },
+        {
+          "from": "file:56015e3765cf",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:3d50e661a0f9",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:cd58fb692af4",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:730b880ba81b",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:7c9d8c374c0a",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:7c9d8c374c0a",
+          "to": "file:0e493df0e1ff",
+          "type": "import"
+        },
+        {
+          "from": "file:4340d287fd31",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:4340d287fd31",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:da8134085888",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:da8134085888",
+          "to": "file:0e493df0e1ff",
+          "type": "import"
+        },
+        {
+          "from": "file:05f10ef83d6a",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:05f10ef83d6a",
+          "to": "file:d6a03a737dd2",
+          "type": "import"
+        },
+        {
+          "from": "file:05f10ef83d6a",
+          "to": "file:4340d287fd31",
+          "type": "import"
+        },
+        {
+          "from": "file:0e493df0e1ff",
+          "to": "file:e6629310760b",
+          "type": "import"
+        },
+        {
+          "from": "file:d6a03a737dd2",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:ec4d961356ca",
+          "to": "file:89c169d59552",
+          "type": "import"
+        },
+        {
+          "from": "file:ec4d961356ca",
+          "to": "file:d6a03a737dd2",
+          "type": "import"
+        },
+        {
+          "from": "file:68622c360e63",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:68622c360e63",
+          "to": "file:0e493df0e1ff",
+          "type": "import"
+        },
+        {
+          "from": "file:1198ebcc0ae2",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:1198ebcc0ae2",
+          "to": "file:0e493df0e1ff",
+          "type": "import"
+        },
+        {
+          "from": "file:5e57b4d0c432",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:5e57b4d0c432",
+          "to": "file:0e493df0e1ff",
+          "type": "import"
+        },
+        {
+          "from": "file:d9ac6eadfb59",
+          "to": "file:d75cefb217d4",
+          "type": "import"
+        },
+        {
+          "from": "file:d9ac6eadfb59",
+          "to": "file:0e493df0e1ff",
+          "type": "import"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "file:8559ba17c0a1",
+          "type": "import"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:300b5c33ccb6",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:1b1aa5c69169",
+          "to": "file:34abf5b2dca5",
+          "type": "import"
+        },
+        {
+          "from": "file:1b1aa5c69169",
+          "to": "file:ee40f1c8b365",
+          "type": "import"
+        },
+        {
+          "from": "file:1b1aa5c69169",
+          "to": "file:8559ba17c0a1",
+          "type": "import"
+        },
+        {
+          "from": "file:1b1aa5c69169",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:300b5c33ccb6",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:ee40f1c8b365",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:9bbaf54a912f",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:07bf5526695c",
+          "type": "import"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:14bdce224fa0",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:83ff95d1316f",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9a06e71cbd13",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "external:279cc01623c5",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "external:0637a95d2a0d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "external:0fb82a5a9277",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e7e90a3f18b",
+          "to": "external:c5528dbb2102",
+          "type": "import_external"
+        },
+        {
+          "from": "file:310270e39893",
+          "to": "external:1e1b7f9bdb63",
+          "type": "import_external"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:793c403f6d37",
+          "to": "external:c5528dbb2102",
+          "type": "import_external"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "external:c5528dbb2102",
+          "type": "import_external"
+        },
+        {
+          "from": "file:467a6835988c",
+          "to": "external:e9aee79b97ea",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "external:1e1b7f9bdb63",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ed599c57d990",
+          "to": "external:c5528dbb2102",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "external:a67b80e4ed2d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9e08da2b7957",
+          "to": "external:279cc01623c5",
+          "type": "import_external"
+        },
+        {
+          "from": "file:730b880ba81b",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4340d287fd31",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "external:5c73eea138dd",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "external:567ee22c9228",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a65e1b141440",
+          "to": "external:e9aee79b97ea",
+          "type": "import_external"
+        },
+        {
+          "from": "file:300b5c33ccb6",
+          "to": "external:34f220ef0980",
+          "type": "import_external"
+        },
+        {
+          "from": "file:300b5c33ccb6",
+          "to": "external:279cc01623c5",
+          "type": "import_external"
+        },
+        {
+          "from": "file:300b5c33ccb6",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1b1aa5c69169",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1b1aa5c69169",
+          "to": "external:5c73eea138dd",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1b1aa5c69169",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:035f74eab960",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:567ee22c9228",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:5c73eea138dd",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:0637a95d2a0d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9bbaf54a912f",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9bbaf54a912f",
+          "to": "external:5c73eea138dd",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9bbaf54a912f",
+          "to": "external:f94df28743e4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9bbaf54a912f",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:f496bc7264a6",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:07bf5526695c",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:07bf5526695c",
+          "to": "external:5c73eea138dd",
+          "type": "import_external"
+        },
+        {
+          "from": "file:07bf5526695c",
+          "to": "external:86c3bc139ded",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:f496bc7264a6",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "library",
+          "to_module": "library/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/CharacteristicListPage.ets",
+        "entry/src/main/ets/pages/CharacteristicOperationPage.ets",
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/pages/ServiceListPage.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/CharacteristicListPage.ets",
+        "entry/src/main/ets/pages/CharacteristicOperationPage.ets",
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/pages/ServiceListPage.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [
+        "entry/src/main/ets/pages/Index.ets",
+        "library/src/main/ets/bluetooth/BleConnector.ets",
+        "library/src/main/ets/bluetooth/SplitWriter.ets",
+        "library/src/main/ets/scan/BleScanner.ets"
+      ],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/hvigorfile.ts",
+        "entry/src/main/ets/entryability/EntryAbility.ts",
+        "entry/src/main/ets/pages/ListDialog.ets",
+        "entry/src/main/ets/pages/ProgressDialog.ets",
+        "entry/src/ohosTest/ets/test/FastBle.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "hvigorfile.ts",
+        "library/hvigorfile.ts",
+        "library/src/main/ets/BleManager.ets",
+        "library/src/main/ets/bluetooth/BleBluetooth.ets",
+        "library/src/main/ets/bluetooth/BleConnector.ets",
+        "library/src/main/ets/bluetooth/MockBluetooth.ets",
+        "library/src/main/ets/bluetooth/MultipleBluetoothController.ets",
+        "library/src/main/ets/bluetooth/SplitWriter.ets",
+        "library/src/main/ets/callback/BleBaseCallback.ets",
+        "library/src/main/ets/callback/BleGattCallback.ets",
+        "library/src/main/ets/callback/BleIndicateCallback.ets",
+        "library/src/main/ets/callback/BleMtuChangedCallback.ets",
+        "library/src/main/ets/callback/BleNotifyCallback.ets",
+        "library/src/main/ets/callback/BleReadCallback.ets",
+        "library/src/main/ets/callback/BleRssiCallback.ets",
+        "library/src/main/ets/callback/BleScanAndConnectCallback.ets",
+        "library/src/main/ets/callback/BleScanCallback.ets",
+        "library/src/main/ets/callback/BleScanPresenterImp.ets",
+        "library/src/main/ets/callback/BleWriteCallback.ets",
+        "library/src/main/ets/data/BleConnectStateParameter.ets",
+        "library/src/main/ets/data/BleDevice.ets",
+        "library/src/main/ets/data/BleMsg.ets",
+        "library/src/main/ets/data/BleScanState.ets",
+        "library/src/main/ets/data/BleWriteState.ets",
+        "library/src/main/ets/exception/BleException.ets",
+        "library/src/main/ets/exception/ConnectException.ets",
+        "library/src/main/ets/exception/GattException.ets",
+        "library/src/main/ets/exception/OtherException.ets",
+        "library/src/main/ets/exception/TimeoutException.ets",
+        "library/src/main/ets/scan/BleScanPresenter.ets",
+        "library/src/main/ets/scan/BleScanRuleConfig.ets",
+        "library/src/main/ets/scan/BleScanner.ets",
+        "library/src/main/ets/utils/ArrayUtils.ets",
+        "library/src/main/ets/utils/BleLog.ets",
+        "library/src/main/ets/utils/BleLruHashMap.ets",
+        "library/src/main/ets/utils/HexUtil.ets",
+        "library/src/main/ets/utils/TextUtils.ets"
+      ]
+    }
+  }
+}

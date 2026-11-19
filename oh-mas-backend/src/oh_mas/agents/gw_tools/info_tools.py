@@ -18,11 +18,6 @@ def show_knowledge(ctx: GWToolContext) -> dict:
     return ctx.record_step("show_knowledge", output)
 
 
-def show_rule_mode(ctx: GWToolContext) -> dict:
-    output = {"rule_id": ctx.alarm.rule, **ctx.rule_mode}
-    return ctx.record_step("show_rule_mode", output)
-
-
 def show_graph_overview(ctx: GWToolContext) -> dict:
     graph = ctx.sliced_graph
     files = graph.get("files", [])

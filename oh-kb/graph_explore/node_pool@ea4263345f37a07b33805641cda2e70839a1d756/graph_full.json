@@ -1,0 +1,1897 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 130.378,
+    "files_scanned": 87,
+    "parse_failed_files": 0,
+    "file_node_count": 87,
+    "external_node_count": 28,
+    "edge_count": 242,
+    "unresolved_local_edges": 0,
+    "external_edges": 87,
+    "edge_type_counts": {
+      "import_external": 87,
+      "export_from": 8,
+      "import": 148
+    },
+    "resolve_mode_counts": {
+      "alias_or_package": 87,
+      "relative": 156
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 155,
+    "file_to_external_edge_count": 87,
+    "repo_name": "node_pool",
+    "commit_hash": "ea4263345f37a07b33805641cda2e70839a1d756",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:14bdce224fa0",
+        "path": "hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:fd3c46be098b",
+        "path": "nodepool/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:5dee1ffa4e26",
+        "path": "nodepool/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:9a06e71cbd13",
+        "path": "entry/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:1ed5f2d095e1",
+        "path": "nodepoolExamples/coldStartPreCreate/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:e1255dc22524",
+        "path": "nodepoolExamples/coldStartNoPreCreate/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:8208a1c988ba",
+        "path": "nodepoolExamples/coldStartPreCreate/src/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:e3e640bc4904",
+        "path": "nodepoolExamples/coldStartPreCreate/src/test/LocalUnit.test.ets",
+        "name": "LocalUnit.test.ets"
+      },
+      {
+        "id": "file:2adac1242713",
+        "path": "nodepoolExamples/coldStartPreCreate/src/main/ets/pages/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:ebde41eb3ad8",
+        "path": "nodepoolExamples/coldStartPreCreate/src/main/ets/coldstartprecreateability/ColdStartPreCreateAbility.ets",
+        "name": "ColdStartPreCreateAbility.ets"
+      },
+      {
+        "id": "file:97be0c6301f5",
+        "path": "nodepoolExamples/coldStartPreCreate/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:86bf3860bd71",
+        "path": "nodepoolExamples/coldStartPreCreate/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:be17a02c41ff",
+        "path": "nodepoolExamples/coldStartNoPreCreate/src/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:c715cb19ca02",
+        "path": "nodepoolExamples/coldStartNoPreCreate/src/test/LocalUnit.test.ets",
+        "name": "LocalUnit.test.ets"
+      },
+      {
+        "id": "file:9572da91849d",
+        "path": "nodepoolExamples/coldStartNoPreCreate/src/main/ets/pages/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:ad53468bbca8",
+        "path": "nodepoolExamples/coldStartNoPreCreate/src/main/ets/coldstartnoprecreateability/ColdStartNoPreCreateAbility.ets",
+        "name": "ColdStartNoPreCreateAbility.ets"
+      },
+      {
+        "id": "file:708f30c17cce",
+        "path": "nodepoolExamples/coldStartNoPreCreate/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:eeeb91aa0158",
+        "path": "nodepoolExamples/coldStartNoPreCreate/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:33e70ec183b7",
+        "path": "nodepool/example/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:4ab35acf409a",
+        "path": "nodepool/src/main/ets/constants/ExceptionCode.ets",
+        "name": "ExceptionCode.ets"
+      },
+      {
+        "id": "file:66ff500bc7bd",
+        "path": "nodepool/src/main/ets/utils/Logger.ets",
+        "name": "Logger.ets"
+      },
+      {
+        "id": "file:e37b2fffb1df",
+        "path": "nodepool/src/main/ets/model/AVPlayerXComponentData.ets",
+        "name": "AVPlayerXComponentData.ets"
+      },
+      {
+        "id": "file:70489ac28300",
+        "path": "nodepool/src/main/ets/model/NodePoolConfig.ets",
+        "name": "NodePoolConfig.ets"
+      },
+      {
+        "id": "file:15e76b1c2702",
+        "path": "nodepool/src/main/ets/model/WebData.ets",
+        "name": "WebData.ets"
+      },
+      {
+        "id": "file:d08301973711",
+        "path": "nodepool/src/main/ets/model/SceneType.ets",
+        "name": "SceneType.ets"
+      },
+      {
+        "id": "file:c98241182b86",
+        "path": "nodepool/src/main/ets/model/NodePoolError.ets",
+        "name": "NodePoolError.ets"
+      },
+      {
+        "id": "file:fc911e8eb6bd",
+        "path": "nodepool/src/main/ets/model/XComponentWithImage.ets",
+        "name": "XComponentWithImage.ets"
+      },
+      {
+        "id": "file:b0def31c10b9",
+        "path": "nodepool/src/main/ets/dispatch/SplitTasksExecutor.ets",
+        "name": "SplitTasksExecutor.ets"
+      },
+      {
+        "id": "file:e782cb577f01",
+        "path": "nodepool/src/main/ets/dispatch/DispatchService.ets",
+        "name": "DispatchService.ets"
+      },
+      {
+        "id": "file:9dbfe1348891",
+        "path": "nodepool/src/main/ets/lib/NodePool.ets",
+        "name": "NodePool.ets"
+      },
+      {
+        "id": "file:838b75e92d2f",
+        "path": "nodepool/src/main/ets/lib/WebBuilder.ets",
+        "name": "WebBuilder.ets"
+      },
+      {
+        "id": "file:7913f6d92832",
+        "path": "nodepool/src/main/ets/lib/NodePoolFactory.ets",
+        "name": "NodePoolFactory.ets"
+      },
+      {
+        "id": "file:42d8cee8806a",
+        "path": "nodepool/src/main/ets/lib/NodeItem.ets",
+        "name": "NodeItem.ets"
+      },
+      {
+        "id": "file:1fa9ad618daa",
+        "path": "nodepool/src/main/ets/mission/MissionFrameOnIdleHandler.ets",
+        "name": "MissionFrameOnIdleHandler.ets"
+      },
+      {
+        "id": "file:82ed7d2dcae3",
+        "path": "entry/src/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:20a8a21e3100",
+        "path": "entry/src/test/LocalUnit.test.ets",
+        "name": "LocalUnit.test.ets"
+      },
+      {
+        "id": "file:05da21ce57fb",
+        "path": "entry/src/main/ets/constants/BreakpointConstants.ets",
+        "name": "BreakpointConstants.ets"
+      },
+      {
+        "id": "file:175afaf73f59",
+        "path": "entry/src/main/ets/constants/CommonConstants.ets",
+        "name": "CommonConstants.ets"
+      },
+      {
+        "id": "file:c9e88e8e9486",
+        "path": "entry/src/main/ets/utils/NetworkUtil.ets",
+        "name": "NetworkUtil.ets"
+      },
+      {
+        "id": "file:582d71e52c2e",
+        "path": "entry/src/main/ets/utils/BreakpointType.ets",
+        "name": "BreakpointType.ets"
+      },
+      {
+        "id": "file:354ffcce7203",
+        "path": "entry/src/main/ets/utils/Logger.ets",
+        "name": "Logger.ets"
+      },
+      {
+        "id": "file:6eb4102d33f9",
+        "path": "entry/src/main/ets/utils/BreakpointSystem.ets",
+        "name": "BreakpointSystem.ets"
+      },
+      {
+        "id": "file:a0fbcc7a560c",
+        "path": "entry/src/main/ets/utils/CommonUtils.ets",
+        "name": "CommonUtils.ets"
+      },
+      {
+        "id": "file:1e946197e8ed",
+        "path": "entry/src/main/ets/pages/ShortVideoPage.ets",
+        "name": "ShortVideoPage.ets"
+      },
+      {
+        "id": "file:1d7ee5e528df",
+        "path": "entry/src/main/ets/pages/MenuPage.ets",
+        "name": "MenuPage.ets"
+      },
+      {
+        "id": "file:eee9fd2096d2",
+        "path": "entry/src/main/ets/pages/WebPage.ets",
+        "name": "WebPage.ets"
+      },
+      {
+        "id": "file:0c1cabc56ac2",
+        "path": "entry/src/main/ets/pages/HomePage.ets",
+        "name": "HomePage.ets"
+      },
+      {
+        "id": "file:15891f703019",
+        "path": "entry/src/main/ets/pages/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:27ca8a0b001b",
+        "path": "entry/src/main/ets/pages/SplashScreenPage.ets",
+        "name": "SplashScreenPage.ets"
+      },
+      {
+        "id": "file:80fff8f2b01d",
+        "path": "entry/src/main/ets/data/TitleDataSource.ets",
+        "name": "TitleDataSource.ets"
+      },
+      {
+        "id": "file:5682d357e56c",
+        "path": "entry/src/main/ets/data/MockData.ets",
+        "name": "MockData.ets"
+      },
+      {
+        "id": "file:015a4ff01861",
+        "path": "entry/src/main/ets/data/WaterFlowDataSource.ets",
+        "name": "WaterFlowDataSource.ets"
+      },
+      {
+        "id": "file:16c45b773dbd",
+        "path": "entry/src/main/ets/data/ViewItem.ets",
+        "name": "ViewItem.ets"
+      },
+      {
+        "id": "file:9e742c0e9abd",
+        "path": "entry/src/main/ets/data/TitleBean.ets",
+        "name": "TitleBean.ets"
+      },
+      {
+        "id": "file:c5147ec30ac0",
+        "path": "entry/src/main/ets/viewmodel/AVPlayerState.ets",
+        "name": "AVPlayerState.ets"
+      },
+      {
+        "id": "file:fa8c814c7f35",
+        "path": "entry/src/main/ets/viewmodel/FooterTabViewModel.ets",
+        "name": "FooterTabViewModel.ets"
+      },
+      {
+        "id": "file:08ebdc702697",
+        "path": "entry/src/main/ets/viewmodel/AVDataSource.ets",
+        "name": "AVDataSource.ets"
+      },
+      {
+        "id": "file:3b28f60dabc0",
+        "path": "entry/src/main/ets/viewmodel/FunctionEntryData.ets",
+        "name": "FunctionEntryData.ets"
+      },
+      {
+        "id": "file:21fdeb77bf7c",
+        "path": "entry/src/main/ets/entrybackupability/EntryBackupAbility.ets",
+        "name": "EntryBackupAbility.ets"
+      },
+      {
+        "id": "file:f6bed585fe2f",
+        "path": "entry/src/main/ets/entryability/EntryAbility.ets",
+        "name": "EntryAbility.ets"
+      },
+      {
+        "id": "file:fe6ef667d727",
+        "path": "entry/src/main/ets/view/FunctionView.ets",
+        "name": "FunctionView.ets"
+      },
+      {
+        "id": "file:e327c8a72202",
+        "path": "entry/src/main/ets/view/SearchBarView.ets",
+        "name": "SearchBarView.ets"
+      },
+      {
+        "id": "file:844d1e373137",
+        "path": "entry/src/main/ets/view/ItemTravelVideoView.ets",
+        "name": "ItemTravelVideoView.ets"
+      },
+      {
+        "id": "file:deddbed2ce5e",
+        "path": "entry/src/main/ets/view/ItemSceneView.ets",
+        "name": "ItemSceneView.ets"
+      },
+      {
+        "id": "file:eddf1fce705c",
+        "path": "entry/src/main/ets/view/ItemTravelImageView.ets",
+        "name": "ItemTravelImageView.ets"
+      },
+      {
+        "id": "file:6ae89abfaaba",
+        "path": "entry/src/main/ets/view/ItemRentView.ets",
+        "name": "ItemRentView.ets"
+      },
+      {
+        "id": "file:54ef08da98e7",
+        "path": "entry/src/main/ets/view/VideoPlayView.ets",
+        "name": "VideoPlayView.ets"
+      },
+      {
+        "id": "file:9a498221942e",
+        "path": "entry/src/main/ets/view/ItemRaidersView.ets",
+        "name": "ItemRaidersView.ets"
+      },
+      {
+        "id": "file:cc7b2bf95184",
+        "path": "entry/src/main/ets/view/ItemHotelView.ets",
+        "name": "ItemHotelView.ets"
+      },
+      {
+        "id": "file:11029d4b1df8",
+        "path": "entry/src/main/ets/view/FlowItemNode.ets",
+        "name": "FlowItemNode.ets"
+      },
+      {
+        "id": "file:652ecb657d69",
+        "path": "entry/src/main/ets/view/ItemUniversalView.ets",
+        "name": "ItemUniversalView.ets"
+      },
+      {
+        "id": "file:d825d458714c",
+        "path": "entry/src/main/ets/view/WaterFlowView.ets",
+        "name": "WaterFlowView.ets"
+      },
+      {
+        "id": "file:2ecf2b971f1d",
+        "path": "entry/src/main/ets/view/TitleView.ets",
+        "name": "TitleView.ets"
+      },
+      {
+        "id": "file:9dbaff169f0c",
+        "path": "entry/src/main/ets/view/WaterFlowNodeView.ets",
+        "name": "WaterFlowNodeView.ets"
+      },
+      {
+        "id": "file:be5505d434b4",
+        "path": "entry/src/main/ets/view/ItemDescView/DescRaidersView.ets",
+        "name": "DescRaidersView.ets"
+      },
+      {
+        "id": "file:ca4fbe5b140a",
+        "path": "entry/src/main/ets/view/ItemDescView/DescTravelImageView.ets",
+        "name": "DescTravelImageView.ets"
+      },
+      {
+        "id": "file:9db98c5705d8",
+        "path": "entry/src/main/ets/view/ItemDescView/DescUniversalView.ets",
+        "name": "DescUniversalView.ets"
+      },
+      {
+        "id": "file:27d868e581cc",
+        "path": "entry/src/main/ets/view/ItemDescView/DescRentView.ets",
+        "name": "DescRentView.ets"
+      },
+      {
+        "id": "file:0fad98aab693",
+        "path": "entry/src/main/ets/view/ItemDescView/DescHotelView.ets",
+        "name": "DescHotelView.ets"
+      },
+      {
+        "id": "file:ea81aafb0f0b",
+        "path": "entry/src/main/ets/view/ItemDescView/DescSceneView.ets",
+        "name": "DescSceneView.ets"
+      },
+      {
+        "id": "file:67cc8af189c6",
+        "path": "entry/src/main/ets/view/ItemDescView/DescTravelVideoView.ets",
+        "name": "DescTravelVideoView.ets"
+      },
+      {
+        "id": "file:6413a04fbe08",
+        "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:9966324819dc",
+        "path": "entry/src/ohosTest/ets/test/ApiCostTimeXts.test.ets",
+        "name": "ApiCostTimeXts.test.ets"
+      },
+      {
+        "id": "file:ea8152509907",
+        "path": "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "name": "TestAbility.ets"
+      },
+      {
+        "id": "file:33c4849d6fa8",
+        "path": "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "name": "Index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:442df9cd2e89",
+        "name": "@ohos/hvigor-ohos-plugin"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      },
+      {
+        "id": "external:7e19b1ebf788",
+        "name": "@kit.AbilityKit"
+      },
+      {
+        "id": "external:74f8221059ba",
+        "name": "@kit.PerformanceAnalysisKit"
+      },
+      {
+        "id": "external:06ceb0257588",
+        "name": "@kit.ArkUI"
+      },
+      {
+        "id": "external:e06c14ce550d",
+        "name": "@hadss/nodepool"
+      },
+      {
+        "id": "external:09282fc9f4d7",
+        "name": "@hadss/nodepool/src/main/ets/lib/NodeItem"
+      },
+      {
+        "id": "external:0ef9659520d3",
+        "name": "@kit.MediaKit"
+      },
+      {
+        "id": "external:9ee07ac7b2a9",
+        "name": "@kit.ArkWeb"
+      },
+      {
+        "id": "external:e9aee79b97ea",
+        "name": "@kit.ArkTS"
+      },
+      {
+        "id": "external:7201c83b4351",
+        "name": "@kit.NetworkKit"
+      },
+      {
+        "id": "external:c5528dbb2102",
+        "name": "@kit.BasicServicesKit"
+      },
+      {
+        "id": "external:67974af1921c",
+        "name": "@ohos.mediaquery"
+      },
+      {
+        "id": "external:421a2d65dc71",
+        "name": "@hadss/nodepool/src/main/ets/lib/NodePool"
+      },
+      {
+        "id": "external:827018334445",
+        "name": "@kit.CoreFileKit"
+      },
+      {
+        "id": "external:8cb7516ddbcd",
+        "name": "@kit.AudioKit"
+      },
+      {
+        "id": "external:8f88efc18f48",
+        "name": "@kit.LocalizationKit"
+      },
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:804207546e94",
+        "name": "@ohos.app.ability.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:6ecd634aa752",
+        "name": "@ohos.app.ability.Want"
+      },
+      {
+        "id": "external:6cfa12249ad3",
+        "name": "@hadss/nodepool/src/main/ets/model/NodePoolError"
+      },
+      {
+        "id": "external:4f300e2d919c",
+        "name": "@hadss/nodepool/src/main/ets/constants/ExceptionCode"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:4e621ae76fd7",
+        "name": "@kit.TestKit"
+      },
+      {
+        "id": "external:a12e0cca629a",
+        "name": "@ohos.systemDateTime"
+      },
+      {
+        "id": "external:67941a1352a3",
+        "name": "@ohos.app.ability.UIAbility"
+      },
+      {
+        "id": "external:f496bc7264a6",
+        "name": "@ohos.app.ability.AbilityConstant"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:7913f6d92832",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:42d8cee8806a",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:9dbfe1348891",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:70489ac28300",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:fc911e8eb6bd",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:15e76b1c2702",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:d08301973711",
+          "type": "export_from"
+        },
+        {
+          "from": "file:5dee1ffa4e26",
+          "to": "file:e37b2fffb1df",
+          "type": "export_from"
+        },
+        {
+          "from": "file:8208a1c988ba",
+          "to": "file:e3e640bc4904",
+          "type": "import"
+        },
+        {
+          "from": "file:86bf3860bd71",
+          "to": "file:97be0c6301f5",
+          "type": "import"
+        },
+        {
+          "from": "file:be17a02c41ff",
+          "to": "file:c715cb19ca02",
+          "type": "import"
+        },
+        {
+          "from": "file:eeeb91aa0158",
+          "to": "file:708f30c17cce",
+          "type": "import"
+        },
+        {
+          "from": "file:70489ac28300",
+          "to": "file:9dbfe1348891",
+          "type": "import"
+        },
+        {
+          "from": "file:b0def31c10b9",
+          "to": "file:e782cb577f01",
+          "type": "import"
+        },
+        {
+          "from": "file:e782cb577f01",
+          "to": "file:1fa9ad618daa",
+          "type": "import"
+        },
+        {
+          "from": "file:e782cb577f01",
+          "to": "file:66ff500bc7bd",
+          "type": "import"
+        },
+        {
+          "from": "file:e782cb577f01",
+          "to": "file:b0def31c10b9",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:42d8cee8806a",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:66ff500bc7bd",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:70489ac28300",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:15e76b1c2702",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:d08301973711",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:838b75e92d2f",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:e37b2fffb1df",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "file:e782cb577f01",
+          "type": "import"
+        },
+        {
+          "from": "file:838b75e92d2f",
+          "to": "file:15e76b1c2702",
+          "type": "import"
+        },
+        {
+          "from": "file:7913f6d92832",
+          "to": "file:70489ac28300",
+          "type": "import"
+        },
+        {
+          "from": "file:7913f6d92832",
+          "to": "file:9dbfe1348891",
+          "type": "import"
+        },
+        {
+          "from": "file:42d8cee8806a",
+          "to": "file:9dbfe1348891",
+          "type": "import"
+        },
+        {
+          "from": "file:82ed7d2dcae3",
+          "to": "file:20a8a21e3100",
+          "type": "import"
+        },
+        {
+          "from": "file:c9e88e8e9486",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:c9e88e8e9486",
+          "to": "file:354ffcce7203",
+          "type": "import"
+        },
+        {
+          "from": "file:582d71e52c2e",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:6eb4102d33f9",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:a0fbcc7a560c",
+          "to": "file:c5147ec30ac0",
+          "type": "import"
+        },
+        {
+          "from": "file:a0fbcc7a560c",
+          "to": "file:354ffcce7203",
+          "type": "import"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "file:54ef08da98e7",
+          "type": "import"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "file:08ebdc702697",
+          "type": "import"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "file:27ca8a0b001b",
+          "type": "import"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "file:c5147ec30ac0",
+          "type": "import"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "file:354ffcce7203",
+          "type": "import"
+        },
+        {
+          "from": "file:1d7ee5e528df",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:1d7ee5e528df",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:1d7ee5e528df",
+          "to": "file:0c1cabc56ac2",
+          "type": "import"
+        },
+        {
+          "from": "file:1d7ee5e528df",
+          "to": "file:fa8c814c7f35",
+          "type": "import"
+        },
+        {
+          "from": "file:eee9fd2096d2",
+          "to": "file:c9e88e8e9486",
+          "type": "import"
+        },
+        {
+          "from": "file:eee9fd2096d2",
+          "to": "file:27ca8a0b001b",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:9dbaff169f0c",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:9e742c0e9abd",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:80fff8f2b01d",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:2ecf2b971f1d",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:d825d458714c",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:e327c8a72202",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:fe6ef667d727",
+          "type": "import"
+        },
+        {
+          "from": "file:0c1cabc56ac2",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:6eb4102d33f9",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:1d7ee5e528df",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:c9e88e8e9486",
+          "type": "import"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "file:eee9fd2096d2",
+          "type": "import"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "file:1e946197e8ed",
+          "type": "import"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "file:354ffcce7203",
+          "type": "import"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "file:9dbaff169f0c",
+          "type": "import"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "file:5682d357e56c",
+          "type": "import"
+        },
+        {
+          "from": "file:5682d357e56c",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:5682d357e56c",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:015a4ff01861",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:fa8c814c7f35",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:3b28f60dabc0",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:fe6ef667d727",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:fe6ef667d727",
+          "to": "file:6eb4102d33f9",
+          "type": "import"
+        },
+        {
+          "from": "file:fe6ef667d727",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:fe6ef667d727",
+          "to": "file:3b28f60dabc0",
+          "type": "import"
+        },
+        {
+          "from": "file:e327c8a72202",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:e327c8a72202",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:e327c8a72202",
+          "to": "file:6eb4102d33f9",
+          "type": "import"
+        },
+        {
+          "from": "file:844d1e373137",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:844d1e373137",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:844d1e373137",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:844d1e373137",
+          "to": "file:67cc8af189c6",
+          "type": "import"
+        },
+        {
+          "from": "file:deddbed2ce5e",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:deddbed2ce5e",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:deddbed2ce5e",
+          "to": "file:ea81aafb0f0b",
+          "type": "import"
+        },
+        {
+          "from": "file:eddf1fce705c",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:eddf1fce705c",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:eddf1fce705c",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:eddf1fce705c",
+          "to": "file:ca4fbe5b140a",
+          "type": "import"
+        },
+        {
+          "from": "file:6ae89abfaaba",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:6ae89abfaaba",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:6ae89abfaaba",
+          "to": "file:27d868e581cc",
+          "type": "import"
+        },
+        {
+          "from": "file:54ef08da98e7",
+          "to": "file:a0fbcc7a560c",
+          "type": "import"
+        },
+        {
+          "from": "file:54ef08da98e7",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:54ef08da98e7",
+          "to": "file:354ffcce7203",
+          "type": "import"
+        },
+        {
+          "from": "file:9a498221942e",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:9a498221942e",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:9a498221942e",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:9a498221942e",
+          "to": "file:be5505d434b4",
+          "type": "import"
+        },
+        {
+          "from": "file:cc7b2bf95184",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:cc7b2bf95184",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:cc7b2bf95184",
+          "to": "file:0fad98aab693",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:0fad98aab693",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:be5505d434b4",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:ea81aafb0f0b",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:ca4fbe5b140a",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:67cc8af189c6",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:9db98c5705d8",
+          "type": "import"
+        },
+        {
+          "from": "file:11029d4b1df8",
+          "to": "file:27d868e581cc",
+          "type": "import"
+        },
+        {
+          "from": "file:652ecb657d69",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:652ecb657d69",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:652ecb657d69",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:652ecb657d69",
+          "to": "file:9db98c5705d8",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:6eb4102d33f9",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:eddf1fce705c",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:9a498221942e",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:deddbed2ce5e",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:844d1e373137",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:652ecb657d69",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:6ae89abfaaba",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:cc7b2bf95184",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:015a4ff01861",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:5682d357e56c",
+          "type": "import"
+        },
+        {
+          "from": "file:d825d458714c",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:2ecf2b971f1d",
+          "to": "file:9e742c0e9abd",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "file:11029d4b1df8",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "file:015a4ff01861",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "file:5682d357e56c",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "file:6eb4102d33f9",
+          "type": "import"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "file:05da21ce57fb",
+          "type": "import"
+        },
+        {
+          "from": "file:be5505d434b4",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:be5505d434b4",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:ca4fbe5b140a",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:ca4fbe5b140a",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:9db98c5705d8",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:9db98c5705d8",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:27d868e581cc",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:27d868e581cc",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:0fad98aab693",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:0fad98aab693",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:ea81aafb0f0b",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:ea81aafb0f0b",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:67cc8af189c6",
+          "to": "file:175afaf73f59",
+          "type": "import"
+        },
+        {
+          "from": "file:67cc8af189c6",
+          "to": "file:16c45b773dbd",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:9966324819dc",
+          "type": "import"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:14bdce224fa0",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:fd3c46be098b",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9a06e71cbd13",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1ed5f2d095e1",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e1255dc22524",
+          "to": "external:442df9cd2e89",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e3e640bc4904",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ebde41eb3ad8",
+          "to": "external:7e19b1ebf788",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ebde41eb3ad8",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ebde41eb3ad8",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:97be0c6301f5",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:97be0c6301f5",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c715cb19ca02",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ad53468bbca8",
+          "to": "external:7e19b1ebf788",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ad53468bbca8",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ad53468bbca8",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:708f30c17cce",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:708f30c17cce",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33e70ec183b7",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33e70ec183b7",
+          "to": "external:09282fc9f4d7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:66ff500bc7bd",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e37b2fffb1df",
+          "to": "external:0ef9659520d3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15e76b1c2702",
+          "to": "external:9ee07ac7b2a9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:fc911e8eb6bd",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e782cb577f01",
+          "to": "external:e9aee79b97ea",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "external:e9aee79b97ea",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9dbfe1348891",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:42d8cee8806a",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1fa9ad618daa",
+          "to": "external:e9aee79b97ea",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1fa9ad618daa",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20a8a21e3100",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c9e88e8e9486",
+          "to": "external:7201c83b4351",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c9e88e8e9486",
+          "to": "external:c5528dbb2102",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c9e88e8e9486",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:354ffcce7203",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6eb4102d33f9",
+          "to": "external:67974af1921c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a0fbcc7a560c",
+          "to": "external:0ef9659520d3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1e946197e8ed",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:eee9fd2096d2",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:eee9fd2096d2",
+          "to": "external:421a2d65dc71",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:27ca8a0b001b",
+          "to": "external:0ef9659520d3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:16c45b773dbd",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:08ebdc702697",
+          "to": "external:0ef9659520d3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:21fdeb77bf7c",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:21fdeb77bf7c",
+          "to": "external:827018334445",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f6bed585fe2f",
+          "to": "external:7e19b1ebf788",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f6bed585fe2f",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f6bed585fe2f",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:fe6ef667d727",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:54ef08da98e7",
+          "to": "external:0ef9659520d3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:54ef08da98e7",
+          "to": "external:8cb7516ddbcd",
+          "type": "import_external"
+        },
+        {
+          "from": "file:54ef08da98e7",
+          "to": "external:06ceb0257588",
+          "type": "import_external"
+        },
+        {
+          "from": "file:54ef08da98e7",
+          "to": "external:c5528dbb2102",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9dbaff169f0c",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:be5505d434b4",
+          "to": "external:8f88efc18f48",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ca4fbe5b140a",
+          "to": "external:8f88efc18f48",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9db98c5705d8",
+          "to": "external:8f88efc18f48",
+          "type": "import_external"
+        },
+        {
+          "from": "file:67cc8af189c6",
+          "to": "external:8f88efc18f48",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:6cfa12249ad3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:4f300e2d919c",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:4e621ae76fd7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:7e19b1ebf788",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "external:4e621ae76fd7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "external:e06c14ce550d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "external:74f8221059ba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "external:7e19b1ebf788",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9966324819dc",
+          "to": "external:a12e0cca629a",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:f496bc7264a6",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "nodepool",
+          "to_module": "nodepool/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/pages/ShortVideoPage.ets",
+        "entry/src/main/ets/pages/SplashScreenPage.ets",
+        "entry/src/main/ets/pages/WebPage.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "nodepool/example/Index.ets",
+        "nodepoolExamples/coldStartNoPreCreate/src/main/ets/pages/Index.ets",
+        "nodepoolExamples/coldStartPreCreate/src/main/ets/pages/Index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/HomePage.ets",
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/pages/MenuPage.ets",
+        "entry/src/main/ets/pages/ShortVideoPage.ets",
+        "entry/src/main/ets/pages/SplashScreenPage.ets",
+        "entry/src/main/ets/pages/WebPage.ets",
+        "entry/src/main/ets/view/FlowItemNode.ets",
+        "entry/src/main/ets/view/FunctionView.ets",
+        "entry/src/main/ets/view/ItemDescView/DescHotelView.ets",
+        "entry/src/main/ets/view/ItemDescView/DescRaidersView.ets",
+        "entry/src/main/ets/view/ItemDescView/DescRentView.ets",
+        "entry/src/main/ets/view/ItemDescView/DescSceneView.ets",
+        "entry/src/main/ets/view/ItemDescView/DescTravelImageView.ets",
+        "entry/src/main/ets/view/ItemDescView/DescTravelVideoView.ets",
+        "entry/src/main/ets/view/ItemDescView/DescUniversalView.ets",
+        "entry/src/main/ets/view/ItemHotelView.ets",
+        "entry/src/main/ets/view/ItemRaidersView.ets",
+        "entry/src/main/ets/view/ItemRentView.ets",
+        "entry/src/main/ets/view/ItemSceneView.ets",
+        "entry/src/main/ets/view/ItemTravelImageView.ets",
+        "entry/src/main/ets/view/ItemTravelVideoView.ets",
+        "entry/src/main/ets/view/ItemUniversalView.ets",
+        "entry/src/main/ets/view/SearchBarView.ets",
+        "entry/src/main/ets/view/TitleView.ets",
+        "entry/src/main/ets/view/VideoPlayView.ets",
+        "entry/src/main/ets/view/WaterFlowNodeView.ets",
+        "entry/src/main/ets/view/WaterFlowView.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "nodepool/example/Index.ets",
+        "nodepool/src/main/ets/lib/NodeItem.ets",
+        "nodepoolExamples/coldStartNoPreCreate/src/main/ets/pages/Index.ets",
+        "nodepoolExamples/coldStartPreCreate/src/main/ets/pages/Index.ets"
+      ],
+      "builders": [
+        "entry/src/main/ets/pages/MenuPage.ets",
+        "entry/src/main/ets/pages/ShortVideoPage.ets",
+        "entry/src/main/ets/pages/WebPage.ets",
+        "entry/src/main/ets/view/FlowItemNode.ets",
+        "entry/src/main/ets/view/FunctionView.ets",
+        "entry/src/main/ets/view/VideoPlayView.ets",
+        "entry/src/main/ets/view/WaterFlowNodeView.ets",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/ApiCostTimeXts.test.ets",
+        "nodepool/example/Index.ets",
+        "nodepool/src/main/ets/lib/WebBuilder.ets"
+      ],
+      "inherit_files": [
+        "nodepool/src/main/ets/mission/MissionFrameOnIdleHandler.ets"
+      ],
+      "implement_files": [
+        "entry/src/main/ets/viewmodel/AVDataSource.ets"
+      ],
+      "export_default_files": [
+        "entry/hvigorfile.ts",
+        "entry/src/main/ets/entryability/EntryAbility.ets",
+        "entry/src/main/ets/entrybackupability/EntryBackupAbility.ets",
+        "entry/src/main/ets/utils/Logger.ets",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/ApiCostTimeXts.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "entry/src/test/List.test.ets",
+        "entry/src/test/LocalUnit.test.ets",
+        "hvigorfile.ts",
+        "nodepool/hvigorfile.ts",
+        "nodepool/src/main/ets/utils/Logger.ets",
+        "nodepoolExamples/coldStartNoPreCreate/hvigorfile.ts",
+        "nodepoolExamples/coldStartNoPreCreate/src/main/ets/coldstartnoprecreateability/ColdStartNoPreCreateAbility.ets",
+        "nodepoolExamples/coldStartNoPreCreate/src/ohosTest/ets/test/Ability.test.ets",
+        "nodepoolExamples/coldStartNoPreCreate/src/ohosTest/ets/test/List.test.ets",
+        "nodepoolExamples/coldStartNoPreCreate/src/test/List.test.ets",
+        "nodepoolExamples/coldStartNoPreCreate/src/test/LocalUnit.test.ets",
+        "nodepoolExamples/coldStartPreCreate/hvigorfile.ts",
+        "nodepoolExamples/coldStartPreCreate/src/main/ets/coldstartprecreateability/ColdStartPreCreateAbility.ets",
+        "nodepoolExamples/coldStartPreCreate/src/ohosTest/ets/test/Ability.test.ets",
+        "nodepoolExamples/coldStartPreCreate/src/ohosTest/ets/test/List.test.ets",
+        "nodepoolExamples/coldStartPreCreate/src/test/List.test.ets",
+        "nodepoolExamples/coldStartPreCreate/src/test/LocalUnit.test.ets"
+      ]
+    }
+  }
+}

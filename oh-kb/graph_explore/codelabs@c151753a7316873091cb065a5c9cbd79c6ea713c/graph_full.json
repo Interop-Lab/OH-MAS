@@ -1,0 +1,881 @@
+{
+  "meta": {
+    "language": "cpp",
+    "build_time_ms": 497.095,
+    "files_scanned": 26,
+    "parse_failed_files": 0,
+    "file_node_count": 26,
+    "external_node_count": 21,
+    "edge_count": 113,
+    "unresolved_local_edges": 7,
+    "external_edges": 47,
+    "edge_type_counts": {
+      "include_system_external": 47,
+      "include_local": 33,
+      "same_module_include": 33
+    },
+    "module_dep_count": 0,
+    "build_gn_dep_refs": 0,
+    "file_to_file_edge_count": 66,
+    "file_to_external_edge_count": 47,
+    "repo_name": "codelabs",
+    "commit_hash": "c151753a7316873091cb065a5c9cbd79c6ea713c",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:fb07bfae62b8",
+        "path": "NativeAPI/NativeTemplateDemo/entry/src/main/cpp/hello.cpp",
+        "name": "hello.cpp"
+      },
+      {
+        "id": "file:15f6b6825f43",
+        "path": "NativeAPI/NativeTemplateDemo/entry/src/main/cpp/common/common.h",
+        "name": "common.h"
+      },
+      {
+        "id": "file:3d45ca53610e",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/database_ops.cpp",
+        "name": "database_ops.cpp"
+      },
+      {
+        "id": "file:ad16ac6bfbb1",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/database_ops.h",
+        "name": "database_ops.h"
+      },
+      {
+        "id": "file:50f0a86d67cf",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/compute_class.h",
+        "name": "compute_class.h"
+      },
+      {
+        "id": "file:2f27eb2659d1",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/napi_init.cpp",
+        "name": "napi_init.cpp"
+      },
+      {
+        "id": "file:6989c7b6d3ac",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/common_ffrt.c",
+        "name": "common_ffrt.c"
+      },
+      {
+        "id": "file:d928300077d0",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/function_class.h",
+        "name": "function_class.h"
+      },
+      {
+        "id": "file:3c1ee1afe910",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/compute_class.c",
+        "name": "compute_class.c"
+      },
+      {
+        "id": "file:d74b04262cca",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/sort_class.cpp",
+        "name": "sort_class.cpp"
+      },
+      {
+        "id": "file:d47b5b4e6d18",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/native_log_wrapper.h",
+        "name": "native_log_wrapper.h"
+      },
+      {
+        "id": "file:aae1d4f0510a",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/function_class.c",
+        "name": "function_class.c"
+      },
+      {
+        "id": "file:02a9842a3a55",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/function_class.cpp",
+        "name": "function_class.cpp"
+      },
+      {
+        "id": "file:dfa3d4ff8f76",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/bank_queue_system.cpp",
+        "name": "bank_queue_system.cpp"
+      },
+      {
+        "id": "file:1bc8d909536f",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/common_ffrt.h",
+        "name": "common_ffrt.h"
+      },
+      {
+        "id": "file:bfa3e5faf939",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/function_class_cpp.h",
+        "name": "function_class_cpp.h"
+      },
+      {
+        "id": "file:e991f833e62c",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/bank_queue_system.h",
+        "name": "bank_queue_system.h"
+      },
+      {
+        "id": "file:ac3112b8b35f",
+        "path": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/sort_class.h",
+        "name": "sort_class.h"
+      },
+      {
+        "id": "file:6760145fcf47",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/napi_init.cpp",
+        "name": "napi_init.cpp"
+      },
+      {
+        "id": "file:8344d3450e90",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/render/plugin_render.cpp",
+        "name": "plugin_render.cpp"
+      },
+      {
+        "id": "file:92688290e741",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/render/egl_core.cpp",
+        "name": "egl_core.cpp"
+      },
+      {
+        "id": "file:ddd3a14e185f",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/render/plugin_render.h",
+        "name": "plugin_render.h"
+      },
+      {
+        "id": "file:14202b047784",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/render/egl_core.h",
+        "name": "egl_core.h"
+      },
+      {
+        "id": "file:0c2896f22851",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/common/common.h",
+        "name": "common.h"
+      },
+      {
+        "id": "file:0dc38b8990cf",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/manager/plugin_manager.cpp",
+        "name": "plugin_manager.cpp"
+      },
+      {
+        "id": "file:69a5e0e68108",
+        "path": "NativeAPI/XComponent/entry/src/main/cpp/manager/plugin_manager.h",
+        "name": "plugin_manager.h"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:a2c131c40f86",
+        "name": "hilog/log.h"
+      },
+      {
+        "id": "external:e9a8c8f7517d",
+        "name": "napi/native_api.h"
+      },
+      {
+        "id": "external:0ed7fca574bd",
+        "name": "sstream"
+      },
+      {
+        "id": "external:22d8c4037e38",
+        "name": "string"
+      },
+      {
+        "id": "external:4fc3e78ab996",
+        "name": "aki/jsbind.h"
+      },
+      {
+        "id": "external:f48e964fa225",
+        "name": "math.h"
+      },
+      {
+        "id": "external:e46647cc786f",
+        "name": "stdio.h"
+      },
+      {
+        "id": "external:d57164f06760",
+        "name": "stdlib.h"
+      },
+      {
+        "id": "external:ac75d9212458",
+        "name": "future"
+      },
+      {
+        "id": "external:a247070543f5",
+        "name": "iostream"
+      },
+      {
+        "id": "external:cf0bcb0956b8",
+        "name": "random"
+      },
+      {
+        "id": "external:14623c347665",
+        "name": "unistd.h"
+      },
+      {
+        "id": "external:171e37c82cb5",
+        "name": "stdint.h"
+      },
+      {
+        "id": "external:09fbe3c1ca60",
+        "name": "js_native_api.h"
+      },
+      {
+        "id": "external:314b8b087291",
+        "name": "js_native_api_types.h"
+      },
+      {
+        "id": "external:d94da75b6490",
+        "name": "EGL/egl.h"
+      },
+      {
+        "id": "external:2b0f449a5266",
+        "name": "EGL/eglext.h"
+      },
+      {
+        "id": "external:df6d06ffe1cf",
+        "name": "EGL/eglplatform.h"
+      },
+      {
+        "id": "external:966ef2716ef5",
+        "name": "GLES3/gl3.h"
+      },
+      {
+        "id": "external:9dff3eb9eff9",
+        "name": "unordered_map"
+      },
+      {
+        "id": "external:4d768f6e06c0",
+        "name": "ace/xcomponent/native_interface_xcomponent.h"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:fb07bfae62b8",
+          "to": "file:15f6b6825f43",
+          "type": "include_local"
+        },
+        {
+          "from": "file:fb07bfae62b8",
+          "to": "file:15f6b6825f43",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3d45ca53610e",
+          "to": "file:ad16ac6bfbb1",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3d45ca53610e",
+          "to": "file:ad16ac6bfbb1",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:50f0a86d67cf",
+          "type": "include_local"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:50f0a86d67cf",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:d928300077d0",
+          "type": "include_local"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:d928300077d0",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:bfa3e5faf939",
+          "type": "include_local"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:bfa3e5faf939",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:ac3112b8b35f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "file:ac3112b8b35f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6989c7b6d3ac",
+          "to": "file:1bc8d909536f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6989c7b6d3ac",
+          "to": "file:1bc8d909536f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6989c7b6d3ac",
+          "to": "file:d47b5b4e6d18",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6989c7b6d3ac",
+          "to": "file:d47b5b4e6d18",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3c1ee1afe910",
+          "to": "file:1bc8d909536f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3c1ee1afe910",
+          "to": "file:1bc8d909536f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:3c1ee1afe910",
+          "to": "file:d47b5b4e6d18",
+          "type": "include_local"
+        },
+        {
+          "from": "file:3c1ee1afe910",
+          "to": "file:d47b5b4e6d18",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "file:ac3112b8b35f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "file:ac3112b8b35f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "file:e991f833e62c",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "file:e991f833e62c",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "file:d47b5b4e6d18",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "file:d47b5b4e6d18",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:aae1d4f0510a",
+          "to": "file:1bc8d909536f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:aae1d4f0510a",
+          "to": "file:1bc8d909536f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:aae1d4f0510a",
+          "to": "file:d47b5b4e6d18",
+          "type": "include_local"
+        },
+        {
+          "from": "file:aae1d4f0510a",
+          "to": "file:d47b5b4e6d18",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:e991f833e62c",
+          "type": "include_local"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:e991f833e62c",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:ad16ac6bfbb1",
+          "type": "include_local"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:ad16ac6bfbb1",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:bfa3e5faf939",
+          "type": "include_local"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:bfa3e5faf939",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:d47b5b4e6d18",
+          "type": "include_local"
+        },
+        {
+          "from": "file:02a9842a3a55",
+          "to": "file:d47b5b4e6d18",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:dfa3d4ff8f76",
+          "to": "file:e991f833e62c",
+          "type": "include_local"
+        },
+        {
+          "from": "file:dfa3d4ff8f76",
+          "to": "file:e991f833e62c",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:dfa3d4ff8f76",
+          "to": "file:d47b5b4e6d18",
+          "type": "include_local"
+        },
+        {
+          "from": "file:dfa3d4ff8f76",
+          "to": "file:d47b5b4e6d18",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6760145fcf47",
+          "to": "file:69a5e0e68108",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6760145fcf47",
+          "to": "file:69a5e0e68108",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6760145fcf47",
+          "to": "file:0c2896f22851",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6760145fcf47",
+          "to": "file:0c2896f22851",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "file:ddd3a14e185f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "file:ddd3a14e185f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "file:69a5e0e68108",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "file:69a5e0e68108",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "file:0c2896f22851",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "file:0c2896f22851",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "file:14202b047784",
+          "type": "include_local"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "file:14202b047784",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "file:ddd3a14e185f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "file:ddd3a14e185f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "file:0c2896f22851",
+          "type": "include_local"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "file:0c2896f22851",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:ddd3a14e185f",
+          "to": "file:14202b047784",
+          "type": "include_local"
+        },
+        {
+          "from": "file:ddd3a14e185f",
+          "to": "file:14202b047784",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "file:69a5e0e68108",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "file:69a5e0e68108",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "file:0c2896f22851",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "file:0c2896f22851",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "file:ddd3a14e185f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "file:ddd3a14e185f",
+          "type": "same_module_include"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:fb07bfae62b8",
+          "to": "external:a2c131c40f86",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:15f6b6825f43",
+          "to": "external:e9a8c8f7517d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:3d45ca53610e",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:ad16ac6bfbb1",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:2f27eb2659d1",
+          "to": "external:4fc3e78ab996",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:3c1ee1afe910",
+          "to": "external:f48e964fa225",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:3c1ee1afe910",
+          "to": "external:e46647cc786f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:3c1ee1afe910",
+          "to": "external:d57164f06760",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "external:ac75d9212458",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "external:a247070543f5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d74b04262cca",
+          "to": "external:cf0bcb0956b8",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aae1d4f0510a",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:6760145fcf47",
+          "to": "external:a2c131c40f86",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "external:171e37c82cb5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "external:09fbe3c1ca60",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "external:314b8b087291",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8344d3450e90",
+          "to": "external:a2c131c40f86",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "external:e46647cc786f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "external:d94da75b6490",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "external:2b0f449a5266",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "external:df6d06ffe1cf",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "external:966ef2716ef5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:92688290e741",
+          "to": "external:a2c131c40f86",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:ddd3a14e185f",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:ddd3a14e185f",
+          "to": "external:9dff3eb9eff9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:ddd3a14e185f",
+          "to": "external:4d768f6e06c0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:ddd3a14e185f",
+          "to": "external:e9a8c8f7517d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:14202b047784",
+          "to": "external:d94da75b6490",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:14202b047784",
+          "to": "external:2b0f449a5266",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:14202b047784",
+          "to": "external:966ef2716ef5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0c2896f22851",
+          "to": "external:e9a8c8f7517d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0c2896f22851",
+          "to": "external:d94da75b6490",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0c2896f22851",
+          "to": "external:2b0f449a5266",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0c2896f22851",
+          "to": "external:966ef2716ef5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0c2896f22851",
+          "to": "external:df6d06ffe1cf",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "external:171e37c82cb5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "external:e46647cc786f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "external:4d768f6e06c0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0dc38b8990cf",
+          "to": "external:a2c131c40f86",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "external:9dff3eb9eff9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "external:09fbe3c1ca60",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "external:314b8b087291",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "external:4d768f6e06c0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:69a5e0e68108",
+          "to": "external:e9a8c8f7517d",
+          "type": "include_system_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "symbol_profiles": [
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/database_ops.cpp",
+          "namespace_count": 0,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/database_ops.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 12
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/compute_class.c",
+          "namespace_count": 0,
+          "class_or_struct_count": 12
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/sort_class.cpp",
+          "namespace_count": 1,
+          "class_or_struct_count": 11
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/function_class.cpp",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/common_ffrt.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/function_class_cpp.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/bank_queue_system.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "NativeAPI/FunctionFlowRuntime/entry/src/main/cpp/sort_class.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "NativeAPI/XComponent/entry/src/main/cpp/render/plugin_render.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "NativeAPI/XComponent/entry/src/main/cpp/render/egl_core.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "NativeAPI/XComponent/entry/src/main/cpp/manager/plugin_manager.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        }
+      ]
+    }
+  }
+}

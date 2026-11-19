@@ -1,0 +1,28 @@
+{
+  "repo_name": "applications_auth_widget",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_auth_widget",
+  "language": "arkts",
+  "commit_hash": "7a7de9d76c3405a6124eebf230cf0c289b7476b9",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_auth_widget@7a7de9d76c3405a6124eebf230cf0c289b7476b9/graph_full.json",
+  "build_time_ms": 89.456,
+  "files_scanned": 40,
+  "parse_failed_files": 0,
+  "file_node_count": 40,
+  "external_node_count": 15,
+  "edge_count": 158,
+  "unresolved_local_edges": 0,
+  "external_edges": 76,
+  "edge_type_counts": {
+    "export_external": 2,
+    "import": 82,
+    "import_external": 74
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 76,
+    "relative": 82
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 82,
+  "file_to_external_edge_count": 76,
+  "extractor_version": "v0.6"
+}

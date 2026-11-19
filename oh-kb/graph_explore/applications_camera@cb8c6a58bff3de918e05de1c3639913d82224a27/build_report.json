@@ -1,0 +1,29 @@
+{
+  "repo_name": "applications_camera",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_camera",
+  "language": "arkts",
+  "commit_hash": "cb8c6a58bff3de918e05de1c3639913d82224a27",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_camera@cb8c6a58bff3de918e05de1c3639913d82224a27/graph_full.json",
+  "build_time_ms": 3335.982,
+  "files_scanned": 598,
+  "parse_failed_files": 0,
+  "file_node_count": 598,
+  "external_node_count": 360,
+  "edge_count": 7207,
+  "unresolved_local_edges": 25,
+  "external_edges": 3755,
+  "edge_type_counts": {
+    "import_external": 3726,
+    "export_from": 5,
+    "import": 3518,
+    "export_external": 29
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 3757,
+    "relative": 3546
+  },
+  "module_dep_count": 7,
+  "file_to_file_edge_count": 3493,
+  "file_to_external_edge_count": 3714,
+  "extractor_version": "v0.6"
+}

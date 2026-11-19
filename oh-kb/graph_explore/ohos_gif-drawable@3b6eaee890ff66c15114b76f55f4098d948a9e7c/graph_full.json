@@ -1,0 +1,533 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 44.384,
+    "files_scanned": 23,
+    "parse_failed_files": 0,
+    "file_node_count": 23,
+    "external_node_count": 15,
+    "edge_count": 55,
+    "unresolved_local_edges": 1,
+    "external_edges": 36,
+    "edge_type_counts": {
+      "export_from": 2,
+      "export_star": 4,
+      "re_export": 4,
+      "export_external": 1,
+      "import_external": 35,
+      "import": 9
+    },
+    "resolve_mode_counts": {
+      "relative": 16,
+      "alias_or_package": 36
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 19,
+    "file_to_external_edge_count": 36,
+    "repo_name": "ohos_gif-drawable",
+    "commit_hash": "3b6eaee890ff66c15114b76f55f4098d948a9e7c",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:dcbd6fece4b5",
+        "path": "libgif/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:f5531b343118",
+        "path": "libgif/src/main/ets/components/gif/utils/ResourceLoader.ts",
+        "name": "ResourceLoader.ts"
+      },
+      {
+        "id": "file:8be35f79eaa6",
+        "path": "libgif/src/main/ets/components/gif/utils/ParseHelperUtils.ts",
+        "name": "ParseHelperUtils.ts"
+      },
+      {
+        "id": "file:db941061a2fe",
+        "path": "libgif/src/main/ets/components/gif/utils/FileUtils.ts",
+        "name": "FileUtils.ts"
+      },
+      {
+        "id": "file:36e13eae57bf",
+        "path": "libgif/src/main/ets/components/gif/parse/GIFParse.ts",
+        "name": "GIFParse.ts"
+      },
+      {
+        "id": "file:158a884e5cc1",
+        "path": "libgif/src/main/ets/components/gif/display/GIFFrame.ts",
+        "name": "GIFFrame.ts"
+      },
+      {
+        "id": "file:d7c727f8bb98",
+        "path": "libgif/src/main/ets/components/gif/display/GIFComponent.ets",
+        "name": "GIFComponent.ets"
+      },
+      {
+        "id": "file:3b02ef24a482",
+        "path": "libgif/src/main/ets/components/gif/worker/GifWorker.ts",
+        "name": "GifWorker.ts"
+      },
+      {
+        "id": "file:508f020b916c",
+        "path": "entry/src/main/ets/pages/workerDecodeGIFTestCasePage.ets",
+        "name": "workerDecodeGIFTestCasePage.ets"
+      },
+      {
+        "id": "file:3781dcde8dc9",
+        "path": "entry/src/main/ets/pages/loadResourceAndRawFilePage.ets",
+        "name": "loadResourceAndRawFilePage.ets"
+      },
+      {
+        "id": "file:af67f92886be",
+        "path": "entry/src/main/ets/pages/sample1TestCasePage.ets",
+        "name": "sample1TestCasePage.ets"
+      },
+      {
+        "id": "file:20c30e69fe1e",
+        "path": "entry/src/main/ets/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:ff4216ab5d27",
+        "path": "entry/src/main/ets/pages/loadStringAndBufferPage.ets",
+        "name": "loadStringAndBufferPage.ets"
+      },
+      {
+        "id": "file:077e64ff54e0",
+        "path": "entry/src/main/ets/pages/networkLoadTestCasePage.ets",
+        "name": "networkLoadTestCasePage.ets"
+      },
+      {
+        "id": "file:4e39a3b49a4c",
+        "path": "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:70a4aaf1148c",
+        "path": "entry/src/main/ets/Application/AbilityStage.ts",
+        "name": "AbilityStage.ts"
+      },
+      {
+        "id": "file:5c1038bbd773",
+        "path": "entry/src/main/ets/pages/workers/worker1.ts",
+        "name": "worker1.ts"
+      },
+      {
+        "id": "file:03927fa60f00",
+        "path": "entry/src/main/ets/pages/workers/gifParseWorker.ts",
+        "name": "gifParseWorker.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:28f956b079a3",
+        "path": "entry/src/ohosTest/ets/TestAbility/TestAbility.ts",
+        "name": "TestAbility.ts"
+      },
+      {
+        "id": "file:2cda739f46c8",
+        "path": "entry/src/ohosTest/ets/Application/AbilityStage.ts",
+        "name": "AbilityStage.ts"
+      },
+      {
+        "id": "file:4753d5e92854",
+        "path": "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "name": "index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:7e62db58bfb2",
+        "name": "gifuct-js"
+      },
+      {
+        "id": "external:917970451079",
+        "name": "@ohos.request"
+      },
+      {
+        "id": "external:0208f71de438",
+        "name": "spark-md5"
+      },
+      {
+        "id": "external:52bd843b9006",
+        "name": "@ohos.fileio"
+      },
+      {
+        "id": "external:6936c8c63688",
+        "name": "@ohos.multimedia.image"
+      },
+      {
+        "id": "external:25c8a15e1baa",
+        "name": "@ohos.worker"
+      },
+      {
+        "id": "external:68319350138f",
+        "name": "@ohos/ohos-gif-drawable"
+      },
+      {
+        "id": "external:eb2898f50c8f",
+        "name": "@system.router"
+      },
+      {
+        "id": "external:359fa699ecf4",
+        "name": "@ohos.application.Ability"
+      },
+      {
+        "id": "external:eb1cf1dae649",
+        "name": "@ohos.application.AbilityStage"
+      },
+      {
+        "id": "external:ffdcf47f69ef",
+        "name": "@ohos/ohos-gif-drawable/src/main/ets/components/gif/worker/GifWorker"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      },
+      {
+        "id": "external:087196b347e1",
+        "name": "@ohos/libgif"
+      },
+      {
+        "id": "external:d64ccc4e2fa9",
+        "name": "@ohos.application.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:d7c727f8bb98",
+          "type": "export_from"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:158a884e5cc1",
+          "type": "export_star"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:158a884e5cc1",
+          "type": "re_export"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:36e13eae57bf",
+          "type": "export_star"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:36e13eae57bf",
+          "type": "re_export"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:8be35f79eaa6",
+          "type": "export_star"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:8be35f79eaa6",
+          "type": "re_export"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:f5531b343118",
+          "type": "export_star"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:f5531b343118",
+          "type": "re_export"
+        },
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "file:3b02ef24a482",
+          "type": "export_from"
+        },
+        {
+          "from": "file:8be35f79eaa6",
+          "to": "file:158a884e5cc1",
+          "type": "import"
+        },
+        {
+          "from": "file:36e13eae57bf",
+          "to": "file:8be35f79eaa6",
+          "type": "import"
+        },
+        {
+          "from": "file:36e13eae57bf",
+          "to": "file:158a884e5cc1",
+          "type": "import"
+        },
+        {
+          "from": "file:d7c727f8bb98",
+          "to": "file:158a884e5cc1",
+          "type": "import"
+        },
+        {
+          "from": "file:d7c727f8bb98",
+          "to": "file:3b02ef24a482",
+          "type": "import"
+        },
+        {
+          "from": "file:d7c727f8bb98",
+          "to": "file:36e13eae57bf",
+          "type": "import"
+        },
+        {
+          "from": "file:3b02ef24a482",
+          "to": "file:36e13eae57bf",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:dcbd6fece4b5",
+          "to": "external:7e62db58bfb2",
+          "type": "export_external"
+        },
+        {
+          "from": "file:f5531b343118",
+          "to": "external:917970451079",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f5531b343118",
+          "to": "external:0208f71de438",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8be35f79eaa6",
+          "to": "external:7e62db58bfb2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:db941061a2fe",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:36e13eae57bf",
+          "to": "external:7e62db58bfb2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d7c727f8bb98",
+          "to": "external:6936c8c63688",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3b02ef24a482",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:508f020b916c",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:508f020b916c",
+          "to": "external:68319350138f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3781dcde8dc9",
+          "to": "external:68319350138f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3781dcde8dc9",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:af67f92886be",
+          "to": "external:68319350138f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:af67f92886be",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:af67f92886be",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ff4216ab5d27",
+          "to": "external:68319350138f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ff4216ab5d27",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ff4216ab5d27",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:077e64ff54e0",
+          "to": "external:68319350138f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:077e64ff54e0",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:70a4aaf1148c",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5c1038bbd773",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5c1038bbd773",
+          "to": "external:7e62db58bfb2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:03927fa60f00",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:03927fa60f00",
+          "to": "external:ffdcf47f69ef",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:7e62db58bfb2",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:087196b347e1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2cda739f46c8",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2cda739f46c8",
+          "to": "external:087196b347e1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4753d5e92854",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "libgif",
+          "to_module": "libgif/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/loadResourceAndRawFilePage.ets",
+        "entry/src/main/ets/pages/loadStringAndBufferPage.ets",
+        "entry/src/main/ets/pages/networkLoadTestCasePage.ets",
+        "entry/src/main/ets/pages/sample1TestCasePage.ets",
+        "entry/src/main/ets/pages/workerDecodeGIFTestCasePage.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/loadResourceAndRawFilePage.ets",
+        "entry/src/main/ets/pages/loadStringAndBufferPage.ets",
+        "entry/src/main/ets/pages/networkLoadTestCasePage.ets",
+        "entry/src/main/ets/pages/sample1TestCasePage.ets",
+        "entry/src/main/ets/pages/workerDecodeGIFTestCasePage.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "libgif/src/main/ets/components/gif/display/GIFComponent.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/Application/AbilityStage.ts",
+        "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "entry/src/ohosTest/ets/Application/AbilityStage.ts",
+        "entry/src/ohosTest/ets/TestAbility/TestAbility.ts",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "libgif/src/main/ets/components/gif/display/GIFComponent.ets"
+      ]
+    }
+  }
+}

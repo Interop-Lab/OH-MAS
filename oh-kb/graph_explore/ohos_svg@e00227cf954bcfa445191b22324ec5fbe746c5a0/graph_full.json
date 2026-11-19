@@ -1,0 +1,1079 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 131.489,
+    "files_scanned": 51,
+    "parse_failed_files": 0,
+    "file_node_count": 51,
+    "external_node_count": 19,
+    "edge_count": 130,
+    "unresolved_local_edges": 0,
+    "external_edges": 44,
+    "edge_type_counts": {
+      "export_external": 2,
+      "export_from": 4,
+      "import_external": 42,
+      "import": 83
+    },
+    "resolve_mode_counts": {
+      "alias_or_package": 44,
+      "relative": 87
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 86,
+    "file_to_external_edge_count": 44,
+    "repo_name": "ohos_svg",
+    "commit_hash": "e00227cf954bcfa445191b22324ec5fbe746c5a0",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:14bdce224fa0",
+        "path": "hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:28db5000083e",
+        "path": "sharedlibrary/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:83ff95d1316f",
+        "path": "library/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:d359b0927909",
+        "path": "library/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:9a06e71cbd13",
+        "path": "entry/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:51b97f3bc36d",
+        "path": "sharedlibrary/src/main/ets/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:67df7d30dd85",
+        "path": "sharedlibrary/src/main/ets/pages/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:5ec73535b18c",
+        "path": "library/src/main/ets/components/SVGExternalFileResolver.ts",
+        "name": "SVGExternalFileResolver.ts"
+      },
+      {
+        "id": "file:88278489b836",
+        "path": "library/src/main/ets/components/SVGImageView.ets",
+        "name": "SVGImageView.ets"
+      },
+      {
+        "id": "file:43e9c74e53f1",
+        "path": "library/src/main/ets/components/RenderOptions.ts",
+        "name": "RenderOptions.ts"
+      },
+      {
+        "id": "file:89aad7255b82",
+        "path": "library/src/main/ets/components/CSS.ts",
+        "name": "CSS.ts"
+      },
+      {
+        "id": "file:46674b70c6b9",
+        "path": "library/src/main/ets/components/LogUtil.ts",
+        "name": "LogUtil.ts"
+      },
+      {
+        "id": "file:3384b9e39a41",
+        "path": "library/src/main/ets/components/SimpleAssetResolver.ts",
+        "name": "SimpleAssetResolver.ts"
+      },
+      {
+        "id": "file:0672259136c8",
+        "path": "library/src/main/ets/components/PreserveAspectRatio.ts",
+        "name": "PreserveAspectRatio.ts"
+      },
+      {
+        "id": "file:88003ff45514",
+        "path": "library/src/main/ets/components/SVGParseException.ts",
+        "name": "SVGParseException.ts"
+      },
+      {
+        "id": "file:f55f6e05b1bc",
+        "path": "library/src/main/ets/components/GlobalContext.ts",
+        "name": "GlobalContext.ts"
+      },
+      {
+        "id": "file:256d344f6547",
+        "path": "library/src/main/ets/components/SVG.ts",
+        "name": "SVG.ts"
+      },
+      {
+        "id": "file:55e416e174c6",
+        "path": "library/src/main/ets/components/utils/SVGRenderer.ts",
+        "name": "SVGRenderer.ts"
+      },
+      {
+        "id": "file:c177ec2ae60c",
+        "path": "library/src/main/ets/components/utils/Character.ts",
+        "name": "Character.ts"
+      },
+      {
+        "id": "file:b50104017852",
+        "path": "library/src/main/ets/components/utils/SVGBase.ts",
+        "name": "SVGBase.ts"
+      },
+      {
+        "id": "file:3fe3b3e120ad",
+        "path": "library/src/main/ets/components/utils/Rect.ts",
+        "name": "Rect.ts"
+      },
+      {
+        "id": "file:eef9a64e7551",
+        "path": "library/src/main/ets/components/utils/NumberParser.ts",
+        "name": "NumberParser.ts"
+      },
+      {
+        "id": "file:52cf9929da6a",
+        "path": "library/src/main/ets/components/utils/CSSParser.ts",
+        "name": "CSSParser.ts"
+      },
+      {
+        "id": "file:5d8d52b64a9b",
+        "path": "library/src/main/ets/components/utils/SVGParserImpl.ts",
+        "name": "SVGParserImpl.ts"
+      },
+      {
+        "id": "file:b74c9da457a5",
+        "path": "library/src/main/ets/components/utils/RenderOptionsBase.ts",
+        "name": "RenderOptionsBase.ts"
+      },
+      {
+        "id": "file:812be3b2eba4",
+        "path": "library/src/main/ets/components/utils/Style.ts",
+        "name": "Style.ts"
+      },
+      {
+        "id": "file:d584be333c85",
+        "path": "library/src/main/ets/components/utils/CSSTextScanner.ts",
+        "name": "CSSTextScanner.ts"
+      },
+      {
+        "id": "file:9418328e9791",
+        "path": "library/src/main/ets/components/utils/SVGParser.ts",
+        "name": "SVGParser.ts"
+      },
+      {
+        "id": "file:2b3368b533de",
+        "path": "library/src/main/ets/components/utils/TextScanner.ts",
+        "name": "TextScanner.ts"
+      },
+      {
+        "id": "file:73ed9eb5ade6",
+        "path": "library/src/main/ets/components/utils/SVGXMLConstants.ts",
+        "name": "SVGXMLConstants.ts"
+      },
+      {
+        "id": "file:a94c7f414d7e",
+        "path": "library/src/main/ets/components/utils/SVGXMLChecker.ts",
+        "name": "SVGXMLChecker.ts"
+      },
+      {
+        "id": "file:b268305bdc26",
+        "path": "library/src/main/ets/components/utils/mini_canvas.ts",
+        "name": "mini_canvas.ts"
+      },
+      {
+        "id": "file:672d96eb7626",
+        "path": "library/src/main/ets/components/utils/MiniCanvas.ets",
+        "name": "MiniCanvas.ets"
+      },
+      {
+        "id": "file:21d123dc519d",
+        "path": "library/src/main/ets/components/utils/CSSBase.ts",
+        "name": "CSSBase.ts"
+      },
+      {
+        "id": "file:51c957c61f68",
+        "path": "library/src/main/ets/components/utils/Matrix.ts",
+        "name": "Matrix.ts"
+      },
+      {
+        "id": "file:04bc5cd9b409",
+        "path": "library/src/main/ets/components/utils/IntegerParser.ts",
+        "name": "IntegerParser.ts"
+      },
+      {
+        "id": "file:6043dcb56d9b",
+        "path": "entry/src/main/ets/pages/RenderSample.ets",
+        "name": "RenderSample.ets"
+      },
+      {
+        "id": "file:3bd761e43f48",
+        "path": "entry/src/main/ets/pages/setFromStringSample.ets",
+        "name": "setFromStringSample.ets"
+      },
+      {
+        "id": "file:20c30e69fe1e",
+        "path": "entry/src/main/ets/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:94d816e2134c",
+        "path": "entry/src/main/ets/pages/ChangeColor.ets",
+        "name": "ChangeColor.ets"
+      },
+      {
+        "id": "file:2baf00b8d441",
+        "path": "entry/src/main/ets/pages/PolygonPage.ets",
+        "name": "PolygonPage.ets"
+      },
+      {
+        "id": "file:5bc18cfb41e3",
+        "path": "entry/src/main/ets/pages/getSVGPixelMap.ets",
+        "name": "getSVGPixelMap.ets"
+      },
+      {
+        "id": "file:55d6d5f8189c",
+        "path": "entry/src/main/ets/pages/Sample2.ets",
+        "name": "Sample2.ets"
+      },
+      {
+        "id": "file:6e18bddc52b7",
+        "path": "entry/src/main/ets/pages/NoViewbox.ets",
+        "name": "NoViewbox.ets"
+      },
+      {
+        "id": "file:25d004ee1577",
+        "path": "entry/src/main/ets/pages/AnotherSample.ets",
+        "name": "AnotherSample.ets"
+      },
+      {
+        "id": "file:ef3d340f1577",
+        "path": "entry/src/main/ets/entryability/EntryAbility.ts",
+        "name": "EntryAbility.ts"
+      },
+      {
+        "id": "file:6413a04fbe08",
+        "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:ea8152509907",
+        "path": "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "name": "TestAbility.ets"
+      },
+      {
+        "id": "file:33c4849d6fa8",
+        "path": "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "name": "Index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:442df9cd2e89",
+        "name": "@ohos/hvigor-ohos-plugin"
+      },
+      {
+        "id": "external:62741a0bc8bc",
+        "name": "@ohos/svg"
+      },
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      },
+      {
+        "id": "external:34f220ef0980",
+        "name": "@ohos.app.ability.common"
+      },
+      {
+        "id": "external:66bcc4753091",
+        "name": "@ohos.util"
+      },
+      {
+        "id": "external:0c6658fd6b99",
+        "name": "@ohos.display"
+      },
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:eb718c0ab77a",
+        "name": "@ohos.util.Stack"
+      },
+      {
+        "id": "external:6936c8c63688",
+        "name": "@ohos.multimedia.image"
+      },
+      {
+        "id": "external:63d2e6f07834",
+        "name": "@ohos.intl"
+      },
+      {
+        "id": "external:94bab56730c4",
+        "name": "@ohos.convertxml"
+      },
+      {
+        "id": "external:67941a1352a3",
+        "name": "@ohos.app.ability.UIAbility"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:f8f5076df4fb",
+        "name": "@ohos/svg/src/main/ets/components/GlobalContext"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:804207546e94",
+        "name": "@ohos.app.ability.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      },
+      {
+        "id": "external:6ecd634aa752",
+        "name": "@ohos.app.ability.Want"
+      },
+      {
+        "id": "external:f496bc7264a6",
+        "name": "@ohos.app.ability.AbilityConstant"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:d359b0927909",
+          "to": "file:88278489b836",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:256d344f6547",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:b50104017852",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:f55f6e05b1bc",
+          "type": "export_from"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "file:b268305bdc26",
+          "type": "import"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "file:256d344f6547",
+          "type": "import"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "file:43e9c74e53f1",
+          "type": "import"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "file:55e416e174c6",
+          "type": "import"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "file:46674b70c6b9",
+          "type": "import"
+        },
+        {
+          "from": "file:43e9c74e53f1",
+          "to": "file:b74c9da457a5",
+          "type": "import"
+        },
+        {
+          "from": "file:43e9c74e53f1",
+          "to": "file:89aad7255b82",
+          "type": "import"
+        },
+        {
+          "from": "file:43e9c74e53f1",
+          "to": "file:0672259136c8",
+          "type": "import"
+        },
+        {
+          "from": "file:89aad7255b82",
+          "to": "file:21d123dc519d",
+          "type": "import"
+        },
+        {
+          "from": "file:3384b9e39a41",
+          "to": "file:5ec73535b18c",
+          "type": "import"
+        },
+        {
+          "from": "file:0672259136c8",
+          "to": "file:46674b70c6b9",
+          "type": "import"
+        },
+        {
+          "from": "file:0672259136c8",
+          "to": "file:2b3368b533de",
+          "type": "import"
+        },
+        {
+          "from": "file:256d344f6547",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:43e9c74e53f1",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:812be3b2eba4",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:b268305bdc26",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:52cf9929da6a",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:5ec73535b18c",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:3fe3b3e120ad",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:51c957c61f68",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:0672259136c8",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:b74c9da457a5",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:f55f6e05b1bc",
+          "type": "import"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "file:46674b70c6b9",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:3fe3b3e120ad",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:b268305bdc26",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:812be3b2eba4",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:9418328e9791",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:43e9c74e53f1",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:52cf9929da6a",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:88003ff45514",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:0672259136c8",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:5d8d52b64a9b",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:55e416e174c6",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:b74c9da457a5",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:5ec73535b18c",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:51c957c61f68",
+          "type": "import"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "file:f55f6e05b1bc",
+          "type": "import"
+        },
+        {
+          "from": "file:52cf9929da6a",
+          "to": "file:5ec73535b18c",
+          "type": "import"
+        },
+        {
+          "from": "file:52cf9929da6a",
+          "to": "file:812be3b2eba4",
+          "type": "import"
+        },
+        {
+          "from": "file:52cf9929da6a",
+          "to": "file:d584be333c85",
+          "type": "import"
+        },
+        {
+          "from": "file:52cf9929da6a",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:52cf9929da6a",
+          "to": "file:46674b70c6b9",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:51c957c61f68",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:52cf9929da6a",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:9418328e9791",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:2b3368b533de",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:eef9a64e7551",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:04bc5cd9b409",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:88003ff45514",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:812be3b2eba4",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:0672259136c8",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:d584be333c85",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:5ec73535b18c",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:73ed9eb5ade6",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:a94c7f414d7e",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:c177ec2ae60c",
+          "type": "import"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "file:46674b70c6b9",
+          "type": "import"
+        },
+        {
+          "from": "file:b74c9da457a5",
+          "to": "file:52cf9929da6a",
+          "type": "import"
+        },
+        {
+          "from": "file:b74c9da457a5",
+          "to": "file:89aad7255b82",
+          "type": "import"
+        },
+        {
+          "from": "file:b74c9da457a5",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:b74c9da457a5",
+          "to": "file:0672259136c8",
+          "type": "import"
+        },
+        {
+          "from": "file:812be3b2eba4",
+          "to": "file:a94c7f414d7e",
+          "type": "import"
+        },
+        {
+          "from": "file:812be3b2eba4",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:812be3b2eba4",
+          "to": "file:5d8d52b64a9b",
+          "type": "import"
+        },
+        {
+          "from": "file:d584be333c85",
+          "to": "file:2b3368b533de",
+          "type": "import"
+        },
+        {
+          "from": "file:d584be333c85",
+          "to": "file:04bc5cd9b409",
+          "type": "import"
+        },
+        {
+          "from": "file:d584be333c85",
+          "to": "file:52cf9929da6a",
+          "type": "import"
+        },
+        {
+          "from": "file:d584be333c85",
+          "to": "file:46674b70c6b9",
+          "type": "import"
+        },
+        {
+          "from": "file:9418328e9791",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:9418328e9791",
+          "to": "file:5ec73535b18c",
+          "type": "import"
+        },
+        {
+          "from": "file:2b3368b533de",
+          "to": "file:eef9a64e7551",
+          "type": "import"
+        },
+        {
+          "from": "file:2b3368b533de",
+          "to": "file:b50104017852",
+          "type": "import"
+        },
+        {
+          "from": "file:2b3368b533de",
+          "to": "file:c177ec2ae60c",
+          "type": "import"
+        },
+        {
+          "from": "file:b268305bdc26",
+          "to": "file:51c957c61f68",
+          "type": "import"
+        },
+        {
+          "from": "file:672d96eb7626",
+          "to": "file:b268305bdc26",
+          "type": "import"
+        },
+        {
+          "from": "file:21d123dc519d",
+          "to": "file:52cf9929da6a",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:14bdce224fa0",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:9a06e71cbd13",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:67df7d30dd85",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:67df7d30dd85",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:67df7d30dd85",
+          "to": "external:34f220ef0980",
+          "type": "import_external"
+        },
+        {
+          "from": "file:67df7d30dd85",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "external:0c6658fd6b99",
+          "type": "import_external"
+        },
+        {
+          "from": "file:88278489b836",
+          "to": "external:34f220ef0980",
+          "type": "import_external"
+        },
+        {
+          "from": "file:46674b70c6b9",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:256d344f6547",
+          "to": "external:34f220ef0980",
+          "type": "import_external"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "external:eb718c0ab77a",
+          "type": "import_external"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "external:6936c8c63688",
+          "type": "import_external"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "external:63d2e6f07834",
+          "type": "import_external"
+        },
+        {
+          "from": "file:55e416e174c6",
+          "to": "external:34f220ef0980",
+          "type": "import_external"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:b50104017852",
+          "to": "external:34f220ef0980",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5d8d52b64a9b",
+          "to": "external:94bab56730c4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6043dcb56d9b",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3bd761e43f48",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:94d816e2134c",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2baf00b8d441",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5bc18cfb41e3",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:55d6d5f8189c",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6e18bddc52b7",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d004ee1577",
+          "to": "external:62741a0bc8bc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:f8f5076df4fb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:f496bc7264a6",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "library",
+          "to_module": "library/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/AnotherSample.ets",
+        "entry/src/main/ets/pages/ChangeColor.ets",
+        "entry/src/main/ets/pages/NoViewbox.ets",
+        "entry/src/main/ets/pages/PolygonPage.ets",
+        "entry/src/main/ets/pages/RenderSample.ets",
+        "entry/src/main/ets/pages/Sample2.ets",
+        "entry/src/main/ets/pages/getSVGPixelMap.ets",
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/setFromStringSample.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "sharedlibrary/src/main/ets/pages/Index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/AnotherSample.ets",
+        "entry/src/main/ets/pages/ChangeColor.ets",
+        "entry/src/main/ets/pages/NoViewbox.ets",
+        "entry/src/main/ets/pages/PolygonPage.ets",
+        "entry/src/main/ets/pages/RenderSample.ets",
+        "entry/src/main/ets/pages/Sample2.ets",
+        "entry/src/main/ets/pages/getSVGPixelMap.ets",
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/setFromStringSample.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "library/src/main/ets/components/SVGImageView.ets",
+        "library/src/main/ets/components/utils/MiniCanvas.ets",
+        "sharedlibrary/src/main/ets/pages/Index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [
+        "library/src/main/ets/components/utils/SVGRenderer.ts"
+      ],
+      "implement_files": [
+        "library/src/main/ets/components/utils/SVGRenderer.ts"
+      ],
+      "export_default_files": [
+        "entry/src/main/ets/entryability/EntryAbility.ts",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "library/src/main/ets/components/LogUtil.ts",
+        "library/src/main/ets/components/SVGImageView.ets",
+        "library/src/main/ets/components/SimpleAssetResolver.ts",
+        "library/src/main/ets/components/utils/Matrix.ts",
+        "library/src/main/ets/components/utils/Rect.ts",
+        "library/src/main/ets/components/utils/SVGXMLConstants.ts"
+      ]
+    }
+  }
+}

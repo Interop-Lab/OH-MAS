@@ -364,7 +364,15 @@ class CPWorkerSpec:
 
 
 class CPMiniWorkerRunner:
-    def __init__(self, *, temperature: float, max_tokens: int, timeout: int, step_limit: int, cost_limit: float):
+    def __init__(
+        self,
+        *,
+        temperature: float,
+        max_tokens: int,
+        timeout: int,
+        step_limit: int,
+        cost_limit: float,
+    ):
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.timeout = timeout
@@ -642,7 +650,6 @@ class CPMiniWorkerRunner:
             Dictionary of filter name -> filter function mappings
         """
         from oh_mas.agents import cp_prompt_formatter
-        from oh_mas.agents.cp_worker_rules import get_rule_instructions
 
         def format_alarm(alarm_dict):
             """Convert alarm dict to Alarm and format."""
@@ -684,14 +691,6 @@ class CPMiniWorkerRunner:
 
             return cp_prompt_formatter.format_retry_protocol(profiled, previous_feedback)
 
-        def format_rule_guide(alarm_dict):
-            """Dynamically load rule-specific instructions based on alarm rule."""
-            if isinstance(alarm_dict, dict):
-                rule = alarm_dict.get("rule", "")
-            else:
-                rule = alarm_dict.rule
-            return get_rule_instructions(rule)
-
         def format_workflow(alarm_dict):
             """Format workflow hint with step budget."""
             if isinstance(alarm_dict, dict):
@@ -704,7 +703,6 @@ class CPMiniWorkerRunner:
             "format_alarm": format_alarm,
             "format_context": format_context,
             "format_retry": format_retry,
-            "format_rule_guide": format_rule_guide,
             "format_workflow": format_workflow,
         }
 
@@ -859,7 +857,7 @@ class CPMiniWorkerRunner:
 
             "**1. read_file <path>**\n"
             "   Read source code (path relative to repo root)\n"
-            "   Example: `read_file entry/src/main/ets/pages/Index.ets`\n\n"
+            "   Example: `read_file <path/to/file>`\n\n"
 
             "**2. search_code <pattern>**\n"
             "   Search codebase with ripgrep/grep\n"
@@ -888,10 +886,10 @@ class CPMiniWorkerRunner:
             "# Example Workflow\n"
             "```bash\n"
             "# Step 1: Read target file\n"
-            "read_file src/Component.ets\n\n"
+            "read_file <path/to/file>\n\n"
 
             "# Step 2: Make edit (copy old_str from read_file output)\n"
-            'edit_file {"path": "src/Component.ets", "old_str": "  oldCode() {\\n    // ...\\n  }", "new_str": "  newCode() {\\n    // ...\\n  }"}\n\n'
+            'edit_file {"path": "<path/to/file>", "old_str": "  oldCode() {\\n    // ...\\n  }", "new_str": "  newCode() {\\n    // ...\\n  }"}\n\n'
 
             "# Step 3: Submit\n"
             "submit_patch\n"
@@ -911,7 +909,6 @@ class CPMiniWorkerRunner:
         - format_alarm: Renders Alarm object as structured section
         - format_context: Renders GW context (graph_centric for easy / repair_contract for medium/hard)
         - format_retry: Conditionally renders retry EXECUTION PROTOCOL (includes AO's MANDATORY CONSTRAINTS)
-        - format_rule_guide: Dynamically loads rule-specific instructions
         - format_workflow: Renders workflow hint (only for first attempt, mutually exclusive with format_retry)
 
         NOTE: knowledge_pack is consumed by GW to synthesize the repair_contract; it is NOT passed
@@ -921,7 +918,6 @@ class CPMiniWorkerRunner:
             "{{alarm | format_alarm}}\n\n"
             "{{context | format_context}}\n\n"
             "{{profiled | format_retry}}\n\n"  # Retry: MANDATORY CONSTRAINTS + execution workflow
-            "{{alarm | format_rule_guide}}\n\n"
             "{% if profiled.get('retry_index', 0) == 0 %}"  # Conditional: only for first attempt
             "{{alarm | format_workflow}}\n\n"
             "{% endif %}"

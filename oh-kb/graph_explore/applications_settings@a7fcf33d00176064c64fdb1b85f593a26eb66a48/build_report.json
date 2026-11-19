@@ -1,0 +1,25 @@
+{
+  "repo_name": "applications_settings",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_settings",
+  "language": "cpp",
+  "commit_hash": "a7fcf33d00176064c64fdb1b85f593a26eb66a48",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_settings@a7fcf33d00176064c64fdb1b85f593a26eb66a48/graph_full.json",
+  "build_time_ms": 614.205,
+  "files_scanned": 46,
+  "parse_failed_files": 0,
+  "file_node_count": 46,
+  "external_node_count": 14,
+  "edge_count": 148,
+  "unresolved_local_edges": 107,
+  "external_edges": 46,
+  "edge_type_counts": {
+    "include_local": 51,
+    "same_module_include": 51,
+    "include_system_external": 46
+  },
+  "module_dep_count": 50,
+  "build_gn_dep_refs": 82,
+  "file_to_file_edge_count": 102,
+  "file_to_external_edge_count": 46,
+  "extractor_version": "v0.6"
+}

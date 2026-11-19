@@ -1,0 +1,27 @@
+{
+  "repo_name": "security_privacy_center",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/security_privacy_center",
+  "language": "arkts",
+  "commit_hash": "876c6d17ef5a7884ddd3a0ca2da4b84023f7b05f",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/security_privacy_center@876c6d17ef5a7884ddd3a0ca2da4b84023f7b05f/graph_full.json",
+  "build_time_ms": 173.514,
+  "files_scanned": 82,
+  "parse_failed_files": 0,
+  "file_node_count": 82,
+  "external_node_count": 35,
+  "edge_count": 275,
+  "unresolved_local_edges": 0,
+  "external_edges": 97,
+  "edge_type_counts": {
+    "import_external": 97,
+    "import": 186
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 97,
+    "relative": 186
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 178,
+  "file_to_external_edge_count": 97,
+  "extractor_version": "v0.6"
+}

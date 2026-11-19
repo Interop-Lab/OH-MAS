@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 48.907,
+    "files_scanned": 10,
+    "parse_failed_files": 0,
+    "file_node_count": 10,
+    "external_node_count": 9,
+    "edge_count": 14,
+    "unresolved_local_edges": 0,
+    "external_edges": 9,
+    "edge_type_counts": {
+      "export_star": 1,
+      "re_export": 1,
+      "import": 3,
+      "import_external": 9
+    },
+    "resolve_mode_counts": {
+      "relative": 4,
+      "alias_or_package": 9
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 5,
+    "file_to_external_edge_count": 9,
+    "repo_name": "RocketChat",
+    "commit_hash": "9e2aae3ab0457752accc6d8a921bc6841776d4ff",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:c9c65a493a26",
+        "path": "rocketchat/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:2918f56fe866",
+        "path": "rocketchat/src/main/ets/components/rest/RestAPI.ets",
+        "name": "RestAPI.ets"
+      },
+      {
+        "id": "file:3fdd311d1d11",
+        "path": "rocketchat/src/main/ets/components/rest/core/HttpRequestConnector.ets",
+        "name": "HttpRequestConnector.ets"
+      },
+      {
+        "id": "file:0ad156670baa",
+        "path": "entry/src/main/ets/MainAbility/app.ets",
+        "name": "app.ets"
+      },
+      {
+        "id": "file:0ad2ae83acc5",
+        "path": "entry/src/main/ets/MainAbility/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:707679451bdf",
+        "path": "entry/src/main/ets/MainAbility/pages/restApiSample.ets",
+        "name": "restApiSample.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:efa835106427",
+        "path": "entry/src/ohosTest/ets/test/RestApiJsUnit.test.ets",
+        "name": "RestApiJsUnit.test.ets"
+      },
+      {
+        "id": "file:0aa5cc4427f1",
+        "path": "entry/src/ohosTest/ets/default/app.ets",
+        "name": "app.ets"
+      },
+      {
+        "id": "file:7e1140976582",
+        "path": "entry/src/ohosTest/ets/default/pages/index/index.ets",
+        "name": "index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:10583baab28e",
+        "name": "@ohos.net.http"
+      },
+      {
+        "id": "external:eb2898f50c8f",
+        "name": "@system.router"
+      },
+      {
+        "id": "external:567ee22c9228",
+        "name": "@system.prompt"
+      },
+      {
+        "id": "external:a362426f9e82",
+        "name": "@ohos/rocketchat"
+      },
+      {
+        "id": "external:b4b7428b3b59",
+        "name": "hypium/index"
+      },
+      {
+        "id": "external:e4cbbbc6de62",
+        "name": "rocketchat_ohos"
+      },
+      {
+        "id": "external:53c0de1abfcf",
+        "name": "deccjsunit/index"
+      },
+      {
+        "id": "external:5368c60415e6",
+        "name": "@system.app"
+      },
+      {
+        "id": "external:20b336f237a0",
+        "name": "@ohos.ability.featureAbility"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:c9c65a493a26",
+          "to": "file:2918f56fe866",
+          "type": "export_star"
+        },
+        {
+          "from": "file:c9c65a493a26",
+          "to": "file:2918f56fe866",
+          "type": "re_export"
+        },
+        {
+          "from": "file:2918f56fe866",
+          "to": "file:3fdd311d1d11",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:efa835106427",
+          "type": "import"
+        },
+        {
+          "from": "file:7e1140976582",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:3fdd311d1d11",
+          "to": "external:10583baab28e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:0ad2ae83acc5",
+          "to": "external:eb2898f50c8f",
+          "type": "import_external"
+        },
+        {
+          "from": "file:707679451bdf",
+          "to": "external:567ee22c9228",
+          "type": "import_external"
+        },
+        {
+          "from": "file:707679451bdf",
+          "to": "external:a362426f9e82",
+          "type": "import_external"
+        },
+        {
+          "from": "file:efa835106427",
+          "to": "external:b4b7428b3b59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:efa835106427",
+          "to": "external:e4cbbbc6de62",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7e1140976582",
+          "to": "external:53c0de1abfcf",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7e1140976582",
+          "to": "external:5368c60415e6",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7e1140976582",
+          "to": "external:20b336f237a0",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "rocketchat",
+          "to_module": "rocketchat/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/MainAbility/pages/index.ets",
+        "entry/src/main/ets/MainAbility/pages/restApiSample.ets",
+        "entry/src/ohosTest/ets/default/pages/index/index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/MainAbility/pages/index.ets",
+        "entry/src/main/ets/MainAbility/pages/restApiSample.ets",
+        "entry/src/ohosTest/ets/default/pages/index/index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/MainAbility/app.ets",
+        "entry/src/ohosTest/ets/default/app.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/test/RestApiJsUnit.test.ets"
+      ]
+    }
+  }
+}

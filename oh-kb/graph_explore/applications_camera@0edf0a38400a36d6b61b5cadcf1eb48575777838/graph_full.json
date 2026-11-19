@@ -1,0 +1,783 @@
+{
+  "meta": {
+    "language": "cpp",
+    "build_time_ms": 139.596,
+    "files_scanned": 11,
+    "parse_failed_files": 0,
+    "file_node_count": 11,
+    "external_node_count": 44,
+    "edge_count": 97,
+    "unresolved_local_edges": 11,
+    "external_edges": 79,
+    "edge_type_counts": {
+      "include_local": 13,
+      "same_module_include": 13,
+      "include_system_external": 79
+    },
+    "module_dep_count": 0,
+    "build_gn_dep_refs": 0,
+    "file_to_file_edge_count": 26,
+    "file_to_external_edge_count": 71,
+    "repo_name": "applications_camera",
+    "commit_hash": "0edf0a38400a36d6b61b5cadcf1eb48575777838",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:7831d5f00d1e",
+        "path": "appnative/src/main/cpp/napi_init.cpp",
+        "name": "napi_init.cpp"
+      },
+      {
+        "id": "file:b7d1c8b8b6b7",
+        "path": "appnative/src/main/cpp/rouletteZoom/native_bridge.cpp",
+        "name": "native_bridge.cpp"
+      },
+      {
+        "id": "file:47124ffb5e9c",
+        "path": "appnative/src/main/cpp/rouletteZoom/zoom_calculate.cpp",
+        "name": "zoom_calculate.cpp"
+      },
+      {
+        "id": "file:f0848d551048",
+        "path": "appnative/src/main/cpp/rouletteZoom/native_bridge.h",
+        "name": "native_bridge.h"
+      },
+      {
+        "id": "file:8a64d8c7e08d",
+        "path": "appnative/src/main/cpp/rouletteZoom/zoom_struct.h",
+        "name": "zoom_struct.h"
+      },
+      {
+        "id": "file:e446751aa7e2",
+        "path": "appnative/src/main/cpp/rouletteZoom/zoom_param.h",
+        "name": "zoom_param.h"
+      },
+      {
+        "id": "file:442b82c561d3",
+        "path": "appnative/src/main/cpp/rouletteZoom/zoom_calculate.h",
+        "name": "zoom_calculate.h"
+      },
+      {
+        "id": "file:b49c70418419",
+        "path": "appnative/src/main/cpp/rouletteZoom/native_node.cpp",
+        "name": "native_node.cpp"
+      },
+      {
+        "id": "file:aa3654445b0a",
+        "path": "appnative/src/main/cpp/rouletteZoom/native_node.h",
+        "name": "native_node.h"
+      },
+      {
+        "id": "file:d618a33d5edb",
+        "path": "appnative/src/main/cpp/rouletteZoom/zoom_struct.cpp",
+        "name": "zoom_struct.cpp"
+      },
+      {
+        "id": "file:d90205021a61",
+        "path": "appnative/src/main/cpp/common/Log.h",
+        "name": "Log.h"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:28b58e86a6b1",
+        "name": "native_window/external_window.h"
+      },
+      {
+        "id": "external:65c36f7e320f",
+        "name": "native_drawing/drawing_bitmap.h"
+      },
+      {
+        "id": "external:579232ea32d9",
+        "name": "native_drawing/drawing_color.h"
+      },
+      {
+        "id": "external:78a5ff4c48ef",
+        "name": "native_drawing/drawing_canvas.h"
+      },
+      {
+        "id": "external:76bd2ffcda37",
+        "name": "native_drawing/drawing_pen.h"
+      },
+      {
+        "id": "external:b2e5aa2d6ca4",
+        "name": "native_drawing/drawing_brush.h"
+      },
+      {
+        "id": "external:1359007957f3",
+        "name": "native_drawing/drawing_path.h"
+      },
+      {
+        "id": "external:00960233d2f7",
+        "name": "multimedia/image_framework/image_pixel_map_mdk.h"
+      },
+      {
+        "id": "external:0d3328895022",
+        "name": "multimedia/image_framework/image_pixel_map_napi.h"
+      },
+      {
+        "id": "external:033ebec6bd72",
+        "name": "native_drawing/drawing_pixel_map.h"
+      },
+      {
+        "id": "external:b7d045fd51e2",
+        "name": "cstdint"
+      },
+      {
+        "id": "external:22d8c4037e38",
+        "name": "string"
+      },
+      {
+        "id": "external:f30d3deeca74",
+        "name": "iomanip"
+      },
+      {
+        "id": "external:beed36eabf0a",
+        "name": "cmath"
+      },
+      {
+        "id": "external:456f68ca37c4",
+        "name": "algorithm"
+      },
+      {
+        "id": "external:a247070543f5",
+        "name": "iostream"
+      },
+      {
+        "id": "external:14623c347665",
+        "name": "unistd.h"
+      },
+      {
+        "id": "external:19cecca974a5",
+        "name": "thread"
+      },
+      {
+        "id": "external:d7d1ee22eff2",
+        "name": "cstdio"
+      },
+      {
+        "id": "external:82d3f0bed02c",
+        "name": "fcntl.h"
+      },
+      {
+        "id": "external:2d193647acd0",
+        "name": "map"
+      },
+      {
+        "id": "external:1dfa8e97b9eb",
+        "name": "vector"
+      },
+      {
+        "id": "external:0ed7fca574bd",
+        "name": "sstream"
+      },
+      {
+        "id": "external:fc0fa5912f3f",
+        "name": "memory"
+      },
+      {
+        "id": "external:d7a2a6b00e1c",
+        "name": "native_drawing/drawing_color_filter.h"
+      },
+      {
+        "id": "external:d97c2af76e80",
+        "name": "native_drawing/drawing_filter.h"
+      },
+      {
+        "id": "external:2e67fe7c4bf5",
+        "name": "native_drawing/drawing_font.h"
+      },
+      {
+        "id": "external:637587b07fc4",
+        "name": "native_drawing/drawing_font_collection.h"
+      },
+      {
+        "id": "external:7e10911d70e7",
+        "name": "native_drawing/drawing_image.h"
+      },
+      {
+        "id": "external:036b848586ff",
+        "name": "native_drawing/drawing_mask_filter.h"
+      },
+      {
+        "id": "external:8eef15606a88",
+        "name": "native_drawing/drawing_matrix.h"
+      },
+      {
+        "id": "external:5eff5a728aa4",
+        "name": "native_drawing/drawing_memory_stream.h"
+      },
+      {
+        "id": "external:2b36406f1199",
+        "name": "native_drawing/drawing_path_effect.h"
+      },
+      {
+        "id": "external:a8fc2bdb7c8e",
+        "name": "native_drawing/drawing_point.h"
+      },
+      {
+        "id": "external:ff2883717d9d",
+        "name": "native_drawing/drawing_rect.h"
+      },
+      {
+        "id": "external:579817017866",
+        "name": "native_drawing/drawing_round_rect.h"
+      },
+      {
+        "id": "external:77ee7db4b4dd",
+        "name": "native_drawing/drawing_sampling_options.h"
+      },
+      {
+        "id": "external:8cdd8e90c734",
+        "name": "native_drawing/drawing_shader_effect.h"
+      },
+      {
+        "id": "external:00a69ac36cfa",
+        "name": "native_drawing/drawing_text_blob.h"
+      },
+      {
+        "id": "external:dad31599aacf",
+        "name": "native_drawing/drawing_text_declaration.h"
+      },
+      {
+        "id": "external:5ae77b02139b",
+        "name": "native_drawing/drawing_text_typography.h"
+      },
+      {
+        "id": "external:a31cb5bba8ab",
+        "name": "native_drawing/drawing_typeface.h"
+      },
+      {
+        "id": "external:68cd4624c89d",
+        "name": "native_drawing/drawing_types.h"
+      },
+      {
+        "id": "external:87658fc2ef2b",
+        "name": "native_buffer/native_buffer.h"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:7831d5f00d1e",
+          "to": "file:f0848d551048",
+          "type": "include_local"
+        },
+        {
+          "from": "file:7831d5f00d1e",
+          "to": "file:f0848d551048",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:b7d1c8b8b6b7",
+          "to": "file:f0848d551048",
+          "type": "include_local"
+        },
+        {
+          "from": "file:b7d1c8b8b6b7",
+          "to": "file:f0848d551048",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:47124ffb5e9c",
+          "to": "file:442b82c561d3",
+          "type": "include_local"
+        },
+        {
+          "from": "file:47124ffb5e9c",
+          "to": "file:442b82c561d3",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "file:aa3654445b0a",
+          "type": "include_local"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "file:aa3654445b0a",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "file:442b82c561d3",
+          "type": "include_local"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "file:442b82c561d3",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "file:8a64d8c7e08d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "file:8a64d8c7e08d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8a64d8c7e08d",
+          "to": "file:e446751aa7e2",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8a64d8c7e08d",
+          "to": "file:e446751aa7e2",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "file:8a64d8c7e08d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "file:8a64d8c7e08d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:b49c70418419",
+          "to": "file:aa3654445b0a",
+          "type": "include_local"
+        },
+        {
+          "from": "file:b49c70418419",
+          "to": "file:aa3654445b0a",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "file:e446751aa7e2",
+          "type": "include_local"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "file:e446751aa7e2",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "file:8a64d8c7e08d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "file:8a64d8c7e08d",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "file:442b82c561d3",
+          "type": "include_local"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "file:442b82c561d3",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d618a33d5edb",
+          "to": "file:8a64d8c7e08d",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d618a33d5edb",
+          "to": "file:8a64d8c7e08d",
+          "type": "same_module_include"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:f0848d551048",
+          "to": "external:28b58e86a6b1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:65c36f7e320f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:579232ea32d9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:78a5ff4c48ef",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:76bd2ffcda37",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:b2e5aa2d6ca4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:1359007957f3",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:00960233d2f7",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:0d3328895022",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:f0848d551048",
+          "to": "external:033ebec6bd72",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8a64d8c7e08d",
+          "to": "external:b7d045fd51e2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:e446751aa7e2",
+          "to": "external:b7d045fd51e2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:f30d3deeca74",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:b7d045fd51e2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:beed36eabf0a",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:456f68ca37c4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:a247070543f5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:19cecca974a5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:d7d1ee22eff2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:82d3f0bed02c",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:442b82c561d3",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:28b58e86a6b1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:65c36f7e320f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:b2e5aa2d6ca4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:78a5ff4c48ef",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:579232ea32d9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:d7a2a6b00e1c",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:d97c2af76e80",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:2e67fe7c4bf5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:637587b07fc4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:7e10911d70e7",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:036b848586ff",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:8eef15606a88",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:5eff5a728aa4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:1359007957f3",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:2b36406f1199",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:76bd2ffcda37",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:a8fc2bdb7c8e",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:ff2883717d9d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:579817017866",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:77ee7db4b4dd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:8cdd8e90c734",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:00a69ac36cfa",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:dad31599aacf",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:5ae77b02139b",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:a31cb5bba8ab",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:68cd4624c89d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:00960233d2f7",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:0d3328895022",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:033ebec6bd72",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:87658fc2ef2b",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:b7d045fd51e2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:beed36eabf0a",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:456f68ca37c4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:a247070543f5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:19cecca974a5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:d7d1ee22eff2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:82d3f0bed02c",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:f30d3deeca74",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:aa3654445b0a",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d90205021a61",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "symbol_profiles": [
+        {
+          "file": "appnative/src/main/cpp/rouletteZoom/native_bridge.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "appnative/src/main/cpp/rouletteZoom/zoom_struct.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "appnative/src/main/cpp/rouletteZoom/zoom_calculate.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "appnative/src/main/cpp/rouletteZoom/native_node.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "appnative/src/main/cpp/common/Log.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        }
+      ]
+    }
+  }
+}

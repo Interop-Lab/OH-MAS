@@ -204,12 +204,16 @@ class DAAgent:
             finally:
                 self._cleanup_patch_file()
 
+        raw_linter_output = (
+            base_repo.codelinter_raw_output or base_repo.cppcheck_raw_output
+        )
         return AuditDoneFailedEvent(
             task_id=event.task_id,
             failed_level=last_level,
             reason=last_reason,
             failed_patches=failed,
             patch_diagnostics=diagnostics,
+            raw_linter_output=raw_linter_output,
         )
 
     def _ensure_preflight(self) -> None:
@@ -779,11 +783,11 @@ class DAAgent:
         """Extract code snippet around the given line with context.
 
         Returns formatted snippet like:
-           39|   build() {
-           40|     if (this.datasource?.type === 'video') {
-        >> 41|       VideoSwipePlayer({    // <-- problem line
-           42|         index: this.index,
-           43|       });
+           39|   <context line>
+           40|   <context line>
+        >> 41|   <problem line>
+           42|   <context line>
+           43|   <context line>
         """
         try:
             # Try to find the file in repo_path

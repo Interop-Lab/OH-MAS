@@ -1,0 +1,29 @@
+{
+  "repo_name": "applications_systemui",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_systemui",
+  "language": "arkts",
+  "commit_hash": "0eea6aff7343dcf1e77e5e12d49e0db299dfe89e",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_systemui@0eea6aff7343dcf1e77e5e12d49e0db299dfe89e/graph_full.json",
+  "build_time_ms": 635.905,
+  "files_scanned": 272,
+  "parse_failed_files": 0,
+  "file_node_count": 272,
+  "external_node_count": 64,
+  "edge_count": 1168,
+  "unresolved_local_edges": 3,
+  "external_edges": 210,
+  "edge_type_counts": {
+    "import": 975,
+    "import_external": 209,
+    "import_side_effect": 1,
+    "export_external": 1
+  },
+  "resolve_mode_counts": {
+    "relative": 979,
+    "alias_or_package": 210
+  },
+  "module_dep_count": 71,
+  "file_to_file_edge_count": 959,
+  "file_to_external_edge_count": 209,
+  "extractor_version": "v0.6"
+}

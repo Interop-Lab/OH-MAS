@@ -1,0 +1,31 @@
+{
+  "repo_name": "ohos_gif-drawable",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_gif-drawable",
+  "language": "arkts",
+  "commit_hash": "3b6eaee890ff66c15114b76f55f4098d948a9e7c",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_gif-drawable@3b6eaee890ff66c15114b76f55f4098d948a9e7c/graph_full.json",
+  "build_time_ms": 44.384,
+  "files_scanned": 23,
+  "parse_failed_files": 0,
+  "file_node_count": 23,
+  "external_node_count": 15,
+  "edge_count": 55,
+  "unresolved_local_edges": 1,
+  "external_edges": 36,
+  "edge_type_counts": {
+    "export_from": 2,
+    "export_star": 4,
+    "re_export": 4,
+    "export_external": 1,
+    "import_external": 35,
+    "import": 9
+  },
+  "resolve_mode_counts": {
+    "relative": 16,
+    "alias_or_package": 36
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 19,
+  "file_to_external_edge_count": 36,
+  "extractor_version": "v0.6"
+}

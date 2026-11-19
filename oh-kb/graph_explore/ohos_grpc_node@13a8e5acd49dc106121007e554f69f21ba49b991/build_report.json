@@ -1,0 +1,25 @@
+{
+  "repo_name": "ohos_grpc_node",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_grpc_node",
+  "language": "cpp",
+  "commit_hash": "13a8e5acd49dc106121007e554f69f21ba49b991",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_grpc_node@13a8e5acd49dc106121007e554f69f21ba49b991/graph_full.json",
+  "build_time_ms": 129.037,
+  "files_scanned": 13,
+  "parse_failed_files": 0,
+  "file_node_count": 13,
+  "external_node_count": 26,
+  "edge_count": 79,
+  "unresolved_local_edges": 21,
+  "external_edges": 44,
+  "edge_type_counts": {
+    "include_local": 19,
+    "same_module_include": 19,
+    "include_system_external": 44
+  },
+  "module_dep_count": 0,
+  "build_gn_dep_refs": 0,
+  "file_to_file_edge_count": 36,
+  "file_to_external_edge_count": 43,
+  "extractor_version": "v0.6"
+}

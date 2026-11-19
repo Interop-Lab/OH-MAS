@@ -91,6 +91,8 @@ class GWAgent:
                 "must_not_touch": len(precise.repair_contract.must_not_touch),
                 "allowed_transformations": len(precise.repair_contract.allowed_transformations),
             }
+            if worker_result.ledger_merge:
+                self.last_debug["agent"]["ledger_merge"] = worker_result.ledger_merge
             if trajectory_path:
                 self._write_trajectory(trajectory_path=trajectory_path, gw_input=gw_input, context=precise_slice)
 

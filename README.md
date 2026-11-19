@@ -1,6 +1,6 @@
 # OH-MAS: Contracting the Search Space for Static-Analysis Warning Repair
 
-> Artifact for our ICSE 2027 submission. OH-MAS is an automated repair system for OpenHarmony that reaches **77.9% strict pass rate** on 741 real-world static-analysis warnings, outperforming the strongest agent baseline by 30.7 pp.
+> Artifact for our ICSE 2027 submission. OH-MAS is an automated repair system for OpenHarmony that reaches **85.0% strict pass rate (SPR)** on 741 real-world static-analysis warnings (81.4% ArkTS, 88.9% C/C++), 28.5 pp ahead of the strongest single-attempt agent baseline (Moatless, 56.5%) and 19.3 pp ahead of the strongest baseline given three linter-fed attempts (GPT-5.5, 65.7%).
 
 ---
 
@@ -21,23 +21,14 @@ The system targets OpenHarmony's two language layers: **ArkTS** (validated by Co
 ```
 OH-MAS/
 ├── oh-mas-backend/          # Core system (Python)
-│   ├── src/oh_mas/
-│   │   ├── agents/          # AO, GW, CP, DA agent implementations
-│   │   ├── core/            # Orchestrator, event bus, workspace, schemas
-│   │   ├── oh-kb/           # KB client & graph construction
-│   │   └── run/             # CLI entry point
-│   └── config/              # YAML configurations (one per experiment)
+│   ├── src/oh_mas/          # agents (AO/GW/CP/DA), core, oh_kb, gw_semantic_lib, run
+│   └── config/              # YAML configs: default, exp_p1/p2/p3 (RQ1/RQ3), rev_* (RQ2 ablations)
 ├── mini-swe-agent/          # Adapted mini-SWE-agent (CP worker backbone)
-├── oh-kb/                   # Unified knowledge base (repair templates + experiences)
-├── data/                    # OH-Bench dataset (ArkTS + C/C++)
-├── scripts/
-│   ├── sample_ablation_subset.py   # Reproducible stratified sampling for RQ2
-│   └── sample_manual_review.py     # Random sampling for manual review
-├── results/
-│   └── analysis_reports/    # Evaluation result reports
-├── Appendix.pdf       # Supplementary material for this paper
-└── docker/
-    └── harmonyrepair-codelinter/Dockerfile
+├── oh-kb/                   # Knowledge base (rule templates + repair_experiences.json + dependency graphs)
+├── dataset/                 # OH-Bench (ArkTS + C/C++) and manual-review subsets
+├── docker/Dockerfile        # Linter (CodeLinter / Cppcheck) image
+├── Per-Instance Analysis Report/   # Per-instance result CSVs for all tables
+└── OH_MAS_appendix.pdf      # Supplementary material
 ```
 
 ---
@@ -75,42 +66,28 @@ pip install -e mini-swe-agent/
 pip install -e oh-mas-backend/
 
 # 4. Build the Docker image (needed for linter-based validation)
-cd docker/harmonyrepair-codelinter
-docker build -t harmonyrepair:with-codelinter .
-cd ../..
+docker build -t harmonyrepair:with-codelinter docker/
 ```
 
 ---
 
 ## Dataset (OH-Bench)
 
-The `data/` directory contains OH-Bench, a repository-level benchmark of **741 real-world warnings** from 39 industrial OpenHarmony repositories:
+The `dataset/` directory contains OH-Bench, a repository-level benchmark of **741 real-world warnings** from 39 industrial OpenHarmony repositories:
 
 
-| File                              | Instances | Language | Purpose                        |
-| ----------------------------------- | ----------- | ---------- | -------------------------------- |
-| `arkts_dataset_final.json`        | 382       | ArkTS    | Full benchmark (RQ1, RQ3)      |
-| `cpp_dataset_final.json`          | 359       | C/C++    | Full benchmark (RQ1, RQ3)      |
-| `arkts_ablation_subset.json`      | 100       | ArkTS    | Stratified subset (RQ2)        |
-| `cpp_ablation_subset.json`        | 100       | C/C++    | Stratified subset (RQ2)        |
-| `arkts_manual_review_subset.json` | 50        | ArkTS    | Manual review / error analysis |
-| `cpp_manual_review_subset.json`   | 50        | C/C++    | Manual review / error analysis |
+| File                              | Instances | Language | Purpose                                   |
+| ----------------------------------- | ----------- | ---------- | ------------------------------------------- |
+| `arkts_dataset_final.json`        | 382       | ArkTS    | Full benchmark (RQ1-RQ3)                  |
+| `cpp_dataset_final.json`          | 359       | C/C++    | Full benchmark (RQ1-RQ3)                  |
+| `arkts_manual_review_subset.json` | 50        | ArkTS    | Manual review / error analysis            |
+| `cpp_manual_review_subset.json`   | 50        | C/C++    | Manual review / error analysis            |
 
-Each instance in the main benchmark contains: `instance_id`, alarm metadata (file, line, rule, message), the buggy repository at a fixed commit, and the reference patch.
+Each instance in the main benchmark contains: `instance_id`, alarm metadata (file, line, rule, message), and the buggy repository at a fixed commit. All experiments (including ablations) run on the full 741 instances.
 
-The manual review subsets (`*_manual_review_subset.json`) are 50-instance samples drawn from the full benchmark for qualitative error analysis. They include additional fields — `input_snippet`, `code_lines`, and `category` — to support case-by-case inspection of repair failures.
+The manual review subsets are 50-instance random samples (`seed=42`) drawn from the full benchmark for qualitative error analysis. They include additional fields — `input_snippet`, `code_lines`, and `category` — to support case-by-case inspection of repair failures.
 
-All subsets are fully reproducible from the full benchmark using the provided scripts (both use `seed=42`):
-
-```bash
-# Regenerate ablation subset (100 ArkTS + 100 C/C++, stratified by rule_id)
-python scripts/sample_ablation_subset.py
-
-# Regenerate manual review subset (50 ArkTS + 50 C/C++, simple random sample)
-python scripts/sample_manual_review.py
-```
-
-> **Note:** The 39 source repositories are not included due to size and third-party licensing. Each instance records the full 40-character commit hash; repositories can be cloned from OpenHarmony Gitee and checked out at the recorded commit. See `data/arkts_dataset_final.json` → `commit_hash` field.
+> **Note:** The 39 source repositories are not included due to size and third-party licensing. Each instance records the full 40-character commit hash; repositories can be cloned from OpenHarmony Gitee and checked out at the recorded commit. See `dataset/arkts_dataset_final.json` → `commit_hash` field.
 
 ---
 
@@ -119,7 +96,7 @@ python scripts/sample_manual_review.py
 Copy and edit the example config:
 
 ```bash
-cp oh-mas-backend/config/oh_mas.yaml oh-mas-backend/config/my_run.yaml
+cp oh-mas-backend/config/exp_p1.yaml oh-mas-backend/config/my_run.yaml
 ```
 
 Key settings:
@@ -175,35 +152,54 @@ PYTHONPATH=src python3 -m oh_mas.run.oh_mas run \
 
 ## Reproducing Paper Results
 
-### RQ1 — Main effectiveness (Table 2)
+Per-instance outcomes (result, failure level, PAR, Pass@1) behind every table are in `Per-Instance Analysis Report/`.
 
-Run `oh_mas.yaml` (P1 pool: Claude Sonnet 4.5, Gemini 2.5 Flash, Kimi K2.5) on the full 741-instance benchmark. Pre-computed results are in `results/analysis_reports/`:
+### RQ1 — Main effectiveness
 
-
-| File                   | Content                       |
-| ------------------------ | ------------------------------- |
-| `p1__arkts_report.txt` | ArkTS full benchmark, pool P1 |
-| `p1__cpp_report.txt`   | C/C++ full benchmark, pool P1 |
-| `p2__arkts_report.txt` | Pool P2 (cost-effective)      |
-| `p3__arkts_report.txt` | Pool P3 (frontier)            |
-
-### RQ2 — Ablation study (Table 3)
-
-Run on the 200-instance stratified subset (`arkts_ablation_subset.json` + `cpp_ablation_subset.json`):
+OH-MAS (pool P1, `exp_p1.yaml`) on all 741 instances, against 12 baselines (SPR %):
 
 
-| Variant                  | Config file                                                             | Report                                            |
-| -------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
-| Full (OH-MAS)            | `oh_mas.yaml`                                                           | `eval_results_p1__arkts_report.txt`               |
-| A1 (no model pool)       | `ablation1_claude.yaml`、ablation_a1_gemini.yaml、ablation_a1_kimi.yaml | `eval_results_ablation1_claude__arkts_report.txt` |
-| A2 (no typed feedback)   | `ablation2.yaml`                                                        | `eval_results_ablation2__arkts_report.txt`        |
-| A2' (free-form feedback) | `ablation2prime.yaml`                                                   | `eval_results_ablation2prime__arkts_report.txt`   |
-| A3 (no repair contract)  | `ablation3.yaml`                                                        | `eval_results_ablation3__arkts_report.txt`        |
-| A3' (no templates)       | `ablation3prime.yaml`                                                   | `eval_results_ablation3prime__arkts_report.txt`   |
+| System                                 | ArkTS    | C/C++    | Overall  |
+| ---------------------------------------- | ---------- | ---------- | ---------- |
+| Best direct LLM, 1 att. (GPT-5.5)      | 56.0     | 55.2     | 55.6     |
+| Best direct LLM, 3 att. (GPT-5.5)      | 72.8     | 58.2     | 65.7     |
+| Best agent, 1 att. (Moatless)          | 58.4     | 54.6     | 56.5     |
+| **OH-MAS (P1)**                        | **81.4** | **88.9** | **85.0** |
+| Sonnet 4.5, 3 att.                     | 63.9     | 56.3     | 60.2     |
+| Moatless, 3 att.                       | 74.1     | 67.1     | 70.7     |
+| OH-MAS, Sonnet 4.5 only (same budget)  | 73.6     | 77.7     | 75.6     |
 
-### RQ3 — Cost-effectiveness (Table 4)
+Full baseline rows (Opus 4.5/4.8, Sonnet 4.5, Gemini 2.5 Flash, Kimi K2.5, MiniMax M2.5, Agentless, SWE-agent, Claude Code, OpenCode) are in `arkts_baselines_per_instance.csv`, `cpp_baselines_per_instance.csv`, `baselines_3att_per_instance.csv`, and `gpt55_3att_per_instance.csv`.
 
-Pre-computed in `results/analysis_reports/p2__*_report.txt` and `p3__*_report.txt`.
+### RQ2 — Ablation study
+
+Run on all 741 instances; per-instance results in `ablation_per_instance.csv`:
+
+
+| Variant                       | Config                | Overall SPR | Δ     |
+| ------------------------------- | ----------------------- | ------------- | ------- |
+| Full (OH-MAS, P1)             | `exp_p1.yaml`         | 85.0        | —     |
+| A1 (single backbone)          | `rev_a1_sonnet.yaml`  | 75.6        | −9.4  |
+| A2 (no typed feedback)        | `rev_a2.yaml`         | 57.6        | −27.4 |
+| A2′ (free-form, non-cumul.)   | `rev_a2prime.yaml`    | 69.2        | −15.8 |
+| A2″ (free-form, cumulative)   | `rev_a2pp.yaml`       | 70.2        | −14.8 |
+| A3 (no repair contract)       | `rev_a3.yaml`         | 65.3        | −19.7 |
+| A3′ (no knowledge base)       | `rev_a3prime.yaml`    | 76.0        | −9.0  |
+| Templates only                | `rev_tpl_only.yaml`   | 74.2        | −10.8 |
+| Experiences only              | `rev_exp_only.yaml`   | 81.8        | −3.2  |
+| Random routing                | `rev_random.yaml`     | 81.0        | −4.0  |
+| Three Sonnet workers          | `rev_sonnet3.yaml`    | 79.5        | −5.5  |
+
+### RQ3 — Cost-effectiveness
+
+Three CP model pools on all 741 instances (`exp_p1/p2/p3.yaml`; per-instance results in `main_P1-P3_per_instance.csv`):
+
+
+| Pool            | ArkTS | C/C++ | Overall | Pass@1 | $/instance |
+| ----------------- | ------- | ------- | --------- | -------- | ------------ |
+| P1 (Balanced)   | 81.4  | 88.9  | 85.0    | 54.7   | 0.46       |
+| P2 (Cost-Eff.)  | 79.8  | 82.2  | 81.0    | 43.3   | 0.26       |
+| P3 (Frontier)   | 78.3  | 86.6  | 82.3    | 54.0   | 0.66       |
 
 ---
 
@@ -255,7 +251,7 @@ Each failed audit returns a **typed** verdict (L1/L2/L3) that the AO converts in
 
 ## Knowledge Base (OH-KB)
 
-The `oh-kb/` directory is a unified knowledge base containing pre-built dependency graphs and rule-specialized repair templates used by GW (`allowed transformations`). These are JSON files organized by linter category:
+The `oh-kb/` directory is a unified knowledge base of rule-specialized repair templates and curated repair experiences used by GW (`allowed transformations`). Pre-built dependency graphs are in `Per-Instance Analysis Report/graph_explore/`. These are JSON files organized by linter category:
 
 ```
 oh-kb/
@@ -271,19 +267,19 @@ Each template file contains `rule_id`, `examples` (buggy/fixed code pairs), and 
 
 The OH-KB supports multiple providers (set in config):
 
-- `null` — no KB, for ablation A3'
+- `null` — no KB (ablation A3′)
 - `graph_explore_mock` — uses pre-built dependency graphs + oh-kb templates (default)
 
-The KB client implementation and dependency graph construction logic reside in `oh-mas-backend/src/oh_mas/oh_kb/` (a subpackage of `oh_mas`).
+The KB client implementation and dependency graph construction logic reside in `oh-mas-backend/src/oh_mas/oh_kb/`.
 
 ---
 
 ## Docker Image
 
-The `docker/harmonyrepair-codelinter/Dockerfile` builds the linter execution environment:
+The `docker/Dockerfile` builds the linter execution environment:
 
 ```bash
-docker build -t harmonyrepair:with-codelinter docker/harmonyrepair-codelinter/
+docker build -t harmonyrepair:with-codelinter docker/
 ```
 
 This image contains CodeLinter (OpenHarmony's official ArkTS static analyzer) and Cppcheck. The DA agent mounts each repository into `/workspace/repo` and runs linters in isolation.

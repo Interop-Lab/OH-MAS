@@ -1,0 +1,29 @@
+{
+  "repo_name": "lottie_turbo",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/lottie_turbo",
+  "language": "arkts",
+  "commit_hash": "1a88295734d000aec4b6988986aba3083b12ecd1",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/lottie_turbo@1a88295734d000aec4b6988986aba3083b12ecd1/graph_full.json",
+  "build_time_ms": 116.83,
+  "files_scanned": 70,
+  "parse_failed_files": 0,
+  "file_node_count": 70,
+  "external_node_count": 21,
+  "edge_count": 111,
+  "unresolved_local_edges": 0,
+  "external_edges": 95,
+  "edge_type_counts": {
+    "import_external": 94,
+    "export_from": 6,
+    "export_external": 1,
+    "import": 10
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 95,
+    "relative": 16
+  },
+  "module_dep_count": 2,
+  "file_to_file_edge_count": 16,
+  "file_to_external_edge_count": 95,
+  "extractor_version": "v0.6"
+}

@@ -49,7 +49,6 @@ def finalize_context(ctx: GWToolContext, *, reasoning: str, confidence: float) -
         mode=ctx.mode,
         repair_contract=ctx.repair_contract,
         raw_graph_slice=ctx.graph_data,
-        rule_context_mode=ctx.rule_mode.get("slice_strategy", ""),
         slicing_strategy="rule_aware",
         llm_reasoning=reasoning,
         agent_confidence=confidence,

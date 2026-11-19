@@ -1,0 +1,28 @@
+{
+  "repo_name": "node_pool",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/node_pool",
+  "language": "arkts",
+  "commit_hash": "2226e83ae4260c1331fbc121582aae726e164882",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/node_pool@2226e83ae4260c1331fbc121582aae726e164882/graph_full.json",
+  "build_time_ms": 82.662,
+  "files_scanned": 53,
+  "parse_failed_files": 0,
+  "file_node_count": 53,
+  "external_node_count": 14,
+  "edge_count": 138,
+  "unresolved_local_edges": 0,
+  "external_edges": 34,
+  "edge_type_counts": {
+    "import_external": 34,
+    "export_from": 4,
+    "import": 100
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 34,
+    "relative": 104
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 104,
+  "file_to_external_edge_count": 34,
+  "extractor_version": "v0.6"
+}

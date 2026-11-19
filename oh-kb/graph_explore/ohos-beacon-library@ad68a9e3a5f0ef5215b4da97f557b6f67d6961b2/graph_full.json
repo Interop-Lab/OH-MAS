@@ -1,0 +1,1976 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 135.706,
+    "files_scanned": 95,
+    "parse_failed_files": 0,
+    "file_node_count": 95,
+    "external_node_count": 24,
+    "edge_count": 250,
+    "unresolved_local_edges": 1,
+    "external_edges": 52,
+    "edge_type_counts": {
+      "export_external": 8,
+      "export_from": 7,
+      "import": 192,
+      "import_external": 44
+    },
+    "resolve_mode_counts": {
+      "alias_or_package": 52,
+      "relative": 200
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 199,
+    "file_to_external_edge_count": 51,
+    "repo_name": "ohos-beacon-library",
+    "commit_hash": "ad68a9e3a5f0ef5215b4da97f557b6f67d6961b2",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:14bdce224fa0",
+        "path": "hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:83ff95d1316f",
+        "path": "library/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:d359b0927909",
+        "path": "library/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:9a06e71cbd13",
+        "path": "entry/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:7b847c62eae0",
+        "path": "library/src/main/ets/components/bluetooth/Pdu.ts",
+        "name": "Pdu.ts"
+      },
+      {
+        "id": "file:9884cebec7eb",
+        "path": "library/src/main/ets/components/bluetooth/BleAdvertisement.ts",
+        "name": "BleAdvertisement.ts"
+      },
+      {
+        "id": "file:f3a195315eed",
+        "path": "library/src/main/ets/components/beacon/Identifier.ts",
+        "name": "Identifier.ts"
+      },
+      {
+        "id": "file:1d607e21db1b",
+        "path": "library/src/main/ets/components/beacon/Beacon.ts",
+        "name": "Beacon.ts"
+      },
+      {
+        "id": "file:13cbafa684e0",
+        "path": "library/src/main/ets/components/beacon/BeaconTransmitter.ts",
+        "name": "BeaconTransmitter.ts"
+      },
+      {
+        "id": "file:d3b7afad5cbf",
+        "path": "library/src/main/ets/components/beacon/BeaconManager.ts",
+        "name": "BeaconManager.ts"
+      },
+      {
+        "id": "file:26779852c519",
+        "path": "library/src/main/ets/components/beacon/IntentHandler.ts",
+        "name": "IntentHandler.ts"
+      },
+      {
+        "id": "file:f775d7682adf",
+        "path": "library/src/main/ets/components/beacon/AltBeacon.ts",
+        "name": "AltBeacon.ts"
+      },
+      {
+        "id": "file:d4adf50c445f",
+        "path": "library/src/main/ets/components/beacon/BeaconLocalBroadcastProcessor.ts",
+        "name": "BeaconLocalBroadcastProcessor.ts"
+      },
+      {
+        "id": "file:9cb5757191bb",
+        "path": "library/src/main/ets/components/beacon/BeaconParser.ts",
+        "name": "BeaconParser.ts"
+      },
+      {
+        "id": "file:7db7f5878d1e",
+        "path": "library/src/main/ets/components/beacon/BeaconDataNotifier.ts",
+        "name": "BeaconDataNotifier.ts"
+      },
+      {
+        "id": "file:474d872d33e7",
+        "path": "library/src/main/ets/components/beacon/BleNotAvailableException.ts",
+        "name": "BleNotAvailableException.ts"
+      },
+      {
+        "id": "file:6cf073bd2e35",
+        "path": "library/src/main/ets/components/beacon/MonitorNotifier.ts",
+        "name": "MonitorNotifier.ts"
+      },
+      {
+        "id": "file:8f1e503f625e",
+        "path": "library/src/main/ets/components/beacon/AltBeaconParser.ts",
+        "name": "AltBeaconParser.ts"
+      },
+      {
+        "id": "file:829842bf7e8f",
+        "path": "library/src/main/ets/components/beacon/BeaconIntentProcessor.ts",
+        "name": "BeaconIntentProcessor.ts"
+      },
+      {
+        "id": "file:4cba6d26351a",
+        "path": "library/src/main/ets/components/beacon/RangeNotifier.ts",
+        "name": "RangeNotifier.ts"
+      },
+      {
+        "id": "file:7453d6ca72a5",
+        "path": "library/src/main/ets/components/beacon/BeaconConsumer.ts",
+        "name": "BeaconConsumer.ts"
+      },
+      {
+        "id": "file:a1b13c0b0b8b",
+        "path": "library/src/main/ets/components/beacon/BeaconData.ts",
+        "name": "BeaconData.ts"
+      },
+      {
+        "id": "file:c726fced84b2",
+        "path": "library/src/main/ets/components/beacon/InternalBeaconConsumer.ts",
+        "name": "InternalBeaconConsumer.ts"
+      },
+      {
+        "id": "file:066bc0750f6b",
+        "path": "library/src/main/ets/components/beacon/Region.ts",
+        "name": "Region.ts"
+      },
+      {
+        "id": "file:4760dada1e01",
+        "path": "library/src/main/ets/components/beacon/distance/ModelSpecificDistanceUpdater.ts",
+        "name": "ModelSpecificDistanceUpdater.ts"
+      },
+      {
+        "id": "file:8a678e985ef1",
+        "path": "library/src/main/ets/components/beacon/distance/DeviceAttritube.ts",
+        "name": "DeviceAttritube.ts"
+      },
+      {
+        "id": "file:ffd9eb094665",
+        "path": "library/src/main/ets/components/beacon/distance/DeviceModel.ts",
+        "name": "DeviceModel.ts"
+      },
+      {
+        "id": "file:8f566989ac0d",
+        "path": "library/src/main/ets/components/beacon/distance/ModelSpecificDistanceCalculator.ts",
+        "name": "ModelSpecificDistanceCalculator.ts"
+      },
+      {
+        "id": "file:637dae9be54e",
+        "path": "library/src/main/ets/components/beacon/distance/DistanceCalculator.ts",
+        "name": "DistanceCalculator.ts"
+      },
+      {
+        "id": "file:0fbd922ee78a",
+        "path": "library/src/main/ets/components/beacon/distance/DeviceModelList.ts",
+        "name": "DeviceModelList.ts"
+      },
+      {
+        "id": "file:1d0fe6dc9398",
+        "path": "library/src/main/ets/components/beacon/distance/CurveFittedDistanceCalculator.ts",
+        "name": "CurveFittedDistanceCalculator.ts"
+      },
+      {
+        "id": "file:c91e25ae5417",
+        "path": "library/src/main/ets/components/beacon/distance/DistanceConfigFetcher.ts",
+        "name": "DistanceConfigFetcher.ts"
+      },
+      {
+        "id": "file:96ffd9071f74",
+        "path": "library/src/main/ets/components/beacon/utils/HexUtil.ts",
+        "name": "HexUtil.ts"
+      },
+      {
+        "id": "file:788e0934acc2",
+        "path": "library/src/main/ets/components/beacon/utils/EddystoneTelemetryAccessor.ts",
+        "name": "EddystoneTelemetryAccessor.ts"
+      },
+      {
+        "id": "file:95885370656e",
+        "path": "library/src/main/ets/components/beacon/utils/DateUtils.ts",
+        "name": "DateUtils.ts"
+      },
+      {
+        "id": "file:7b184b72bbe9",
+        "path": "library/src/main/ets/components/beacon/utils/UrlBeaconUrlCompressor.ts",
+        "name": "UrlBeaconUrlCompressor.ts"
+      },
+      {
+        "id": "file:1d8318115410",
+        "path": "library/src/main/ets/components/beacon/utils/Handler.ts",
+        "name": "Handler.ts"
+      },
+      {
+        "id": "file:eaaac84fe89d",
+        "path": "library/src/main/ets/components/beacon/utils/TextUtils.ts",
+        "name": "TextUtils.ts"
+      },
+      {
+        "id": "file:b1ccdcf40aae",
+        "path": "library/src/main/ets/components/beacon/logging/Logger.ts",
+        "name": "Logger.ts"
+      },
+      {
+        "id": "file:b62a9d24852e",
+        "path": "library/src/main/ets/components/beacon/logging/AbstractOpenHarmonyLogger.ts",
+        "name": "AbstractOpenHarmonyLogger.ts"
+      },
+      {
+        "id": "file:40b7588f8cca",
+        "path": "library/src/main/ets/components/beacon/logging/LogManager.ets",
+        "name": "LogManager.ets"
+      },
+      {
+        "id": "file:10762922039e",
+        "path": "library/src/main/ets/components/beacon/logging/InfoOpenHarmonyLogger.ts",
+        "name": "InfoOpenHarmonyLogger.ts"
+      },
+      {
+        "id": "file:8f9b14753bc4",
+        "path": "library/src/main/ets/components/beacon/logging/WarningOpenHarmonyLogger.ts",
+        "name": "WarningOpenHarmonyLogger.ts"
+      },
+      {
+        "id": "file:eb8c47a4b760",
+        "path": "library/src/main/ets/components/beacon/logging/VerboseOpenHarmonyLogger.ts",
+        "name": "VerboseOpenHarmonyLogger.ts"
+      },
+      {
+        "id": "file:234395bb54d7",
+        "path": "library/src/main/ets/components/beacon/logging/EmptyLogger.ts",
+        "name": "EmptyLogger.ts"
+      },
+      {
+        "id": "file:584084417261",
+        "path": "library/src/main/ets/components/beacon/logging/Loggers.ts",
+        "name": "Loggers.ts"
+      },
+      {
+        "id": "file:d4ed815df23c",
+        "path": "library/src/main/ets/components/beacon/simulator/BeaconSimulator.ts",
+        "name": "BeaconSimulator.ts"
+      },
+      {
+        "id": "file:33990da8a7f7",
+        "path": "library/src/main/ets/components/beacon/simulator/StatiBeaconSimulator.ts",
+        "name": "StatiBeaconSimulator.ts"
+      },
+      {
+        "id": "file:4615405de72b",
+        "path": "library/src/main/ets/components/beacon/service/DetectionTracker.ts",
+        "name": "DetectionTracker.ts"
+      },
+      {
+        "id": "file:08a7725100e1",
+        "path": "library/src/main/ets/components/beacon/service/ScanResult.ts",
+        "name": "ScanResult.ts"
+      },
+      {
+        "id": "file:882e40054822",
+        "path": "library/src/main/ets/components/beacon/service/MonitoringData.ts",
+        "name": "MonitoringData.ts"
+      },
+      {
+        "id": "file:2bc18d7e9e2f",
+        "path": "library/src/main/ets/components/beacon/service/SettingsData.ts",
+        "name": "SettingsData.ts"
+      },
+      {
+        "id": "file:cc57b1fcdf53",
+        "path": "library/src/main/ets/components/beacon/service/ExtraDataBeaconTracker.ts",
+        "name": "ExtraDataBeaconTracker.ts"
+      },
+      {
+        "id": "file:d5ae9b879670",
+        "path": "library/src/main/ets/components/beacon/service/StartRMData.ts",
+        "name": "StartRMData.ts"
+      },
+      {
+        "id": "file:788fcb9d3263",
+        "path": "library/src/main/ets/components/beacon/service/Stats.ts",
+        "name": "Stats.ts"
+      },
+      {
+        "id": "file:7e84e2103b63",
+        "path": "library/src/main/ets/components/beacon/service/IntentScanStrategyCoordinator.ts",
+        "name": "IntentScanStrategyCoordinator.ts"
+      },
+      {
+        "id": "file:5506e3e1fbbb",
+        "path": "library/src/main/ets/components/beacon/service/RangedBeacon.ts",
+        "name": "RangedBeacon.ts"
+      },
+      {
+        "id": "file:a95183309314",
+        "path": "library/src/main/ets/components/beacon/service/MonitoringStatus.ts",
+        "name": "MonitoringStatus.ts"
+      },
+      {
+        "id": "file:2116bbf762a0",
+        "path": "library/src/main/ets/components/beacon/service/ScanHelper.ts",
+        "name": "ScanHelper.ts"
+      },
+      {
+        "id": "file:998c2b838d85",
+        "path": "library/src/main/ets/components/beacon/service/Sample.ts",
+        "name": "Sample.ts"
+      },
+      {
+        "id": "file:713c92662777",
+        "path": "library/src/main/ets/components/beacon/service/Measurement.ts",
+        "name": "Measurement.ts"
+      },
+      {
+        "id": "file:8a7a6c13b961",
+        "path": "library/src/main/ets/components/beacon/service/RunningAverageRssiFilter.ts",
+        "name": "RunningAverageRssiFilter.ts"
+      },
+      {
+        "id": "file:8f19d4177395",
+        "path": "library/src/main/ets/components/beacon/service/RegionMonitoringState.ts",
+        "name": "RegionMonitoringState.ts"
+      },
+      {
+        "id": "file:fe294452b49c",
+        "path": "library/src/main/ets/components/beacon/service/ArmaRssiFilter.ts",
+        "name": "ArmaRssiFilter.ts"
+      },
+      {
+        "id": "file:dda84cc66583",
+        "path": "library/src/main/ets/components/beacon/service/RssiFilter.ts",
+        "name": "RssiFilter.ts"
+      },
+      {
+        "id": "file:d8630bce8bb2",
+        "path": "library/src/main/ets/components/beacon/service/RangeState.ts",
+        "name": "RangeState.ts"
+      },
+      {
+        "id": "file:1738bade1951",
+        "path": "library/src/main/ets/components/beacon/service/RangingData.ts",
+        "name": "RangingData.ts"
+      },
+      {
+        "id": "file:31d79ab3da0c",
+        "path": "library/src/main/ets/components/beacon/service/BeaconService.ts",
+        "name": "BeaconService.ts"
+      },
+      {
+        "id": "file:c81e596202fc",
+        "path": "library/src/main/ets/components/beacon/service/ScanState.ts",
+        "name": "ScanState.ts"
+      },
+      {
+        "id": "file:fd831186e2ca",
+        "path": "library/src/main/ets/components/beacon/service/Callback.ts",
+        "name": "Callback.ts"
+      },
+      {
+        "id": "file:fc3bd9af8f03",
+        "path": "library/src/main/ets/components/beacon/client/DataProviderException.ts",
+        "name": "DataProviderException.ts"
+      },
+      {
+        "id": "file:31e61f62b82c",
+        "path": "library/src/main/ets/components/beacon/client/BeaconDataFactory.ts",
+        "name": "BeaconDataFactory.ts"
+      },
+      {
+        "id": "file:e81031e88155",
+        "path": "library/src/main/ets/components/beacon/client/NullBeaconDataFactory.ts",
+        "name": "NullBeaconDataFactory.ts"
+      },
+      {
+        "id": "file:811e8c17d3d7",
+        "path": "library/src/main/ets/components/beacon/startup/StartupBroadcastReceiver.ts",
+        "name": "StartupBroadcastReceiver.ts"
+      },
+      {
+        "id": "file:bb904797eab1",
+        "path": "library/src/main/ets/components/beacon/startup/RegionBootstrap.ts",
+        "name": "RegionBootstrap.ts"
+      },
+      {
+        "id": "file:6dd7da0a23a3",
+        "path": "library/src/main/ets/components/beacon/startup/BootstrapNotifier.ts",
+        "name": "BootstrapNotifier.ts"
+      },
+      {
+        "id": "file:dc19fe7b94b2",
+        "path": "library/src/main/ets/components/beacon/startup/MapKeyConstant.ts",
+        "name": "MapKeyConstant.ts"
+      },
+      {
+        "id": "file:71575606f176",
+        "path": "library/src/main/ets/components/beacon/service/scanner/ScanFilterUtils.ts",
+        "name": "ScanFilterUtils.ts"
+      },
+      {
+        "id": "file:c0f40cce6c31",
+        "path": "library/src/main/ets/components/beacon/service/scanner/ScanData.ts",
+        "name": "ScanData.ts"
+      },
+      {
+        "id": "file:623053ca0a88",
+        "path": "library/src/main/ets/components/beacon/service/scanner/CycledLeScannerForLollipop.ts",
+        "name": "CycledLeScannerForLollipop.ts"
+      },
+      {
+        "id": "file:6e9bf35ef389",
+        "path": "library/src/main/ets/components/beacon/service/scanner/ScanFilterData.ts",
+        "name": "ScanFilterData.ts"
+      },
+      {
+        "id": "file:08f01c34e131",
+        "path": "library/src/main/ets/components/beacon/service/scanner/CycledLeScanCallback.ts",
+        "name": "CycledLeScanCallback.ts"
+      },
+      {
+        "id": "file:d11c792c1f64",
+        "path": "library/src/main/ets/components/beacon/service/scanner/NonBeaconLeScanCallback.ts",
+        "name": "NonBeaconLeScanCallback.ts"
+      },
+      {
+        "id": "file:e1462683a005",
+        "path": "library/src/main/ets/components/beacon/service/scanner/CycledLeScanner.ts",
+        "name": "CycledLeScanner.ts"
+      },
+      {
+        "id": "file:58739123fb44",
+        "path": "library/src/main/ets/components/beacon/service/scanner/DistinctPacketDetector.ts",
+        "name": "DistinctPacketDetector.ts"
+      },
+      {
+        "id": "file:300b5c33ccb6",
+        "path": "entry/src/main/ets/pages/Utils.ets",
+        "name": "Utils.ets"
+      },
+      {
+        "id": "file:200a3acf8050",
+        "path": "entry/src/main/ets/pages/MonitoringSample.ets",
+        "name": "MonitoringSample.ets"
+      },
+      {
+        "id": "file:822d523c416d",
+        "path": "entry/src/main/ets/pages/GlobalContext.ts",
+        "name": "GlobalContext.ts"
+      },
+      {
+        "id": "file:6e7678396582",
+        "path": "entry/src/main/ets/pages/RangeSample.ets",
+        "name": "RangeSample.ets"
+      },
+      {
+        "id": "file:ef3d340f1577",
+        "path": "entry/src/main/ets/entryability/EntryAbility.ts",
+        "name": "EntryAbility.ts"
+      },
+      {
+        "id": "file:7d780571c012",
+        "path": "entry/src/ohosTest/ets/TestRunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:25d7358216ab",
+        "path": "entry/src/ohosTest/ets/testAbility/TestAbility.ets",
+        "name": "TestAbility.ets"
+      },
+      {
+        "id": "file:aad68f80d612",
+        "path": "entry/src/ohosTest/ets/testAbility/pages/index.ets",
+        "name": "index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:442df9cd2e89",
+        "name": "@ohos/hvigor-ohos-plugin"
+      },
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:1e1b7f9bdb63",
+        "name": "@kit.ConnectivityKit"
+      },
+      {
+        "id": "external:98d0aae4f1ca",
+        "name": "@ohos.deviceInfo"
+      },
+      {
+        "id": "external:a90b76f79ddc",
+        "name": "@ohos.process"
+      },
+      {
+        "id": "external:676b20465cc1",
+        "name": "BeaconTracker"
+      },
+      {
+        "id": "external:e27ce921ce68",
+        "name": "ScanHelper"
+      },
+      {
+        "id": "external:3b413a8b0148",
+        "name": "RangeState"
+      },
+      {
+        "id": "external:7ad712ce256b",
+        "name": "BeaconService"
+      },
+      {
+        "id": "external:7bb6b5bdca9a",
+        "name": "@ohos.bluetooth"
+      },
+      {
+        "id": "external:279cc01623c5",
+        "name": "@ohos.base"
+      },
+      {
+        "id": "external:2d721167c46f",
+        "name": "CycledLeScanner"
+      },
+      {
+        "id": "external:624ac69127f8",
+        "name": "@ohos.abilityAccessCtrl"
+      },
+      {
+        "id": "external:356c595c6f6a",
+        "name": "@ohos/beacon-library"
+      },
+      {
+        "id": "external:0637a95d2a0d",
+        "name": "@ohos.bluetooth.access"
+      },
+      {
+        "id": "external:8f88efc18f48",
+        "name": "@kit.LocalizationKit"
+      },
+      {
+        "id": "external:c5528dbb2102",
+        "name": "@kit.BasicServicesKit"
+      },
+      {
+        "id": "external:67941a1352a3",
+        "name": "@ohos.app.ability.UIAbility"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:6ecd634aa752",
+        "name": "@ohos.app.ability.Want"
+      },
+      {
+        "id": "external:f496bc7264a6",
+        "name": "@ohos.app.ability.AbilityConstant"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:804207546e94",
+        "name": "@ohos.app.ability.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:d359b0927909",
+          "to": "file:f3a195315eed",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:066bc0750f6b",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:6cf073bd2e35",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:9cb5757191bb",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:d3b7afad5cbf",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:1d607e21db1b",
+          "type": "export_from"
+        },
+        {
+          "from": "file:d359b0927909",
+          "to": "file:4cba6d26351a",
+          "type": "export_from"
+        },
+        {
+          "from": "file:9884cebec7eb",
+          "to": "file:7b847c62eae0",
+          "type": "import"
+        },
+        {
+          "from": "file:1d607e21db1b",
+          "to": "file:7db7f5878d1e",
+          "type": "import"
+        },
+        {
+          "from": "file:1d607e21db1b",
+          "to": "file:e81031e88155",
+          "type": "import"
+        },
+        {
+          "from": "file:1d607e21db1b",
+          "to": "file:31e61f62b82c",
+          "type": "import"
+        },
+        {
+          "from": "file:1d607e21db1b",
+          "to": "file:637dae9be54e",
+          "type": "import"
+        },
+        {
+          "from": "file:1d607e21db1b",
+          "to": "file:f3a195315eed",
+          "type": "import"
+        },
+        {
+          "from": "file:13cbafa684e0",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:13cbafa684e0",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:8a678e985ef1",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:0fbd922ee78a",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:7e84e2103b63",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:8f1e503f625e",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:4cba6d26351a",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:6cf073bd2e35",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:a95183309314",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:2bc18d7e9e2f",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:d5ae9b879670",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:31d79ab3da0c",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:1d8318115410",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:d3b7afad5cbf",
+          "to": "file:d11c792c1f64",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:a95183309314",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:6cf073bd2e35",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:4cba6d26351a",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:1738bade1951",
+          "type": "import"
+        },
+        {
+          "from": "file:26779852c519",
+          "to": "file:882e40054822",
+          "type": "import"
+        },
+        {
+          "from": "file:f775d7682adf",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:9cb5757191bb",
+          "to": "file:7b847c62eae0",
+          "type": "import"
+        },
+        {
+          "from": "file:9cb5757191bb",
+          "to": "file:f3a195315eed",
+          "type": "import"
+        },
+        {
+          "from": "file:9cb5757191bb",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:9cb5757191bb",
+          "to": "file:9884cebec7eb",
+          "type": "import"
+        },
+        {
+          "from": "file:7db7f5878d1e",
+          "to": "file:fc3bd9af8f03",
+          "type": "import"
+        },
+        {
+          "from": "file:7db7f5878d1e",
+          "to": "file:a1b13c0b0b8b",
+          "type": "import"
+        },
+        {
+          "from": "file:7db7f5878d1e",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:6cf073bd2e35",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:8f1e503f625e",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:8f1e503f625e",
+          "to": "file:f775d7682adf",
+          "type": "import"
+        },
+        {
+          "from": "file:8f1e503f625e",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:829842bf7e8f",
+          "to": "file:26779852c519",
+          "type": "import"
+        },
+        {
+          "from": "file:4cba6d26351a",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:4cba6d26351a",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:7453d6ca72a5",
+          "to": "file:c726fced84b2",
+          "type": "import"
+        },
+        {
+          "from": "file:a1b13c0b0b8b",
+          "to": "file:7db7f5878d1e",
+          "type": "import"
+        },
+        {
+          "from": "file:066bc0750f6b",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:066bc0750f6b",
+          "to": "file:f3a195315eed",
+          "type": "import"
+        },
+        {
+          "from": "file:4760dada1e01",
+          "to": "file:ffd9eb094665",
+          "type": "import"
+        },
+        {
+          "from": "file:4760dada1e01",
+          "to": "file:c91e25ae5417",
+          "type": "import"
+        },
+        {
+          "from": "file:8f566989ac0d",
+          "to": "file:0fbd922ee78a",
+          "type": "import"
+        },
+        {
+          "from": "file:8f566989ac0d",
+          "to": "file:8a678e985ef1",
+          "type": "import"
+        },
+        {
+          "from": "file:8f566989ac0d",
+          "to": "file:1d0fe6dc9398",
+          "type": "import"
+        },
+        {
+          "from": "file:8f566989ac0d",
+          "to": "file:ffd9eb094665",
+          "type": "import"
+        },
+        {
+          "from": "file:8f566989ac0d",
+          "to": "file:637dae9be54e",
+          "type": "import"
+        },
+        {
+          "from": "file:0fbd922ee78a",
+          "to": "file:8a678e985ef1",
+          "type": "import"
+        },
+        {
+          "from": "file:1d0fe6dc9398",
+          "to": "file:637dae9be54e",
+          "type": "import"
+        },
+        {
+          "from": "file:96ffd9071f74",
+          "to": "file:eaaac84fe89d",
+          "type": "import"
+        },
+        {
+          "from": "file:788e0934acc2",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:788e0934acc2",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:788e0934acc2",
+          "to": "file:96ffd9071f74",
+          "type": "import"
+        },
+        {
+          "from": "file:7b184b72bbe9",
+          "to": "file:eaaac84fe89d",
+          "type": "import"
+        },
+        {
+          "from": "file:b62a9d24852e",
+          "to": "file:b1ccdcf40aae",
+          "type": "import"
+        },
+        {
+          "from": "file:40b7588f8cca",
+          "to": "file:584084417261",
+          "type": "import"
+        },
+        {
+          "from": "file:40b7588f8cca",
+          "to": "file:b1ccdcf40aae",
+          "type": "import"
+        },
+        {
+          "from": "file:10762922039e",
+          "to": "file:b62a9d24852e",
+          "type": "import"
+        },
+        {
+          "from": "file:8f9b14753bc4",
+          "to": "file:b62a9d24852e",
+          "type": "import"
+        },
+        {
+          "from": "file:eb8c47a4b760",
+          "to": "file:b62a9d24852e",
+          "type": "import"
+        },
+        {
+          "from": "file:234395bb54d7",
+          "to": "file:b1ccdcf40aae",
+          "type": "import"
+        },
+        {
+          "from": "file:584084417261",
+          "to": "file:b1ccdcf40aae",
+          "type": "import"
+        },
+        {
+          "from": "file:584084417261",
+          "to": "file:234395bb54d7",
+          "type": "import"
+        },
+        {
+          "from": "file:584084417261",
+          "to": "file:eb8c47a4b760",
+          "type": "import"
+        },
+        {
+          "from": "file:584084417261",
+          "to": "file:10762922039e",
+          "type": "import"
+        },
+        {
+          "from": "file:584084417261",
+          "to": "file:8f9b14753bc4",
+          "type": "import"
+        },
+        {
+          "from": "file:d4ed815df23c",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:33990da8a7f7",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:33990da8a7f7",
+          "to": "file:d4ed815df23c",
+          "type": "import"
+        },
+        {
+          "from": "file:882e40054822",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:2bc18d7e9e2f",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:2bc18d7e9e2f",
+          "to": "file:a95183309314",
+          "type": "import"
+        },
+        {
+          "from": "file:2bc18d7e9e2f",
+          "to": "file:31d79ab3da0c",
+          "type": "import"
+        },
+        {
+          "from": "file:2bc18d7e9e2f",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:2bc18d7e9e2f",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:cc57b1fcdf53",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:d5ae9b879670",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:788fcb9d3263",
+          "to": "file:998c2b838d85",
+          "type": "import"
+        },
+        {
+          "from": "file:788fcb9d3263",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:788fcb9d3263",
+          "to": "file:95885370656e",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:2116bbf762a0",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:c81e596202fc",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:8f566989ac0d",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:cc57b1fcdf53",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:7e84e2103b63",
+          "to": "file:08a7725100e1",
+          "type": "import"
+        },
+        {
+          "from": "file:5506e3e1fbbb",
+          "to": "file:fe294452b49c",
+          "type": "import"
+        },
+        {
+          "from": "file:5506e3e1fbbb",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:5506e3e1fbbb",
+          "to": "file:dda84cc66583",
+          "type": "import"
+        },
+        {
+          "from": "file:5506e3e1fbbb",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:5506e3e1fbbb",
+          "to": "file:8a7a6c13b961",
+          "type": "import"
+        },
+        {
+          "from": "file:a95183309314",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:a95183309314",
+          "to": "file:fd831186e2ca",
+          "type": "import"
+        },
+        {
+          "from": "file:a95183309314",
+          "to": "file:8f19d4177395",
+          "type": "import"
+        },
+        {
+          "from": "file:a95183309314",
+          "to": "file:882e40054822",
+          "type": "import"
+        },
+        {
+          "from": "file:a95183309314",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:e1462683a005",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:623053ca0a88",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:a95183309314",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:d8630bce8bb2",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:cc57b1fcdf53",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:58739123fb44",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:d11c792c1f64",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:788fcb9d3263",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:08f01c34e131",
+          "type": "import"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "file:1738bade1951",
+          "type": "import"
+        },
+        {
+          "from": "file:8a7a6c13b961",
+          "to": "file:dda84cc66583",
+          "type": "import"
+        },
+        {
+          "from": "file:8a7a6c13b961",
+          "to": "file:713c92662777",
+          "type": "import"
+        },
+        {
+          "from": "file:8a7a6c13b961",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:8f19d4177395",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:8f19d4177395",
+          "to": "file:fd831186e2ca",
+          "type": "import"
+        },
+        {
+          "from": "file:fe294452b49c",
+          "to": "file:dda84cc66583",
+          "type": "import"
+        },
+        {
+          "from": "file:d8630bce8bb2",
+          "to": "file:fd831186e2ca",
+          "type": "import"
+        },
+        {
+          "from": "file:d8630bce8bb2",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:d8630bce8bb2",
+          "to": "file:5506e3e1fbbb",
+          "type": "import"
+        },
+        {
+          "from": "file:1738bade1951",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:1738bade1951",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:2bc18d7e9e2f",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:fd831186e2ca",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:d4adf50c445f",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:637dae9be54e",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:8f566989ac0d",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:cc57b1fcdf53",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:d8630bce8bb2",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:a95183309314",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:2116bbf762a0",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:1d8318115410",
+          "type": "import"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "file:d5ae9b879670",
+          "type": "import"
+        },
+        {
+          "from": "file:c81e596202fc",
+          "to": "file:fd831186e2ca",
+          "type": "import"
+        },
+        {
+          "from": "file:c81e596202fc",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:c81e596202fc",
+          "to": "file:d8630bce8bb2",
+          "type": "import"
+        },
+        {
+          "from": "file:c81e596202fc",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:c81e596202fc",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:c81e596202fc",
+          "to": "file:a95183309314",
+          "type": "import"
+        },
+        {
+          "from": "file:c81e596202fc",
+          "to": "file:cc57b1fcdf53",
+          "type": "import"
+        },
+        {
+          "from": "file:fd831186e2ca",
+          "to": "file:829842bf7e8f",
+          "type": "import"
+        },
+        {
+          "from": "file:31e61f62b82c",
+          "to": "file:7db7f5878d1e",
+          "type": "import"
+        },
+        {
+          "from": "file:31e61f62b82c",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:e81031e88155",
+          "to": "file:fc3bd9af8f03",
+          "type": "import"
+        },
+        {
+          "from": "file:e81031e88155",
+          "to": "file:7db7f5878d1e",
+          "type": "import"
+        },
+        {
+          "from": "file:e81031e88155",
+          "to": "file:1d607e21db1b",
+          "type": "import"
+        },
+        {
+          "from": "file:e81031e88155",
+          "to": "file:31e61f62b82c",
+          "type": "import"
+        },
+        {
+          "from": "file:811e8c17d3d7",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:811e8c17d3d7",
+          "to": "file:dc19fe7b94b2",
+          "type": "import"
+        },
+        {
+          "from": "file:bb904797eab1",
+          "to": "file:7453d6ca72a5",
+          "type": "import"
+        },
+        {
+          "from": "file:bb904797eab1",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:bb904797eab1",
+          "to": "file:6cf073bd2e35",
+          "type": "import"
+        },
+        {
+          "from": "file:bb904797eab1",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:6dd7da0a23a3",
+          "to": "file:6cf073bd2e35",
+          "type": "import"
+        },
+        {
+          "from": "file:71575606f176",
+          "to": "file:066bc0750f6b",
+          "type": "import"
+        },
+        {
+          "from": "file:71575606f176",
+          "to": "file:f3a195315eed",
+          "type": "import"
+        },
+        {
+          "from": "file:71575606f176",
+          "to": "file:9cb5757191bb",
+          "type": "import"
+        },
+        {
+          "from": "file:71575606f176",
+          "to": "file:6e9bf35ef389",
+          "type": "import"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "file:c0f40cce6c31",
+          "type": "import"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "file:96ffd9071f74",
+          "type": "import"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "file:2116bbf762a0",
+          "type": "import"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "file:e1462683a005",
+          "type": "import"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "file:4615405de72b",
+          "type": "import"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "file:08f01c34e131",
+          "type": "import"
+        },
+        {
+          "from": "file:08f01c34e131",
+          "to": "file:2116bbf762a0",
+          "type": "import"
+        },
+        {
+          "from": "file:e1462683a005",
+          "to": "file:2116bbf762a0",
+          "type": "import"
+        },
+        {
+          "from": "file:e1462683a005",
+          "to": "file:d3b7afad5cbf",
+          "type": "import"
+        },
+        {
+          "from": "file:e1462683a005",
+          "to": "file:08f01c34e131",
+          "type": "import"
+        },
+        {
+          "from": "file:58739123fb44",
+          "to": "file:96ffd9071f74",
+          "type": "import"
+        },
+        {
+          "from": "file:300b5c33ccb6",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:200a3acf8050",
+          "to": "file:300b5c33ccb6",
+          "type": "import"
+        },
+        {
+          "from": "file:200a3acf8050",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:6e7678396582",
+          "to": "file:300b5c33ccb6",
+          "type": "import"
+        },
+        {
+          "from": "file:6e7678396582",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "file:822d523c416d",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:14bdce224fa0",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:83ff95d1316f",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:9a06e71cbd13",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:f3a195315eed",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:13cbafa684e0",
+          "to": "external:1e1b7f9bdb63",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4760dada1e01",
+          "to": "external:98d0aae4f1ca",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ffd9eb094665",
+          "to": "external:98d0aae4f1ca",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4615405de72b",
+          "to": "external:a90b76f79ddc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:cc57b1fcdf53",
+          "to": "external:676b20465cc1",
+          "type": "export_external"
+        },
+        {
+          "from": "file:5506e3e1fbbb",
+          "to": "external:a90b76f79ddc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2116bbf762a0",
+          "to": "external:e27ce921ce68",
+          "type": "export_external"
+        },
+        {
+          "from": "file:8a7a6c13b961",
+          "to": "external:a90b76f79ddc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8f19d4177395",
+          "to": "external:a90b76f79ddc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d8630bce8bb2",
+          "to": "external:3b413a8b0148",
+          "type": "export_external"
+        },
+        {
+          "from": "file:31d79ab3da0c",
+          "to": "external:7ad712ce256b",
+          "type": "export_external"
+        },
+        {
+          "from": "file:71575606f176",
+          "to": "external:7bb6b5bdca9a",
+          "type": "import_external"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "external:1e1b7f9bdb63",
+          "type": "import_external"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "external:279cc01623c5",
+          "type": "import_external"
+        },
+        {
+          "from": "file:623053ca0a88",
+          "to": "external:a90b76f79ddc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e1462683a005",
+          "to": "external:1e1b7f9bdb63",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e1462683a005",
+          "to": "external:a90b76f79ddc",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e1462683a005",
+          "to": "external:2d721167c46f",
+          "type": "export_external"
+        },
+        {
+          "from": "file:300b5c33ccb6",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:300b5c33ccb6",
+          "to": "external:279cc01623c5",
+          "type": "import_external"
+        },
+        {
+          "from": "file:200a3acf8050",
+          "to": "external:356c595c6f6a",
+          "type": "import_external"
+        },
+        {
+          "from": "file:200a3acf8050",
+          "to": "external:0637a95d2a0d",
+          "type": "import_external"
+        },
+        {
+          "from": "file:200a3acf8050",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:200a3acf8050",
+          "to": "external:8f88efc18f48",
+          "type": "import_external"
+        },
+        {
+          "from": "file:200a3acf8050",
+          "to": "external:c5528dbb2102",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6e7678396582",
+          "to": "external:356c595c6f6a",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6e7678396582",
+          "to": "external:1e1b7f9bdb63",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6e7678396582",
+          "to": "external:624ac69127f8",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6e7678396582",
+          "to": "external:279cc01623c5",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ef3d340f1577",
+          "to": "external:f496bc7264a6",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d780571c012",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d780571c012",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d780571c012",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:356c595c6f6a",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "external:6ecd634aa752",
+          "type": "import_external"
+        },
+        {
+          "from": "file:25d7358216ab",
+          "to": "external:f496bc7264a6",
+          "type": "import_external"
+        },
+        {
+          "from": "file:aad68f80d612",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "library",
+          "to_module": "library/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/MonitoringSample.ets",
+        "entry/src/main/ets/pages/RangeSample.ets",
+        "entry/src/ohosTest/ets/testAbility/pages/index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/MonitoringSample.ets",
+        "entry/src/main/ets/pages/RangeSample.ets",
+        "entry/src/ohosTest/ets/testAbility/pages/index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [
+        "library/src/main/ets/components/beacon/AltBeacon.ts",
+        "library/src/main/ets/components/beacon/AltBeaconParser.ts",
+        "library/src/main/ets/components/beacon/BleNotAvailableException.ts",
+        "library/src/main/ets/components/beacon/client/DataProviderException.ts",
+        "library/src/main/ets/components/beacon/logging/InfoOpenHarmonyLogger.ts",
+        "library/src/main/ets/components/beacon/logging/VerboseOpenHarmonyLogger.ts",
+        "library/src/main/ets/components/beacon/logging/WarningOpenHarmonyLogger.ts",
+        "library/src/main/ets/components/beacon/service/scanner/CycledLeScannerForLollipop.ts"
+      ],
+      "implement_files": [
+        "library/src/main/ets/components/beacon/client/NullBeaconDataFactory.ts",
+        "library/src/main/ets/components/beacon/distance/CurveFittedDistanceCalculator.ts",
+        "library/src/main/ets/components/beacon/distance/ModelSpecificDistanceCalculator.ts",
+        "library/src/main/ets/components/beacon/logging/EmptyLogger.ts",
+        "library/src/main/ets/components/beacon/simulator/StatiBeaconSimulator.ts"
+      ],
+      "export_default_files": [
+        "entry/src/main/ets/entryability/EntryAbility.ts",
+        "entry/src/ohosTest/ets/TestRunner/OpenHarmonyTestRunner.ts",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/testAbility/TestAbility.ets",
+        "library/src/main/ets/components/beacon/AltBeacon.ts",
+        "library/src/main/ets/components/beacon/AltBeaconParser.ts",
+        "library/src/main/ets/components/beacon/Beacon.ts",
+        "library/src/main/ets/components/beacon/BeaconConsumer.ts",
+        "library/src/main/ets/components/beacon/BeaconData.ts",
+        "library/src/main/ets/components/beacon/BeaconDataNotifier.ts",
+        "library/src/main/ets/components/beacon/BeaconIntentProcessor.ts",
+        "library/src/main/ets/components/beacon/BeaconLocalBroadcastProcessor.ts",
+        "library/src/main/ets/components/beacon/BeaconManager.ts",
+        "library/src/main/ets/components/beacon/BeaconParser.ts",
+        "library/src/main/ets/components/beacon/BeaconTransmitter.ts",
+        "library/src/main/ets/components/beacon/Identifier.ts",
+        "library/src/main/ets/components/beacon/IntentHandler.ts",
+        "library/src/main/ets/components/beacon/MonitorNotifier.ts",
+        "library/src/main/ets/components/beacon/RangeNotifier.ts",
+        "library/src/main/ets/components/beacon/Region.ts",
+        "library/src/main/ets/components/beacon/client/BeaconDataFactory.ts",
+        "library/src/main/ets/components/beacon/client/DataProviderException.ts",
+        "library/src/main/ets/components/beacon/client/NullBeaconDataFactory.ts",
+        "library/src/main/ets/components/beacon/distance/CurveFittedDistanceCalculator.ts",
+        "library/src/main/ets/components/beacon/distance/DeviceAttritube.ts",
+        "library/src/main/ets/components/beacon/distance/DeviceModel.ts",
+        "library/src/main/ets/components/beacon/distance/DeviceModelList.ts",
+        "library/src/main/ets/components/beacon/distance/DistanceCalculator.ts",
+        "library/src/main/ets/components/beacon/distance/DistanceConfigFetcher.ts",
+        "library/src/main/ets/components/beacon/distance/ModelSpecificDistanceCalculator.ts",
+        "library/src/main/ets/components/beacon/distance/ModelSpecificDistanceUpdater.ts",
+        "library/src/main/ets/components/beacon/logging/AbstractOpenHarmonyLogger.ts",
+        "library/src/main/ets/components/beacon/logging/EmptyLogger.ts",
+        "library/src/main/ets/components/beacon/logging/InfoOpenHarmonyLogger.ts",
+        "library/src/main/ets/components/beacon/logging/LogManager.ets",
+        "library/src/main/ets/components/beacon/logging/Logger.ts",
+        "library/src/main/ets/components/beacon/logging/Loggers.ts",
+        "library/src/main/ets/components/beacon/logging/VerboseOpenHarmonyLogger.ts",
+        "library/src/main/ets/components/beacon/logging/WarningOpenHarmonyLogger.ts",
+        "library/src/main/ets/components/beacon/service/ArmaRssiFilter.ts",
+        "library/src/main/ets/components/beacon/service/Callback.ts",
+        "library/src/main/ets/components/beacon/service/DetectionTracker.ts",
+        "library/src/main/ets/components/beacon/service/IntentScanStrategyCoordinator.ts",
+        "library/src/main/ets/components/beacon/service/Measurement.ts",
+        "library/src/main/ets/components/beacon/service/MonitoringData.ts",
+        "library/src/main/ets/components/beacon/service/MonitoringStatus.ts",
+        "library/src/main/ets/components/beacon/service/RangedBeacon.ts",
+        "library/src/main/ets/components/beacon/service/RangingData.ts",
+        "library/src/main/ets/components/beacon/service/RegionMonitoringState.ts",
+        "library/src/main/ets/components/beacon/service/RssiFilter.ts",
+        "library/src/main/ets/components/beacon/service/RunningAverageRssiFilter.ts",
+        "library/src/main/ets/components/beacon/service/Sample.ts",
+        "library/src/main/ets/components/beacon/service/ScanResult.ts",
+        "library/src/main/ets/components/beacon/service/ScanState.ts",
+        "library/src/main/ets/components/beacon/service/SettingsData.ts",
+        "library/src/main/ets/components/beacon/service/StartRMData.ts",
+        "library/src/main/ets/components/beacon/service/Stats.ts",
+        "library/src/main/ets/components/beacon/service/scanner/CycledLeScanCallback.ts",
+        "library/src/main/ets/components/beacon/service/scanner/CycledLeScannerForLollipop.ts",
+        "library/src/main/ets/components/beacon/service/scanner/DistinctPacketDetector.ts",
+        "library/src/main/ets/components/beacon/service/scanner/ScanData.ts",
+        "library/src/main/ets/components/beacon/service/scanner/ScanFilterData.ts",
+        "library/src/main/ets/components/beacon/service/scanner/ScanFilterUtils.ts",
+        "library/src/main/ets/components/beacon/simulator/BeaconSimulator.ts",
+        "library/src/main/ets/components/beacon/simulator/StatiBeaconSimulator.ts",
+        "library/src/main/ets/components/beacon/startup/BootstrapNotifier.ts",
+        "library/src/main/ets/components/beacon/startup/MapKeyConstant.ts",
+        "library/src/main/ets/components/beacon/utils/DateUtils.ts",
+        "library/src/main/ets/components/beacon/utils/EddystoneTelemetryAccessor.ts",
+        "library/src/main/ets/components/beacon/utils/HexUtil.ts",
+        "library/src/main/ets/components/beacon/utils/TextUtils.ts",
+        "library/src/main/ets/components/beacon/utils/UrlBeaconUrlCompressor.ts",
+        "library/src/main/ets/components/bluetooth/BleAdvertisement.ts",
+        "library/src/main/ets/components/bluetooth/Pdu.ts"
+      ]
+    }
+  }
+}

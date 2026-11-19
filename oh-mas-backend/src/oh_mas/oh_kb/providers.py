@@ -181,9 +181,20 @@ class LocalSeedOHKBClient(OHKBClient):
 
 
 class GraphExploreMockOHKBClient(OHKBClient):
-    def __init__(self, *, graph_root: Path, linter_examples_root: Path, repair_experiences_path: Path | None = None, max_graph_load: int = 256):
+    def __init__(
+        self,
+        *,
+        graph_root: Path,
+        linter_examples_root: Path | None,
+        repair_experiences_path: Path | None = None,
+        max_graph_load: int = 256,
+        use_templates: bool = True,
+        use_experiences: bool = True,
+    ):
         self.graph_root = graph_root
         self.linter_examples_root = linter_examples_root
+        self.use_templates = use_templates
+        self.use_experiences = use_experiences
         self.max_graph_load = max_graph_load
         self._graphs = self._load_graphs()
 
@@ -208,7 +219,7 @@ class GraphExploreMockOHKBClient(OHKBClient):
 
     def _load_repair_experiences(self) -> dict:
         """Load repair experiences from JSON file (L3 knowledge)."""
-        if not self.repair_experiences_path or not self.repair_experiences_path.exists():
+        if not self.use_experiences or not self.repair_experiences_path or not self.repair_experiences_path.exists():
             return {}
         try:
             data = json.loads(self.repair_experiences_path.read_text(encoding="utf-8"))
@@ -297,6 +308,8 @@ class GraphExploreMockOHKBClient(OHKBClient):
         return items
 
     def _find_example_files(self, norm_rule: str) -> list[Path]:
+        if not self.use_templates or self.linter_examples_root is None:
+            return []
         all_json = list(self.linter_examples_root.rglob("*.json"))
         if not all_json:
             return []

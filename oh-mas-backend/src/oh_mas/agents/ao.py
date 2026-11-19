@@ -1,13 +1,16 @@
 from __future__ import annotations
 
+import hashlib
 import json
+import random
 import urllib.error
 import urllib.request
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from time import perf_counter
 from typing import Any
 
 from oh_mas.core.schemas import (
+    FREE_TEXT_FEEDBACK_MODES,
     Alarm,
     AuditDoneFailedEvent,
     CPInput,
@@ -17,7 +20,9 @@ from oh_mas.core.schemas import (
     PreviousAuditFeedback,
     PromptInjection,
     TaskProfiledEvent,
+    TypedConstraint,
 )
+from oh_mas.core.constraint_ledger import decision_payload, render_prompt_block
 from oh_mas.core.tracing import to_jsonable, utc_now_iso
 from oh_mas.oh_kb.client import OHKBClient
 
@@ -35,6 +40,12 @@ class AOConfig:
     kb_max_items: int = 8
     kb_timeout_ms: int = 300
     fail_open: bool = True
+    feedback_mode: str = "typed_accumulative"  # "typed_accumulative" | "free_text_nonaccumulative" | "free_text_accumulative"
+    routing: str = "llm"  # "llm" (default) | "random"
+    routing_seed: int = 42
+    allow_duplicate_models: bool = False
+    enable_synthetic_knowledge: bool = True
+    constraint_ledger: bool = False  # cumulative typed constraint ledger (H_t); ignored for free-text feedback modes
 
 
 class AOAgent:
@@ -45,6 +56,11 @@ class AOAgent:
         self.config = config
         self.last_debug: dict[str, Any] = {}
         self.last_llm_traces: list[dict[str, Any]] = []
+        self.last_free_text_entry: dict[str, Any] | None = None
+
+    @property
+    def uses_ledger(self) -> bool:
+        return bool(self.config.constraint_ledger) and self.config.feedback_mode not in FREE_TEXT_FEEDBACK_MODES
 
     def mode_for_retry(self, retry_index: int) -> Mode:
         idx = min(max(retry_index, 0), 2)
@@ -58,9 +74,15 @@ class AOAgent:
         alarm: Alarm,
         previous_audit: AuditDoneFailedEvent | None = None,
         previous_task_append: str = "",
+        free_text_history: list[dict[str, Any]] | None = None,
+        constraint_ledger: list[TypedConstraint] | None = None,
     ) -> TaskProfiledEvent:
+        ledger_entries = list(constraint_ledger or []) if self.uses_ledger else []
         self.last_debug = {}
         self.last_llm_traces = []
+        self.last_free_text_entry = None
+        if previous_audit is not None and self.config.feedback_mode not in FREE_TEXT_FEEDBACK_MODES:
+            previous_audit = replace(previous_audit, raw_linter_output="")
         mode = self.mode_for_retry(retry_index)
         language = self._infer_language(alarm.file)
         query_common = {
@@ -140,9 +162,21 @@ class AOAgent:
             allowed_models=allowed_models,
             default_models=default_models,
             default_gw_input=default_gw_input,
+            free_text_mode=self.config.feedback_mode in FREE_TEXT_FEEDBACK_MODES,
+            free_text_history=free_text_history if self.config.feedback_mode == "free_text_accumulative" else None,
+            constraint_ledger=ledger_entries,
         )
         gw_input = self._resolve_gw_input(decision, default_gw_input)
         models = self._resolve_cp_models(decision, allowed_models, default_models)
+        routing_debug: dict[str, Any] | None = None
+        if self.config.allow_duplicate_models:
+            models = self._fixed_duplicate_models(mode, models)
+            routing_debug = {"routing": "fixed_duplicates", "models": list(models)}
+        elif self.config.routing == "random":
+            pool = self._dedupe(list(self.config.models_registry))
+            models, routing_debug = self._random_models(
+                task_id=task_id, retry_index=retry_index, pool=pool, count=len(default_models)
+            )
 
         # Extract task_append from AO decision LLM (primary source)
         llm_task_append = ""
@@ -156,22 +190,45 @@ class AOAgent:
         task_append = [f"Target rule: {alarm.rule}"]
 
         if previous_feedback is not None:
-            # Fallback: If AO LLM didn't generate constraints, use basic template
-            if not llm_task_append or "MANDATORY CONSTRAINTS" not in llm_task_append:
-                fallback_constraints = self._build_fallback_constraints(previous_feedback, alarm)
-                if fallback_constraints:
-                    task_append.append(fallback_constraints)
+            if self.config.feedback_mode == "free_text_accumulative":
+                # A2'' ablation: every earlier round's free-text analysis and raw checker output is kept verbatim.
+                entry = {
+                    "round": retry_index,
+                    "reason": previous_audit.reason if previous_audit is not None else "",
+                    "raw_output": (previous_audit.raw_linter_output if previous_audit is not None else "") or "",
+                    "analysis": llm_task_append,
+                }
+                self.last_free_text_entry = entry
+                task_append.append(self._format_free_text_history(list(free_text_history or []) + [entry]))
+            elif self.config.feedback_mode == "free_text_nonaccumulative":
+                # A2' ablation: AO LLM already received only {"reason", "raw_output"}
+                # (via free_text_mode=True in _decide_with_llm), so llm_task_append is
+                # naturally non-typed. Use it directly without accumulation.
+                if llm_task_append:
+                    task_append.append(llm_task_append)
+                # Intentionally skip _extract_accumulated_constraints(): no history carry-over.
             else:
-                # Use AO LLM's generated constraints (includes analysis + code snippets)
-                task_append.append(llm_task_append)
+                # Default: typed_accumulative path
+                # Fallback: If AO LLM didn't generate constraints, use basic template
+                if not llm_task_append or "MANDATORY CONSTRAINTS" not in llm_task_append:
+                    fallback_constraints = self._build_fallback_constraints(previous_feedback, alarm)
+                    if fallback_constraints:
+                        task_append.append(fallback_constraints)
+                else:
+                    # Use AO LLM's generated constraints (includes analysis + code snippets)
+                    task_append.append(llm_task_append)
 
-            # Accumulate: append constraints from the previous round so CP retains
-            # lessons learned across multiple retry cycles (e.g., "must inline nested
-            # components" survives into the round that focuses on "add reuseId").
-            if previous_task_append:
-                accumulated = self._extract_accumulated_constraints(previous_task_append)
-                if accumulated:
-                    task_append.append(accumulated)
+                # Accumulate: append constraints from the previous round so CP retains
+                # lessons learned across multiple retry cycles (e.g., "must inline nested
+                # components" survives into the round that focuses on "add reuseId").
+                if self.uses_ledger:
+                    # The ledger replaces the text carry-over: every earlier failure is re-rendered from structured entries.
+                    if ledger_entries:
+                        task_append.append(render_prompt_block(ledger_entries))
+                elif previous_task_append:
+                    accumulated = self._extract_accumulated_constraints(previous_task_append)
+                    if accumulated:
+                        task_append.append(accumulated)
         elif llm_task_append:
             # First attempt but LLM provided guidance
             task_append.append(llm_task_append)
@@ -200,6 +257,8 @@ class AOAgent:
             "default_models": default_models,
             "models": models,
         }
+        if routing_debug is not None:
+            self.last_debug["routing"] = routing_debug
 
         return TaskProfiledEvent(
             task_id=task_id,
@@ -207,9 +266,43 @@ class AOAgent:
             mode=mode,
             alarm=alarm,
             previous_audit_feedback=previous_feedback,
+            feedback_mode=self.config.feedback_mode,
             gw_input=gw_input,
             cp_input=cp_input,
+            constraint_ledger=ledger_entries,
         )
+
+    @staticmethod
+    def _format_free_text_history(entries: list[dict[str, Any]], raw_cap: int = 8000) -> str:
+        blocks = []
+        for entry in entries:
+            parts = [f"=== PREVIOUS ROUND {entry.get('round')} ==="]
+            if entry.get("reason"):
+                parts.append(f"Failure reason: {entry['reason']}")
+            if entry.get("analysis"):
+                parts.append(f"Analysis:\n{entry['analysis']}")
+            raw = str(entry.get("raw_output") or "")
+            if raw:
+                parts.append(f"Checker output:\n{raw[:raw_cap]}")
+            blocks.append("\n".join(parts))
+        return "\n\n".join(blocks)
+
+    def _random_models(self, *, task_id: str, retry_index: int, pool: list[str], count: int) -> tuple[list[str], dict[str, Any]]:
+        """Uniform draw without replacement; deterministic in (seed, task_id, retry_index)."""
+        digest = hashlib.sha256(f"{self.config.routing_seed}:{task_id}:{retry_index}".encode("utf-8")).hexdigest()
+        n = max(0, min(count, len(pool)))
+        chosen = random.Random(int(digest[:16], 16)).sample(list(pool), n)
+        return chosen, {
+            "routing": "random",
+            "seed": self.config.routing_seed,
+            "pool": list(pool),
+            "count": n,
+            "models": list(chosen),
+        }
+
+    def _fixed_duplicate_models(self, mode: Mode, fallback: list[str]) -> list[str]:
+        configured = [m.strip() for m in self.config.mode_models.get(mode, []) if isinstance(m, str) and m.strip()]
+        return configured or list(fallback)
 
     @staticmethod
     def _build_previous_feedback(previous_audit: AuditDoneFailedEvent | None) -> PreviousAuditFeedback | None:
@@ -220,6 +313,7 @@ class AOAgent:
             reason=previous_audit.reason,
             failed_patches=list(previous_audit.failed_patches),
             patch_diagnostics=list(previous_audit.patch_diagnostics),
+            raw_linter_output=previous_audit.raw_linter_output,
         )
 
     @staticmethod
@@ -344,6 +438,9 @@ class AOAgent:
         allowed_models: list[str],
         default_models: list[str],
         default_gw_input: GWInput,
+        free_text_mode: bool = False,
+        free_text_history: list[dict[str, Any]] | None = None,
+        constraint_ledger: list[TypedConstraint] | None = None,
     ) -> dict[str, Any]:
         fallback = {
             "gw_input": default_gw_input.to_dict(),
@@ -370,10 +467,21 @@ class AOAgent:
             },
         }
 
-        # Extract linter violations from previous audit for enhanced L2 analysis
-        linter_violations_summary = None
-        if previous_feedback and previous_feedback.failed_level == "L2":
-            linter_violations_summary = self._format_linter_violations_for_llm(previous_feedback)
+        # Build previous_audit_feedback payload.
+        # free_text_mode (A2' ablation): replace structured typed fields with plain
+        # {"reason", "raw_output"} so the LLM reasons from unstructured text only.
+        # Normal mode: pass full typed PreviousAuditFeedback + linter_violations_summary.
+        if free_text_mode and previous_audit is not None:
+            previous_audit_feedback_payload: dict[str, Any] | None = {
+                "reason": previous_audit.reason,
+                "raw_output": (previous_audit.raw_linter_output or "")[:32000],
+            }
+            linter_violations_summary = None
+        else:
+            linter_violations_summary = None
+            if previous_feedback and previous_feedback.failed_level == "L2":
+                linter_violations_summary = self._format_linter_violations_for_llm(previous_feedback)
+            previous_audit_feedback_payload = previous_feedback.to_dict() if previous_feedback else None
 
         user_payload = {
             "task_id": task_id,
@@ -381,8 +489,20 @@ class AOAgent:
             "forced_mode": mode,
             "language": language,
             "alarm": alarm.to_dict(),
-            "previous_audit_feedback": previous_feedback.to_dict() if previous_feedback else None,
-            "previous_audit_raw": previous_audit.to_dict() if previous_audit else None,
+            "previous_audit_feedback": previous_audit_feedback_payload,
+            "previous_audit_raw": None if free_text_mode else (previous_audit.to_dict() if previous_audit else None),
+            **(
+                {
+                    "earlier_rounds": (
+                        [{**e, "raw_output": str(e.get("raw_output") or "")[:8000]} for e in free_text_history]
+                        if free_text_history
+                        else None
+                    )
+                }
+                if free_text_mode
+                else {}
+            ),
+            **({"accumulated_constraints": decision_payload(constraint_ledger)} if constraint_ledger else {}),
             "linter_violations_summary": linter_violations_summary,
             "allowed_models": allowed_models,
             "default_models": default_models,
@@ -423,7 +543,7 @@ class AOAgent:
             request_params["model_kwargs"]["max_completion_tokens"] = max(128, int(step["max_completion_tokens"]))
             request_params["model_kwargs"]["max_tokens"] = max(128, int(step["max_completion_tokens"]))
 
-            messages = self._decision_messages(user_payload=user_payload, compact=bool(step["compact"]))
+            messages = self._decision_messages(user_payload=user_payload, compact=bool(step["compact"]), free_text_mode=free_text_mode)
             start = perf_counter()
             trace: dict[str, Any] = {
                 "trace_backend": "ao-llm-decision",
@@ -493,7 +613,7 @@ class AOAgent:
         return fallback
 
     @staticmethod
-    def _decision_messages(*, user_payload: dict[str, Any], compact: bool) -> list[dict[str, str]]:
+    def _decision_messages(*, user_payload: dict[str, Any], compact: bool, free_text_mode: bool = False) -> list[dict[str, str]]:
         if compact:
             system_prompt = (
                 "Output JSON only. Schema: "
@@ -501,6 +621,54 @@ class AOAgent:
                 "cp_strategy:{models:string[],model_count:integer,task_append:string},"
                 "rationale:string}. "
                 "models MUST be chosen from allowed_models. No markdown, no prose."
+            )
+        elif free_text_mode:
+            system_prompt = (
+            "You are AO (Adaptive Orchestrator), the strategic decision engine in OH-MAS for OpenHarmony code defect repair.\\n\\n"
+            "# Your Mission\\n"
+            "Analyze alarm details and prior audit feedback to determine optimal execution strategy for downstream agents "
+            "(GW: Graph Weaver, CP: Constrained Patcher).\\n\\n"
+            "# Input Format for This Run\\n"
+            "previous_audit_feedback contains plain text only: {reason, raw_output}.\\n"
+            "Reason from the raw checker output and reason string as a general-purpose agent would.\\n"
+            "If earlier_rounds is present, it holds your own earlier analyses and the checker outputs of earlier rounds.\\n\\n"
+            "# Decision Process (follow in order)\\n"
+            "1. **Assess alarm severity and retry context**\\n"
+            "   - First attempt (retry_index=0): Favor single-model, minimal-graph exploration\\n"
+            "   - Failed attempts (retry_index>0): Escalate model diversity and graph depth\\n\\n"
+            "2. **Interpret previous audit feedback**\\n"
+            "   - Read previous_audit_feedback.reason and raw_output to understand what went wrong\\n"
+            "   - Infer the likely cause of the failure and identify the direction for the next repair attempt\\n"
+            "3. **Select GW strategy**\\n"
+            "   - build_semantic_graph: Enable if retry_index>=1\\n"
+            "   - extract_constraints: Enable if retry_index>=1\\n"
+            "\\n"
+            "4. **Select CP models**\\n"
+            "   Model count is determined by execution mode (not retry index):\\n"
+            "   - easy: 1 model, medium: 2 models, hard: 3 models\\n"
+            "   - CRITICAL: Only select from allowed_models array\\n\\n"
+            "5. **Formulate task_append guidance**\\n"
+            "   Write natural language guidance for CP workers based on what you read in raw_output and reason.\\n"
+            "   Describe what likely went wrong and what the next attempt should focus on.\\n"
+            "   Do not invent specific line numbers or code snippets you did not see in raw_output.\\n\\n"
+            "# Output Requirements\\n"
+            "Return ONLY valid JSON with this exact schema:\\n"
+            "{\\n"
+            '  "gw_input": {\\n'
+            '    "build_semantic_graph": boolean,\\n'
+            '    "extract_constraints": boolean\\n'
+            "  },\\n"
+            '  "cp_strategy": {\\n'
+            '    "models": [string],  // MUST be subset of allowed_models\\n'
+            '    "model_count": integer,  // MUST match models array length\\n'
+            '    "task_append": string    // Natural language guidance for CP workers\\n'
+            "  },\\n"
+            '  "rationale": string  // Brief explanation of decision logic (max 50 words)\\n'
+            "}\\n\\n"
+            "# Quality Checklist (verify before responding)\\n"
+            "- [ ] All models in cp_strategy.models exist in allowed_models\\n"
+            "- [ ] model_count equals length of models array\\n"
+            "- [ ] JSON is valid and contains no markdown code fences"
             )
         else:
             system_prompt = (
@@ -523,11 +691,7 @@ class AOAgent:
             "3. **Select GW strategy**\\n"
             "   - build_semantic_graph: Enable if retry_index>=1 OR previous_feedback.failed_level in [L2,L3]\\n"
             "   - extract_constraints: Enable if retry_index>=1 OR previous_feedback.failed_level==L3\\n"
-            "   - **SPECIAL RULE**: For alarm.rule == '@performance/hp-arkui-use-reusable-component',\\n"
-            "     ALWAYS set BOTH build_semantic_graph=true AND extract_constraints=true regardless of\\n"
-            "     retry_index. This rule has complex multi-file fix patterns (multiple LazyForEach\\n"
-            "     blocks, nested custom component inlining, Visibility-based if-else elimination) that\\n"
-            "     require a full repair contract even on the very first attempt (easy mode).\\n\\n"
+            "\\n"
             "4. **Select CP models**\\n"
             "   Model count is determined by execution mode (not retry index):\\n"
             "   - easy: 1 model (low-cost probing)\\n"
@@ -549,12 +713,12 @@ class AOAgent:
             "   - If details mention specific line mismatches, quote them\\n\\n"
             "   Example L1 task_append:\\n"
             "   '=== MANDATORY CONSTRAINTS ===\\n"
-            "   Previous patches failed to apply at CardComponent.ets:16 and CardLongTakePageOne.ets:20.\\n"
+            "   Previous patches failed to apply at <fileA>:<line> and <fileB>:<line>.\\n"
             "   REQUIRED ACTIONS:\\n"
             "   1. Use read_file to get CURRENT content of each file BEFORE editing\\n"
             "   2. DO NOT copy old_str from previous attempts - file content may have changed\\n"
             "   3. Ensure old_str matches EXACTLY including whitespace\\n"
-            "   4. If CardClickRegistry already exists, do NOT add it again'\\n\\n"
+            "   4. If a symbol you intend to add already exists, do NOT add it again'\\n\\n"
             "   ## For L2 (Target Alarm Not Fixed) failures:\\n"
             "   CRITICAL: You receive linter_violations[] with code_snippet showing EXACT problematic code.\\n"
             "   Your task_append MUST:\\n"
@@ -566,41 +730,38 @@ class AOAgent:
             "   '=== MANDATORY CONSTRAINTS ===\\n"
             "   **Failure Type:** L2 - Target Alarm Not Fixed\\n\\n"
             "   **Violations Found:**\\n"
-            "   Linter still detects `hp-arkui-no-func-as-arg-for-reusable-component` at:\\n"
-            "   - ContactDetailComponent.ets:51\\n"
+            "   Linter still detects `<rule_id>` at:\\n"
+            "   - <file>:<line>\\n"
             "     ```typescript\\n"
-            "     ContactDetailComponent({ rawContactId: this.getRawContactId(index) })\\n"
+            "     <code_snippet from linter_violations>\\n"
             "     ```\\n\\n"
             "   **Root Cause Analysis:**\\n"
-            "   The code shows this.getRawContactId(index) being CALLED as a component parameter.\\n"
-            "   This is a METHOD CALL violation (Type 2), not a function member definition.\\n"
-            "   Previous patches removed onClickHead which was NOT the actual violation.\\n\\n"
+            "   <Explain which construct in the snippet triggers the rule>.\\n"
+            "   Previous patches changed <unrelated code>, which was NOT the actual violation.\\n\\n"
             "   **What CP Should Focus On:**\\n"
-            "   The method call at line 51 needs to be pre-computed before being passed as a parameter.\\n"
-            "   Refer to knowledge_pack for specific @Reusable parameter handling patterns.'\\n\\n"
+            "   <The specific construct at the reported line that must change>.\\n"
+            "   Refer to knowledge_pack for the relevant repair patterns.'\\n\\n"
             "   ## For L3 (New Warnings Introduced) failures:\\n"
             "   CRITICAL: You receive introduced_warnings[] with code_snippet showing problematic code.\\n"
             "   Your task_append MUST:\\n"
             "   1. Display the code_snippet from introduced_warnings\\n"
             "   2. Analyze what in the code_snippet triggers the NEW rule\\n"
-            "   3. Explain WHY your previous patch caused this (e.g., added @Reusable but kept custom component calls)\\n"
+            "   3. Explain WHY your previous patch caused this (e.g., the change violated a constraint that another rule checks)\\n"
             "   4. State that these are NOT false positives - linter is correct\\n"
             "   Example L3 task_append:\\n"
             "   '=== MANDATORY CONSTRAINTS ===\\n"
             "   **Failure Type:** L3 - Introduced New Warnings\\n\\n"
             "   **Violations Found:**\\n"
-            "   Previous patch introduced `@performance/hp-arkui-replace-nested-reusable-component-by-builder` at:\\n"
-            "   - VideoSwipeComponent.ets:42\\n"
+            "   Previous patch introduced `<new_rule_id>` at:\\n"
+            "   - <file>:<line>\\n"
             "     ```typescript\\n"
-            "     VideoSwipePlayer({ url: this.url })  // Inside @Reusable component build()\\n"
+            "     <code_snippet from introduced_warnings>\\n"
             "     ```\\n\\n"
             "   **Root Cause Analysis:**\\n"
-            "   The previous patch added @Reusable decorator to VideoSwipeComponent, but its build() method\\n"
-            "   still calls custom component VideoSwipePlayer(). ArkUI prohibits custom component calls\\n"
-            "   inside @Reusable components because they break the recycling mechanism.\\n\\n"
+            "   <Explain how the previous patch caused the new warning>.\\n\\n"
             "   **What CP Should Focus On:**\\n"
-            "   The custom component call at line 42 violates @Reusable constraints.\\n"
-            "   Refer to knowledge_pack for @Reusable and nested component handling patterns.'\\n\\n"
+            "   <The specific construct at the reported line that violates the new rule>.\\n"
+            "   Refer to knowledge_pack for the relevant repair patterns.'\\n\\n"
             "   ## ANTI-PATTERNS (NEVER do these):\\n"
             "   - NEVER say 'avoid new warnings' without specifying WHICH rules\\n"
             "   - NEVER say 'be careful' or 'ensure compatibility' without specific actions\\n"
@@ -884,14 +1045,14 @@ class AOAgent:
             layer="L2",
             source="framework",
             alarm=alarm,
-            allow_synthetic=True,
+            allow_synthetic=self.config.enable_synthetic_knowledge,
         )
         rt = self._ensure_non_empty_kb_result(
             rule_templates,
             layer="L2",
             source="rule_template",
             alarm=alarm,
-            allow_synthetic=True,
+            allow_synthetic=self.config.enable_synthetic_knowledge,
         )
         ex = self._ensure_non_empty_kb_result(
             experiences,

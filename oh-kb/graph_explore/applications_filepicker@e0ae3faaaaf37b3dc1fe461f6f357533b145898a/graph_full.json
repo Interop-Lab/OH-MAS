@@ -1,0 +1,1714 @@
+{
+  "meta": {
+    "language": "cpp",
+    "build_time_ms": 274.306,
+    "files_scanned": 40,
+    "parse_failed_files": 0,
+    "file_node_count": 40,
+    "external_node_count": 43,
+    "edge_count": 223,
+    "unresolved_local_edges": 36,
+    "external_edges": 105,
+    "edge_type_counts": {
+      "include_system_external": 105,
+      "include_local": 59,
+      "same_module_include": 59
+    },
+    "module_dep_count": 0,
+    "build_gn_dep_refs": 0,
+    "file_to_file_edge_count": 118,
+    "file_to_external_edge_count": 105,
+    "repo_name": "applications_filepicker",
+    "commit_hash": "e0ae3faaaaf37b3dc1fe461f6f357533b145898a",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:2248e09130bd",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/Security.cpp",
+        "name": "Security.cpp"
+      },
+      {
+        "id": "file:1bf4fae27c26",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/utils/log.h",
+        "name": "log.h"
+      },
+      {
+        "id": "file:a642f92d1bd0",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/utils/file_manager_operation_struct.h",
+        "name": "file_manager_operation_struct.h"
+      },
+      {
+        "id": "file:a1575c21ed06",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_val.h",
+        "name": "n_val.h"
+      },
+      {
+        "id": "file:fd7c0f784fdf",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_func_arg.cpp",
+        "name": "n_func_arg.cpp"
+      },
+      {
+        "id": "file:f8663bcee398",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_context.h",
+        "name": "n_async_context.h"
+      },
+      {
+        "id": "file:30acf1576f19",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_func_arg.h",
+        "name": "n_func_arg.h"
+      },
+      {
+        "id": "file:02889c6cdf7f",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_work_promise.h",
+        "name": "n_async_work_promise.h"
+      },
+      {
+        "id": "file:419d15a22049",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_ref.h",
+        "name": "n_ref.h"
+      },
+      {
+        "id": "file:4febdc381601",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_work_promise.cpp",
+        "name": "n_async_work_promise.cpp"
+      },
+      {
+        "id": "file:30039f8ed58d",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_val.cpp",
+        "name": "n_val.cpp"
+      },
+      {
+        "id": "file:cbc0c27321db",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_work_factory.h",
+        "name": "n_async_work_factory.h"
+      },
+      {
+        "id": "file:c691ba692c79",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_error.cpp",
+        "name": "n_error.cpp"
+      },
+      {
+        "id": "file:cf4ff3a84cdf",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_ref.cpp",
+        "name": "n_ref.cpp"
+      },
+      {
+        "id": "file:771f0d52f6ae",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_error.h",
+        "name": "n_error.h"
+      },
+      {
+        "id": "file:e9384d40ee72",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/common/common.h",
+        "name": "common.h"
+      },
+      {
+        "id": "file:8440d9fb6a8e",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/file_manager_utils.cpp",
+        "name": "file_manager_utils.cpp"
+      },
+      {
+        "id": "file:246544784eda",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_trash.h",
+        "name": "filemanager_rdb_trash.h"
+      },
+      {
+        "id": "file:70815d75d90a",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/napi_module_trash.h",
+        "name": "napi_module_trash.h"
+      },
+      {
+        "id": "file:04d13cd046ab",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_utils.h",
+        "name": "filemanager_rdb_utils.h"
+      },
+      {
+        "id": "file:6e949fd614a1",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_trash.cpp",
+        "name": "filemanager_rdb_trash.cpp"
+      },
+      {
+        "id": "file:84cf4ab2f3fa",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_db_manager.h",
+        "name": "filemanager_db_manager.h"
+      },
+      {
+        "id": "file:8bf189537d84",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/file_manager_utils.h",
+        "name": "file_manager_utils.h"
+      },
+      {
+        "id": "file:37df4ba94cac",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_instance.h",
+        "name": "filemanager_rdb_instance.h"
+      },
+      {
+        "id": "file:11f94e485e3d",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_db_manager.cpp",
+        "name": "filemanager_db_manager.cpp"
+      },
+      {
+        "id": "file:5966ef4985a1",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/trash_utils.cpp",
+        "name": "trash_utils.cpp"
+      },
+      {
+        "id": "file:2fb9d601b1ae",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/file_manager_errno.h",
+        "name": "file_manager_errno.h"
+      },
+      {
+        "id": "file:718bc97112fc",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/trash_data_struct.h",
+        "name": "trash_data_struct.h"
+      },
+      {
+        "id": "file:c4d9b83cf15e",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/trash_utils.h",
+        "name": "trash_utils.h"
+      },
+      {
+        "id": "file:64dd169a3a0d",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_instance.cpp",
+        "name": "filemanager_rdb_instance.cpp"
+      },
+      {
+        "id": "file:d054bf4aa3a9",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/napi_module_trash.cpp",
+        "name": "napi_module_trash.cpp"
+      },
+      {
+        "id": "file:40ca12343ec8",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_utils.cpp",
+        "name": "filemanager_rdb_utils.cpp"
+      },
+      {
+        "id": "file:33e5924c6059",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/filequery/file_producer.h",
+        "name": "file_producer.h"
+      },
+      {
+        "id": "file:31c7c2d7dd0e",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/filequery/file_producer.cpp",
+        "name": "file_producer.cpp"
+      },
+      {
+        "id": "file:b135a9f0394b",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/file_util.h",
+        "name": "file_util.h"
+      },
+      {
+        "id": "file:4e48ad4c9420",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/napi_util.h",
+        "name": "napi_util.h"
+      },
+      {
+        "id": "file:83a61167afcb",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/listfile.cpp",
+        "name": "listfile.cpp"
+      },
+      {
+        "id": "file:0e89b6f5e2c3",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/napi_util.cpp",
+        "name": "napi_util.cpp"
+      },
+      {
+        "id": "file:8c65807f8bad",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/listfile.h",
+        "name": "listfile.h"
+      },
+      {
+        "id": "file:7b1da3b4aeb5",
+        "path": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/file_util.cpp",
+        "name": "file_util.cpp"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:781f3ff16cba",
+        "name": "cstdlib"
+      },
+      {
+        "id": "external:e7a0a74ea985",
+        "name": "sys/ioctl.h"
+      },
+      {
+        "id": "external:22d8c4037e38",
+        "name": "string"
+      },
+      {
+        "id": "external:cc680da0937f",
+        "name": "string_view"
+      },
+      {
+        "id": "external:bafd13e3a6d0",
+        "name": "node_api.h"
+      },
+      {
+        "id": "external:1dfa8e97b9eb",
+        "name": "vector"
+      },
+      {
+        "id": "external:fc0fa5912f3f",
+        "name": "memory"
+      },
+      {
+        "id": "external:a247070543f5",
+        "name": "iostream"
+      },
+      {
+        "id": "external:f65a621de05d",
+        "name": "cstring"
+      },
+      {
+        "id": "external:022b388aa1f1",
+        "name": "functional"
+      },
+      {
+        "id": "external:850b87a5c0da",
+        "name": "tuple"
+      },
+      {
+        "id": "external:9dff3eb9eff9",
+        "name": "unordered_map"
+      },
+      {
+        "id": "external:24e648d6accc",
+        "name": "chrono"
+      },
+      {
+        "id": "external:6590e8a7f36d",
+        "name": "regex"
+      },
+      {
+        "id": "external:14623c347665",
+        "name": "unistd.h"
+      },
+      {
+        "id": "external:f09607679815",
+        "name": "unordered_set"
+      },
+      {
+        "id": "external:f30d3deeca74",
+        "name": "iomanip"
+      },
+      {
+        "id": "external:82d3f0bed02c",
+        "name": "fcntl.h"
+      },
+      {
+        "id": "external:0ed7fca574bd",
+        "name": "sstream"
+      },
+      {
+        "id": "external:3d0f5956417a",
+        "name": "sys/stat.h"
+      },
+      {
+        "id": "external:c9039eaa0c59",
+        "name": "filesystem"
+      },
+      {
+        "id": "external:306cd6cb59b4",
+        "name": "charconv"
+      },
+      {
+        "id": "external:f284e3acda6d",
+        "name": "cerrno"
+      },
+      {
+        "id": "external:6c7403c89104",
+        "name": "database/rdb/relational_store.h"
+      },
+      {
+        "id": "external:f1d800bbacb5",
+        "name": "database/rdb/oh_value_object.h"
+      },
+      {
+        "id": "external:4e8ff8000ce9",
+        "name": "database/rdb/oh_cursor.h"
+      },
+      {
+        "id": "external:53657155ccbe",
+        "name": "database/rdb/relational_store_error_code.h"
+      },
+      {
+        "id": "external:cf5ae9a72f95",
+        "name": "mutex"
+      },
+      {
+        "id": "external:2d193647acd0",
+        "name": "map"
+      },
+      {
+        "id": "external:55b8ae9eeb43",
+        "name": "set"
+      },
+      {
+        "id": "external:1a4c139eddff",
+        "name": "dirent.h"
+      },
+      {
+        "id": "external:30b99e13e211",
+        "name": "deque"
+      },
+      {
+        "id": "external:415dcded0cb1",
+        "name": "sys/types.h"
+      },
+      {
+        "id": "external:6af8fb94df54",
+        "name": "utime.h"
+      },
+      {
+        "id": "external:8078be746cd9",
+        "name": "codecvt"
+      },
+      {
+        "id": "external:19cecca974a5",
+        "name": "thread"
+      },
+      {
+        "id": "external:4d60ecabd4c3",
+        "name": "uv.h"
+      },
+      {
+        "id": "external:faa7f8804891",
+        "name": "ctime"
+      },
+      {
+        "id": "external:08ae8cfc4016",
+        "name": "sys/xattr.h"
+      },
+      {
+        "id": "external:c346e3b367ce",
+        "name": "stack"
+      },
+      {
+        "id": "external:fece33b5a7aa",
+        "name": "atomic"
+      },
+      {
+        "id": "external:fe79b97d6417",
+        "name": "filemanagement/fileio/oh_fileio.h"
+      },
+      {
+        "id": "external:2c7758ff31de",
+        "name": "filemanagement/file_uri/oh_file_uri.h"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:2248e09130bd",
+          "to": "file:8c65807f8bad",
+          "type": "include_local"
+        },
+        {
+          "from": "file:2248e09130bd",
+          "to": "file:8c65807f8bad",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:2248e09130bd",
+          "to": "file:33e5924c6059",
+          "type": "include_local"
+        },
+        {
+          "from": "file:2248e09130bd",
+          "to": "file:33e5924c6059",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:fd7c0f784fdf",
+          "to": "file:30acf1576f19",
+          "type": "include_local"
+        },
+        {
+          "from": "file:fd7c0f784fdf",
+          "to": "file:30acf1576f19",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:f8663bcee398",
+          "to": "file:771f0d52f6ae",
+          "type": "include_local"
+        },
+        {
+          "from": "file:f8663bcee398",
+          "to": "file:771f0d52f6ae",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:f8663bcee398",
+          "to": "file:a1575c21ed06",
+          "type": "include_local"
+        },
+        {
+          "from": "file:f8663bcee398",
+          "to": "file:a1575c21ed06",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:f8663bcee398",
+          "to": "file:419d15a22049",
+          "type": "include_local"
+        },
+        {
+          "from": "file:f8663bcee398",
+          "to": "file:419d15a22049",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:02889c6cdf7f",
+          "to": "file:cbc0c27321db",
+          "type": "include_local"
+        },
+        {
+          "from": "file:02889c6cdf7f",
+          "to": "file:cbc0c27321db",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:02889c6cdf7f",
+          "to": "file:a1575c21ed06",
+          "type": "include_local"
+        },
+        {
+          "from": "file:02889c6cdf7f",
+          "to": "file:a1575c21ed06",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:419d15a22049",
+          "to": "file:a1575c21ed06",
+          "type": "include_local"
+        },
+        {
+          "from": "file:419d15a22049",
+          "to": "file:a1575c21ed06",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:4febdc381601",
+          "to": "file:02889c6cdf7f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:4febdc381601",
+          "to": "file:02889c6cdf7f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:30039f8ed58d",
+          "to": "file:a1575c21ed06",
+          "type": "include_local"
+        },
+        {
+          "from": "file:30039f8ed58d",
+          "to": "file:a1575c21ed06",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:cbc0c27321db",
+          "to": "file:f8663bcee398",
+          "type": "include_local"
+        },
+        {
+          "from": "file:cbc0c27321db",
+          "to": "file:f8663bcee398",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:c691ba692c79",
+          "to": "file:771f0d52f6ae",
+          "type": "include_local"
+        },
+        {
+          "from": "file:c691ba692c79",
+          "to": "file:771f0d52f6ae",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:c691ba692c79",
+          "to": "file:a1575c21ed06",
+          "type": "include_local"
+        },
+        {
+          "from": "file:c691ba692c79",
+          "to": "file:a1575c21ed06",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:cf4ff3a84cdf",
+          "to": "file:419d15a22049",
+          "type": "include_local"
+        },
+        {
+          "from": "file:cf4ff3a84cdf",
+          "to": "file:419d15a22049",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:771f0d52f6ae",
+          "to": "file:a1575c21ed06",
+          "type": "include_local"
+        },
+        {
+          "from": "file:771f0d52f6ae",
+          "to": "file:a1575c21ed06",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "file:2fb9d601b1ae",
+          "type": "include_local"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "file:2fb9d601b1ae",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:37df4ba94cac",
+          "type": "include_local"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:37df4ba94cac",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:718bc97112fc",
+          "type": "include_local"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:718bc97112fc",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:84cf4ab2f3fa",
+          "type": "include_local"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:84cf4ab2f3fa",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:04d13cd046ab",
+          "type": "include_local"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:04d13cd046ab",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:70815d75d90a",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:70815d75d90a",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:6e949fd614a1",
+          "to": "file:246544784eda",
+          "type": "include_local"
+        },
+        {
+          "from": "file:6e949fd614a1",
+          "to": "file:246544784eda",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "file:37df4ba94cac",
+          "type": "include_local"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "file:37df4ba94cac",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:37df4ba94cac",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:37df4ba94cac",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:37df4ba94cac",
+          "to": "file:2fb9d601b1ae",
+          "type": "include_local"
+        },
+        {
+          "from": "file:37df4ba94cac",
+          "to": "file:2fb9d601b1ae",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:11f94e485e3d",
+          "to": "file:84cf4ab2f3fa",
+          "type": "include_local"
+        },
+        {
+          "from": "file:11f94e485e3d",
+          "to": "file:84cf4ab2f3fa",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:c4d9b83cf15e",
+          "type": "include_local"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:c4d9b83cf15e",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:718bc97112fc",
+          "type": "include_local"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:718bc97112fc",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:246544784eda",
+          "type": "include_local"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:246544784eda",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:2fb9d601b1ae",
+          "type": "include_local"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:2fb9d601b1ae",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:718bc97112fc",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:718bc97112fc",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "file:718bc97112fc",
+          "type": "include_local"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "file:718bc97112fc",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:37df4ba94cac",
+          "type": "include_local"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:37df4ba94cac",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:718bc97112fc",
+          "type": "include_local"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:718bc97112fc",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:c4d9b83cf15e",
+          "type": "include_local"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:c4d9b83cf15e",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:84cf4ab2f3fa",
+          "type": "include_local"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "file:84cf4ab2f3fa",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:70815d75d90a",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:70815d75d90a",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:718bc97112fc",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:718bc97112fc",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:c4d9b83cf15e",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:c4d9b83cf15e",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:246544784eda",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "file:246544784eda",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:40ca12343ec8",
+          "to": "file:04d13cd046ab",
+          "type": "include_local"
+        },
+        {
+          "from": "file:40ca12343ec8",
+          "to": "file:04d13cd046ab",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:40ca12343ec8",
+          "to": "file:37df4ba94cac",
+          "type": "include_local"
+        },
+        {
+          "from": "file:40ca12343ec8",
+          "to": "file:37df4ba94cac",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:40ca12343ec8",
+          "to": "file:8bf189537d84",
+          "type": "include_local"
+        },
+        {
+          "from": "file:40ca12343ec8",
+          "to": "file:8bf189537d84",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "file:33e5924c6059",
+          "type": "include_local"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "file:33e5924c6059",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:8c65807f8bad",
+          "type": "include_local"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:8c65807f8bad",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:30acf1576f19",
+          "type": "include_local"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:30acf1576f19",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:a1575c21ed06",
+          "type": "include_local"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:a1575c21ed06",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:1bf4fae27c26",
+          "type": "include_local"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:1bf4fae27c26",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:a642f92d1bd0",
+          "type": "include_local"
+        },
+        {
+          "from": "file:83a61167afcb",
+          "to": "file:a642f92d1bd0",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0e89b6f5e2c3",
+          "to": "file:4e48ad4c9420",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0e89b6f5e2c3",
+          "to": "file:4e48ad4c9420",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0e89b6f5e2c3",
+          "to": "file:1bf4fae27c26",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0e89b6f5e2c3",
+          "to": "file:1bf4fae27c26",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:7b1da3b4aeb5",
+          "to": "file:b135a9f0394b",
+          "type": "include_local"
+        },
+        {
+          "from": "file:7b1da3b4aeb5",
+          "to": "file:b135a9f0394b",
+          "type": "same_module_include"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:2248e09130bd",
+          "to": "external:781f3ff16cba",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:2248e09130bd",
+          "to": "external:e7a0a74ea985",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:a642f92d1bd0",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:a1575c21ed06",
+          "to": "external:cc680da0937f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:a1575c21ed06",
+          "to": "external:bafd13e3a6d0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:a1575c21ed06",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:30acf1576f19",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:30acf1576f19",
+          "to": "external:a247070543f5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:30acf1576f19",
+          "to": "external:bafd13e3a6d0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:30039f8ed58d",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c691ba692c79",
+          "to": "external:f65a621de05d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:771f0d52f6ae",
+          "to": "external:022b388aa1f1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:771f0d52f6ae",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:771f0d52f6ae",
+          "to": "external:850b87a5c0da",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:771f0d52f6ae",
+          "to": "external:9dff3eb9eff9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:24e648d6accc",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:6590e8a7f36d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:f09607679815",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:f30d3deeca74",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:82d3f0bed02c",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:781f3ff16cba",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:3d0f5956417a",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:c9039eaa0c59",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:306cd6cb59b4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8440d9fb6a8e",
+          "to": "external:f284e3acda6d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "external:6c7403c89104",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "external:f1d800bbacb5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:246544784eda",
+          "to": "external:4e8ff8000ce9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:04d13cd046ab",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:04d13cd046ab",
+          "to": "external:4e8ff8000ce9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:6e949fd614a1",
+          "to": "external:53657155ccbe",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "external:cf5ae9a72f95",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:84cf4ab2f3fa",
+          "to": "external:55b8ae9eeb43",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8bf189537d84",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8bf189537d84",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:37df4ba94cac",
+          "to": "external:cf5ae9a72f95",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:37df4ba94cac",
+          "to": "external:6c7403c89104",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:37df4ba94cac",
+          "to": "external:53657155ccbe",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:11f94e485e3d",
+          "to": "external:53657155ccbe",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:f65a621de05d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:1a4c139eddff",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:a247070543f5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:cc680da0937f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:3d0f5956417a",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:30b99e13e211",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:c9039eaa0c59",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:415dcded0cb1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:6af8fb94df54",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:8078be746cd9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:5966ef4985a1",
+          "to": "external:306cd6cb59b4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:2fb9d601b1ae",
+          "to": "external:9dff3eb9eff9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:2fb9d601b1ae",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:718bc97112fc",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:f65a621de05d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:1a4c139eddff",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:a247070543f5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:cc680da0937f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:3d0f5956417a",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:30b99e13e211",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c4d9b83cf15e",
+          "to": "external:1dfa8e97b9eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:64dd169a3a0d",
+          "to": "external:19cecca974a5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:4d60ecabd4c3",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:19cecca974a5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:fc0fa5912f3f",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:c9039eaa0c59",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:faa7f8804891",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:a247070543f5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:30b99e13e211",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:415dcded0cb1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:08ae8cfc4016",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:1a4c139eddff",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d054bf4aa3a9",
+          "to": "external:c346e3b367ce",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:33e5924c6059",
+          "to": "external:fece33b5a7aa",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:33e5924c6059",
+          "to": "external:55b8ae9eeb43",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:33e5924c6059",
+          "to": "external:19cecca974a5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:33e5924c6059",
+          "to": "external:3d0f5956417a",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:82d3f0bed02c",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:55b8ae9eeb43",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:f09607679815",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:1a4c139eddff",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:19cecca974a5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:fe79b97d6417",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:31c7c2d7dd0e",
+          "to": "external:2c7758ff31de",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b135a9f0394b",
+          "to": "external:fe79b97d6417",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b135a9f0394b",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:4e48ad4c9420",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:8c65807f8bad",
+          "to": "external:1a4c139eddff",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:7b1da3b4aeb5",
+          "to": "external:3d0f5956417a",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:7b1da3b4aeb5",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "symbol_profiles": [
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/utils/log.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/utils/file_manager_operation_struct.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_val.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_func_arg.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_context.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_func_arg.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_work_promise.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_ref.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_work_promise.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_val.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_async_work_factory.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_error.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_ref.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/napi/n_error.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/file_manager_utils.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_trash.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/napi_module_trash.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_utils.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_trash.cpp",
+          "namespace_count": 3,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_db_manager.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/file_manager_utils.h",
+          "namespace_count": 3,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_instance.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_db_manager.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/trash_utils.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 17
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/file_manager_errno.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/trash_data_struct.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 3
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/trash_utils.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 12
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_instance.cpp",
+          "namespace_count": 3,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/napi_module_trash.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 4
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/trash/filemanager_rdb_utils.cpp",
+          "namespace_count": 2,
+          "class_or_struct_count": 0
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/filequery/file_producer.h",
+          "namespace_count": 1,
+          "class_or_struct_count": 4
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/filequery/file_producer.cpp",
+          "namespace_count": 1,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/file_util.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/napi_util.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/listfile.cpp",
+          "namespace_count": 3,
+          "class_or_struct_count": 5
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/listfile.h",
+          "namespace_count": 2,
+          "class_or_struct_count": 3
+        },
+        {
+          "file": "oh_filemanger_6.1/filemanager/common/src/main/cpp/fileoperation/file_util.cpp",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        }
+      ]
+    }
+  }
+}

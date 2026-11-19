@@ -9,9 +9,52 @@ from oh_mas.agents.ao import AOAgent
 from oh_mas.agents.cp import CPAgent
 from oh_mas.agents.da import DAAgent
 from oh_mas.agents.gw import GWAgent
+from oh_mas.core.constraint_ledger import ConstraintLedger
 from oh_mas.core.event_bus import InMemoryEventBus
-from oh_mas.core.schemas import Alarm, AuditDoneEvent, CPProfileInput, GWProfileInput, parse_diff_by_file
+from oh_mas.core.schemas import (
+    FREE_TEXT_FEEDBACK_MODES,
+    Alarm,
+    AuditDoneEvent,
+    CPProfileInput,
+    GWProfileInput,
+    parse_diff_by_file,
+)
 from oh_mas.core.tracing import TraceRecorder, to_jsonable
+
+
+def _is_oh_mas_checkout(repo_path: Any) -> bool:
+    """True if repo_path lies in the git checkout that holds this package; a hard reset there would wipe source edits."""
+    import subprocess
+
+    try:
+        top = subprocess.run(
+            ["git", "-C", str(repo_path), "rev-parse", "--show-toplevel"], capture_output=True, text=True, check=True
+        ).stdout.strip()
+    except Exception:
+        return False
+    return bool(top) and (Path(top) / "oh-mas-backend" / "src" / "oh_mas").exists()
+
+
+def build_gw_profile_input(profiled: Any) -> GWProfileInput:
+    """Typed runs build exactly the pre-a2prime (cb2b69242) input; free-text ablations get the AO text instead."""
+    if getattr(profiled, "feedback_mode", "typed_accumulative") in FREE_TEXT_FEEDBACK_MODES:
+        raw_audit_feedback = profiled.cp_input.prompt_injection.task_append if profiled.retry_index > 0 else ""
+        return GWProfileInput(
+            task_id=profiled.task_id,
+            mode=profiled.mode,
+            alarm=profiled.alarm,
+            gw_input=profiled.gw_input,
+            previous_audit_feedback=None,
+            raw_audit_feedback=raw_audit_feedback,
+        )
+    return GWProfileInput(
+        task_id=profiled.task_id,
+        mode=profiled.mode,
+        alarm=profiled.alarm,
+        gw_input=profiled.gw_input,
+        previous_audit_feedback=profiled.previous_audit_feedback,
+        constraint_ledger=list(getattr(profiled, "constraint_ledger", None) or []),
+    )
 
 
 @dataclass
@@ -59,7 +102,11 @@ class OHMASOrchestrator:
             "final_audit": None,
             "patches_by_id": {},  # Store patch diffs by patch_id for retrieval when passing
             "last_task_append": "",  # Carry previous round's constraints for accumulation
+            "free_text_history": [],  # A2'' ablation: per-round free-text analyses and raw checker outputs
         }
+
+        ledger = ConstraintLedger()
+        ledger_on = getattr(self.ao, "uses_ledger", False) is True
 
         recorder.record("task.started", {"task_id": task_id, "alarm": alarm.to_dict()})
 
@@ -148,16 +195,8 @@ class OHMASOrchestrator:
             profiled = state["current_profiled"]
             if profiled is None or profiled.task_id != event.get("task_id"):
                 return
-            # Project profiled event to GW-specific input.
-            # previous_audit_feedback is forwarded so GW can reason about what
-            # went wrong in the previous attempt and generate a targeted contract.
-            gw_input = GWProfileInput(
-                task_id=profiled.task_id,
-                mode=profiled.mode,
-                alarm=profiled.alarm,
-                gw_input=profiled.gw_input,
-                previous_audit_feedback=profiled.previous_audit_feedback,
-            )
+
+            gw_input = build_gw_profile_input(profiled)
             gw_input_payload = gw_input.to_dict()
             gw_trajectory_path = ""
             if trace_dir is not None:
@@ -212,13 +251,17 @@ class OHMASOrchestrator:
                     "context": context.to_dict(),
                 },
             )
+            round_summary = to_jsonable(getattr(self.cp, "last_round_summary", None))
             cp_debug_history.append(
                 {
                     "retry_index": profiled.retry_index,
                     "mode": profiled.mode,
                     "patches": to_jsonable(self.cp.last_debug),
+                    "round_summary": round_summary,
                 }
             )
+            if round_summary:
+                recorder.record("cp.round.summary", {"retry_index": profiled.retry_index, "mode": profiled.mode, **round_summary})
             for trace in self.cp.last_llm_traces:
                 full_payload = to_full_llm_trace(to_jsonable(trace))
                 llm_traces.append(full_payload)
@@ -256,12 +299,24 @@ class OHMASOrchestrator:
             if final_audit.result == "passed" or state["current_retry"] >= self.max_retries:
                 return
             state["last_failed_audit"] = final_audit
+            if ledger_on:
+                new_entries = ledger.update(final_audit, attempt=state["current_retry"], alarm=alarm)
+                recorder.record(
+                    "constraint.ledger",
+                    {
+                        "attempt": state["current_retry"],
+                        "size": len(ledger),
+                        "new": [c.to_dict() for c in new_entries],
+                    },
+                )
             state["current_retry"] += 1
             # Reset repository to original state before retry
             if original_commit_hash and hasattr(self.da, "config"):
                 try:
                     import subprocess
                     repo_path = self.da.config.repo_path
+                    if _is_oh_mas_checkout(repo_path):
+                        raise RuntimeError(f"refusing to hard-reset the OH-MAS source checkout: {repo_path}")
                     recorder.record(
                         "repo.reset",
                         {
@@ -302,6 +357,10 @@ class OHMASOrchestrator:
         def start_retry(retry_index: int) -> None:
             previous_audit = state["last_failed_audit"]
             previous_task_append = state["last_task_append"]
+            accumulative = getattr(getattr(self.ao, "config", None), "feedback_mode", "") == "free_text_accumulative"
+            ao_extra: dict[str, Any] = {"free_text_history": list(state["free_text_history"])} if accumulative else {}
+            if ledger_on:
+                ao_extra["constraint_ledger"] = ledger.snapshot()
             profiled = record_agent_call(
                 "AO",
                 lambda: self.ao.build_profiled_event(
@@ -310,6 +369,7 @@ class OHMASOrchestrator:
                     alarm=alarm,
                     previous_audit=previous_audit,
                     previous_task_append=previous_task_append,
+                    **ao_extra,
                 ),
                 input_payload={
                     "task_id": task_id,
@@ -321,6 +381,13 @@ class OHMASOrchestrator:
             )
             # Save this round's task_append so the next retry round can accumulate it
             state["last_task_append"] = profiled.cp_input.prompt_injection.task_append
+            if accumulative:
+                entry = getattr(self.ao, "last_free_text_entry", None)
+                if entry:
+                    state["free_text_history"].append(entry)
+            routing = (getattr(self.ao, "last_debug", None) or {}).get("routing")
+            if routing:
+                recorder.record("ao.routing", {"retry_index": retry_index, **routing})
             state["current_profiled"] = profiled
             state["current_context"] = None
             mode_history.append(profiled.mode)

@@ -55,6 +55,14 @@ def _load_env_candidates(config_path: Path) -> None:
 
 
 def _extract_json_from_output(output: str) -> dict:
+    # The result is printed with indent=2, so it starts at a column-0 "{". Trying only those
+    # positions avoids re-parsing the multi-MB tail once per nested "{" (quadratic).
+    decoder = json.JSONDecoder()
+    for match in reversed(list(re.finditer(r"(?m)^\{$", output))):
+        try:
+            return decoder.raw_decode(output[match.start():])[0]
+        except ValueError:
+            continue
     for idx in range(len(output) - 1, -1, -1):
         if output[idx] != "{":
             continue
@@ -103,7 +111,7 @@ def run(
 
     kb_client = build_oh_kb_client(
         provider=kb_cfg["provider"],
-        seed_file=_resolve_path(kb_cfg["seed_file"], base_dir=cfg_dir),
+        seed_file=_resolve_path(kb_cfg["seed_file"], base_dir=cfg_dir) if kb_cfg.get("seed_file") else None,
         fail_open=bool(kb_cfg.get("fail_open", True)),
         graph_root=_resolve_path(kb_cfg["graph_root"], base_dir=cfg_dir) if kb_cfg.get("graph_root") else None,
         linter_examples_root=_resolve_path(kb_cfg["linter_examples_root"], base_dir=cfg_dir)
@@ -112,6 +120,8 @@ def run(
         repair_experiences_path=_resolve_path(kb_cfg["repair_experiences_path"], base_dir=cfg_dir)
         if kb_cfg.get("repair_experiences_path")
         else None,
+        use_templates=bool(kb_cfg.get("use_templates", True)),
+        use_experiences=bool(kb_cfg.get("use_experiences", True)),
     )
 
     trace_root_cfg = runtime_cfg.get("trace_root")
@@ -135,6 +145,12 @@ def run(
             kb_max_items=int(kb_cfg.get("max_items", 8)),
             kb_timeout_ms=int(kb_cfg.get("timeout_ms", 300)),
             fail_open=bool(kb_cfg.get("fail_open", True)),
+            feedback_mode=str(ao_cfg.get("feedback_mode", "typed_accumulative")),
+            routing=str(ao_cfg.get("routing", "llm")),
+            routing_seed=int(ao_cfg.get("routing_seed", 42)),
+            allow_duplicate_models=bool(cp_cfg.get("allow_duplicate_models", False)),
+            enable_synthetic_knowledge=bool(ao_cfg.get("enable_synthetic_knowledge", True)),
+            constraint_ledger=bool(ao_cfg.get("constraint_ledger", False)),
         ),
     )
     gw_repo_root = cp_cfg.get("repo_root") or da_cfg.get("repo_path", "")
@@ -142,6 +158,7 @@ def run(
         kb_client=kb_client,
         repo_root=str(_resolve_path(gw_repo_root, base_dir=cfg_dir)) if gw_repo_root else "",
         worker_config=GWWorkerConfig(
+            merge_ledger=bool(gw_cfg.get("merge_ledger", False)),
             enable_llm=bool(gw_cfg.get("enable_llm", True)),  # 默认启用 LLM
             llm_model=gw_cfg.get("llm_model", ""),
             llm_model_class=gw_cfg.get("llm_model_class", "openrouter"),
@@ -251,8 +268,8 @@ def _run_instance_in_docker(
     # Rewrite OH-KB paths for container runtime so graph/knowledge files resolve correctly.
     kb_cfg = container_cfg.get("oh_kb", {})
     kb_cfg["graph_root"] = f"{docker_runtime_path}/graph_explore"
-    kb_cfg["linter_examples_root"] = "/workspace/oh-kb"
-    kb_cfg["repair_experiences_path"] = "/workspace/oh-kb/repair_experiences.json"
+    kb_cfg["linter_examples_root"] = "/workspace/linter_examples"
+    kb_cfg["repair_experiences_path"] = "/workspace/oh_mas_data/repair_experiences.json"
     container_cfg["oh_kb"] = kb_cfg
 
     with tempfile.NamedTemporaryFile(mode="w", suffix=".yaml", delete=False) as cfg_tmp:
@@ -292,10 +309,14 @@ def _run_instance_in_docker(
     trace_root = _resolve_path(runtime_cfg.get("trace_root", runtime_cfg["runtime_root"] + "/traces"), base_dir=cfg_dir)
     trace_root.mkdir(parents=True, exist_ok=True)
     linter_examples_root = _resolve_path(
-        cfg.get("oh_kb", {}).get("linter_examples_root", "../../oh-kb"),
+        cfg.get("oh_kb", {}).get("linter_examples_root", "../../linter_examples"),
         base_dir=cfg_dir,
     )
-    oh_kb_root = linter_examples_root
+    repair_experiences_path = _resolve_path(
+        cfg.get("oh_kb", {}).get("repair_experiences_path", "../data/repair_experiences.json"),
+        base_dir=cfg_dir,
+    )
+    repair_experiences_root = repair_experiences_path.parent
 
     docker_extra_args = runtime_cfg.get("docker_extra_args", "")
     if needs_host_network and "--network" not in docker_extra_args:
@@ -309,7 +330,8 @@ def _run_instance_in_docker(
         f" -v {shlex.quote(str(cfg_path))}:/workspace/oh_mas_config.yaml"
         f" -v {shlex.quote(str(runtime_root))}:{shlex.quote(docker_runtime_path)}"
         f" -v {shlex.quote(str(trace_root))}:{shlex.quote(docker_trace_path)}"
-        f" -v {shlex.quote(str(oh_kb_root))}:/workspace/oh-kb"
+        f" -v {shlex.quote(str(linter_examples_root))}:/workspace/linter_examples"
+        f" -v {shlex.quote(str(repair_experiences_root))}:/workspace/oh_mas_data"
         f" {docker_extra_args}"
         f" -w {shlex.quote(docker_repo_path)}"
         f" {shlex.quote(docker_image)}"

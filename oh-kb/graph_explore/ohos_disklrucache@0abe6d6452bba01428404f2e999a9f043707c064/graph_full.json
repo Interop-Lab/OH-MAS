@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 21.627,
+    "files_scanned": 15,
+    "parse_failed_files": 0,
+    "file_node_count": 15,
+    "external_node_count": 9,
+    "edge_count": 26,
+    "unresolved_local_edges": 0,
+    "external_edges": 16,
+    "edge_type_counts": {
+      "export_star": 2,
+      "re_export": 2,
+      "import_external": 16,
+      "import": 6
+    },
+    "resolve_mode_counts": {
+      "relative": 8,
+      "alias_or_package": 16
+    },
+    "module_dep_count": 1,
+    "file_to_file_edge_count": 10,
+    "file_to_external_edge_count": 16,
+    "repo_name": "ohos_disklrucache",
+    "commit_hash": "0abe6d6452bba01428404f2e999a9f043707c064",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:6b1f695e9ad2",
+        "path": "disklrucache/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:b6633f5ff271",
+        "path": "disklrucache/src/main/ets/components/cache/FileReader.ts",
+        "name": "FileReader.ts"
+      },
+      {
+        "id": "file:82b05b24844f",
+        "path": "disklrucache/src/main/ets/components/cache/DiskCacheEntry.ts",
+        "name": "DiskCacheEntry.ts"
+      },
+      {
+        "id": "file:31740c9b3329",
+        "path": "disklrucache/src/main/ets/components/cache/FileUtils.ts",
+        "name": "FileUtils.ts"
+      },
+      {
+        "id": "file:c1569d30690e",
+        "path": "disklrucache/src/main/ets/components/cache/DiskLruCache.ts",
+        "name": "DiskLruCache.ts"
+      },
+      {
+        "id": "file:0c4821e8b545",
+        "path": "disklrucache/src/main/ets/components/cache/CustomMap.ts",
+        "name": "CustomMap.ts"
+      },
+      {
+        "id": "file:20c30e69fe1e",
+        "path": "entry/src/main/ets/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:4e39a3b49a4c",
+        "path": "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:0a357742941b",
+        "path": "entry/src/main/ets/Application/MyAbilityStage.ts",
+        "name": "MyAbilityStage.ts"
+      },
+      {
+        "id": "file:7d780571c012",
+        "path": "entry/src/ohosTest/ets/TestRunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:28f956b079a3",
+        "path": "entry/src/ohosTest/ets/TestAbility/TestAbility.ts",
+        "name": "TestAbility.ts"
+      },
+      {
+        "id": "file:9ed59b657a09",
+        "path": "entry/src/ohosTest/ets/Application/TestAbilityStage.ts",
+        "name": "TestAbilityStage.ts"
+      },
+      {
+        "id": "file:4753d5e92854",
+        "path": "entry/src/ohosTest/ets/TestAbility/pages/index.ets",
+        "name": "index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:52bd843b9006",
+        "name": "@ohos.fileio"
+      },
+      {
+        "id": "external:0208f71de438",
+        "name": "spark-md5"
+      },
+      {
+        "id": "external:4cbe5c98ceba",
+        "name": "@ohos/disklrucache"
+      },
+      {
+        "id": "external:359fa699ecf4",
+        "name": "@ohos.application.Ability"
+      },
+      {
+        "id": "external:eb1cf1dae649",
+        "name": "@ohos.application.AbilityStage"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:d64ccc4e2fa9",
+        "name": "@ohos.application.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      },
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:6b1f695e9ad2",
+          "to": "file:c1569d30690e",
+          "type": "export_star"
+        },
+        {
+          "from": "file:6b1f695e9ad2",
+          "to": "file:c1569d30690e",
+          "type": "re_export"
+        },
+        {
+          "from": "file:6b1f695e9ad2",
+          "to": "file:82b05b24844f",
+          "type": "export_star"
+        },
+        {
+          "from": "file:6b1f695e9ad2",
+          "to": "file:82b05b24844f",
+          "type": "re_export"
+        },
+        {
+          "from": "file:c1569d30690e",
+          "to": "file:0c4821e8b545",
+          "type": "import"
+        },
+        {
+          "from": "file:c1569d30690e",
+          "to": "file:31740c9b3329",
+          "type": "import"
+        },
+        {
+          "from": "file:c1569d30690e",
+          "to": "file:b6633f5ff271",
+          "type": "import"
+        },
+        {
+          "from": "file:c1569d30690e",
+          "to": "file:82b05b24844f",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:705740198205",
+          "type": "import"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:b6633f5ff271",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:31740c9b3329",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c1569d30690e",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c1569d30690e",
+          "to": "external:0208f71de438",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:4cbe5c98ceba",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:52bd843b9006",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:0a357742941b",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d780571c012",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d780571c012",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:d64ccc4e2fa9",
+          "type": "import_external"
+        },
+        {
+          "from": "file:28f956b079a3",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:9ed59b657a09",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4753d5e92854",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "disklrucache",
+          "to_module": "disklrucache/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/ohosTest/ets/TestAbility/pages/index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/Application/MyAbilityStage.ts",
+        "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "entry/src/ohosTest/ets/Application/TestAbilityStage.ts",
+        "entry/src/ohosTest/ets/TestAbility/TestAbility.ts",
+        "entry/src/ohosTest/ets/TestRunner/OpenHarmonyTestRunner.ts",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets"
+      ]
+    }
+  }
+}

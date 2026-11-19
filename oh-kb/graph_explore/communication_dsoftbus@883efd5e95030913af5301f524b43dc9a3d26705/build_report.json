@@ -1,0 +1,26 @@
+{
+  "repo_name": "communication_dsoftbus",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/communication_dsoftbus",
+  "language": "cpp",
+  "commit_hash": "883efd5e95030913af5301f524b43dc9a3d26705",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/communication_dsoftbus@883efd5e9503/graph_full.json",
+  "build_time_ms": 22240.817,
+  "files_scanned": 2696,
+  "parse_failed_files": 0,
+  "file_node_count": 2696,
+  "external_node_count": 166,
+  "edge_count": 5442,
+  "unresolved_local_edges": 12333,
+  "external_edges": 3505,
+  "edge_type_counts": {
+    "include_system_external": 3505,
+    "include_local": 975,
+    "same_module_include": 977,
+    "include_system": 2
+  },
+  "module_dep_count": 435,
+  "build_gn_dep_refs": 4891,
+  "file_to_file_edge_count": 1954,
+  "file_to_external_edge_count": 3488,
+  "extractor_version": "v0.6"
+}

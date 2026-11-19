@@ -1,0 +1,1580 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 170.939,
+    "files_scanned": 69,
+    "parse_failed_files": 0,
+    "file_node_count": 69,
+    "external_node_count": 12,
+    "edge_count": 212,
+    "unresolved_local_edges": 44,
+    "external_edges": 24,
+    "edge_type_counts": {
+      "export_from": 5,
+      "import_external": 24,
+      "import": 183
+    },
+    "resolve_mode_counts": {
+      "relative": 232,
+      "alias_or_package": 24
+    },
+    "module_dep_count": 2,
+    "file_to_file_edge_count": 188,
+    "file_to_external_edge_count": 24,
+    "repo_name": "applications_contacts",
+    "commit_hash": "004c8d789dafccc7505d9bd7dcf48afc7b2f89a3",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:76276af75deb",
+        "path": "common/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:434733dc75f5",
+        "path": "common/src/main/ets/util/StringUtil.ets",
+        "name": "StringUtil.ets"
+      },
+      {
+        "id": "file:b3cd4cb28613",
+        "path": "common/src/main/ets/util/ObjectUtil.ets",
+        "name": "ObjectUtil.ets"
+      },
+      {
+        "id": "file:9a8492656aaa",
+        "path": "common/src/main/ets/util/ArrayUtil.ets",
+        "name": "ArrayUtil.ets"
+      },
+      {
+        "id": "file:e8789d82cec6",
+        "path": "common/src/main/ets/util/HiLog.ets",
+        "name": "HiLog.ets"
+      },
+      {
+        "id": "file:f4deb9c8319e",
+        "path": "common/src/main/ets/permission/PermissionManager.ets",
+        "name": "PermissionManager.ets"
+      },
+      {
+        "id": "file:e9b5c585c155",
+        "path": "entry/src/main/ets/model/ContactAbilityModel.ets",
+        "name": "ContactAbilityModel.ets"
+      },
+      {
+        "id": "file:20c30e69fe1e",
+        "path": "entry/src/main/ets/pages/index.ets",
+        "name": "index.ets"
+      },
+      {
+        "id": "file:83b1b37e56bd",
+        "path": "entry/src/main/ets/presenter/IndexPresenter.ets",
+        "name": "IndexPresenter.ets"
+      },
+      {
+        "id": "file:e18179ecfa2a",
+        "path": "entry/src/main/ets/util/PreferencesUtil.ets",
+        "name": "PreferencesUtil.ets"
+      },
+      {
+        "id": "file:4b7f0675f91e",
+        "path": "entry/src/main/ets/util/StringFormatUtil.ets",
+        "name": "StringFormatUtil.ets"
+      },
+      {
+        "id": "file:549f4820436d",
+        "path": "entry/src/main/ets/util/PatternUtil.ets",
+        "name": "PatternUtil.ets"
+      },
+      {
+        "id": "file:4e39a3b49a4c",
+        "path": "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:0a357742941b",
+        "path": "entry/src/main/ets/Application/MyAbilityStage.ts",
+        "name": "MyAbilityStage.ts"
+      },
+      {
+        "id": "file:a1e77bd1ae47",
+        "path": "entry/src/main/ets/feature/AudioHepler.ets",
+        "name": "AudioHepler.ets"
+      },
+      {
+        "id": "file:441817fa5385",
+        "path": "entry/src/main/ets/feature/EnvironmentProp.ets",
+        "name": "EnvironmentProp.ets"
+      },
+      {
+        "id": "file:67d194afb4c7",
+        "path": "entry/src/main/ets/model/calllog/CalllogModel.ets",
+        "name": "CalllogModel.ets"
+      },
+      {
+        "id": "file:102028b809fd",
+        "path": "entry/src/main/ets/model/bean/HouseBean.ets",
+        "name": "HouseBean.ets"
+      },
+      {
+        "id": "file:b011a10271c6",
+        "path": "entry/src/main/ets/model/bean/CallBean.ets",
+        "name": "CallBean.ets"
+      },
+      {
+        "id": "file:3ba888aadeb6",
+        "path": "entry/src/main/ets/model/bean/CallLogBean.ets",
+        "name": "CallLogBean.ets"
+      },
+      {
+        "id": "file:ba4b8e7e4a3a",
+        "path": "entry/src/main/ets/model/bean/EventBean.ets",
+        "name": "EventBean.ets"
+      },
+      {
+        "id": "file:33a3dc87ead7",
+        "path": "entry/src/main/ets/model/bean/RemDayBean.ets",
+        "name": "RemDayBean.ets"
+      },
+      {
+        "id": "file:f96a2f183ecd",
+        "path": "entry/src/main/ets/model/bean/MorandiColor.ets",
+        "name": "MorandiColor.ets"
+      },
+      {
+        "id": "file:75b27b9c0adc",
+        "path": "entry/src/main/ets/model/bean/BatchSelectRecentSource.ts",
+        "name": "BatchSelectRecentSource.ts"
+      },
+      {
+        "id": "file:b4c19cf19be3",
+        "path": "entry/src/main/ets/model/bean/BatchSelectContactSource.ts",
+        "name": "BatchSelectContactSource.ts"
+      },
+      {
+        "id": "file:daf0be69481d",
+        "path": "entry/src/main/ets/model/bean/CallRecordListDataSource.ts",
+        "name": "CallRecordListDataSource.ts"
+      },
+      {
+        "id": "file:fde6cb5ff9b6",
+        "path": "entry/src/main/ets/model/bean/BasicDataSource.ets",
+        "name": "BasicDataSource.ets"
+      },
+      {
+        "id": "file:b91156400756",
+        "path": "entry/src/main/ets/model/bean/ContactBean.ets",
+        "name": "ContactBean.ets"
+      },
+      {
+        "id": "file:e03ceeb86ef2",
+        "path": "entry/src/main/ets/model/bean/GroupBean.ets",
+        "name": "GroupBean.ets"
+      },
+      {
+        "id": "file:43df79d95164",
+        "path": "entry/src/main/ets/model/bean/ContactInfo.ets",
+        "name": "ContactInfo.ets"
+      },
+      {
+        "id": "file:eea14178221a",
+        "path": "entry/src/main/ets/model/bean/ContactVo.ets",
+        "name": "ContactVo.ets"
+      },
+      {
+        "id": "file:7a8eb47caf29",
+        "path": "entry/src/main/ets/model/bean/AIMBean.ets",
+        "name": "AIMBean.ets"
+      },
+      {
+        "id": "file:363a33bc03bc",
+        "path": "entry/src/main/ets/model/bean/AssociatedPersonBean.ets",
+        "name": "AssociatedPersonBean.ets"
+      },
+      {
+        "id": "file:2ff5115c7ccd",
+        "path": "entry/src/main/ets/model/bean/ContactListDataSource.ts",
+        "name": "ContactListDataSource.ts"
+      },
+      {
+        "id": "file:92653ef779ec",
+        "path": "entry/src/main/ets/model/bean/DetailCallLogDataSource.ts",
+        "name": "DetailCallLogDataSource.ts"
+      },
+      {
+        "id": "file:e100ca7e269f",
+        "path": "entry/src/main/ets/model/bean/PhoneNumBean.ets",
+        "name": "PhoneNumBean.ets"
+      },
+      {
+        "id": "file:60d30b6cdf01",
+        "path": "entry/src/main/ets/model/bean/EmailBean.ets",
+        "name": "EmailBean.ets"
+      },
+      {
+        "id": "file:278a7acdfce4",
+        "path": "entry/src/main/ets/pages/contacts/ContactList.ets",
+        "name": "ContactList.ets"
+      },
+      {
+        "id": "file:e7485e9226c7",
+        "path": "entry/src/main/ets/pages/dialer/DialerTablet.ets",
+        "name": "DialerTablet.ets"
+      },
+      {
+        "id": "file:d851bd65052d",
+        "path": "entry/src/main/ets/pages/dialog/ShareDialogEx.ets",
+        "name": "ShareDialogEx.ets"
+      },
+      {
+        "id": "file:501467a9d108",
+        "path": "entry/src/main/ets/pages/dialog/DeleteDialogEx.ets",
+        "name": "DeleteDialogEx.ets"
+      },
+      {
+        "id": "file:6ebdea8663c9",
+        "path": "entry/src/main/ets/pages/contacts/accountants/Accountants.ets",
+        "name": "Accountants.ets"
+      },
+      {
+        "id": "file:391de06f30fc",
+        "path": "entry/src/main/ets/pages/contacts/details/ContactDetail.ets",
+        "name": "ContactDetail.ets"
+      },
+      {
+        "id": "file:42eb6d1ad50d",
+        "path": "entry/src/main/ets/pages/contacts/batchselectcontacts/SingleSelectContactPage.ets",
+        "name": "SingleSelectContactPage.ets"
+      },
+      {
+        "id": "file:dc8a07482eaa",
+        "path": "entry/src/main/ets/pages/contacts/batchselectcontacts/BatchSelectContactsPage.ets",
+        "name": "BatchSelectContactsPage.ets"
+      },
+      {
+        "id": "file:d69baf4dcf1f",
+        "path": "entry/src/main/ets/pages/dialer/callRecord/CallRecord.ets",
+        "name": "CallRecord.ets"
+      },
+      {
+        "id": "file:792e874c150d",
+        "path": "entry/src/main/ets/pages/dialer/callRecord/AllRecord.ets",
+        "name": "AllRecord.ets"
+      },
+      {
+        "id": "file:0f5d8c88637c",
+        "path": "entry/src/main/ets/pages/phone/dialer/Dialer.ets",
+        "name": "Dialer.ets"
+      },
+      {
+        "id": "file:8332edd78c38",
+        "path": "entry/src/main/ets/presenter/dialer/DialerPresenter.ets",
+        "name": "DialerPresenter.ets"
+      },
+      {
+        "id": "file:baa305b6eb02",
+        "path": "entry/src/main/ets/presenter/contact/ContactListPresenter.ets",
+        "name": "ContactListPresenter.ets"
+      },
+      {
+        "id": "file:4d8afbbfcf8a",
+        "path": "entry/src/main/ets/presenter/dialer/callRecord/CallRecordPresenter.ets",
+        "name": "CallRecordPresenter.ets"
+      },
+      {
+        "id": "file:d768f45fc6e8",
+        "path": "entry/src/main/ets/presenter/contact/accountants/AccountantsPresenter.ets",
+        "name": "AccountantsPresenter.ets"
+      },
+      {
+        "id": "file:6d77497e2bfa",
+        "path": "entry/src/main/ets/presenter/contact/detail/DetailPresenter.ets",
+        "name": "DetailPresenter.ets"
+      },
+      {
+        "id": "file:920d038c8435",
+        "path": "entry/src/main/ets/presenter/contact/batchselectcontacts/BatchSelectContactsPresenter.ets",
+        "name": "BatchSelectContactsPresenter.ets"
+      },
+      {
+        "id": "file:e6ac462d4628",
+        "path": "entry/src/main/ets/component/contactdetail/DetailInfoList.ets",
+        "name": "DetailInfoList.ets"
+      },
+      {
+        "id": "file:842f1d86a816",
+        "path": "entry/src/main/ets/component/contactdetail/DetailCalllog.ets",
+        "name": "DetailCalllog.ets"
+      },
+      {
+        "id": "file:2510690fc0e1",
+        "path": "entry/src/main/ets/component/contactdetail/DetailMenu.ets",
+        "name": "DetailMenu.ets"
+      },
+      {
+        "id": "file:85c2a5f1da52",
+        "path": "entry/src/main/ets/component/contactdetail/DetailInfoListView.ets",
+        "name": "DetailInfoListView.ets"
+      },
+      {
+        "id": "file:e41bdf843188",
+        "path": "entry/src/main/ets/component/dialer/CallLogTabs.ets",
+        "name": "CallLogTabs.ets"
+      },
+      {
+        "id": "file:75a96d2ba1ee",
+        "path": "entry/src/main/ets/component/dialer/DialerInitialPage.ets",
+        "name": "DialerInitialPage.ets"
+      },
+      {
+        "id": "file:8d22cb9695be",
+        "path": "entry/src/main/ets/component/contact/ContactListItemView.ets",
+        "name": "ContactListItemView.ets"
+      },
+      {
+        "id": "file:c40ad2741a81",
+        "path": "entry/src/main/ets/component/contact/accountants/ItemEvent.ets",
+        "name": "ItemEvent.ets"
+      },
+      {
+        "id": "file:ebc058b15772",
+        "path": "entry/src/main/ets/component/contact/accountants/ShowDayTime.ets",
+        "name": "ShowDayTime.ets"
+      },
+      {
+        "id": "file:44f18f1258d5",
+        "path": "entry/src/main/ets/component/contact/accountants/ImageItemLeft.ets",
+        "name": "ImageItemLeft.ets"
+      },
+      {
+        "id": "file:36b3405bcdb0",
+        "path": "entry/src/main/ets/component/contact/accountants/AddItem.ets",
+        "name": "AddItem.ets"
+      },
+      {
+        "id": "file:62b59b0fc5c5",
+        "path": "entry/src/main/ets/component/contact/accountants/ItemList.ets",
+        "name": "ItemList.ets"
+      },
+      {
+        "id": "file:2c38b9d3b180",
+        "path": "entry/src/main/ets/component/contact/batchselectcontacts/BatchTabGuide.ets",
+        "name": "BatchTabGuide.ets"
+      },
+      {
+        "id": "file:4e60c61c7d62",
+        "path": "entry/src/main/ets/component/contact/batchselectcontacts/BatchSelectContactItemView.ets",
+        "name": "BatchSelectContactItemView.ets"
+      },
+      {
+        "id": "file:6946c5a62376",
+        "path": "entry/src/main/ets/component/contact/batchselectcontacts/BatchSelectRecentItemView.ets",
+        "name": "BatchSelectRecentItemView.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:20b336f237a0",
+        "name": "@ohos.ability.featureAbility"
+      },
+      {
+        "id": "external:ddaf7f0515e1",
+        "name": "@ohos.data.dataAbility"
+      },
+      {
+        "id": "external:2acf6639c422",
+        "name": "@ohos.telephony.call"
+      },
+      {
+        "id": "external:fd2d72905bd1",
+        "name": "@ohos.router"
+      },
+      {
+        "id": "external:359fa699ecf4",
+        "name": "@ohos.application.Ability"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:eb1cf1dae649",
+        "name": "@ohos.application.AbilityStage"
+      },
+      {
+        "id": "external:25c8a15e1baa",
+        "name": "@ohos.worker"
+      },
+      {
+        "id": "external:98d0aae4f1ca",
+        "name": "@ohos.deviceInfo"
+      },
+      {
+        "id": "external:2d8af467e217",
+        "name": "@ohos.telephony.observer"
+      },
+      {
+        "id": "external:567ee22c9228",
+        "name": "@system.prompt"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:76276af75deb",
+          "to": "file:e8789d82cec6",
+          "type": "export_from"
+        },
+        {
+          "from": "file:76276af75deb",
+          "to": "file:9a8492656aaa",
+          "type": "export_from"
+        },
+        {
+          "from": "file:76276af75deb",
+          "to": "file:b3cd4cb28613",
+          "type": "export_from"
+        },
+        {
+          "from": "file:76276af75deb",
+          "to": "file:434733dc75f5",
+          "type": "export_from"
+        },
+        {
+          "from": "file:76276af75deb",
+          "to": "file:f4deb9c8319e",
+          "type": "export_from"
+        },
+        {
+          "from": "file:f4deb9c8319e",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "file:f96a2f183ecd",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "file:eea14178221a",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "file:43df79d95164",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "file:e18179ecfa2a",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:e7485e9226c7",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:278a7acdfce4",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:0f5d8c88637c",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:83b1b37e56bd",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:f4deb9c8319e",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:8332edd78c38",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:baa305b6eb02",
+          "type": "import"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "file:4d8afbbfcf8a",
+          "type": "import"
+        },
+        {
+          "from": "file:83b1b37e56bd",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:83b1b37e56bd",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "file:83b1b37e56bd",
+          "type": "import"
+        },
+        {
+          "from": "file:0a357742941b",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:a1e77bd1ae47",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:67d194afb4c7",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:67d194afb4c7",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:75b27b9c0adc",
+          "to": "file:fde6cb5ff9b6",
+          "type": "import"
+        },
+        {
+          "from": "file:75b27b9c0adc",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:75b27b9c0adc",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:b4c19cf19be3",
+          "to": "file:fde6cb5ff9b6",
+          "type": "import"
+        },
+        {
+          "from": "file:b4c19cf19be3",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:b4c19cf19be3",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:daf0be69481d",
+          "to": "file:fde6cb5ff9b6",
+          "type": "import"
+        },
+        {
+          "from": "file:daf0be69481d",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:daf0be69481d",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:fde6cb5ff9b6",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:b91156400756",
+          "to": "file:60d30b6cdf01",
+          "type": "import"
+        },
+        {
+          "from": "file:b91156400756",
+          "to": "file:33a3dc87ead7",
+          "type": "import"
+        },
+        {
+          "from": "file:b91156400756",
+          "to": "file:363a33bc03bc",
+          "type": "import"
+        },
+        {
+          "from": "file:b91156400756",
+          "to": "file:7a8eb47caf29",
+          "type": "import"
+        },
+        {
+          "from": "file:b91156400756",
+          "to": "file:102028b809fd",
+          "type": "import"
+        },
+        {
+          "from": "file:b91156400756",
+          "to": "file:e03ceeb86ef2",
+          "type": "import"
+        },
+        {
+          "from": "file:b91156400756",
+          "to": "file:e100ca7e269f",
+          "type": "import"
+        },
+        {
+          "from": "file:43df79d95164",
+          "to": "file:e100ca7e269f",
+          "type": "import"
+        },
+        {
+          "from": "file:43df79d95164",
+          "to": "file:60d30b6cdf01",
+          "type": "import"
+        },
+        {
+          "from": "file:43df79d95164",
+          "to": "file:7a8eb47caf29",
+          "type": "import"
+        },
+        {
+          "from": "file:43df79d95164",
+          "to": "file:102028b809fd",
+          "type": "import"
+        },
+        {
+          "from": "file:43df79d95164",
+          "to": "file:e03ceeb86ef2",
+          "type": "import"
+        },
+        {
+          "from": "file:43df79d95164",
+          "to": "file:ba4b8e7e4a3a",
+          "type": "import"
+        },
+        {
+          "from": "file:43df79d95164",
+          "to": "file:363a33bc03bc",
+          "type": "import"
+        },
+        {
+          "from": "file:eea14178221a",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:2ff5115c7ccd",
+          "to": "file:fde6cb5ff9b6",
+          "type": "import"
+        },
+        {
+          "from": "file:2ff5115c7ccd",
+          "to": "file:eea14178221a",
+          "type": "import"
+        },
+        {
+          "from": "file:2ff5115c7ccd",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:2ff5115c7ccd",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:2ff5115c7ccd",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:92653ef779ec",
+          "to": "file:fde6cb5ff9b6",
+          "type": "import"
+        },
+        {
+          "from": "file:92653ef779ec",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:92653ef779ec",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:278a7acdfce4",
+          "to": "file:8d22cb9695be",
+          "type": "import"
+        },
+        {
+          "from": "file:278a7acdfce4",
+          "to": "file:baa305b6eb02",
+          "type": "import"
+        },
+        {
+          "from": "file:278a7acdfce4",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:278a7acdfce4",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:278a7acdfce4",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:e7485e9226c7",
+          "to": "file:d69baf4dcf1f",
+          "type": "import"
+        },
+        {
+          "from": "file:e7485e9226c7",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:e7485e9226c7",
+          "to": "file:75a96d2ba1ee",
+          "type": "import"
+        },
+        {
+          "from": "file:e7485e9226c7",
+          "to": "file:8332edd78c38",
+          "type": "import"
+        },
+        {
+          "from": "file:e7485e9226c7",
+          "to": "file:e18179ecfa2a",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:b3cd4cb28613",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:e100ca7e269f",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:d768f45fc6e8",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:501467a9d108",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:ebc058b15772",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:62b59b0fc5c5",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:c40ad2741a81",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:36b3405bcdb0",
+          "type": "import"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "file:44f18f1258d5",
+          "type": "import"
+        },
+        {
+          "from": "file:391de06f30fc",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:391de06f30fc",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:391de06f30fc",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:391de06f30fc",
+          "to": "file:6d77497e2bfa",
+          "type": "import"
+        },
+        {
+          "from": "file:391de06f30fc",
+          "to": "file:842f1d86a816",
+          "type": "import"
+        },
+        {
+          "from": "file:391de06f30fc",
+          "to": "file:85c2a5f1da52",
+          "type": "import"
+        },
+        {
+          "from": "file:42eb6d1ad50d",
+          "to": "file:920d038c8435",
+          "type": "import"
+        },
+        {
+          "from": "file:42eb6d1ad50d",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:42eb6d1ad50d",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:42eb6d1ad50d",
+          "to": "file:4e60c61c7d62",
+          "type": "import"
+        },
+        {
+          "from": "file:dc8a07482eaa",
+          "to": "file:920d038c8435",
+          "type": "import"
+        },
+        {
+          "from": "file:dc8a07482eaa",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:dc8a07482eaa",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:dc8a07482eaa",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:dc8a07482eaa",
+          "to": "file:6946c5a62376",
+          "type": "import"
+        },
+        {
+          "from": "file:dc8a07482eaa",
+          "to": "file:4e60c61c7d62",
+          "type": "import"
+        },
+        {
+          "from": "file:dc8a07482eaa",
+          "to": "file:2c38b9d3b180",
+          "type": "import"
+        },
+        {
+          "from": "file:d69baf4dcf1f",
+          "to": "file:792e874c150d",
+          "type": "import"
+        },
+        {
+          "from": "file:d69baf4dcf1f",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:d69baf4dcf1f",
+          "to": "file:4d8afbbfcf8a",
+          "type": "import"
+        },
+        {
+          "from": "file:d69baf4dcf1f",
+          "to": "file:e41bdf843188",
+          "type": "import"
+        },
+        {
+          "from": "file:792e874c150d",
+          "to": "file:4d8afbbfcf8a",
+          "type": "import"
+        },
+        {
+          "from": "file:792e874c150d",
+          "to": "file:6d77497e2bfa",
+          "type": "import"
+        },
+        {
+          "from": "file:792e874c150d",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:792e874c150d",
+          "to": "file:83b1b37e56bd",
+          "type": "import"
+        },
+        {
+          "from": "file:0f5d8c88637c",
+          "to": "file:d69baf4dcf1f",
+          "type": "import"
+        },
+        {
+          "from": "file:0f5d8c88637c",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:0f5d8c88637c",
+          "to": "file:8332edd78c38",
+          "type": "import"
+        },
+        {
+          "from": "file:0f5d8c88637c",
+          "to": "file:75a96d2ba1ee",
+          "type": "import"
+        },
+        {
+          "from": "file:0f5d8c88637c",
+          "to": "file:e18179ecfa2a",
+          "type": "import"
+        },
+        {
+          "from": "file:0f5d8c88637c",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:8332edd78c38",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:8332edd78c38",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:8332edd78c38",
+          "to": "file:a1e77bd1ae47",
+          "type": "import"
+        },
+        {
+          "from": "file:8332edd78c38",
+          "to": "file:e18179ecfa2a",
+          "type": "import"
+        },
+        {
+          "from": "file:8332edd78c38",
+          "to": "file:83b1b37e56bd",
+          "type": "import"
+        },
+        {
+          "from": "file:baa305b6eb02",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:baa305b6eb02",
+          "to": "file:eea14178221a",
+          "type": "import"
+        },
+        {
+          "from": "file:baa305b6eb02",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:baa305b6eb02",
+          "to": "file:e9b5c585c155",
+          "type": "import"
+        },
+        {
+          "from": "file:baa305b6eb02",
+          "to": "file:2ff5115c7ccd",
+          "type": "import"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "file:67d194afb4c7",
+          "type": "import"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "file:b3cd4cb28613",
+          "type": "import"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "file:daf0be69481d",
+          "type": "import"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "file:8332edd78c38",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:e9b5c585c155",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:b3cd4cb28613",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:60d30b6cdf01",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:43df79d95164",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:e100ca7e269f",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:102028b809fd",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:7a8eb47caf29",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:ba4b8e7e4a3a",
+          "type": "import"
+        },
+        {
+          "from": "file:d768f45fc6e8",
+          "to": "file:363a33bc03bc",
+          "type": "import"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "file:f96a2f183ecd",
+          "type": "import"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "file:e9b5c585c155",
+          "type": "import"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "file:92653ef779ec",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:67d194afb4c7",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:f96a2f183ecd",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:b3cd4cb28613",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:e9b5c585c155",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:75b27b9c0adc",
+          "type": "import"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "file:b4c19cf19be3",
+          "type": "import"
+        },
+        {
+          "from": "file:e6ac462d4628",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:e6ac462d4628",
+          "to": "file:4b7f0675f91e",
+          "type": "import"
+        },
+        {
+          "from": "file:85c2a5f1da52",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:85c2a5f1da52",
+          "to": "file:9a8492656aaa",
+          "type": "import"
+        },
+        {
+          "from": "file:85c2a5f1da52",
+          "to": "file:e6ac462d4628",
+          "type": "import"
+        },
+        {
+          "from": "file:85c2a5f1da52",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:85c2a5f1da52",
+          "to": "file:83b1b37e56bd",
+          "type": "import"
+        },
+        {
+          "from": "file:e41bdf843188",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:75a96d2ba1ee",
+          "to": "file:4d8afbbfcf8a",
+          "type": "import"
+        },
+        {
+          "from": "file:8d22cb9695be",
+          "to": "file:501467a9d108",
+          "type": "import"
+        },
+        {
+          "from": "file:8d22cb9695be",
+          "to": "file:d851bd65052d",
+          "type": "import"
+        },
+        {
+          "from": "file:8d22cb9695be",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:8d22cb9695be",
+          "to": "file:e8789d82cec6",
+          "type": "import"
+        },
+        {
+          "from": "file:8d22cb9695be",
+          "to": "file:baa305b6eb02",
+          "type": "import"
+        },
+        {
+          "from": "file:8d22cb9695be",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:c40ad2741a81",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:c40ad2741a81",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:c40ad2741a81",
+          "to": "file:4b7f0675f91e",
+          "type": "import"
+        },
+        {
+          "from": "file:ebc058b15772",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:ebc058b15772",
+          "to": "file:ba4b8e7e4a3a",
+          "type": "import"
+        },
+        {
+          "from": "file:ebc058b15772",
+          "to": "file:4b7f0675f91e",
+          "type": "import"
+        },
+        {
+          "from": "file:44f18f1258d5",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:36b3405bcdb0",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:62b59b0fc5c5",
+          "to": "file:441817fa5385",
+          "type": "import"
+        },
+        {
+          "from": "file:2c38b9d3b180",
+          "to": "file:920d038c8435",
+          "type": "import"
+        },
+        {
+          "from": "file:4e60c61c7d62",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        },
+        {
+          "from": "file:6946c5a62376",
+          "to": "file:434733dc75f5",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:e8789d82cec6",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "external:20b336f237a0",
+          "type": "import_external"
+        },
+        {
+          "from": "file:e9b5c585c155",
+          "to": "external:ddaf7f0515e1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c30e69fe1e",
+          "to": "external:2acf6639c422",
+          "type": "import_external"
+        },
+        {
+          "from": "file:83b1b37e56bd",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:359fa699ecf4",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4e39a3b49a4c",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:0a357742941b",
+          "to": "external:eb1cf1dae649",
+          "type": "import_external"
+        },
+        {
+          "from": "file:a1e77bd1ae47",
+          "to": "external:25c8a15e1baa",
+          "type": "import_external"
+        },
+        {
+          "from": "file:441817fa5385",
+          "to": "external:98d0aae4f1ca",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6ebdea8663c9",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:391de06f30fc",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8332edd78c38",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8332edd78c38",
+          "to": "external:2d8af467e217",
+          "type": "import_external"
+        },
+        {
+          "from": "file:baa305b6eb02",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "external:2d8af467e217",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4d8afbbfcf8a",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "external:567ee22c9228",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6d77497e2bfa",
+          "to": "external:2d8af467e217",
+          "type": "import_external"
+        },
+        {
+          "from": "file:920d038c8435",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:85c2a5f1da52",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        },
+        {
+          "from": "file:85c2a5f1da52",
+          "to": "external:2acf6639c422",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8d22cb9695be",
+          "to": "external:fd2d72905bd1",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": [
+        {
+          "from_module": "common",
+          "to_module": "common/src",
+          "type": "module_dep"
+        },
+        {
+          "from_module": "entry/src",
+          "to_module": "common/src",
+          "type": "module_dep"
+        }
+      ]
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/contacts/ContactList.ets",
+        "entry/src/main/ets/pages/contacts/accountants/Accountants.ets",
+        "entry/src/main/ets/pages/contacts/batchselectcontacts/BatchSelectContactsPage.ets",
+        "entry/src/main/ets/pages/contacts/batchselectcontacts/SingleSelectContactPage.ets",
+        "entry/src/main/ets/pages/contacts/details/ContactDetail.ets",
+        "entry/src/main/ets/pages/dialer/DialerTablet.ets",
+        "entry/src/main/ets/pages/dialer/callRecord/CallRecord.ets",
+        "entry/src/main/ets/pages/index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/component/contact/ContactListItemView.ets",
+        "entry/src/main/ets/component/contact/accountants/AddItem.ets",
+        "entry/src/main/ets/component/contact/accountants/ImageItemLeft.ets",
+        "entry/src/main/ets/component/contact/accountants/ItemEvent.ets",
+        "entry/src/main/ets/component/contact/accountants/ItemList.ets",
+        "entry/src/main/ets/component/contact/batchselectcontacts/BatchSelectContactItemView.ets",
+        "entry/src/main/ets/component/contact/batchselectcontacts/BatchSelectRecentItemView.ets",
+        "entry/src/main/ets/component/contact/batchselectcontacts/BatchTabGuide.ets",
+        "entry/src/main/ets/component/contactdetail/DetailCalllog.ets",
+        "entry/src/main/ets/component/contactdetail/DetailInfoList.ets",
+        "entry/src/main/ets/component/contactdetail/DetailInfoListView.ets",
+        "entry/src/main/ets/component/contactdetail/DetailMenu.ets",
+        "entry/src/main/ets/component/dialer/CallLogTabs.ets",
+        "entry/src/main/ets/component/dialer/DialerInitialPage.ets",
+        "entry/src/main/ets/pages/contacts/ContactList.ets",
+        "entry/src/main/ets/pages/contacts/accountants/Accountants.ets",
+        "entry/src/main/ets/pages/contacts/batchselectcontacts/BatchSelectContactsPage.ets",
+        "entry/src/main/ets/pages/contacts/batchselectcontacts/SingleSelectContactPage.ets",
+        "entry/src/main/ets/pages/contacts/details/ContactDetail.ets",
+        "entry/src/main/ets/pages/dialer/DialerTablet.ets",
+        "entry/src/main/ets/pages/dialer/callRecord/AllRecord.ets",
+        "entry/src/main/ets/pages/dialer/callRecord/CallRecord.ets",
+        "entry/src/main/ets/pages/index.ets",
+        "entry/src/main/ets/pages/phone/dialer/Dialer.ets"
+      ],
+      "builders": [
+        "entry/src/main/ets/component/contact/ContactListItemView.ets",
+        "entry/src/main/ets/component/contact/accountants/ItemEvent.ets",
+        "entry/src/main/ets/component/contact/accountants/ItemList.ets",
+        "entry/src/main/ets/component/contactdetail/DetailCalllog.ets",
+        "entry/src/main/ets/component/contactdetail/DetailInfoListView.ets",
+        "entry/src/main/ets/component/contactdetail/DetailMenu.ets",
+        "entry/src/main/ets/pages/contacts/ContactList.ets",
+        "entry/src/main/ets/pages/contacts/details/ContactDetail.ets",
+        "entry/src/main/ets/pages/dialer/callRecord/AllRecord.ets"
+      ],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/Application/MyAbilityStage.ts",
+        "entry/src/main/ets/MainAbility/MainAbility.ts",
+        "entry/src/main/ets/feature/EnvironmentProp.ets",
+        "entry/src/main/ets/model/ContactAbilityModel.ets",
+        "entry/src/main/ets/model/bean/BasicDataSource.ets",
+        "entry/src/main/ets/model/bean/BatchSelectContactSource.ts",
+        "entry/src/main/ets/model/bean/BatchSelectRecentSource.ts",
+        "entry/src/main/ets/model/bean/CallRecordListDataSource.ts",
+        "entry/src/main/ets/model/bean/ContactListDataSource.ts",
+        "entry/src/main/ets/model/bean/DetailCallLogDataSource.ts",
+        "entry/src/main/ets/model/bean/MorandiColor.ets",
+        "entry/src/main/ets/model/calllog/CalllogModel.ets",
+        "entry/src/main/ets/presenter/IndexPresenter.ets",
+        "entry/src/main/ets/presenter/contact/ContactListPresenter.ets",
+        "entry/src/main/ets/presenter/contact/accountants/AccountantsPresenter.ets",
+        "entry/src/main/ets/presenter/contact/batchselectcontacts/BatchSelectContactsPresenter.ets",
+        "entry/src/main/ets/presenter/contact/detail/DetailPresenter.ets",
+        "entry/src/main/ets/presenter/dialer/DialerPresenter.ets",
+        "entry/src/main/ets/presenter/dialer/callRecord/CallRecordPresenter.ets",
+        "entry/src/main/ets/util/PatternUtil.ets",
+        "entry/src/main/ets/util/PreferencesUtil.ets",
+        "entry/src/main/ets/util/StringFormatUtil.ets"
+      ]
+    }
+  }
+}

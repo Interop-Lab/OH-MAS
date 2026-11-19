@@ -1,0 +1,641 @@
+{
+  "meta": {
+    "language": "cpp",
+    "build_time_ms": 129.037,
+    "files_scanned": 13,
+    "parse_failed_files": 0,
+    "file_node_count": 13,
+    "external_node_count": 26,
+    "edge_count": 79,
+    "unresolved_local_edges": 21,
+    "external_edges": 44,
+    "edge_type_counts": {
+      "include_local": 19,
+      "same_module_include": 19,
+      "include_system_external": 44
+    },
+    "module_dep_count": 0,
+    "build_gn_dep_refs": 0,
+    "file_to_file_edge_count": 36,
+    "file_to_external_edge_count": 43,
+    "repo_name": "ohos_grpc_node",
+    "commit_hash": "13a8e5acd49dc106121007e554f69f21ba49b991",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:e0ac965f3594",
+        "path": "library/src/main/cpp/napi/http2_map.h",
+        "name": "http2_map.h"
+      },
+      {
+        "id": "file:0b567927ea80",
+        "path": "library/src/main/cpp/napi/http2_napi.cpp",
+        "name": "http2_napi.cpp"
+      },
+      {
+        "id": "file:a0f28db47430",
+        "path": "library/src/main/cpp/napi/http2_constant.h",
+        "name": "http2_constant.h"
+      },
+      {
+        "id": "file:22d39a7d62ea",
+        "path": "library/src/main/cpp/napi/http2_common.h",
+        "name": "http2_common.h"
+      },
+      {
+        "id": "file:02b42a090ba9",
+        "path": "library/src/main/cpp/napi/http2_napi_init.cpp",
+        "name": "http2_napi_init.cpp"
+      },
+      {
+        "id": "file:71f2089d54ad",
+        "path": "library/src/main/cpp/napi/http2_napi.h",
+        "name": "http2_napi.h"
+      },
+      {
+        "id": "file:1dc0c6192a2f",
+        "path": "library/src/main/cpp/napi/http2_handle_shake.h",
+        "name": "http2_handle_shake.h"
+      },
+      {
+        "id": "file:b3e6acf17636",
+        "path": "library/src/main/cpp/napi/http2_utils.h",
+        "name": "http2_utils.h"
+      },
+      {
+        "id": "file:d9bf1e25cf9e",
+        "path": "library/src/main/cpp/napi/http2_struct.h",
+        "name": "http2_struct.h"
+      },
+      {
+        "id": "file:c42b8f779ca6",
+        "path": "library/src/main/cpp/utils/napi/napi_utils.h",
+        "name": "napi_utils.h"
+      },
+      {
+        "id": "file:650bccb8cf00",
+        "path": "library/src/main/cpp/utils/napi/napi_utils.cpp",
+        "name": "napi_utils.cpp"
+      },
+      {
+        "id": "file:910577dcf12b",
+        "path": "library/src/main/cpp/utils/log/ohos_log.cpp",
+        "name": "ohos_log.cpp"
+      },
+      {
+        "id": "file:477538d02284",
+        "path": "library/src/main/cpp/utils/log/ohos_log.h",
+        "name": "ohos_log.h"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:314b8b087291",
+        "name": "js_native_api_types.h"
+      },
+      {
+        "id": "external:2d193647acd0",
+        "name": "map"
+      },
+      {
+        "id": "external:aeed32809dc4",
+        "name": "shared_mutex"
+      },
+      {
+        "id": "external:9dff3eb9eff9",
+        "name": "unordered_map"
+      },
+      {
+        "id": "external:68682a5caf57",
+        "name": "cstddef"
+      },
+      {
+        "id": "external:19cecca974a5",
+        "name": "thread"
+      },
+      {
+        "id": "external:22d8c4037e38",
+        "name": "string"
+      },
+      {
+        "id": "external:82d3f0bed02c",
+        "name": "fcntl.h"
+      },
+      {
+        "id": "external:97f769db64b9",
+        "name": "netinet/in.h"
+      },
+      {
+        "id": "external:3a9df05651eb",
+        "name": "netinet/tcp.h"
+      },
+      {
+        "id": "external:fe08b74da9d1",
+        "name": "poll.h"
+      },
+      {
+        "id": "external:d7d1ee22eff2",
+        "name": "cstdio"
+      },
+      {
+        "id": "external:1eaceff74aab",
+        "name": "netdb.h"
+      },
+      {
+        "id": "external:14623c347665",
+        "name": "unistd.h"
+      },
+      {
+        "id": "external:eb37510feae0",
+        "name": "nghttp2/nghttp2.h"
+      },
+      {
+        "id": "external:0a9aa9a32eea",
+        "name": "openssl/ssl.h"
+      },
+      {
+        "id": "external:dc005ee8cec0",
+        "name": "openssl/err.h"
+      },
+      {
+        "id": "external:3c1763198b71",
+        "name": "openssl/conf.h"
+      },
+      {
+        "id": "external:4d60ecabd4c3",
+        "name": "uv.h"
+      },
+      {
+        "id": "external:71b28188d29e",
+        "name": "arpa/inet.h"
+      },
+      {
+        "id": "external:6e036110b3bc",
+        "name": "sys/socket.h"
+      },
+      {
+        "id": "external:0ed7fca574bd",
+        "name": "sstream"
+      },
+      {
+        "id": "external:e9a8c8f7517d",
+        "name": "napi/native_api.h"
+      },
+      {
+        "id": "external:8078be746cd9",
+        "name": "codecvt"
+      },
+      {
+        "id": "external:6c0394c54dd5",
+        "name": "locale"
+      },
+      {
+        "id": "external:a2c131c40f86",
+        "name": "hilog/log.h"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:e0ac965f3594",
+          "to": "file:d9bf1e25cf9e",
+          "type": "include_local"
+        },
+        {
+          "from": "file:e0ac965f3594",
+          "to": "file:d9bf1e25cf9e",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "file:71f2089d54ad",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "file:71f2089d54ad",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "file:22d39a7d62ea",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "file:22d39a7d62ea",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "file:a0f28db47430",
+          "type": "include_local"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "file:a0f28db47430",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:22d39a7d62ea",
+          "to": "file:a0f28db47430",
+          "type": "include_local"
+        },
+        {
+          "from": "file:22d39a7d62ea",
+          "to": "file:a0f28db47430",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:22d39a7d62ea",
+          "to": "file:1dc0c6192a2f",
+          "type": "include_local"
+        },
+        {
+          "from": "file:22d39a7d62ea",
+          "to": "file:1dc0c6192a2f",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:02b42a090ba9",
+          "to": "file:71f2089d54ad",
+          "type": "include_local"
+        },
+        {
+          "from": "file:02b42a090ba9",
+          "to": "file:71f2089d54ad",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:71f2089d54ad",
+          "to": "file:d9bf1e25cf9e",
+          "type": "include_local"
+        },
+        {
+          "from": "file:71f2089d54ad",
+          "to": "file:d9bf1e25cf9e",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:d9bf1e25cf9e",
+          "type": "include_local"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:d9bf1e25cf9e",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:a0f28db47430",
+          "type": "include_local"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:a0f28db47430",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:e0ac965f3594",
+          "type": "include_local"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:e0ac965f3594",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:b3e6acf17636",
+          "type": "include_local"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "file:b3e6acf17636",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "file:e0ac965f3594",
+          "type": "include_local"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "file:e0ac965f3594",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "file:d9bf1e25cf9e",
+          "type": "include_local"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "file:d9bf1e25cf9e",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "file:a0f28db47430",
+          "type": "include_local"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "file:a0f28db47430",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "file:a0f28db47430",
+          "type": "include_local"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "file:a0f28db47430",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:650bccb8cf00",
+          "to": "file:c42b8f779ca6",
+          "type": "include_local"
+        },
+        {
+          "from": "file:650bccb8cf00",
+          "to": "file:c42b8f779ca6",
+          "type": "same_module_include"
+        },
+        {
+          "from": "file:910577dcf12b",
+          "to": "file:477538d02284",
+          "type": "include_local"
+        },
+        {
+          "from": "file:910577dcf12b",
+          "to": "file:477538d02284",
+          "type": "same_module_include"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:e0ac965f3594",
+          "to": "external:314b8b087291",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:e0ac965f3594",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:e0ac965f3594",
+          "to": "external:aeed32809dc4",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:e0ac965f3594",
+          "to": "external:9dff3eb9eff9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "external:68682a5caf57",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:0b567927ea80",
+          "to": "external:19cecca974a5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:02b42a090ba9",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:82d3f0bed02c",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:97f769db64b9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:3a9df05651eb",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:2d193647acd0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:fe08b74da9d1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:d7d1ee22eff2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:1eaceff74aab",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:eb37510feae0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:0a9aa9a32eea",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:dc005ee8cec0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:3c1763198b71",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:9dff3eb9eff9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:1dc0c6192a2f",
+          "to": "external:4d60ecabd4c3",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "external:71b28188d29e",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "external:1eaceff74aab",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "external:6e036110b3bc",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "external:0ed7fca574bd",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "external:eb37510feae0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:b3e6acf17636",
+          "to": "external:14623c347665",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "external:eb37510feae0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "external:0a9aa9a32eea",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "external:dc005ee8cec0",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "external:3c1763198b71",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "external:fe08b74da9d1",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:d9bf1e25cf9e",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c42b8f779ca6",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:c42b8f779ca6",
+          "to": "external:e9a8c8f7517d",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:650bccb8cf00",
+          "to": "external:8078be746cd9",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:650bccb8cf00",
+          "to": "external:d7d1ee22eff2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:650bccb8cf00",
+          "to": "external:6c0394c54dd5",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:650bccb8cf00",
+          "to": "external:22d8c4037e38",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:910577dcf12b",
+          "to": "external:d7d1ee22eff2",
+          "type": "include_system_external"
+        },
+        {
+          "from": "file:910577dcf12b",
+          "to": "external:a2c131c40f86",
+          "type": "include_system_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "symbol_profiles": [
+        {
+          "file": "library/src/main/cpp/napi/http2_map.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 2
+        },
+        {
+          "file": "library/src/main/cpp/napi/http2_napi.cpp",
+          "namespace_count": 0,
+          "class_or_struct_count": 8
+        },
+        {
+          "file": "library/src/main/cpp/napi/http2_common.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 16
+        },
+        {
+          "file": "library/src/main/cpp/napi/http2_napi.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        },
+        {
+          "file": "library/src/main/cpp/napi/http2_utils.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 9
+        },
+        {
+          "file": "library/src/main/cpp/napi/http2_struct.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 6
+        },
+        {
+          "file": "library/src/main/cpp/utils/napi/napi_utils.h",
+          "namespace_count": 0,
+          "class_or_struct_count": 1
+        }
+      ]
+    }
+  }
+}

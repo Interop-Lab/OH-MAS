@@ -1,0 +1,28 @@
+{
+  "repo_name": "FastBle",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/FastBle",
+  "language": "arkts",
+  "commit_hash": "10032992a747afbcc590d8377974170549a3fd0a",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/FastBle@10032992a747afbcc590d8377974170549a3fd0a/graph_full.json",
+  "build_time_ms": 112.851,
+  "files_scanned": 57,
+  "parse_failed_files": 0,
+  "file_node_count": 57,
+  "external_node_count": 25,
+  "edge_count": 218,
+  "unresolved_local_edges": 0,
+  "external_edges": 98,
+  "edge_type_counts": {
+    "import_external": 98,
+    "export_from": 31,
+    "import": 123
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 98,
+    "relative": 154
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 154,
+  "file_to_external_edge_count": 64,
+  "extractor_version": "v0.6"
+}

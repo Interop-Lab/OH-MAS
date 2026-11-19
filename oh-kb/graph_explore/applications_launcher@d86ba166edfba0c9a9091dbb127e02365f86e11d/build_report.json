@@ -1,0 +1,30 @@
+{
+  "repo_name": "applications_launcher",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_launcher",
+  "language": "arkts",
+  "commit_hash": "d86ba166edfba0c9a9091dbb127e02365f86e11d",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_launcher@d86ba166edfba0c9a9091dbb127e02365f86e11d/graph_full.json",
+  "build_time_ms": 414.251,
+  "files_scanned": 204,
+  "parse_failed_files": 0,
+  "file_node_count": 204,
+  "external_node_count": 50,
+  "edge_count": 638,
+  "unresolved_local_edges": 4,
+  "external_edges": 457,
+  "edge_type_counts": {
+    "export_from": 94,
+    "import_external": 440,
+    "import": 354,
+    "export_external": 17,
+    "import_side_effect": 2
+  },
+  "resolve_mode_counts": {
+    "relative": 454,
+    "alias_or_package": 457
+  },
+  "module_dep_count": 1,
+  "file_to_file_edge_count": 450,
+  "file_to_external_edge_count": 188,
+  "extractor_version": "v0.6"
+}

@@ -1,0 +1,1205 @@
+{
+  "meta": {
+    "language": "arkts",
+    "build_time_ms": 91.755,
+    "files_scanned": 45,
+    "parse_failed_files": 0,
+    "file_node_count": 45,
+    "external_node_count": 16,
+    "edge_count": 164,
+    "unresolved_local_edges": 0,
+    "external_edges": 78,
+    "edge_type_counts": {
+      "export_external": 2,
+      "import": 86,
+      "import_external": 76
+    },
+    "resolve_mode_counts": {
+      "alias_or_package": 78,
+      "relative": 86
+    },
+    "module_dep_count": 0,
+    "file_to_file_edge_count": 86,
+    "file_to_external_edge_count": 78,
+    "repo_name": "applications_auth_widget",
+    "commit_hash": "3b478cc7575f5465b437b096af5abdeb89a5e6bb",
+    "extractor_version": "v0.6"
+  },
+  "graph": {
+    "files": [
+      {
+        "id": "file:14bdce224fa0",
+        "path": "hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:9a06e71cbd13",
+        "path": "entry/hvigorfile.ts",
+        "name": "hvigorfile.ts"
+      },
+      {
+        "id": "file:4000bf6aead7",
+        "path": "entry/src/main/ets/extensionability/UserAuthAbility.ts",
+        "name": "UserAuthAbility.ts"
+      },
+      {
+        "id": "file:15891f703019",
+        "path": "entry/src/main/ets/pages/Index.ets",
+        "name": "Index.ets"
+      },
+      {
+        "id": "file:63775494213c",
+        "path": "entry/src/main/ets/mainability/MainAbility.ts",
+        "name": "MainAbility.ts"
+      },
+      {
+        "id": "file:3fa14d002305",
+        "path": "entry/src/main/ets/pages/components/FaceAuth.ets",
+        "name": "FaceAuth.ets"
+      },
+      {
+        "id": "file:4c24c3f52a63",
+        "path": "entry/src/main/ets/pages/components/PasswordAuth.ets",
+        "name": "PasswordAuth.ets"
+      },
+      {
+        "id": "file:13a55bbfd09b",
+        "path": "entry/src/main/ets/pages/components/CustomPassword.ets",
+        "name": "CustomPassword.ets"
+      },
+      {
+        "id": "file:d22b1535a119",
+        "path": "entry/src/main/ets/pages/components/FingerprintAuth.ets",
+        "name": "FingerprintAuth.ets"
+      },
+      {
+        "id": "file:643cb3b7d3a2",
+        "path": "entry/src/main/ets/common/utils/LogUtils.ts",
+        "name": "LogUtils.ts"
+      },
+      {
+        "id": "file:f9d2b2ebb172",
+        "path": "entry/src/main/ets/common/utils/AuthUtils.ts",
+        "name": "AuthUtils.ts"
+      },
+      {
+        "id": "file:07eecbac4bc3",
+        "path": "entry/src/main/ets/common/utils/FuncUtils.ts",
+        "name": "FuncUtils.ts"
+      },
+      {
+        "id": "file:92268c9cee41",
+        "path": "entry/src/main/ets/common/utils/WindowPrivacyUtils.ts",
+        "name": "WindowPrivacyUtils.ts"
+      },
+      {
+        "id": "file:eb84865281dc",
+        "path": "entry/src/main/ets/common/utils/TimeUtils.ts",
+        "name": "TimeUtils.ts"
+      },
+      {
+        "id": "file:8060bb1af949",
+        "path": "entry/src/main/ets/common/module/DialogType.ts",
+        "name": "DialogType.ts"
+      },
+      {
+        "id": "file:fc55b1267052",
+        "path": "entry/src/main/ets/common/components/SixPwd.ets",
+        "name": "SixPwd.ets"
+      },
+      {
+        "id": "file:3c235f504c51",
+        "path": "entry/src/main/ets/common/components/CustomPSD.ets",
+        "name": "CustomPSD.ets"
+      },
+      {
+        "id": "file:71e006ad1c7e",
+        "path": "entry/src/main/ets/common/components/Pwd.ets",
+        "name": "Pwd.ets"
+      },
+      {
+        "id": "file:5d1e20c4eed7",
+        "path": "entry/src/main/ets/common/components/NumkeyBoard.ets",
+        "name": "NumkeyBoard.ets"
+      },
+      {
+        "id": "file:25755a1471ba",
+        "path": "entry/src/main/ets/common/vm/Constants.ts",
+        "name": "Constants.ts"
+      },
+      {
+        "id": "file:90445ea837b7",
+        "path": "entry/src/ohosTest/ets/extensionability/UserAuthAbility.ts",
+        "name": "UserAuthAbility.ts"
+      },
+      {
+        "id": "file:6413a04fbe08",
+        "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts",
+        "name": "OpenHarmonyTestRunner.ts"
+      },
+      {
+        "id": "file:705740198205",
+        "path": "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "name": "Ability.test.ets"
+      },
+      {
+        "id": "file:44b6101b03b8",
+        "path": "entry/src/ohosTest/ets/test/Index.test.ets",
+        "name": "Index.test.ets"
+      },
+      {
+        "id": "file:1953b3fc7379",
+        "path": "entry/src/ohosTest/ets/test/List.test.ets",
+        "name": "List.test.ets"
+      },
+      {
+        "id": "file:ea8152509907",
+        "path": "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "name": "TestAbility.ets"
+      },
+      {
+        "id": "file:38b86e6639f1",
+        "path": "entry/src/ohosTest/ets/test/uitest/CustomPassword.test.ets",
+        "name": "CustomPassword.test.ets"
+      },
+      {
+        "id": "file:97dd85444615",
+        "path": "entry/src/ohosTest/ets/test/uitest/PasswordAuth.test.ets",
+        "name": "PasswordAuth.test.ets"
+      },
+      {
+        "id": "file:40a34e40ab80",
+        "path": "entry/src/ohosTest/ets/test/uitest/FingerprintAuth.test.ets",
+        "name": "FingerprintAuth.test.ets"
+      },
+      {
+        "id": "file:19826d7a1ac8",
+        "path": "entry/src/ohosTest/ets/test/uitest/CustomPasswordNumber.test.ets",
+        "name": "CustomPasswordNumber.test.ets"
+      },
+      {
+        "id": "file:5de281537902",
+        "path": "entry/src/ohosTest/ets/test/uitest/PinFingerPrint.test.ets",
+        "name": "PinFingerPrint.test.ets"
+      },
+      {
+        "id": "file:7aa5b74df10a",
+        "path": "entry/src/ohosTest/ets/test/uitest/PinFace.test.ets",
+        "name": "PinFace.test.ets"
+      },
+      {
+        "id": "file:f382db2638b4",
+        "path": "entry/src/ohosTest/ets/test/uitest/FaceAuth.test.ets",
+        "name": "FaceAuth.test.ets"
+      },
+      {
+        "id": "file:05ff2804baf8",
+        "path": "entry/src/ohosTest/ets/test/uitest/CustomPasswordAttr.test.ets",
+        "name": "CustomPasswordAttr.test.ets"
+      },
+      {
+        "id": "file:7d9d8e260f3a",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/PasswordAuthSix.test.ets",
+        "name": "PasswordAuthSix.test.ets"
+      },
+      {
+        "id": "file:2ac590cd0236",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/CustomPasswordFinger.test.ets",
+        "name": "CustomPasswordFinger.test.ets"
+      },
+      {
+        "id": "file:61fbc772eab0",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/CustomPassword.test.ets",
+        "name": "CustomPassword.test.ets"
+      },
+      {
+        "id": "file:8a626f932ad1",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/PasswordAuth.test.ets",
+        "name": "PasswordAuth.test.ets"
+      },
+      {
+        "id": "file:20c6cff003f1",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/CustomPasswordFace.test.ets",
+        "name": "CustomPasswordFace.test.ets"
+      },
+      {
+        "id": "file:80e8268ff89f",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/FingerprintAuth.test.ets",
+        "name": "FingerprintAuth.test.ets"
+      },
+      {
+        "id": "file:1198dadca6b2",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/FaceAuth.test.ets",
+        "name": "FaceAuth.test.ets"
+      },
+      {
+        "id": "file:0ae136d76197",
+        "path": "entry/src/ohosTest/ets/test/jsunit/widgetTest/PageCom.test.ets",
+        "name": "PageCom.test.ets"
+      },
+      {
+        "id": "file:bcc59a90bf16",
+        "path": "entry/src/ohosTest/ets/test/jsunit/constantsTest/Constants.test.ets",
+        "name": "Constants.test.ets"
+      },
+      {
+        "id": "file:c3381ec45d7a",
+        "path": "entry/src/ohosTest/ets/test/jsunit/commonUtilsTest/FuncUtils.test.ets",
+        "name": "FuncUtils.test.ets"
+      },
+      {
+        "id": "file:33c4849d6fa8",
+        "path": "entry/src/ohosTest/ets/testability/pages/Index.ets",
+        "name": "Index.ets"
+      }
+    ],
+    "external_modules": [
+      {
+        "id": "external:442df9cd2e89",
+        "name": "@ohos/hvigor-ohos-plugin"
+      },
+      {
+        "id": "external:dc100860c115",
+        "name": "@ohos.app.ability.UserAuthExtensionAbility"
+      },
+      {
+        "id": "external:9704b12b521b",
+        "name": "@ohos.screen"
+      },
+      {
+        "id": "external:71e1dd29953b",
+        "name": "@ohos.userIAM.userAuth"
+      },
+      {
+        "id": "external:7ab279586abb",
+        "name": "@ohos.window"
+      },
+      {
+        "id": "external:67941a1352a3",
+        "name": "@ohos.app.ability.UIAbility"
+      },
+      {
+        "id": "external:73aaffd50579",
+        "name": "@ohos.account.osAccount"
+      },
+      {
+        "id": "external:0c6658fd6b99",
+        "name": "@ohos.display"
+      },
+      {
+        "id": "external:66bcc4753091",
+        "name": "@ohos.util"
+      },
+      {
+        "id": "external:53601cb01c59",
+        "name": "@ohos.hilog"
+      },
+      {
+        "id": "external:2182f9a423d7",
+        "name": "@ohos.app.ability.UIExtensionContentSession"
+      },
+      {
+        "id": "external:98d0aae4f1ca",
+        "name": "@ohos.deviceInfo"
+      },
+      {
+        "id": "external:68bb30a773b7",
+        "name": "@ohos.application.testRunner"
+      },
+      {
+        "id": "external:804207546e94",
+        "name": "@ohos.app.ability.abilityDelegatorRegistry"
+      },
+      {
+        "id": "external:ea9184512137",
+        "name": "@ohos/hypium"
+      },
+      {
+        "id": "external:8e99a53dd56e",
+        "name": "@ohos.UiTest"
+      }
+    ],
+    "relations": {
+      "file_to_file": [
+        {
+          "from": "file:4000bf6aead7",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:4000bf6aead7",
+          "to": "file:92268c9cee41",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:8060bb1af949",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:07eecbac4bc3",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:13a55bbfd09b",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:3fa14d002305",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:d22b1535a119",
+          "type": "import"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "file:4c24c3f52a63",
+          "type": "import"
+        },
+        {
+          "from": "file:63775494213c",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:71e006ad1c7e",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:fc55b1267052",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:8060bb1af949",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:f9d2b2ebb172",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:71e006ad1c7e",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:fc55b1267052",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:f9d2b2ebb172",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:07eecbac4bc3",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "file:3c235f504c51",
+          "type": "import"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "file:07eecbac4bc3",
+          "type": "import"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:71e006ad1c7e",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:fc55b1267052",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:8060bb1af949",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:f9d2b2ebb172",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:07eecbac4bc3",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:f9d2b2ebb172",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:f9d2b2ebb172",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:07eecbac4bc3",
+          "to": "file:8060bb1af949",
+          "type": "import"
+        },
+        {
+          "from": "file:92268c9cee41",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "file:f9d2b2ebb172",
+          "type": "import"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:f9d2b2ebb172",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:eb84865281dc",
+          "type": "import"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "file:5d1e20c4eed7",
+          "type": "import"
+        },
+        {
+          "from": "file:71e006ad1c7e",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:5d1e20c4eed7",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:90445ea837b7",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:c3381ec45d7a",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:bcc59a90bf16",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:61fbc772eab0",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:20c6cff003f1",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:2ac590cd0236",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:1198dadca6b2",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:80e8268ff89f",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:0ae136d76197",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:8a626f932ad1",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:7d9d8e260f3a",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:38b86e6639f1",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:f382db2638b4",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:40a34e40ab80",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:97dd85444615",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:5de281537902",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:7aa5b74df10a",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:19826d7a1ac8",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:05ff2804baf8",
+          "type": "import"
+        },
+        {
+          "from": "file:1953b3fc7379",
+          "to": "file:44b6101b03b8",
+          "type": "import"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "file:1953b3fc7379",
+          "type": "import"
+        },
+        {
+          "from": "file:0ae136d76197",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:bcc59a90bf16",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:c3381ec45d7a",
+          "to": "file:f9d2b2ebb172",
+          "type": "import"
+        },
+        {
+          "from": "file:c3381ec45d7a",
+          "to": "file:07eecbac4bc3",
+          "type": "import"
+        },
+        {
+          "from": "file:c3381ec45d7a",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:8060bb1af949",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:07eecbac4bc3",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:643cb3b7d3a2",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:25755a1471ba",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:13a55bbfd09b",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:3fa14d002305",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:d22b1535a119",
+          "type": "import"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "file:4c24c3f52a63",
+          "type": "import"
+        }
+      ],
+      "file_to_external": [
+        {
+          "from": "file:14bdce224fa0",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:9a06e71cbd13",
+          "to": "external:442df9cd2e89",
+          "type": "export_external"
+        },
+        {
+          "from": "file:4000bf6aead7",
+          "to": "external:dc100860c115",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:9704b12b521b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:15891f703019",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:63775494213c",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:63775494213c",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "external:9704b12b521b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "external:0c6658fd6b99",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3fa14d002305",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:4c24c3f52a63",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:13a55bbfd09b",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "external:73aaffd50579",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "external:0c6658fd6b99",
+          "type": "import_external"
+        },
+        {
+          "from": "file:d22b1535a119",
+          "to": "external:9704b12b521b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:643cb3b7d3a2",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f9d2b2ebb172",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:07eecbac4bc3",
+          "to": "external:66bcc4753091",
+          "type": "import_external"
+        },
+        {
+          "from": "file:07eecbac4bc3",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:92268c9cee41",
+          "to": "external:2182f9a423d7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:fc55b1267052",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "external:0c6658fd6b99",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "external:9704b12b521b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:3c235f504c51",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5d1e20c4eed7",
+          "to": "external:98d0aae4f1ca",
+          "type": "import_external"
+        },
+        {
+          "from": "file:90445ea837b7",
+          "to": "external:dc100860c115",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:68bb30a773b7",
+          "type": "import_external"
+        },
+        {
+          "from": "file:6413a04fbe08",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:705740198205",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:44b6101b03b8",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:44b6101b03b8",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:804207546e94",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:67941a1352a3",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:53601cb01c59",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        },
+        {
+          "from": "file:ea8152509907",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:38b86e6639f1",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:38b86e6639f1",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:97dd85444615",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:97dd85444615",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:40a34e40ab80",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:40a34e40ab80",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:19826d7a1ac8",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:19826d7a1ac8",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5de281537902",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:5de281537902",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7aa5b74df10a",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7aa5b74df10a",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f382db2638b4",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:f382db2638b4",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:05ff2804baf8",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:05ff2804baf8",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d9d8e260f3a",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:7d9d8e260f3a",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2ac590cd0236",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:2ac590cd0236",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:61fbc772eab0",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:61fbc772eab0",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8a626f932ad1",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:8a626f932ad1",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c6cff003f1",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:20c6cff003f1",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:80e8268ff89f",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:80e8268ff89f",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1198dadca6b2",
+          "to": "external:8e99a53dd56e",
+          "type": "import_external"
+        },
+        {
+          "from": "file:1198dadca6b2",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:0ae136d76197",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:0ae136d76197",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:bcc59a90bf16",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c3381ec45d7a",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:c3381ec45d7a",
+          "to": "external:ea9184512137",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "external:71e1dd29953b",
+          "type": "import_external"
+        },
+        {
+          "from": "file:33c4849d6fa8",
+          "to": "external:7ab279586abb",
+          "type": "import_external"
+        }
+      ],
+      "module_to_module": []
+    },
+    "anchors": {
+      "entry_components": [
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "components": [
+        "entry/src/main/ets/common/components/CustomPSD.ets",
+        "entry/src/main/ets/common/components/NumkeyBoard.ets",
+        "entry/src/main/ets/common/components/Pwd.ets",
+        "entry/src/main/ets/common/components/SixPwd.ets",
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/pages/components/CustomPassword.ets",
+        "entry/src/main/ets/pages/components/FaceAuth.ets",
+        "entry/src/main/ets/pages/components/FingerprintAuth.ets",
+        "entry/src/main/ets/pages/components/PasswordAuth.ets",
+        "entry/src/ohosTest/ets/testability/pages/Index.ets"
+      ],
+      "builders": [],
+      "inherit_files": [],
+      "implement_files": [],
+      "export_default_files": [
+        "entry/src/main/ets/common/utils/AuthUtils.ts",
+        "entry/src/main/ets/common/utils/FuncUtils.ts",
+        "entry/src/main/ets/common/utils/LogUtils.ts",
+        "entry/src/main/ets/common/utils/TimeUtils.ts",
+        "entry/src/main/ets/common/utils/WindowPrivacyUtils.ts",
+        "entry/src/main/ets/common/vm/Constants.ts",
+        "entry/src/main/ets/extensionability/UserAuthAbility.ts",
+        "entry/src/main/ets/mainability/MainAbility.ts",
+        "entry/src/ohosTest/ets/extensionability/UserAuthAbility.ts",
+        "entry/src/ohosTest/ets/test/Ability.test.ets",
+        "entry/src/ohosTest/ets/test/Index.test.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/commonUtilsTest/FuncUtils.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/constantsTest/Constants.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/CustomPassword.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/CustomPasswordFace.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/CustomPasswordFinger.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/FaceAuth.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/FingerprintAuth.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/PageCom.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/PasswordAuth.test.ets",
+        "entry/src/ohosTest/ets/test/jsunit/widgetTest/PasswordAuthSix.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/CustomPassword.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/CustomPasswordAttr.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/CustomPasswordNumber.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/FaceAuth.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/FingerprintAuth.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/PasswordAuth.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/PinFace.test.ets",
+        "entry/src/ohosTest/ets/test/uitest/PinFingerPrint.test.ets",
+        "entry/src/ohosTest/ets/testability/TestAbility.ets",
+        "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ts"
+      ]
+    }
+  }
+}

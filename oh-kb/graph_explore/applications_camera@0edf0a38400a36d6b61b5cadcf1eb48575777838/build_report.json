@@ -1,0 +1,25 @@
+{
+  "repo_name": "applications_camera",
+  "repo_path": "/tmp/gw_build/camera/applications_camera",
+  "language": "cpp",
+  "commit_hash": "0edf0a38400a36d6b61b5cadcf1eb48575777838",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_camera@0edf0a38400a36d6b61b5cadcf1eb48575777838/graph_full.json",
+  "build_time_ms": 139.596,
+  "files_scanned": 11,
+  "parse_failed_files": 0,
+  "file_node_count": 11,
+  "external_node_count": 44,
+  "edge_count": 97,
+  "unresolved_local_edges": 11,
+  "external_edges": 79,
+  "edge_type_counts": {
+    "include_local": 13,
+    "same_module_include": 13,
+    "include_system_external": 79
+  },
+  "module_dep_count": 0,
+  "build_gn_dep_refs": 0,
+  "file_to_file_edge_count": 26,
+  "file_to_external_edge_count": 71,
+  "extractor_version": "v0.6"
+}

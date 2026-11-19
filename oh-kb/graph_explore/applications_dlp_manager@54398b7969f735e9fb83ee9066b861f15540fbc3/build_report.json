@@ -1,0 +1,28 @@
+{
+  "repo_name": "applications_dlp_manager",
+  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_dlp_manager",
+  "language": "arkts",
+  "commit_hash": "54398b7969f735e9fb83ee9066b861f15540fbc3",
+  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_dlp_manager@54398b7969f735e9fb83ee9066b861f15540fbc3/graph_full.json",
+  "build_time_ms": 126.757,
+  "files_scanned": 29,
+  "parse_failed_files": 0,
+  "file_node_count": 29,
+  "external_node_count": 41,
+  "edge_count": 267,
+  "unresolved_local_edges": 0,
+  "external_edges": 159,
+  "edge_type_counts": {
+    "import_external": 157,
+    "import": 118,
+    "export_external": 2
+  },
+  "resolve_mode_counts": {
+    "alias_or_package": 159,
+    "relative": 118
+  },
+  "module_dep_count": 0,
+  "file_to_file_edge_count": 113,
+  "file_to_external_edge_count": 154,
+  "extractor_version": "v0.6"
+}
