@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_contacts",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_contacts",
+  "repo_path": "repositories/applications_contacts",
   "language": "arkts",
   "commit_hash": "5d59d66d9cfef85463b17d2ce362d1c0590c88e9",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_contacts@5d59d66d9cfef85463b17d2ce362d1c0590c88e9/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_contacts@5d59d66d9cfef85463b17d2ce362d1c0590c88e9/graph_full.json",
   "build_time_ms": 2872.347,
   "files_scanned": 714,
   "parse_failed_files": 0,

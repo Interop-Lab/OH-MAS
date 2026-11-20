@@ -1,9 +1,9 @@
 {
   "repo_name": "ohos_apng",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_apng",
+  "repo_path": "repositories/ohos_apng",
   "language": "arkts",
   "commit_hash": "2b9ed328097e8a12891dc1cb510e7b07c856d4e6",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_apng@2b9ed328097e8a12891dc1cb510e7b07c856d4e6/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohos_apng@2b9ed328097e8a12891dc1cb510e7b07c856d4e6/graph_full.json",
   "build_time_ms": 68.879,
   "files_scanned": 35,
   "parse_failed_files": 0,

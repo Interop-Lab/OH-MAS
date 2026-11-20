@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_print_spooler",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_print_spooler",
+  "repo_path": "repositories/applications_print_spooler",
   "language": "arkts",
   "commit_hash": "4bc6ce260abb979f49530a96378b21bbb2723012",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_print_spooler@4bc6ce260abb979f49530a96378b21bbb2723012/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_print_spooler@4bc6ce260abb979f49530a96378b21bbb2723012/graph_full.json",
   "build_time_ms": 180.719,
   "files_scanned": 78,
   "parse_failed_files": 0,

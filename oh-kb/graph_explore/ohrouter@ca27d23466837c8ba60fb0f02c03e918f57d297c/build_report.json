@@ -1,9 +1,9 @@
 {
   "repo_name": "ohrouter",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohrouter",
+  "repo_path": "repositories/ohrouter",
   "language": "arkts",
   "commit_hash": "ca27d23466837c8ba60fb0f02c03e918f57d297c",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohrouter@ca27d23466837c8ba60fb0f02c03e918f57d297c/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohrouter@ca27d23466837c8ba60fb0f02c03e918f57d297c/graph_full.json",
   "build_time_ms": 308.177,
   "files_scanned": 226,
   "parse_failed_files": 3,

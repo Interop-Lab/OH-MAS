@@ -1,9 +1,9 @@
 {
   "repo_name": "scroll_components",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/scroll_components",
+  "repo_path": "repositories/scroll_components",
   "language": "arkts",
   "commit_hash": "057e9b6d43699d566a8a6dd8683487a03f3b6fb1",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/scroll_components@057e9b6d43699d566a8a6dd8683487a03f3b6fb1/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/scroll_components@057e9b6d43699d566a8a6dd8683487a03f3b6fb1/graph_full.json",
   "build_time_ms": 249.291,
   "files_scanned": 146,
   "parse_failed_files": 0,

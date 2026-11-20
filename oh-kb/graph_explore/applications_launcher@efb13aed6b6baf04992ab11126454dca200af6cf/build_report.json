@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_launcher",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_launcher",
+  "repo_path": "repositories/applications_launcher",
   "language": "arkts",
   "commit_hash": "efb13aed6b6baf04992ab11126454dca200af6cf",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_launcher@efb13aed6b6baf04992ab11126454dca200af6cf/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_launcher@efb13aed6b6baf04992ab11126454dca200af6cf/graph_full.json",
   "build_time_ms": 441.708,
   "files_scanned": 221,
   "parse_failed_files": 0,

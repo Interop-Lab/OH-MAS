@@ -26,7 +26,7 @@ OH-MAS/
 ├── mini-swe-agent/          # Adapted mini-SWE-agent (CP worker backbone)
 ├── oh-kb/                   # Knowledge base (rule templates + repair_experiences.json + dependency graphs)
 ├── dataset/                 # OH-Bench (ArkTS + C/C++) and manual-review subsets
-├── docker/Dockerfile        # Linter (CodeLinter / Cppcheck) image
+├── docker/                  # Dockerfile.base, Dockerfile (CodeLinter / Cppcheck image), build.sh, fetch/verify scripts for command-line-tools
 ├── Per-Instance Analysis Report/   # Per-instance result CSVs for all tables
 └── OH_MAS_appendix.pdf      # Supplementary material
 ```
@@ -65,9 +65,16 @@ source vene/bin/activate
 pip install -e mini-swe-agent/
 pip install -e oh-mas-backend/
 
-# 4. Build the Docker image (needed for linter-based validation)
-docker build -t harmonyrepair:with-codelinter docker/
+# 4. Fetch the HarmonyOS command-line-tools 6.0.1.268 (CodeLinter 6.0.240). Huawei distributes the archive
+#    behind a developer login (https://developer.huawei.com/consumer/cn/download/), so download it manually,
+#    then let the script extract it and verify the tree against docker/command-line-tools.tree.sha256:
+docker/fetch_command_line_tools.sh /path/to/commandline-tools-linux-x64-6.0.1.268.zip
+
+# 5. Build harmonyrepair:latest (Dockerfile.base) and harmonyrepair:with-codelinter (Dockerfile)
+docker/build.sh
 ```
+
+Docker is only needed for `docker_whole` / `docker` execution modes; with `execution_mode: host` and a local CodeLinter/Cppcheck you can skip steps 4-5.
 
 ---
 
@@ -152,7 +159,7 @@ PYTHONPATH=src python3 -m oh_mas.run.oh_mas run \
 
 ## Reproducing Paper Results
 
-Per-instance outcomes (result, failure level, PAR, Pass@1) behind every table are in `Per-Instance Analysis Report/`.
+Per-instance outcomes (result, failure level, PAR, Pass@1) behind every table are in `Per-Instance Analysis Report/`. `oracle_audit_per_instance.csv` holds the oracle-verdict audit: the 88 DA-accepted patches among the 100 sampled instances, with both annotators' labels (5 false positives, 5.7%; 5 disagreements, Cohen's κ = 0.64).
 
 ### RQ1 — Main effectiveness
 
@@ -251,7 +258,7 @@ Each failed audit returns a **typed** verdict (L1/L2/L3) that the AO converts in
 
 ## Knowledge Base (OH-KB)
 
-The `oh-kb/` directory is a unified knowledge base of rule-specialized repair templates and curated repair experiences used by GW (`allowed transformations`). Pre-built dependency graphs are in `Per-Instance Analysis Report/graph_explore/`. These are JSON files organized by linter category:
+The `oh-kb/` directory is a unified knowledge base of rule-specialized repair templates and curated repair experiences used by GW (`allowed transformations`). Pre-built dependency graphs (111 graphs, 39 projects, one `{repo}@{commit}/graph_full.json` each) are in `oh-kb/graph_explore/` (`oh_kb.graph_root` in every config; a missing graph directory now raises an error at start-up and a missing project graph logs a warning). These are JSON files organized by linter category:
 
 ```
 oh-kb/
@@ -276,10 +283,10 @@ The KB client implementation and dependency graph construction logic reside in `
 
 ## Docker Image
 
-The `docker/Dockerfile` builds the linter execution environment:
+`docker/Dockerfile.base` builds `harmonyrepair:latest` (Debian trixie, Python 3.11, Cppcheck, clang-tidy), and `docker/Dockerfile` adds CodeLinter on top of it. Both are built by `docker/build.sh` once `docker/command-line-tools/` is in place (see Installation, step 4):
 
 ```bash
-docker build -t harmonyrepair:with-codelinter docker/
+docker/build.sh
 ```
 
 This image contains CodeLinter (OpenHarmony's official ArkTS static analyzer) and Cppcheck. The DA agent mounts each repository into `/workspace/repo` and runs linters in isolation.

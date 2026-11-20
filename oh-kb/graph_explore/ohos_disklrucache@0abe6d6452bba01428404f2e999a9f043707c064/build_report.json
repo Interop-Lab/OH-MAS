@@ -1,9 +1,9 @@
 {
   "repo_name": "ohos_disklrucache",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_disklrucache",
+  "repo_path": "repositories/ohos_disklrucache",
   "language": "arkts",
   "commit_hash": "0abe6d6452bba01428404f2e999a9f043707c064",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_disklrucache@0abe6d6452bba01428404f2e999a9f043707c064/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohos_disklrucache@0abe6d6452bba01428404f2e999a9f043707c064/graph_full.json",
   "build_time_ms": 21.627,
   "files_scanned": 15,
   "parse_failed_files": 0,

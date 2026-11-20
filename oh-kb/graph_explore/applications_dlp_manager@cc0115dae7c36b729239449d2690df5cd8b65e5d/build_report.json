@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_dlp_manager",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_dlp_manager",
+  "repo_path": "repositories/applications_dlp_manager",
   "language": "arkts",
   "commit_hash": "cc0115dae7c36b729239449d2690df5cd8b65e5d",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_dlp_manager@cc0115dae7c36b729239449d2690df5cd8b65e5d/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_dlp_manager@cc0115dae7c36b729239449d2690df5cd8b65e5d/graph_full.json",
   "build_time_ms": 106.281,
   "files_scanned": 27,
   "parse_failed_files": 0,

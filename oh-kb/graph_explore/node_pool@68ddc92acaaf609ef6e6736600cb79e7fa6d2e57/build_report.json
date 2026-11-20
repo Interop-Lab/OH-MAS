@@ -1,9 +1,9 @@
 {
   "repo_name": "node_pool",
-  "repo_path": "/tmp/gw_build/nodepool/node_pool",
+  "repo_path": "repositories/node_pool",
   "language": "arkts",
   "commit_hash": "68ddc92acaaf609ef6e6736600cb79e7fa6d2e57",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/node_pool@68ddc92acaaf609ef6e6736600cb79e7fa6d2e57/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/node_pool@68ddc92acaaf609ef6e6736600cb79e7fa6d2e57/graph_full.json",
   "build_time_ms": 170.101,
   "files_scanned": 75,
   "parse_failed_files": 0,

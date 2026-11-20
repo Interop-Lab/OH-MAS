@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_settings",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_settings",
+  "repo_path": "repositories/applications_settings",
   "language": "arkts",
   "commit_hash": "eb9ccac21011ae16bc04d12775d7c5ad8bbd7157",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_settings@eb9ccac21011ae16bc04d12775d7c5ad8bbd7157/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_settings@eb9ccac21011ae16bc04d12775d7c5ad8bbd7157/graph_full.json",
   "build_time_ms": 5258.436,
   "files_scanned": 1844,
   "parse_failed_files": 0,

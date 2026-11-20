@@ -1,9 +1,9 @@
 {
   "repo_name": "dialoghub",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/dialoghub",
+  "repo_path": "repositories/dialoghub",
   "language": "arkts",
   "commit_hash": "222d27dd8d772a6d965bb6af8abb0ed9ecd67484",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/dialoghub@222d27dd8d77/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/dialoghub@222d27dd8d772a6d965bb6af8abb0ed9ecd67484/graph_full.json",
   "build_time_ms": 332.735,
   "files_scanned": 168,
   "parse_failed_files": 0,

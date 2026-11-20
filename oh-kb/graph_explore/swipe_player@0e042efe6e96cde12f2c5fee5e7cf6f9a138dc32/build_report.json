@@ -1,9 +1,9 @@
 {
   "repo_name": "swipe_player",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/swipe_player",
+  "repo_path": "repositories/swipe_player",
   "language": "arkts",
   "commit_hash": "0e042efe6e96cde12f2c5fee5e7cf6f9a138dc32",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/swipe_player@0e042efe6e96cde12f2c5fee5e7cf6f9a138dc32/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/swipe_player@0e042efe6e96cde12f2c5fee5e7cf6f9a138dc32/graph_full.json",
   "build_time_ms": 23.204,
   "files_scanned": 21,
   "parse_failed_files": 0,

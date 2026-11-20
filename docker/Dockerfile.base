@@ -1,0 +1,22 @@
+# Base image `harmonyrepair:latest` used by Dockerfile (CodeLinter image).
+# Reconstructed from the image used in the paper: Debian trixie, Python 3.11.14, Cppcheck 2.17.1.
+FROM python:3.11.14-trixie
+
+WORKDIR /workspace
+ENV PYTHONUNBUFFERED=1
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends cppcheck clang-tidy git \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir \
+    "swe-rex>=1.2.0" \
+    "tree-sitter>=0.20.0" \
+    "tree-sitter-languages>=1.10.0" \
+    "neo4j>=5.0.0" \
+    "networkx>=3.0" \
+    "pexpect>=4.8.0" \
+    cpplint \
+    "httpx[socks]"
+
+CMD ["/bin/bash"]

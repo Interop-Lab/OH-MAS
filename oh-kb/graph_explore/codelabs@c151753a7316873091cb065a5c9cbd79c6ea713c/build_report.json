@@ -1,9 +1,9 @@
 {
   "repo_name": "codelabs",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/codelabs",
+  "repo_path": "repositories/codelabs",
   "language": "cpp",
   "commit_hash": "c151753a7316873091cb065a5c9cbd79c6ea713c",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/codelabs@c151753a7316873091cb065a5c9cbd79c6ea713c/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/codelabs@c151753a7316873091cb065a5c9cbd79c6ea713c/graph_full.json",
   "build_time_ms": 497.095,
   "files_scanned": 26,
   "parse_failed_files": 0,

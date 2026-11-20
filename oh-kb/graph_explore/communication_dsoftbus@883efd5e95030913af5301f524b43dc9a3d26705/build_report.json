@@ -1,9 +1,9 @@
 {
   "repo_name": "communication_dsoftbus",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/communication_dsoftbus",
+  "repo_path": "repositories/communication_dsoftbus",
   "language": "cpp",
   "commit_hash": "883efd5e95030913af5301f524b43dc9a3d26705",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/communication_dsoftbus@883efd5e9503/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/communication_dsoftbus@883efd5e95030913af5301f524b43dc9a3d26705/graph_full.json",
   "build_time_ms": 22240.817,
   "files_scanned": 2696,
   "parse_failed_files": 0,

@@ -1,9 +1,9 @@
 {
   "repo_name": "ohos_video_trimmer",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_video_trimmer",
+  "repo_path": "repositories/ohos_video_trimmer",
   "language": "arkts",
   "commit_hash": "2370bb8ec30fbdf7dbc5c1d683e7f0b7fb7e90fd",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_video_trimmer@2370bb8ec30fbdf7dbc5c1d683e7f0b7fb7e90fd/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohos_video_trimmer@2370bb8ec30fbdf7dbc5c1d683e7f0b7fb7e90fd/graph_full.json",
   "build_time_ms": 38.179,
   "files_scanned": 20,
   "parse_failed_files": 0,

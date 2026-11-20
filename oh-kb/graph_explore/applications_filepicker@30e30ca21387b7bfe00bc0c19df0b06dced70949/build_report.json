@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_filepicker",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_filepicker",
+  "repo_path": "repositories/applications_filepicker",
   "language": "arkts",
   "commit_hash": "30e30ca21387b7bfe00bc0c19df0b06dced70949",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_filepicker@30e30ca21387b7bfe00bc0c19df0b06dced70949/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_filepicker@30e30ca21387b7bfe00bc0c19df0b06dced70949/graph_full.json",
   "build_time_ms": 87.967,
   "files_scanned": 41,
   "parse_failed_files": 0,

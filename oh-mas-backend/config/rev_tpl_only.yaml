@@ -17,9 +17,9 @@ oh_kb:
   fail_open: true
   timeout_ms: 200
   max_items: 10
-  graph_root: ../runtime/graph_explore
-  linter_examples_root: ../../linter_examples
-  repair_experiences_path: ../data/repair_experiences.json
+  graph_root: ../../oh-kb/graph_explore
+  linter_examples_root: ../../oh-kb
+  repair_experiences_path: ../../oh-kb/repair_experiences.json
   use_templates: true
   use_experiences: false
 ao:

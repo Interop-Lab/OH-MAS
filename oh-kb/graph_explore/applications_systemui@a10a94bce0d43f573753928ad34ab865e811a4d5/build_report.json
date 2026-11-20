@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_systemui",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_systemui",
+  "repo_path": "repositories/applications_systemui",
   "language": "arkts",
   "commit_hash": "a10a94bce0d43f573753928ad34ab865e811a4d5",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_systemui@a10a94bce0d43f573753928ad34ab865e811a4d5/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_systemui@a10a94bce0d43f573753928ad34ab865e811a4d5/graph_full.json",
   "build_time_ms": 659.967,
   "files_scanned": 273,
   "parse_failed_files": 0,

@@ -1,9 +1,9 @@
 {
   "repo_name": "FastBle",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/FastBle",
+  "repo_path": "repositories/FastBle",
   "language": "arkts",
   "commit_hash": "10032992a747afbcc590d8377974170549a3fd0a",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/FastBle@10032992a747afbcc590d8377974170549a3fd0a/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/FastBle@10032992a747afbcc590d8377974170549a3fd0a/graph_full.json",
   "build_time_ms": 112.851,
   "files_scanned": 57,
   "parse_failed_files": 0,

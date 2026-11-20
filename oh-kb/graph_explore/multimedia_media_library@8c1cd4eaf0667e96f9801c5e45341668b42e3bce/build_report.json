@@ -1,9 +1,9 @@
 {
   "repo_name": "multimedia_media_library",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/multimedia_media_library",
+  "repo_path": "repositories/multimedia_media_library",
   "language": "cpp",
   "commit_hash": "8c1cd4eaf0667e96f9801c5e45341668b42e3bce",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/multimedia_media_library@8c1cd4eaf066/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/multimedia_media_library@8c1cd4eaf0667e96f9801c5e45341668b42e3bce/graph_full.json",
   "build_time_ms": 31957.378,
   "files_scanned": 3187,
   "parse_failed_files": 0,

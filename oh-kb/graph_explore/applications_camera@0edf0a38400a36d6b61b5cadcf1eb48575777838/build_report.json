@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_camera",
-  "repo_path": "/tmp/gw_build/camera/applications_camera",
+  "repo_path": "repositories/applications_camera",
   "language": "cpp",
   "commit_hash": "0edf0a38400a36d6b61b5cadcf1eb48575777838",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_camera@0edf0a38400a36d6b61b5cadcf1eb48575777838/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_camera@0edf0a38400a36d6b61b5cadcf1eb48575777838/graph_full.json",
   "build_time_ms": 139.596,
   "files_scanned": 11,
   "parse_failed_files": 0,

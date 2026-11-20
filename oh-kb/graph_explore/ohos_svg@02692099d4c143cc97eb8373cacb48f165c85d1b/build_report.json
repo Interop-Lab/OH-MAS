@@ -1,9 +1,9 @@
 {
   "repo_name": "ohos_svg",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_svg",
+  "repo_path": "repositories/ohos_svg",
   "language": "arkts",
   "commit_hash": "02692099d4c143cc97eb8373cacb48f165c85d1b",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_svg@02692099d4c143cc97eb8373cacb48f165c85d1b/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohos_svg@02692099d4c143cc97eb8373cacb48f165c85d1b/graph_full.json",
   "build_time_ms": 44.482,
   "files_scanned": 27,
   "parse_failed_files": 0,

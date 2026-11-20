@@ -1,9 +1,9 @@
 {
   "repo_name": "RocketChat",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/RocketChat",
+  "repo_path": "repositories/RocketChat",
   "language": "arkts",
   "commit_hash": "9e2aae3ab0457752accc6d8a921bc6841776d4ff",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/RocketChat@9e2aae3ab0457752accc6d8a921bc6841776d4ff/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/RocketChat@9e2aae3ab0457752accc6d8a921bc6841776d4ff/graph_full.json",
   "build_time_ms": 48.907,
   "files_scanned": 10,
   "parse_failed_files": 0,

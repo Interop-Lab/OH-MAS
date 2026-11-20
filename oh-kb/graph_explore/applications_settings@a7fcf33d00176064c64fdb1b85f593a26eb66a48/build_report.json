@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_settings",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_settings",
+  "repo_path": "repositories/applications_settings",
   "language": "cpp",
   "commit_hash": "a7fcf33d00176064c64fdb1b85f593a26eb66a48",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_settings@a7fcf33d00176064c64fdb1b85f593a26eb66a48/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_settings@a7fcf33d00176064c64fdb1b85f593a26eb66a48/graph_full.json",
   "build_time_ms": 614.205,
   "files_scanned": 46,
   "parse_failed_files": 0,

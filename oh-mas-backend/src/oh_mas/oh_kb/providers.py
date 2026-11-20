@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import json
+import logging
 import time
 from dataclasses import dataclass
 from pathlib import Path
 
 from oh_mas.oh_kb.client import DependencyGraphResult, KnowledgeResult, OHKBClient
+
+logger = logging.getLogger(__name__)
 
 
 class NullOHKBClient(OHKBClient):
@@ -197,9 +200,18 @@ class GraphExploreMockOHKBClient(OHKBClient):
         self.use_experiences = use_experiences
         self.max_graph_load = max_graph_load
         self._graphs = self._load_graphs()
+        if not self._graphs:
+            raise FileNotFoundError(
+                f"graph_explore_mock: no '*/graph_full.json' under graph_root={self.graph_root}; "
+                "check oh_kb.graph_root (expected oh-kb/graph_explore, relative to the config file)"
+            )
+        if self.use_templates and (self.linter_examples_root is None or not self.linter_examples_root.is_dir()):
+            raise FileNotFoundError(f"graph_explore_mock: linter_examples_root not found: {self.linter_examples_root}")
 
         # Load repair experiences (L3)
         self.repair_experiences_path = repair_experiences_path
+        if self.use_experiences and repair_experiences_path is not None and not repair_experiences_path.is_file():
+            raise FileNotFoundError(f"graph_explore_mock: repair_experiences_path not found: {repair_experiences_path}")
         self._repair_experiences = self._load_repair_experiences()
 
         self.kb_version = "graph_explore_mock_v2"
@@ -389,6 +401,10 @@ class GraphExploreMockOHKBClient(OHKBClient):
 
         latency = int((time.perf_counter() - t0) * 1000)
         if chosen is None:
+            logger.warning(
+                "no dependency graph for repo=%r commit=%r file=%r under %s; returning empty graph",
+                requested_repo, requested_commit, af, self.graph_root,
+            )
             return DependencyGraphResult(
                 repo_name="",
                 commit_hash="",
@@ -424,7 +440,7 @@ class GraphExploreMockOHKBClient(OHKBClient):
                         "anchors": {},
                     },
                 },
-                error=None,
+                error={"code": "graph_not_found", "repo_name": requested_repo, "commit_hash": requested_commit, "alarm_file": af},
             )
 
         return DependencyGraphResult(

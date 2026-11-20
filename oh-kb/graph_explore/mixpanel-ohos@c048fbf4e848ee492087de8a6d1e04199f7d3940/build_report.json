@@ -1,9 +1,9 @@
 {
   "repo_name": "mixpanel-ohos",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/mixpanel-ohos",
+  "repo_path": "repositories/mixpanel-ohos",
   "language": "arkts",
   "commit_hash": "c048fbf4e848ee492087de8a6d1e04199f7d3940",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/mixpanel-ohos@c048fbf4e848ee492087de8a6d1e04199f7d3940/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/mixpanel-ohos@c048fbf4e848ee492087de8a6d1e04199f7d3940/graph_full.json",
   "build_time_ms": 26.113,
   "files_scanned": 12,
   "parse_failed_files": 0,

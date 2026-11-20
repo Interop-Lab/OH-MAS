@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oh-mas-backend"
+version = "0.1.0"
+description = "OH-MAS backend built on mini-swe-agent"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6",
+  "mini-swe-agent",
+]
+
+[project.scripts]
+oh-mas = "oh_mas.run.oh_mas:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["oh_mas*"]

@@ -1,9 +1,9 @@
 {
   "repo_name": "openharmony_tpc_samples",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/openharmony_tpc_samples",
+  "repo_path": "repositories/openharmony_tpc_samples",
   "language": "cpp",
   "commit_hash": "b38c639fc52fc58bc54238c4171a5e6a26aee5cc",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/openharmony_tpc_samples@b38c639fc52fc58bc54238c4171a5e6a26aee5cc/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/openharmony_tpc_samples@b38c639fc52fc58bc54238c4171a5e6a26aee5cc/graph_full.json",
   "build_time_ms": 6221.575,
   "files_scanned": 544,
   "parse_failed_files": 0,

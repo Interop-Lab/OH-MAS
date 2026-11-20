@@ -1,9 +1,9 @@
 {
   "repo_name": "ohos-beacon-library",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos-beacon-library",
+  "repo_path": "repositories/ohos-beacon-library",
   "language": "arkts",
   "commit_hash": "8f3b0dce99d8f17a086f7f37394f5f4af7187dcb",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos-beacon-library@8f3b0dce99d8f17a086f7f37394f5f4af7187dcb/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohos-beacon-library@8f3b0dce99d8f17a086f7f37394f5f4af7187dcb/graph_full.json",
   "build_time_ms": 123.677,
   "files_scanned": 90,
   "parse_failed_files": 0,

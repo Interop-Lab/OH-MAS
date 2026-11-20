@@ -1,9 +1,9 @@
 {
   "repo_name": "ohos_gif-drawable",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_gif-drawable",
+  "repo_path": "repositories/ohos_gif-drawable",
   "language": "arkts",
   "commit_hash": "3b6eaee890ff66c15114b76f55f4098d948a9e7c",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_gif-drawable@3b6eaee890ff66c15114b76f55f4098d948a9e7c/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohos_gif-drawable@3b6eaee890ff66c15114b76f55f4098d948a9e7c/graph_full.json",
   "build_time_ms": 44.384,
   "files_scanned": 23,
   "parse_failed_files": 0,

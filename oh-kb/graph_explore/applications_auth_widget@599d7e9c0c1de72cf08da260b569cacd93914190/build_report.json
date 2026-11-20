@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_auth_widget",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_auth_widget",
+  "repo_path": "repositories/applications_auth_widget",
   "language": "arkts",
   "commit_hash": "599d7e9c0c1de72cf08da260b569cacd93914190",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_auth_widget@599d7e9c0c1de72cf08da260b569cacd93914190/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_auth_widget@599d7e9c0c1de72cf08da260b569cacd93914190/graph_full.json",
   "build_time_ms": 59.529,
   "files_scanned": 22,
   "parse_failed_files": 0,

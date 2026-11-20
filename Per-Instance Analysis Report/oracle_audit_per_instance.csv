@@ -16,7 +16,7 @@ CPP_0118,C++,openharmony_tpc_samples,cppcheck/functionStatic,socketio/library/sr
 CPP_0120,C++,openharmony_tpc_samples,cppcheck/shadowVariable,socketio/library/src/main/cpp/client_socket.h,136-179,TP,TP,TP,
 CPP_0126,C++,openharmony_tpc_samples,cppcheck/functionStatic,socketio_tls/library/src/main/cpp/socketio_module_napi.cpp,203-412,TP,FP,TP,
 CPP_0138,C++,openharmony_tpc_samples,cppcheck/knownConditionTrueFalse,spinec/Spinec/src/main/cpp/thirdparty/stb/stb_image.h,5139-5166,TP,TP,TP,
-CPP_0139,C++,openharmony_tpc_samples,cppcheck/knownConditionTrueFalse,spinec/Spinec/src/main/cpp/thirdparty/stb/stb_image.h,5794-5891,FP,FP,FP,behavior_change: patch deletes the empty len==128 branch of PSD so it falls into the branch that repeats 129 times, and unconditionally writes g->pal[g->transparent], although the original code allows transparent=-1.
+CPP_0139,C++,openharmony_tpc_samples,cppcheck/knownConditionTrueFalse,spinec/Spinec/src/main/cpp/thirdparty/stb/stb_image.h,5794-5891,FP,FP,FP,"behavior_change: patch deletes the empty len==128 branch of PSD so it falls into the branch that repeats 129 times, and unconditionally writes g->pal[g->transparent], although the original code allows transparent=-1."
 CPP_0143,C++,openharmony_tpc_samples,cppcheck/variableScope,spinec/Spinec/src/main/cpp/thirdparty/stb/stb_image.h,5133-5166,TP,TP,TP,
 CPP_0149,C++,openharmony_tpc_samples,cppcheck/variableScope,spinec/Spinec/src/main/cpp/thirdparty/spinec/spine/IkConstraint.c,81-140,TP,TP,TP,
 CPP_0151,C++,openharmony_tpc_samples,cppcheck/variableScope,spinec/Spinec/src/main/cpp/thirdparty/spinec/spine/Skeleton.c,308-340,TP,TP,TP,
@@ -49,6 +49,7 @@ OH_0013,ArkTS,applications_contacts,@performance/hp-arkui-use-reusable-component
 OH_0014,ArkTS,applications_contacts,@performance/hp-arkui-set-cache-count-for-lazyforeach-grid,entry/src/main/ets/pages/dialer/callRecord/AllRecord.ets,45-73,TP,TP,TP,
 OH_0016,ArkTS,applications_contacts,@performance/hp-arkui-set-cache-count-for-lazyforeach-grid,entry/src/main/ets/pages/contacts/batchselectcontacts/BatchSelectContactsPage.ets,195-229,TP,TP,TP,
 OH_0017,ArkTS,applications_contacts,@performance/hp-arkui-use-reusable-component,entry/src/main/ets/pages/contacts/batchselectcontacts/BatchSelectContactsPage.ets,195-229,FP,FP,FP,"syntax_break: patch deletes the BatchSelectRecentItemView/ContactItemView constructor lines and their imports, so the list items are no longer rendered and the code does not compile"
+OH_0023,ArkTS,applications_contacts,@performance/hp-arkui-use-reusable-component,entry/src/main/ets/component/contactdetail/DetailCalllog.ets,111-180,FP,TP,TP,"consensus TP after disagreement (rater1 FP: .reuseId() is chained on LazyForEach rather than the @Reusable CallLogListItem; rater2 TP): the warning-relevant change is correct, since @Reusable plus aboutToReuse restores message and imgRes exactly as aboutToAppear does"
 OH_0045,ArkTS,applications_contacts,@performance/hp-arkui-set-cache-count-for-lazyforeach-grid,entry/src/main/ets/pages/favorites/favoriteList.ets,77-129,TP,TP,TP,
 OH_0048,ArkTS,applications_contacts,@performance/hp-arkui-set-cache-count-for-lazyforeach-grid,entry/src/main/ets/pages/contacts/batchselectcontacts/SingleSelectContactPage.ets,120-211,TP,TP,TP,
 OH_0050,ArkTS,applications_contacts,@performance/hp-arkui-no-stringify-in-lazyforeach-key-generator,entry/src/main/ets/pages/contacts/batchselectcontacts/SingleSelectContactPage.ets,120-211,TP,TP,TP,
@@ -56,6 +57,7 @@ OH_0053,ArkTS,applications_contacts,@performance/hp-arkui-no-stringify-in-lazyfo
 OH_0058,ArkTS,applications_contacts,@performance/hp-arkui-no-stringify-in-lazyforeach-key-generator,entry/src/main/ets/pages/group/BatchDeleteGroup.ets,52-348,TP,TP,TP,
 OH_0072,ArkTS,applications_contacts,@performance/hp-arkui-no-func-as-arg-for-reusable-component,entry/src/main/ets/component/contactdetail/DetailInfoRemarks.ets,44-130,TP,TP,TP,
 OH_0080,ArkTS,applications_contacts,@performance/hp-arkui-no-stringify-in-lazyforeach-key-generator,entry/src/main/ets/pages/favorites/favoriteList.ets,602-833,TP,TP,TP,
+OH_0082,ArkTS,applications_contacts,@performance/hp-arkui-use-reusable-component,entry/src/main/ets/pages/group/GroupList.ets,555-757,FP,FP,FP,"behavior_change: TextInputBuilder replaces CustomTextInputContent with a hand-built TextInput; onChange writes groupName into the model on every keystroke and the confirm handler compares this.item.group.groupName with itself, so the duplicate/unchanged check is broken and cancel no longer reverts. .reuseId() is also chained onto LazyForEach"
 OH_0102,ArkTS,applications_contacts,@performance/hp-arkui-no-stringify-in-lazyforeach-key-generator,entry/src/main/ets/pages/intelligencegroup/IntelligenceGroupSelectMemSendMsg.ets,407-491,TP,TP,TP,
 OH_0111,ArkTS,applications_contacts,@performance/hp-arkui-no-stringify-in-lazyforeach-key-generator,entry/src/main/ets/pages/dialer/callRecord/InterceptionCalls.ets,141-168,TP,TP,TP,
 OH_0112,ArkTS,applications_contacts,@performance/hp-arkui-no-stringify-in-lazyforeach-key-generator,entry/src/main/ets/pages/contacts/settings/RecentDelete.ets,593-715,TP,TP,TP,
@@ -69,7 +71,6 @@ OH_0143,ArkTS,applications_systemui,@performance/hp-arkui-use-transition-to-repl
 OH_0173,ArkTS,applications_permission_manager,@performance/hp-arkui-use-local-var-to-replace-state-var,permissionmanager/src/main/ets/pages/dialogPlus.ets,379-385,TP,TP,TP,
 OH_0175,ArkTS,applications_permission_manager,@performance/hp-arkui-use-local-var-to-replace-state-var,permissionmanager/src/main/ets/pages/application-tertiary.ets,41-157,TP,TP,TP,
 OH_0177,ArkTS,applications_permission_manager,@performance/hp-arkui-no-state-var-access-in-loop,permissionmanager/src/main/ets/pages/authority-tertiary.ets,197-232,FP,FP,FP,"behavior_change: async then-callbacks now write to local copies while this.* state is assigned early and the original permissionNum is lost, so later UI updates are dropped"
-OH_0195,ArkTS,swipe_player,@performance/hp-arkui-use-reusable-component,HMSliderPlayer/src/main/ets/components/HMSliderPlayer.ets,36-121,FP,FP,FP,"behavior_change: HMVideoSliderComponent is rewritten and merged with the player/custom views, far beyond the alarm scope; after aboutToReuse the player/XComponent keeps stale state"
 OH_0215,ArkTS,applications_camera,@performance/hp-arkui-no-state-var-access-in-loop,features/extend/src/main/ets/commonfunc/exposure/LandscapeExposureBarView.ets,355-382,TP,TP,TP,
 OH_0217,ArkTS,applications_camera,@performance/hp-arkui-suggest-use-effectkit-blur,product/tablet/src/main/ets/pages/PreviewArea.ets,619-768,FP,TP,TP,
 OH_0236,ArkTS,applications_mms,@performance/hp-arkui-use-object-link-to-replace-prop,entry/src/main/ets/pages/conversation/MessageTypeTitleAndCalenderDate.ets,22-60,TP,TP,TP,
@@ -81,7 +82,6 @@ OH_0310,ArkTS,ohrouter,@previewer/mandatory-default-value-for-local-initializati
 OH_0328,ArkTS,ohrouter,@hw-stylistic/operator-linebreak,HMRouterTransitions/src/main/ets/longTake/LongTakeSession.ets,109-163,TP,TP,TP,
 OH_0333,ArkTS,ohrouter,@hw-stylistic/quotes,HMRouterExamples/product/phone/src/main/ets/constants/RouterPageConstant.ets,1-44,TP,TP,TP,
 OH_0347,ArkTS,node_pool,@performance/hp-arkui-use-object-link-to-replace-prop,entry/src/main/ets/view/ItemDescView/DescRaidersView.ets,20-114,FP,FP,FP,"framework_misuse: @ObjectLink is applied to ViewItem, which is a plain class (not @Observed), and the default value is dropped, so it fails to compile/run"
-OH_0358,ArkTS,node_pool,@performance/hp-arkui-use-reusable-component,entry/src/main/ets/pages/ShortVideoPage.ets,41-185,FP,TP,TP,
 OH_0360,ArkTS,applications_launcher,@performance/hp-arkui-no-state-var-access-in-loop,feature/pagedesktop/src/main/ets/default/common/components/SwiperPage.ets,68-70,TP,TP,TP,
 OH_0367,ArkTS,ohos_vlayout,@performance/hp-arkui-no-state-var-access-in-loop,vlayout/src/main/ets/components/common/StaggeredGridLayoutHelper.ets,90-120,TP,TP,TP,
 OH_0374,ArkTS,lottie_turbo,@performance/foreach-args-check,entry/src/main/ets/pages/example/EffectPage.ets,18-78,TP,TP,TP,

@@ -1,9 +1,9 @@
 {
   "repo_name": "security_privacy_center",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/security_privacy_center",
+  "repo_path": "repositories/security_privacy_center",
   "language": "arkts",
   "commit_hash": "876c6d17ef5a7884ddd3a0ca2da4b84023f7b05f",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/security_privacy_center@876c6d17ef5a7884ddd3a0ca2da4b84023f7b05f/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/security_privacy_center@876c6d17ef5a7884ddd3a0ca2da4b84023f7b05f/graph_full.json",
   "build_time_ms": 173.514,
   "files_scanned": 82,
   "parse_failed_files": 0,

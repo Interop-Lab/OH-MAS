@@ -1,9 +1,9 @@
 {
   "repo_name": "lottie_turbo",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/lottie_turbo",
+  "repo_path": "repositories/lottie_turbo",
   "language": "arkts",
   "commit_hash": "b04ff6e283455d00c7c0fb010a2d731014b96aab",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/lottie_turbo@b04ff6e283455d00c7c0fb010a2d731014b96aab/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/lottie_turbo@b04ff6e283455d00c7c0fb010a2d731014b96aab/graph_full.json",
   "build_time_ms": 89.318,
   "files_scanned": 46,
   "parse_failed_files": 0,

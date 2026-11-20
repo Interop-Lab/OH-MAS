@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_mms",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_mms",
+  "repo_path": "repositories/applications_mms",
   "language": "arkts",
   "commit_hash": "12a79ede3a7dc83c354fbc37fa90076f14a222c3",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_mms@12a79ede3a7dc83c354fbc37fa90076f14a222c3/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_mms@12a79ede3a7dc83c354fbc37fa90076f14a222c3/graph_full.json",
   "build_time_ms": 2530.684,
   "files_scanned": 565,
   "parse_failed_files": 0,

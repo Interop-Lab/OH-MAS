@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_camera",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_camera",
+  "repo_path": "repositories/applications_camera",
   "language": "arkts",
   "commit_hash": "cb8c6a58bff3de918e05de1c3639913d82224a27",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_camera@cb8c6a58bff3de918e05de1c3639913d82224a27/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_camera@cb8c6a58bff3de918e05de1c3639913d82224a27/graph_full.json",
   "build_time_ms": 3335.982,
   "files_scanned": 598,
   "parse_failed_files": 0,

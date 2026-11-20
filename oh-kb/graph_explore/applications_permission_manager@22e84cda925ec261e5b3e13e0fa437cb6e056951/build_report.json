@@ -1,9 +1,9 @@
 {
   "repo_name": "applications_permission_manager",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/applications_permission_manager",
+  "repo_path": "repositories/applications_permission_manager",
   "language": "arkts",
   "commit_hash": "22e84cda925ec261e5b3e13e0fa437cb6e056951",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/applications_permission_manager@22e84cda925ec261e5b3e13e0fa437cb6e056951/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/applications_permission_manager@22e84cda925ec261e5b3e13e0fa437cb6e056951/graph_full.json",
   "build_time_ms": 208.922,
   "files_scanned": 47,
   "parse_failed_files": 0,

@@ -1,9 +1,9 @@
 {
   "repo_name": "distributedhardware_device_manager",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/distributedhardware_device_manager",
+  "repo_path": "repositories/distributedhardware_device_manager",
   "language": "cpp",
   "commit_hash": "c3d58ed65cf78bc243147c215e6428a901deea0a",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/distributedhardware_device_manager@c3d58ed65cf78bc243147c215e6428a901deea0a/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/distributedhardware_device_manager@c3d58ed65cf78bc243147c215e6428a901deea0a/graph_full.json",
   "build_time_ms": 9437.109,
   "files_scanned": 884,
   "parse_failed_files": 0,

@@ -267,7 +267,7 @@ def _run_instance_in_docker(
         container_cfg["cp"]["worker_trace_root"] = f"{docker_trace_path}/cp_workers"
     # Rewrite OH-KB paths for container runtime so graph/knowledge files resolve correctly.
     kb_cfg = container_cfg.get("oh_kb", {})
-    kb_cfg["graph_root"] = f"{docker_runtime_path}/graph_explore"
+    kb_cfg["graph_root"] = "/workspace/graph_explore"
     kb_cfg["linter_examples_root"] = "/workspace/linter_examples"
     kb_cfg["repair_experiences_path"] = "/workspace/oh_mas_data/repair_experiences.json"
     container_cfg["oh_kb"] = kb_cfg
@@ -309,14 +309,15 @@ def _run_instance_in_docker(
     trace_root = _resolve_path(runtime_cfg.get("trace_root", runtime_cfg["runtime_root"] + "/traces"), base_dir=cfg_dir)
     trace_root.mkdir(parents=True, exist_ok=True)
     linter_examples_root = _resolve_path(
-        cfg.get("oh_kb", {}).get("linter_examples_root", "../../linter_examples"),
+        cfg.get("oh_kb", {}).get("linter_examples_root", "../../oh-kb"),
         base_dir=cfg_dir,
     )
     repair_experiences_path = _resolve_path(
-        cfg.get("oh_kb", {}).get("repair_experiences_path", "../data/repair_experiences.json"),
+        cfg.get("oh_kb", {}).get("repair_experiences_path", "../../oh-kb/repair_experiences.json"),
         base_dir=cfg_dir,
     )
     repair_experiences_root = repair_experiences_path.parent
+    graph_root = _resolve_path(cfg.get("oh_kb", {}).get("graph_root", "../../oh-kb/graph_explore"), base_dir=cfg_dir)
 
     docker_extra_args = runtime_cfg.get("docker_extra_args", "")
     if needs_host_network and "--network" not in docker_extra_args:
@@ -330,6 +331,7 @@ def _run_instance_in_docker(
         f" -v {shlex.quote(str(cfg_path))}:/workspace/oh_mas_config.yaml"
         f" -v {shlex.quote(str(runtime_root))}:{shlex.quote(docker_runtime_path)}"
         f" -v {shlex.quote(str(trace_root))}:{shlex.quote(docker_trace_path)}"
+        f" -v {shlex.quote(str(graph_root))}:/workspace/graph_explore:ro"
         f" -v {shlex.quote(str(linter_examples_root))}:/workspace/linter_examples"
         f" -v {shlex.quote(str(repair_experiences_root))}:/workspace/oh_mas_data"
         f" {docker_extra_args}"

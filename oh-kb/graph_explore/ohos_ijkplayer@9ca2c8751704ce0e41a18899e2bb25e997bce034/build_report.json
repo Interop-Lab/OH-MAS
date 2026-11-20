@@ -1,9 +1,9 @@
 {
   "repo_name": "ohos_ijkplayer",
-  "repo_path": "/home/deepsearch/OH-MAS/repositories/ohos_ijkplayer",
+  "repo_path": "repositories/ohos_ijkplayer",
   "language": "cpp",
   "commit_hash": "9ca2c8751704ce0e41a18899e2bb25e997bce034",
-  "output_graph": "/home/deepsearch/OH-MAS/oh-mas-backend/runtime/graph_explore/ohos_ijkplayer@9ca2c8751704ce0e41a18899e2bb25e997bce034/graph_full.json",
+  "output_graph": "oh-kb/graph_explore/ohos_ijkplayer@9ca2c8751704ce0e41a18899e2bb25e997bce034/graph_full.json",
   "build_time_ms": 1004.482,
   "files_scanned": 153,
   "parse_failed_files": 0,
