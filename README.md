@@ -30,7 +30,7 @@ OH-MAS/
 ├── dataset/                 # OH-Bench (ArkTS + C/C++) and manual-review subsets
 ├── docker/                  # Dockerfile.base, Dockerfile (CodeLinter / Cppcheck image), build.sh, fetch/verify scripts for command-line-tools
 ├── results/                 # Per-instance repair outcomes and oracle-review labels
-├── evaluation/              # Comparison studies, paired statistics, and build evidence
+├── evaluation/              # Comparison studies, paired statistics, and build evidence(The post-patch alarm archive is distributed as a[release asset](https://github.com/Interop-Lab/OH-MAS/releases/download/evaluation-data-v1/post_alarms.jsonl.gz).After downloading, place `post_alarms.jsonl.gz` under`evaluation/matching_sensitivity/alarms/`.)
 └── OH_MAS_appendix.pdf      # Supplementary material
 ```
 
