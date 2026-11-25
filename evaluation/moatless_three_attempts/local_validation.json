@@ -1,0 +1,37 @@
+{
+  "counts": {
+    "ArkTS": {
+      "n": 382,
+      "pass": 283,
+      "pass_at_1": 225
+    },
+    "C++": {
+      "n": 359,
+      "pass": 241,
+      "pass_at_1": 195
+    },
+    "Overall": {
+      "n": 741,
+      "pass": 524,
+      "pass_at_1": 420
+    }
+  },
+  "final_records_aligned": 741,
+  "CPP_label_changes": 9,
+  "ArkTS_label_changes": 0,
+  "controlled_verdicts_unchanged_all_rows": true,
+  "ranking_changes_unchanged": true,
+  "matching_summary_stats_unchanged": true,
+  "source_sha256_entries": 751,
+  "raw_trace_files_locally_verified": false,
+  "original_source_export_sha256": "cc3cc15faa6e3dd86897f5f1528367651ec81db93cf0b4ecc320cbddffc04069",
+  "distributed_export_sha256": "a7d93bed8c50609a025a286df016e5d008e734e8e8443dbe5b28db59f898877e",
+  "omitted_distributed_columns": [
+    "par",
+    "fail_level"
+  ],
+  "distributed_validated_result_fields": [
+    "result",
+    "pass_at_1"
+  ]
+}

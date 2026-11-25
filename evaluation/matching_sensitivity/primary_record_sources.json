@@ -1,0 +1,641 @@
+{
+  "source_manifest": "../primary_statistics/source_manifest.json",
+  "updated_columns": [
+    "paper_recorded_label_raw",
+    "paper_recorded_pass",
+    "paper_recorded_source"
+  ],
+  "controlled_columns_unchanged": true,
+  "systems": [
+    {
+      "system": "E10_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "ThreeSonnet_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 282
+    },
+    {
+      "system": "E10_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "ThreeSonnet_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 307
+    },
+    {
+      "system": "E1_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A1_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 281
+    },
+    {
+      "system": "E1_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A1_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 279
+    },
+    {
+      "system": "E2_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A2_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 234
+    },
+    {
+      "system": "E2_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A2_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 193
+    },
+    {
+      "system": "E3_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A2p_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 271
+    },
+    {
+      "system": "E3_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A2p_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 242
+    },
+    {
+      "system": "E4_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A2pp_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 266
+    },
+    {
+      "system": "E4_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A2pp_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 254
+    },
+    {
+      "system": "E5_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A3_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 273
+    },
+    {
+      "system": "E5_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A3_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 211
+    },
+    {
+      "system": "E6_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A3p_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 272
+    },
+    {
+      "system": "E6_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "A3p_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 291
+    },
+    {
+      "system": "E7_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "TemplatesOnly_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 281
+    },
+    {
+      "system": "E7_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "TemplatesOnly_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 269
+    },
+    {
+      "system": "E8_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "ExperiencesOnly_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 297
+    },
+    {
+      "system": "E8_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "ExperiencesOnly_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 309
+    },
+    {
+      "system": "E9_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "RandomRouting_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 291
+    },
+    {
+      "system": "E9_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "result_column": "RandomRouting_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 309
+    },
+    {
+      "system": "P1latest",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/main_P1-P3_per_instance.csv",
+      "sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+      "result_column": "P1_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 311
+    },
+    {
+      "system": "P1latest",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/main_P1-P3_per_instance.csv",
+      "sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+      "result_column": "P1_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 319
+    },
+    {
+      "system": "P2_arkts",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/main_P1-P3_per_instance.csv",
+      "sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+      "result_column": "P2_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 305
+    },
+    {
+      "system": "P2_cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/main_P1-P3_per_instance.csv",
+      "sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+      "result_column": "P2_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 295
+    },
+    {
+      "system": "P3_arkts",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/main_P1-P3_per_instance.csv",
+      "sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+      "result_column": "P3_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 299
+    },
+    {
+      "system": "P3_cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/main_P1-P3_per_instance.csv",
+      "sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+      "result_column": "P3_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 311
+    },
+    {
+      "system": "a1_gemini_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/single_model_gemini_kimi_per_instance.csv",
+      "sha256": "27daa58d81bc7f47fd5c39551d8a7d0f8b01db5f8d75e6136cf7b142c16627b4",
+      "result_column": "A1_Gemini_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 220
+    },
+    {
+      "system": "a1_gemini_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/single_model_gemini_kimi_per_instance.csv",
+      "sha256": "27daa58d81bc7f47fd5c39551d8a7d0f8b01db5f8d75e6136cf7b142c16627b4",
+      "result_column": "A1_Gemini_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 251
+    },
+    {
+      "system": "a1_kimi_ArkTS",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/single_model_gemini_kimi_per_instance.csv",
+      "sha256": "27daa58d81bc7f47fd5c39551d8a7d0f8b01db5f8d75e6136cf7b142c16627b4",
+      "result_column": "A1_Kimi_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 275
+    },
+    {
+      "system": "a1_kimi_Cpp",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/single_model_gemini_kimi_per_instance.csv",
+      "sha256": "27daa58d81bc7f47fd5c39551d8a7d0f8b01db5f8d75e6136cf7b142c16627b4",
+      "result_column": "A1_Kimi_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 255
+    },
+    {
+      "system": "cpp_moatless3",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/baselines_3att_per_instance.csv",
+      "sha256": "5233478c016aaea49dbf3475c434732b7011a6c25c68910f6ffac9bb098e13a0",
+      "result_column": "Moatless_3att_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 241
+    },
+    {
+      "system": "cpp_single_agentless",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Agentless",
+      "rows": 359,
+      "passes": 173
+    },
+    {
+      "system": "cpp_single_claudecode",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Claude Code",
+      "rows": 359,
+      "passes": 191
+    },
+    {
+      "system": "cpp_single_gemini25flash",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Gemini 2.5 Flash",
+      "rows": 359,
+      "passes": 162
+    },
+    {
+      "system": "cpp_single_gpt55",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "GPT-5.5",
+      "rows": 359,
+      "passes": 198
+    },
+    {
+      "system": "cpp_single_kimik25",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Kimi K2.5",
+      "rows": 359,
+      "passes": 185
+    },
+    {
+      "system": "cpp_single_minimaxm25",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "MiniMax M2.5",
+      "rows": 359,
+      "passes": 157
+    },
+    {
+      "system": "cpp_single_moatless",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Moatless",
+      "rows": 359,
+      "passes": 196
+    },
+    {
+      "system": "cpp_single_opencode",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "OpenCode",
+      "rows": 359,
+      "passes": 186
+    },
+    {
+      "system": "cpp_single_opus45",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Claude Opus 4.5",
+      "rows": 359,
+      "passes": 186
+    },
+    {
+      "system": "cpp_single_opus48",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Claude Opus 4.8",
+      "rows": 359,
+      "passes": 185
+    },
+    {
+      "system": "cpp_single_sonnet45",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "Claude Sonnet 4.5",
+      "rows": 359,
+      "passes": 181
+    },
+    {
+      "system": "cpp_single_sweagent",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "result_column": "result",
+      "native_system": "SWE-agent",
+      "rows": 359,
+      "passes": 173
+    },
+    {
+      "system": "gpt55c",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/gpt55_3att_per_instance.csv",
+      "sha256": "917d3fd2b60922460c6295c6c2976090a31c7b610ca59d792d5a43b82213bdf7",
+      "result_column": "GPT5.5_3att_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 209
+    },
+    {
+      "system": "gpt55x3",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/gpt55_3att_per_instance.csv",
+      "sha256": "917d3fd2b60922460c6295c6c2976090a31c7b610ca59d792d5a43b82213bdf7",
+      "result_column": "GPT5.5_3att_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 278
+    },
+    {
+      "system": "moatless3",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/baselines_3att_per_instance.csv",
+      "sha256": "5233478c016aaea49dbf3475c434732b7011a6c25c68910f6ffac9bb098e13a0",
+      "result_column": "Moatless_3att_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 283
+    },
+    {
+      "system": "ohmas_ext",
+      "dataset": "External-ArkTS",
+      "repository_file": "results/external_ohbench_per_instance.csv",
+      "sha256": "78f450c77b1de303b3397e441a16c46663b336209f2b87e12a65e0f512fe748e",
+      "result_column": "result",
+      "native_system": null,
+      "rows": 100,
+      "passes": 89
+    },
+    {
+      "system": "opus3c",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/baselines_3att_per_instance.csv",
+      "sha256": "5233478c016aaea49dbf3475c434732b7011a6c25c68910f6ffac9bb098e13a0",
+      "result_column": "Opus4.8_3att_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 204
+    },
+    {
+      "system": "opus3n",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/baselines_3att_per_instance.csv",
+      "sha256": "5233478c016aaea49dbf3475c434732b7011a6c25c68910f6ffac9bb098e13a0",
+      "result_column": "Opus4.8_3att_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 272
+    },
+    {
+      "system": "single_Agentless",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Agentless",
+      "rows": 382,
+      "passes": 209
+    },
+    {
+      "system": "single_Claude_Code",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Claude Code",
+      "rows": 382,
+      "passes": 175
+    },
+    {
+      "system": "single_Claude_Opus_4_5",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Claude Opus 4.5",
+      "rows": 382,
+      "passes": 178
+    },
+    {
+      "system": "single_Claude_Opus_4_8",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Claude Opus 4.8",
+      "rows": 382,
+      "passes": 215
+    },
+    {
+      "system": "single_Claude_Sonnet_4_5",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Claude Sonnet 4.5",
+      "rows": 382,
+      "passes": 173
+    },
+    {
+      "system": "single_GPT_5_5",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "GPT-5.5",
+      "rows": 382,
+      "passes": 214
+    },
+    {
+      "system": "single_Gemini_2_5_Flash",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Gemini 2.5 Flash",
+      "rows": 382,
+      "passes": 195
+    },
+    {
+      "system": "single_Kimi_K2_5",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Kimi K2.5",
+      "rows": 382,
+      "passes": 160
+    },
+    {
+      "system": "single_MiniMax_M2_5",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "MiniMax M2.5",
+      "rows": 382,
+      "passes": 113
+    },
+    {
+      "system": "single_Moatless",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "Moatless",
+      "rows": 382,
+      "passes": 223
+    },
+    {
+      "system": "single_OpenCode",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "OpenCode",
+      "rows": 382,
+      "passes": 164
+    },
+    {
+      "system": "single_SWE_agent",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "result_column": "result",
+      "native_system": "SWE-agent",
+      "rows": 382,
+      "passes": 184
+    },
+    {
+      "system": "sonnet3c",
+      "dataset": "OHBench-CPP",
+      "repository_file": "results/baselines_3att_per_instance.csv",
+      "sha256": "5233478c016aaea49dbf3475c434732b7011a6c25c68910f6ffac9bb098e13a0",
+      "result_column": "Sonnet4.5_3att_result",
+      "native_system": null,
+      "rows": 359,
+      "passes": 202
+    },
+    {
+      "system": "sonnet3n",
+      "dataset": "OHBench-ArkTS",
+      "repository_file": "results/baselines_3att_per_instance.csv",
+      "sha256": "5233478c016aaea49dbf3475c434732b7011a6c25c68910f6ffac9bb098e13a0",
+      "result_column": "Sonnet4.5_3att_result",
+      "native_system": null,
+      "rows": 382,
+      "passes": 244
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+ "hash_inputs": {
+  "haprepair_commit": "2df699a28ecae5f19e9b8825b964597a73d52218",
+  "dataset_sha256": "a306307b6274b6bdf34db76d59dbbb5db840a40b44bf0c7c76e994b18fb4a1f6",
+  "meta_sha256": "44da3016c05c803e9596eb9ed9c8d3685da6aa5846489c2dd27a9e0b953b1f6b",
+  "baseline_commits": {
+   "AdaptiveCapabilities": "58df0e6cd89f5ccaf1e307328764ab2d0882bd72",
+   "ComponentCollection": "e988c535b10951c47b12c598affc9d621c4809fe",
+   "GSYVideoPlayer": "3803720481fbf91ba20b59c5a6e6e4d99b8bf65b",
+   "Gallery": "037548c5c9cb5a2ed730c3da1b224515c9ba5176",
+   "HealthyDietIX": "100630a3d649938cf0ac401ce73f9de2f756d049",
+   "Photos": "0f20d1a926dcd70cf7a287d3a1d46f80d18b65d9",
+   "StageModelAbilityDevelop": "f995233f8e037f076b7a52c6537d75593428700a",
+   "amqplib": "53ec6a4509caa6fc24d15675bdad9a655305236b",
+   "node-pop3": "a1e4139a5ba553febbac9abd017955734a52055a",
+   "utilCode": "24fab1e3f43b9d107f95b14f22ae905bac5a83c8",
+   "wifi_testapp": "e85f6e40657d011003cdecfa504acc072080f832"
+  },
+  "scan_config_sha256": "91de02b03d0c5df48d3da615eb0b17615f2f9ad0e0f7f575119c964ae3b9cc95",
+  "rules_json_sha256": "30e3829234bbb07e5ad2e6ed50d47ccec29e0bab0a037b3c3e99009e7624eeb2",
+  "vul_pairs_sha256": "d91ff95e7acc8eccfdd40dd2b996b64db5b7a691936e3e7dc31a59c40226b832",
+  "retrieval_adapter_sha256": "48a007c12f97b2789173520e78ff3c54fb5ea30830a15fd9fd46882c14bbfcc9",
+  "stella_revision": "7817065102fd9e1b031fe874e910c01f40b2f001",
+  "stella_dtype": "float32",
+  "da_file_sha256": "0753537035162b81f35496005f1c0691e30c0bba9a4d632171fa6dc561688f35",
+  "da_config_orig_sha256": "9e68119f1d6419bb2a28b12b7ccaeed3a3ff7df1fbb9681d03f10a417f5d4b74",
+  "da_config_modification": "da.repo_path -> /workspace/repo; codelinter_target_cmd and codelinter_repo_cmd get -c /audit/code-linter.json5 (public config)",
+  "docker_image_id": "sha256:f825fefcb2a25a0da02c314cfa02b0c154ca497466bf8e20d290838d0ac030ab",
+  "da_network": "none",
+  "gen_model": "claude-sonnet-4-5-20250929",
+  "check_model": "gpt-4o-2024-08-06",
+  "provider": "relayrouter",
+  "temperature": 0,
+  "max_repair_attempts": 3,
+  "outer_rounds": 5,
+  "rag_top_n": 1,
+  "rag_type": "difflib",
+  "protocol": "paper protocol: file-level multi-defect input (all HapRepair-registered CodeLinter defects of the file), up to 5 rounds with CodeLinter(public config) rescan, 3 inner attempts with GPT-4o check; round 1 of single-alarm files reuses the earlier single-alarm run",
+  "location_check": "supplementary, difflib line mapping + post scan with public config",
+  "stella_serving": "separate unix-socket embedding service, FP32, restarted by a supervisor",
+  "runner_sha256": "57d7354565fc70ea15a19e0608bfba02d680d69d00781fabae0ccc8428baa15a"
+ },
+ "provenance": {
+  "created": "2026-11-10T07:49:41.135241+00:00",
+  "runner_sha256": "df00b0d68eca7895bd9f20deb8921c64c86f50a9955fbe41452b13741cfd1de1",
+  "da_eval_ext_sha256": "2ff8dab8faf2b3e8759324cc72a199ac3c97ce9286f2ce2ae9ce191bc5b40edb",
+  "packages": {
+   "torch": "2.15.0+cpu",
+   "transformers": "5.22.2",
+   "openai": "3.46.0",
+   "numpy": "2.5.4",
+   "accelerate": "1.15.0"
+  }
+ }
+}

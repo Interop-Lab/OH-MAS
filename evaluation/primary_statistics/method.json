@@ -1,0 +1,12 @@
+{
+  "population": "Matched task IDs in current repository reports; primary outcomes only.",
+  "CI": "10,000 paired instance percentile-bootstrap resamples; sorted instance IDs; numpy.default_rng(20261110), reset for each comparison; batches of 500.",
+  "p": "Two-sided exact McNemar test on discordant task pairs.",
+  "direction": "first system minus second system in percentage points.",
+  "multiplicity": "No multiple-comparison adjustment.",
+  "HapRepair_exception": "Separate results in ../haprepair/ use file-snapshot clusters, 20,000 bootstrap draws and 20,000 cluster sign flips, seed 20261117.",
+  "controlled_matching": "This directory does not recompute controlled offline matcher statistics.",
+  "PAR": "Per-instance PAR columns are omitted from distribution; no applicability labels, outcome labels or statistical results are changed.",
+  "prior_method_reference": "recompute_v5.py, stat function; the method is reused with current repository inputs, not its old input paths.",
+  "failure_level_fields": "Failure-level columns are not distributed. SPR, bootstrap CIs, and paired tests read binary result fields and task/group identifiers only."
+}

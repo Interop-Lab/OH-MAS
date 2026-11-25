@@ -1,0 +1,36 @@
+PASS  12 single C++ systems found | recomputed = 12 | expected = 12
+PASS  single12 C++: DA accepts, EXACT rejects | recomputed = 739 | expected = 739
+PASS  single12 C++: EXACT accepts, DA rejects (reverse) | recomputed = 0 | expected = 0
+PASS  single12 C++: DA accepts, LOC-v1 rejects | recomputed = 11 | expected = 11
+PASS  single12 C++: LOC-v1 accepts, DA rejects (reverse) | recomputed = 0 | expected = 0
+PASS  single12 C++: LOC-v1 and LOC-v2 identical verdicts | recomputed = 0 | expected = 0
+PASS  max LOC-v1 flips per system, single12 C++ (system cpp_single_minimaxm25) | recomputed = 3 | expected = 3
+PASS  max LOC-v1 flips per system, Table III C++ (system E1_Cpp) | recomputed = 5 | expected = 5
+PASS    ... attained by E1_Cpp | recomputed = True | expected = True
+PASS  max LOC-v1 flips per system, extra C++ (system a1_gemini_Cpp) | recomputed = 7 | expected = 7
+PASS    ... attained by a1_gemini_Cpp | recomputed = True | expected = True
+PASS  max LOC-v1 flips per system, single12 ArkTS (system single_MiniMax_M2_5) | recomputed = 1 | expected = 1
+PASS  max LOC-v1 flips per system, OH-Bench ArkTS (32 systems) (system E8_ArkTS) | recomputed = 3 | expected = 3
+PASS  max LOC-v1 flips per system, external 100 (system ohmas_ext) | recomputed = 2 | expected = 2
+PASS    ... attained by ohmas_ext | recomputed = True | expected = True
+PASS  LOC-v1 strict reversals, single12 C++ | recomputed = 2 | expected = 2
+PASS  LOC-v1 strict reversals, Table III C++ | recomputed = 2 | expected = 2
+PASS  LOC-v1 strict reversals, single12 ArkTS | recomputed = 0 | expected = 0
+PASS  LOC-v1 strict reversals, Table III ArkTS | recomputed = 0 | expected = 0
+PASS  LOC-v1 strict reversals, 32 OH-Bench ArkTS systems | recomputed = 1 | expected = 1
+PASS  OH-MAS (P1latest) vs baselines: no relative-order change under LOC-v1 (single12 + Table III, both languages) | recomputed = 0 | expected = 0
+PASS  Kendall tau DA vs LOC-v1, single12 C++ | recomputed = 0.8939 | expected = 0.8939
+PASS    LOC-v1 reversals among DA-significant pairs, single12 C++ | recomputed = 0 | expected = 0
+PASS  Kendall tau DA vs LOC-v1, tableIII C++ | recomputed = 0.9485 | expected = 0.9485
+PASS    LOC-v1 reversals among DA-significant pairs, tableIII C++ | recomputed = 0 | expected = 0
+PASS  Kendall tau DA vs LOC-v1, single12 ArkTS | recomputed = 0.9545 | expected = 0.9545
+PASS    LOC-v1 reversals among DA-significant pairs, single12 ArkTS | recomputed = 0 | expected = 0
+PASS  Kendall tau DA vs LOC-v1, tableIII ArkTS | recomputed = 0.9779 | expected = 0.9779
+PASS    LOC-v1 reversals among DA-significant pairs, tableIII ArkTS | recomputed = 0 | expected = 0
+PASS  Kendall tau DA vs LOC-v1, OH-Bench ArkTS (32) | recomputed = 0.9879 | expected = 0.9879
+PASS    LOC-v1 reversals among DA-significant pairs, OH-Bench ArkTS (32) | recomputed = 0 | expected = 0
+PASS  OH-MAS vs 12 baselines x 2 languages: pairs | recomputed = 24 | expected = 24
+PASS  paired significance conclusions changed DA -> LOC-v1 | recomputed = 0 | expected = 0
+INFO  P1 offline DA pass = 648 | paper recorded pass = 630 (different quantities: controlled offline DA vs paper record)
+
+33/33 checks passed

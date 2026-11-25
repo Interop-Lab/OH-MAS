@@ -1,0 +1,7 @@
+6.0.240
+Cppcheck 2.17.1
+ripgrep 14.1.1
+git version 2.47.3
+Python 3.11.14
+Debian GNU/Linux 13 (trixie)
+x86_64

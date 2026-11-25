@@ -1,0 +1,5 @@
+single12 C++ 12 systems LOC-v1: {'reversals': 2, 'reversals_among_DA_significant': 0, 'min_p_of_reversed': 0.848, 'kendall_tau': 0.8939, 'ties_changed': 3} | EXACT reversals 18 among DA-significant 7 tau 0.4091
+tableIII C++ 17 systems LOC-v1: {'reversals': 2, 'reversals_among_DA_significant': 0, 'min_p_of_reversed': 0.844, 'kendall_tau': 0.9485, 'ties_changed': 3} | EXACT reversals 21 among DA-significant 9 tau 0.6691
+single12 ArkTS 12 systems LOC-v1: {'reversals': 0, 'reversals_among_DA_significant': 0, 'min_p_of_reversed': None, 'kendall_tau': 0.9545, 'ties_changed': 0} | EXACT reversals 6 among DA-significant 0 tau 0.7727
+tableIII ArkTS 17 systems LOC-v1: {'reversals': 0, 'reversals_among_DA_significant': 0, 'min_p_of_reversed': None, 'kendall_tau': 0.9779, 'ties_changed': 0} | EXACT reversals 8 among DA-significant 1 tau 0.8603
+OH-Bench ArkTS (32) 32 systems LOC-v1: {'reversals': 1, 'reversals_among_DA_significant': 0, 'min_p_of_reversed': 0.896, 'kendall_tau': 0.9879, 'ties_changed': 0} | EXACT reversals 29 among DA-significant 1 tau 0.869

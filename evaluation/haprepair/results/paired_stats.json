@@ -1,0 +1,53 @@
+[
+ {
+  "label": "OH-Bench 382: OH-MAS (P1 recorded) vs public HapRepair (original)",
+  "n": 382,
+  "clusters": 233,
+  "ohmas_pass": 311,
+  "hap_pass": 266,
+  "ohmas_spr": 81.4,
+  "hap_spr": 69.6,
+  "diff_pp": 11.8,
+  "ci95": [
+   4.2,
+   19.7
+  ],
+  "p": 0.0029
+ },
+ {
+  "label": "OH-Bench 382: OH-MAS (P1 recorded) vs extended-rule-coverage HapRepair (not the public release)",
+  "n": 382,
+  "clusters": 233,
+  "ohmas_pass": 311,
+  "hap_pass": 276,
+  "ohmas_spr": 81.4,
+  "hap_spr": 72.3,
+  "diff_pp": 9.2,
+  "ci95": [
+   2.1,
+   16.7
+  ],
+  "p": 0.0152
+ },
+ {
+  "label": "External 100: OH-MAS vs HapRepair (paper protocol)",
+  "n": 100,
+  "clusters": 79,
+  "ohmas_pass": 89,
+  "hap_pass": 69,
+  "ohmas_spr": 89.0,
+  "hap_spr": 69.0,
+  "diff_pp": 20.0,
+  "ci95": [
+   9.7,
+   30.5
+  ],
+  "p": 0.0007
+ },
+ {
+  "label": "new 44 tasks",
+  "n": 44,
+  "hap_extended_pass": 10,
+  "ohmas_pass": 43
+ }
+]

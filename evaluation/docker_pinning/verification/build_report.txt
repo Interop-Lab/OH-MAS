@@ -1,0 +1,11 @@
+base image id:  sha256:4bf704409b7a5c1ccc1c8467ab21a63648ffef755ec4ba2212dadb81b687f272
+final image id: sha256:490238cbd4250dc828ea58246810be9f4c572f0f99fbef62aff827572ddb3357
+6.0.240
+Cppcheck 2.17.1
+ripgrep 14.1.1
+git version 2.47.3
+Python 3.11.14
+clang-tidy=1:19.0-63
+cppcheck=2.17.1-2
+git=1:2.47.3-0+deb13u1
+ripgrep=14.1.1-1+b4

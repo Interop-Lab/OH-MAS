@@ -1,0 +1,56 @@
+{
+	"schemaVersion": 2,
+	"mediaType": "application/vnd.oci.image.manifest.v1+json",
+	"config": {
+		"mediaType": "application/vnd.oci.image.config.v1+json",
+		"digest": "sha256:e22fa15c9daaa83da6b54f696b7cb2dbfe8ac31a85ca4a875c37917934236ce9",
+		"size": 6348
+	},
+	"layers": [
+		{
+			"mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+			"digest": "sha256:ef235bf1a09a237b896b69935c8c8d917c9c6a78b538724911414afc0a96763c",
+			"size": 49292952
+		},
+		{
+			"mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+			"digest": "sha256:954d6059ca7bdbb9ceb566ca2239e01ef312165659d656753d7dbace7771a591",
+			"size": 25614010
+		},
+		{
+			"mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+			"digest": "sha256:b5e2021c4c8bd1a46b34d9608a9381afdc333600ee1ef3c94306ecf7373e1956",
+			"size": 67787365
+		},
+		{
+			"mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+			"digest": "sha256:128c712640095cd6361adb8c415d18f40180beef843ae18943d3a366993d7749",
+			"size": 236004205
+		},
+		{
+			"mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+			"digest": "sha256:8f9446cd3e035b6e8e03bf0ca5c38e0c3d85db79dc88b10e351f294818287fd5",
+			"size": 6100439
+		},
+		{
+			"mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+			"digest": "sha256:f675d952f4e797944833db47be93ed88bfeb10f579640f37034b376335f1830a",
+			"size": 23954089
+		},
+		{
+			"mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+			"digest": "sha256:a3daca28d0a9d2b1647aeb88d2091c0bf1fa0bf0c4c53d779e3bc7e2122ac172",
+			"size": 251
+		}
+	],
+	"annotations": {
+		"com.docker.official-images.bashbrew.arch": "amd64",
+		"org.opencontainers.image.base.digest": "sha256:639f9fecd9b6eac4dc371790cb958e5f26a2d55bc62234205d74d8aa99fcbe43",
+		"org.opencontainers.image.base.name": "buildpack-deps:trixie",
+		"org.opencontainers.image.created": "2026-02-04T20:17:43Z",
+		"org.opencontainers.image.revision": "90e9ca41dc404ee7d22c09b894823e8925227c17",
+		"org.opencontainers.image.source": "https://github.com/docker-library/python.git#90e9ca41dc404ee7d22c09b894823e8925227c17:3.11/trixie",
+		"org.opencontainers.image.url": "https://hub.docker.com/_/python",
+		"org.opencontainers.image.version": "3.11.14-trixie"
+	}
+}

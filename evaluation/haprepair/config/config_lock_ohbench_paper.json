@@ -1,0 +1,39 @@
+{
+ "hash_inputs": {
+  "haprepair_commit": "2df699a28ecae5f19e9b8825b964597a73d52218",
+  "dataset_sha256": "a3834a501421e8859c63923b83a446114d489f14cff1404ee6dcba7f6f121834",
+  "rules_json_sha256": "30e3829234bbb07e5ad2e6ed50d47ccec29e0bab0a037b3c3e99009e7624eeb2",
+  "vul_pairs_xlsx_sha256": "d91ff95e7acc8eccfdd40dd2b996b64db5b7a691936e3e7dc31a59c40226b832",
+  "retrieval_adapter_sha256": "48a007c12f97b2789173520e78ff3c54fb5ea30830a15fd9fd46882c14bbfcc9",
+  "stella_model": "dunzhang/stella_en_1.5B_v5",
+  "stella_revision": "7817065102fd9e1b031fe874e910c01f40b2f001",
+  "stella_dtype": "float32",
+  "da_file_sha256": "0753537035162b81f35496005f1c0691e30c0bba9a4d632171fa6dc561688f35",
+  "da_source_path": "<HOME>/OH-MAS-rev1/oh-mas-backend/src/oh_mas/agents/da.py",
+  "da_config_orig_sha256": "9e68119f1d6419bb2a28b12b7ccaeed3a3ff7df1fbb9681d03f10a417f5d4b74",
+  "da_config_modification": "da.repo_path -> /workspace/repo only",
+  "docker_image": "harmonyrepair:with-codelinter",
+  "docker_image_id": "sha256:f825fefcb2a25a0da02c314cfa02b0c154ca497466bf8e20d290838d0ac030ab",
+  "da_network": "none",
+  "provider": {
+   "name": "relayrouter",
+   "gen_model": "claude-sonnet-4-5-20250929",
+   "check_model": "gpt-4o-2024-08-06",
+   "usage_extra_body": false
+  },
+  "gen_model": "claude-sonnet-4-5-20250929",
+  "check_model": "gpt-4o-2024-08-06",
+  "temperature": 0,
+  "max_repair_attempts": 3,
+  "rag_top_n": 1,
+  "rag_type": "difflib",
+  "surrounding_context": true,
+  "check_invalid_response_retries": 2,
+  "api_tool_retries": 8,
+  "boundary_normalization": "leading/trailing newline runs of candidate set to those of original; CRLF restored if original is pure CRLF",
+  "outer_rounds": 5,
+  "protocol": "paper protocol on OH-Bench: file-level multi-defect input, <=5 rounds, DA default-command rescans; reuse of B1 for not-covered, single-alarm passed/stalled files and fully-passed multi-alarm files",
+  "runner_sha256": "01d6a91b7b71cb0727b013d3a0ec0f61f87f0aede44682994647bdde0673b62b",
+  "stella_serving": "batch embedding between waves (FP32; resident or disk-offload)"
+ }
+}

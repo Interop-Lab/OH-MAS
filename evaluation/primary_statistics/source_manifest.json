@@ -1,0 +1,64 @@
+{
+  "authority": "Current repository primary per-instance reports; P1/P2/P3 use source A.",
+  "files": {
+    "ablation_per_instance.csv": {
+      "repository_path": "results/ablation_per_instance.csv",
+      "sha256": "21a08f0032816bf0e717a0e5d7e283c40c26542f9ecb4854ad119e5b9f54d74a",
+      "rows": 741
+    },
+    "arkts_baselines_per_instance.csv": {
+      "repository_path": "results/arkts_baselines_per_instance.csv",
+      "sha256": "4427d2c3b1b6fd6ffccb77c5d12500ae34bf7fcfa3abe89a4eb6e36ad9525fa3",
+      "rows": 4584
+    },
+    "baselines_3att_per_instance.csv": {
+      "repository_path": "results/baselines_3att_per_instance.csv",
+      "sha256": "5233478c016aaea49dbf3475c434732b7011a6c25c68910f6ffac9bb098e13a0",
+      "rows": 741
+    },
+    "cpp_baselines_per_instance.csv": {
+      "repository_path": "results/cpp_baselines_per_instance.csv",
+      "sha256": "d24532876a3a31d2382791ba3c6fb9615634984f00bd832db013db084fc5c8d3",
+      "rows": 4308
+    },
+    "experience_instances.csv": {
+      "repository_path": "results/experience_instances.csv",
+      "sha256": "4f6c2fccec16faa13a435f0600a4367f5932fac79dee15118e583844028a81b5",
+      "rows": 741
+    },
+    "external_ohbench_per_instance.csv": {
+      "repository_path": "results/external_ohbench_per_instance.csv",
+      "sha256": "78f450c77b1de303b3397e441a16c46663b336209f2b87e12a65e0f512fe748e",
+      "rows": 100
+    },
+    "gpt55_3att_per_instance.csv": {
+      "repository_path": "results/gpt55_3att_per_instance.csv",
+      "sha256": "917d3fd2b60922460c6295c6c2976090a31c7b610ca59d792d5a43b82213bdf7",
+      "rows": 741
+    },
+    "main_P1-P3_per_instance.csv": {
+      "repository_path": "results/main_P1-P3_per_instance.csv",
+      "sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+      "rows": 741
+    },
+    "oracle_audit_per_instance.csv": {
+      "repository_path": "results/oracle_audit_per_instance.csv",
+      "sha256": "5484091f4d75d378f6730961d6d14647297515b6d942c42e5377b32e69e275e0",
+      "rows": 88
+    },
+    "single_model_gemini_kimi_per_instance.csv": {
+      "repository_path": "results/single_model_gemini_kimi_per_instance.csv",
+      "sha256": "27daa58d81bc7f47fd5c39551d8a7d0f8b01db5f8d75e6136cf7b142c16627b4",
+      "rows": 741
+    }
+  },
+  "key": "instance_id",
+  "primary_full_column": "P1_result",
+  "primary_full_passes": {
+    "ArkTS": 311,
+    "C++": 319,
+    "Overall": 630
+  },
+  "PAR_policy": "Per-instance PAR columns are omitted from the distributed CSVs; no PAR values or aggregation have been recomputed.",
+  "failure_level_policy": "fail_level and *_fail_level columns are omitted from distributed per-instance reports; retained outcomes and grouping identifiers are unchanged."
+}

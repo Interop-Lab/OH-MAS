@@ -1,0 +1,24 @@
+# Base image of the experiment environment (reconstructed from `docker history` of harmonyrepair:latest, image ID 07b805e2d87f).
+# Upstream is pinned by digest: Docker Hub python:3.11 (Debian 13 trixie, Python 3.11.14, linux/amd64).
+#   index digest   sha256:6b023894c26ea77c602814d8b682507e1f9dd731038e25f93381b488ca9e7176
+#   amd64 manifest sha256:a8c1d6b97bc1babb60ae5a72ee60e9fca8bf0054accc0d5ca4745370c5d9d2de (config/image ID e22fa15c9daa...)
+FROM python:3.11@sha256:6b023894c26ea77c602814d8b682507e1f9dd731038e25f93381b488ca9e7176
+
+# Historical build used mirrors.tuna.tsinghua.edu.cn; override with --build-arg DEBIAN_MIRROR=... if needed.
+ARG DEBIAN_MIRROR=deb.debian.org
+ARG PIP_INDEX_URL=https://pypi.org/simple
+
+WORKDIR /workspace
+
+# Exact versions of the packages the experiments rely on (dpkg-query of the historical image).
+RUN sed -i "s/deb.debian.org/${DEBIAN_MIRROR}/g" /etc/apt/sources.list.d/debian.sources \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends cppcheck=2.17.1-2 clang-tidy=1:19.0-63 \
+ && rm -rf /var/lib/apt/lists/* \
+ && test "$(cppcheck --version)" = "Cppcheck 2.17.1"
+
+COPY requirements.base.lock /tmp/requirements.base.lock
+RUN pip install --no-cache-dir -i "${PIP_INDEX_URL}" -r /tmp/requirements.base.lock && pip cache purge && rm /tmp/requirements.base.lock
+
+ENV PYTHONUNBUFFERED=1
+CMD ["/bin/bash"]

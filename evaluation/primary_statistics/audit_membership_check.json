@@ -1,0 +1,12 @@
+{
+  "sampled": 100,
+  "accepted_by_A": 88,
+  "audit_rows": 88,
+  "accepted_missing_audit": [],
+  "audit_not_accepted": [],
+  "by_language": {
+    "ArkTS": 43,
+    "C++": 45
+  },
+  "labels_edited": false
+}

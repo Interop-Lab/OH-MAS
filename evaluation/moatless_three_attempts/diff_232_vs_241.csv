@@ -1,0 +1,10 @@
+instance_id,result_232_source,result_241_final,trace_selection_source,rejudge_result,rejudge_fixed_by,original_attempt1_audit
+CPP_0001,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0032,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0036,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0115,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0116,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0117,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0316,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0317,FAIL,PASS,rejudged,passed,ws,L1
+CPP_0331,FAIL,PASS,rejudged,passed,ws,L1

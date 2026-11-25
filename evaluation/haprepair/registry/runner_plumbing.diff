@@ -1,0 +1,55 @@
+--- run_ohb_paper.py
++++ run_ohb_ext.py
+@@ -13,7 +13,7 @@
+ import run_ext as R
+ import da_eval as DAB            # B1's pinned DA harness (default scan commands, OH-Bench repositories)
+ 
+-OHB = '<HOME>/OH-MAS_haprepair/ohbench_paper'; B1 = R.B1; HAP = R.HAP
++OHB = '<HOME>/OH-MAS_haprepair/ext_rules_20261117/ohb_ext'; B1 = R.B1; HAP = '<HOME>/OH-MAS_haprepair/ext_rules_20261117/hap_ext'; R.HAP = HAP; sys.path.insert(0, HAP)   # EXTENDED-RULES COPY of the locked HapRepair tree
+ REPOS = '<HOME>/OH-MAS-rev1-arkts/repositories'; IMAGE = 'harmonyrepair:with-codelinter'
+ MAX_ROUNDS = 5; PY = '<HOME>/haprepair_b1_venv/bin/python'
+ scan_sem = threading.Semaphore(3)
+@@ -157,7 +157,7 @@
+     ap = argparse.ArgumentParser()
+     ap.add_argument('--workers', type=int, default=4); ap.add_argument('--da-workers', type=int, default=3)
+     ap.add_argument('--max-cost', type=float, default=80); ap.add_argument('--tmp-root', default='/tmp/ohb_work')
+-    ap.add_argument('--limit', type=int, default=0); ap.add_argument('--only', default='')
++    ap.add_argument('--plan-only', action='store_true'); ap.add_argument('--limit', type=int, default=0); ap.add_argument('--only', default='')
+     args = ap.parse_args()
+     for d in ('per_file', 'per_task', 'patches', 'logs', 'jobs'): os.makedirs(f'{OHB}/{d}', exist_ok=True)
+     os.makedirs(args.tmp_root, exist_ok=True)
+@@ -172,26 +172,18 @@
+         r = json.load(open(f)); b1[r['instance_id']] = r
+     byfile = collections.defaultdict(list)
+     for i, d in ds.items(): byfile[(d['project'], d['commit_hash'], d['target_file'])].append(d)
+-    plan = collections.Counter(); jobs = []; carried = []     # carried = tasks whose final result is B1's
++    ids44 = {r['instance_id'] for r in __import__('csv').DictReader(open('<HOME>/OH-MAS_haprepair/audit_unregistered_20261116_055339/unregistered_tasks.csv'))}
++    plan = collections.Counter(); jobs = []; carried = []
+     for (p, c, f), ts in sorted(byfile.items()):
+-        ids = [t['instance_id'] for t in ts]
+-        if all(t['rule_id'] not in reg_rules for t in ts):
+-            carried += [(i, 'not_covered') for i in ids]; plan['not_covered_files'] += 1; continue
+-        regs = [a for a in baseline_alarms(p, c, f) if a[0] in reg_rules]
+-        allpass = all(fin(b1[i]) == 'da_passed' for i in ids)
+-        if allpass:
+-            carried += [(i, 'b1_pass_reused' + ('' if len(regs) <= 1 else '_multi_alarm_file')) for i in ids]; plan['A_or_C_allpassed'] += 1; continue
+-        if len(regs) <= 1:
+-            nopatch = all(fin(b1[i]) in ('no_patch', 'model_context_overflow', 'not_covered') for i in ids if ds[i]['rule_id'] in reg_rules)
+-            if nopatch: carried += [(i, 'b1_stalled_reused') for i in ids]; plan['B_stalled'] += 1; continue
+-            pp = b1[[i for i in ids if ds[i]['rule_id'] in reg_rules][0]].get('patch_path')
+-            jobs.append(dict(id=jid(p, c, f), project=p, commit=c, file=f, tasks=ts, reuse_patch=pp)); plan['B_continue'] += 1
+-        else:
+-            jobs.append(dict(id=jid(p, c, f), project=p, commit=c, file=f, tasks=ts)); plan['C_full'] += 1
++        ts44 = [t for t in ts if t['instance_id'] in ids44]
++        if not ts44: continue
++        assert all(t['instance_id'] in ids44 for t in ts), 'file shared with a non-extension task'
++        jobs.append(dict(id=jid(p, c, f), project=p, commit=c, file=f, tasks=ts)); plan['ext_full_file_job'] += 1
+     print('plan:', dict(plan), 'jobs to run', len(jobs), 'carried tasks', len(carried), flush=True)
++    if args.plan_only: print('plan-only: jobs', [(j['id'], j['file'].split('/')[-1], len(j['tasks'])) for j in jobs]); return
+     if args.only: jobs = [j for j in jobs if args.only in j['file']]
+     if args.limit: jobs = jobs[:args.limit]
+-    cfg = json.load(open(f'{OHB}/config_lock_ohb.json')); cfg_hash = R.config_hash(cfg['hash_inputs'])
++    cfg = json.load(open(f'{OHB}/config_lock_ext.json')); cfg_hash = R.config_hash(cfg['hash_inputs'])
+     for i, why in carried:                               # carried-over tasks: copy B1's verdict, clearly tagged
+         o = dict(instance_id=i, project=ds[i]['project'], file=ds[i]['target_file'], rule_id=ds[i]['rule_id'], final_status=fin(b1[i]), source='B1_single_alarm_reused', reuse_reason=why,
+                  da_result=b1[i].get('da_result'), da_failed_level=b1[i].get('da_failed_level'), config_hash=cfg_hash)

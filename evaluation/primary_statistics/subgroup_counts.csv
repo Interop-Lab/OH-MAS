@@ -1,0 +1,7 @@
+subset,n,target_rules,P1_pass,P1_spr,TemplatesOnly_pass,TemplatesOnly_spr,P1_minus_TemplatesOnly_pp
+Overall,741,35,630,85.0,550,74.2,10.8
+ArkTS,382,21,311,81.4,281,73.6,7.9
+C++,359,14,319,88.9,269,74.9,13.9
+ArkUI_364,364,14,294,80.8,264,72.5,8.2
+experience_all_399,399,11,308,77.2,232,58.1,19.0
+experience_unaudited_365,365,11,285,78.1,217,59.5,18.6

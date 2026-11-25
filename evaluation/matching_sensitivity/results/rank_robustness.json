@@ -1,0 +1,575 @@
+{
+ "single12 C++": {
+  "n_systems": 12,
+  "n_tasks": 359,
+  "LOC-v1": {
+   "pairs": 66,
+   "sig_pairs_DA": 34,
+   "reversals": 2,
+   "reversals_among_DA_significant": 0,
+   "min_p_of_reversed": 0.848,
+   "reversed_pairs": [
+    [
+     "cpp_single_opus48",
+     "cpp_single_kimik25",
+     0.848
+    ],
+    [
+     "cpp_single_minimaxm25",
+     "cpp_single_opencode",
+     0.918
+    ]
+   ],
+   "kendall_tau": 0.8939,
+   "ties_changed": 3,
+   "ties_among_DA_significant": 0
+  },
+  "EXACT": {
+   "pairs": 66,
+   "sig_pairs_DA": 34,
+   "reversals": 18,
+   "reversals_among_DA_significant": 7,
+   "min_p_of_reversed": 0.0,
+   "reversed_pairs": [
+    [
+     "cpp_single_opus45",
+     "cpp_single_opus48",
+     0.798
+    ],
+    [
+     "cpp_single_opus45",
+     "cpp_single_sonnet45",
+     0.672
+    ],
+    [
+     "cpp_single_opus45",
+     "cpp_single_sweagent",
+     0.005
+    ],
+    [
+     "cpp_single_opus48",
+     "cpp_single_sonnet45",
+     1.0
+    ],
+    [
+     "cpp_single_opus48",
+     "cpp_single_gpt55",
+     0.004
+    ],
+    [
+     "cpp_single_opus48",
+     "cpp_single_sweagent",
+     0.006
+    ],
+    [
+     "cpp_single_sonnet45",
+     "cpp_single_gpt55",
+     0.021
+    ],
+    [
+     "cpp_single_sonnet45",
+     "cpp_single_kimik25",
+     0.745
+    ],
+    [
+     "cpp_single_sonnet45",
+     "cpp_single_moatless",
+     0.073
+    ],
+    [
+     "cpp_single_gpt55",
+     "cpp_single_kimik25",
+     0.022
+    ],
+    [
+     "cpp_single_gpt55",
+     "cpp_single_sweagent",
+     0.0
+    ],
+    [
+     "cpp_single_gemini25flash",
+     "cpp_single_agentless",
+     0.208
+    ],
+    [
+     "cpp_single_gemini25flash",
+     "cpp_single_sweagent",
+     0.724
+    ],
+    [
+     "cpp_single_kimik25",
+     "cpp_single_sweagent",
+     0.003
+    ],
+    [
+     "cpp_single_minimaxm25",
+     "cpp_single_opencode",
+     0.918
+    ],
+    [
+     "cpp_single_agentless",
+     "cpp_single_sweagent",
+     0.123
+    ],
+    [
+     "cpp_single_agentless",
+     "cpp_single_claudecode",
+     0.801
+    ],
+    [
+     "cpp_single_sweagent",
+     "cpp_single_claudecode",
+     0.263
+    ]
+   ],
+   "kendall_tau": 0.4091,
+   "ties_changed": 3,
+   "ties_among_DA_significant": 0
+  }
+ },
+ "tableIII C++": {
+  "n_systems": 17,
+  "n_tasks": 359,
+  "LOC-v1": {
+   "pairs": 136,
+   "sig_pairs_DA": 97,
+   "reversals": 2,
+   "reversals_among_DA_significant": 0,
+   "min_p_of_reversed": 0.844,
+   "reversed_pairs": [
+    [
+     "cpp_single_opus48",
+     "cpp_single_kimik25",
+     0.844
+    ],
+    [
+     "cpp_single_minimaxm25",
+     "cpp_single_opencode",
+     0.925
+    ]
+   ],
+   "kendall_tau": 0.9485,
+   "ties_changed": 3,
+   "ties_among_DA_significant": 0
+  },
+  "EXACT": {
+   "pairs": 136,
+   "sig_pairs_DA": 97,
+   "reversals": 21,
+   "reversals_among_DA_significant": 9,
+   "min_p_of_reversed": 0.0,
+   "reversed_pairs": [
+    [
+     "cpp_single_opus45",
+     "cpp_single_opus48",
+     0.809
+    ],
+    [
+     "cpp_single_opus45",
+     "cpp_single_sonnet45",
+     0.668
+    ],
+    [
+     "cpp_single_opus45",
+     "cpp_single_sweagent",
+     0.005
+    ],
+    [
+     "cpp_single_opus48",
+     "cpp_single_sonnet45",
+     1.0
+    ],
+    [
+     "cpp_single_opus48",
+     "cpp_single_gpt55",
+     0.003
+    ],
+    [
+     "cpp_single_opus48",
+     "cpp_single_sweagent",
+     0.007
+    ],
+    [
+     "cpp_single_sonnet45",
+     "cpp_single_gpt55",
+     0.016
+    ],
+    [
+     "cpp_single_sonnet45",
+     "cpp_single_kimik25",
+     0.756
+    ],
+    [
+     "cpp_single_sonnet45",
+     "cpp_single_moatless",
+     0.077
+    ],
+    [
+     "cpp_single_sonnet45",
+     "opus3c",
+     0.0
+    ],
+    [
+     "cpp_single_sonnet45",
+     "sonnet3c",
+     0.0
+    ],
+    [
+     "cpp_single_gpt55",
+     "cpp_single_kimik25",
+     0.024
+    ],
+    [
+     "cpp_single_gpt55",
+     "cpp_single_sweagent",
+     0.0
+    ],
+    [
+     "cpp_single_gemini25flash",
+     "cpp_single_agentless",
+     0.216
+    ],
+    [
+     "cpp_single_gemini25flash",
+     "cpp_single_sweagent",
+     0.72
+    ],
+    [
+     "cpp_single_kimik25",
+     "cpp_single_sweagent",
+     0.004
+    ],
+    [
+     "cpp_single_minimaxm25",
+     "cpp_single_opencode",
+     0.925
+    ],
+    [
+     "cpp_single_agentless",
+     "cpp_single_sweagent",
+     0.121
+    ],
+    [
+     "cpp_single_agentless",
+     "cpp_single_claudecode",
+     0.796
+    ],
+    [
+     "cpp_single_sweagent",
+     "cpp_single_claudecode",
+     0.269
+    ],
+    [
+     "opus3c",
+     "sonnet3c",
+     1.0
+    ]
+   ],
+   "kendall_tau": 0.6691,
+   "ties_changed": 3,
+   "ties_among_DA_significant": 0
+  }
+ },
+ "single12 ArkTS": {
+  "n_systems": 12,
+  "n_tasks": 382,
+  "LOC-v1": {
+   "pairs": 66,
+   "sig_pairs_DA": 35,
+   "reversals": 0,
+   "reversals_among_DA_significant": 0,
+   "min_p_of_reversed": null,
+   "reversed_pairs": [],
+   "kendall_tau": 0.9545,
+   "ties_changed": 0,
+   "ties_among_DA_significant": 0
+  },
+  "EXACT": {
+   "pairs": 66,
+   "sig_pairs_DA": 35,
+   "reversals": 6,
+   "reversals_among_DA_significant": 0,
+   "min_p_of_reversed": 0.656,
+   "reversed_pairs": [
+    [
+     "single_Claude_Opus_4_5",
+     "single_Claude_Code",
+     1.0
+    ],
+    [
+     "single_Claude_Opus_4_8",
+     "single_GPT_5_5",
+     0.803
+    ],
+    [
+     "single_Claude_Opus_4_8",
+     "single_Gemini_2_5_Flash",
+     0.912
+    ],
+    [
+     "single_Claude_Sonnet_4_5",
+     "single_Claude_Code",
+     0.656
+    ],
+    [
+     "single_GPT_5_5",
+     "single_Gemini_2_5_Flash",
+     0.699
+    ],
+    [
+     "single_Kimi_K2_5",
+     "single_Claude_Code",
+     1.0
+    ]
+   ],
+   "kendall_tau": 0.7727,
+   "ties_changed": 2,
+   "ties_among_DA_significant": 0
+  }
+ },
+ "tableIII ArkTS": {
+  "n_systems": 17,
+  "n_tasks": 382,
+  "LOC-v1": {
+   "pairs": 136,
+   "sig_pairs_DA": 99,
+   "reversals": 0,
+   "reversals_among_DA_significant": 0,
+   "min_p_of_reversed": null,
+   "reversed_pairs": [],
+   "kendall_tau": 0.9779,
+   "ties_changed": 0,
+   "ties_among_DA_significant": 0
+  },
+  "EXACT": {
+   "pairs": 136,
+   "sig_pairs_DA": 99,
+   "reversals": 8,
+   "reversals_among_DA_significant": 1,
+   "min_p_of_reversed": 0.029,
+   "reversed_pairs": [
+    [
+     "gpt55x3",
+     "opus3n",
+     0.029
+    ],
+    [
+     "gpt55x3",
+     "moatless3",
+     1.0
+    ],
+    [
+     "single_Claude_Opus_4_5",
+     "single_Claude_Code",
+     1.0
+    ],
+    [
+     "single_Claude_Opus_4_8",
+     "single_GPT_5_5",
+     0.802
+    ],
+    [
+     "single_Claude_Opus_4_8",
+     "single_Gemini_2_5_Flash",
+     0.906
+    ],
+    [
+     "single_Claude_Sonnet_4_5",
+     "single_Claude_Code",
+     0.651
+    ],
+    [
+     "single_GPT_5_5",
+     "single_Gemini_2_5_Flash",
+     0.698
+    ],
+    [
+     "single_Kimi_K2_5",
+     "single_Claude_Code",
+     1.0
+    ]
+   ],
+   "kendall_tau": 0.8603,
+   "ties_changed": 2,
+   "ties_among_DA_significant": 0
+  }
+ },
+ "OH-Bench ArkTS (32)": {
+  "n_systems": 32,
+  "n_tasks": 382,
+  "LOC-v1": {
+   "pairs": 496,
+   "sig_pairs_DA": 371,
+   "reversals": 1,
+   "reversals_among_DA_significant": 0,
+   "min_p_of_reversed": 0.896,
+   "reversed_pairs": [
+    [
+     "E8_ArkTS",
+     "P2_arkts",
+     0.896
+    ]
+   ],
+   "kendall_tau": 0.9879,
+   "ties_changed": 0,
+   "ties_among_DA_significant": 0
+  },
+  "EXACT": {
+   "pairs": 496,
+   "sig_pairs_DA": 371,
+   "reversals": 29,
+   "reversals_among_DA_significant": 1,
+   "min_p_of_reversed": 0.025,
+   "reversed_pairs": [
+    [
+     "gpt55x3",
+     "opus3n",
+     0.025
+    ],
+    [
+     "gpt55x3",
+     "moatless3",
+     1.0
+    ],
+    [
+     "gpt55x3",
+     "E4_ArkTS",
+     0.62
+    ],
+    [
+     "gpt55x3",
+     "E5_ArkTS",
+     1.0
+    ],
+    [
+     "gpt55x3",
+     "E6_ArkTS",
+     0.701
+    ],
+    [
+     "gpt55x3",
+     "a1_kimi_ArkTS",
+     0.472
+    ],
+    [
+     "gpt55x3",
+     "hap_ohb_paper",
+     0.255
+    ],
+    [
+     "opus3n",
+     "hap_ohb_paper",
+     0.901
+    ],
+    [
+     "sonnet3n",
+     "E2_ArkTS",
+     0.237
+    ],
+    [
+     "moatless3",
+     "E4_ArkTS",
+     0.668
+    ],
+    [
+     "moatless3",
+     "E6_ArkTS",
+     0.784
+    ],
+    [
+     "moatless3",
+     "a1_kimi_ArkTS",
+     0.468
+    ],
+    [
+     "single_Claude_Opus_4_5",
+     "single_Claude_Code",
+     1.0
+    ],
+    [
+     "single_Claude_Opus_4_5",
+     "hap_ohb_b1",
+     0.881
+    ],
+    [
+     "single_Claude_Opus_4_8",
+     "single_GPT_5_5",
+     0.806
+    ],
+    [
+     "single_Claude_Opus_4_8",
+     "single_Gemini_2_5_Flash",
+     0.915
+    ],
+    [
+     "single_Claude_Sonnet_4_5",
+     "single_Claude_Code",
+     0.655
+    ],
+    [
+     "single_Claude_Sonnet_4_5",
+     "hap_ohb_b1",
+     0.64
+    ],
+    [
+     "single_GPT_5_5",
+     "single_Gemini_2_5_Flash",
+     0.703
+    ],
+    [
+     "single_Kimi_K2_5",
+     "single_Claude_Code",
+     1.0
+    ],
+    [
+     "single_Kimi_K2_5",
+     "hap_ohb_b1",
+     0.886
+    ],
+    [
+     "single_Claude_Code",
+     "hap_ohb_b1",
+     0.938
+    ],
+    [
+     "E1_ArkTS",
+     "E3_ArkTS",
+     0.41
+    ],
+    [
+     "E1_ArkTS",
+     "E5_ArkTS",
+     0.206
+    ],
+    [
+     "E1_ArkTS",
+     "E6_ArkTS",
+     0.074
+    ],
+    [
+     "E1_ArkTS",
+     "E7_ArkTS",
+     0.616
+    ],
+    [
+     "E8_ArkTS",
+     "E9_ArkTS",
+     0.803
+    ],
+    [
+     "E9_ArkTS",
+     "P2_arkts",
+     0.629
+    ],
+    [
+     "E9_ArkTS",
+     "P3_arkts",
+     0.322
+    ]
+   ],
+   "kendall_tau": 0.869,
+   "ties_changed": 6,
+   "ties_among_DA_significant": 0
+  }
+ }
+}

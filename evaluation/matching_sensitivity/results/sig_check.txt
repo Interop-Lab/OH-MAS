@@ -1,0 +1,1 @@
+24 pairs; significance DA vs LOC changed: 0 ; vs EXACT changed: 0

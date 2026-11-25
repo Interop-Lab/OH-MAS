@@ -1,0 +1,9 @@
+{
+ "scanned_rows_recomputed": 23444,
+ "mismatches": 0,
+ "mismatch_examples": [],
+ "no_patch_rows": 584,
+ "no_patch_rows_not_all_NO_PATCH": 0,
+ "scanned_rows_without_alarm_record": 0,
+ "not_evaluated_rows": 7
+}

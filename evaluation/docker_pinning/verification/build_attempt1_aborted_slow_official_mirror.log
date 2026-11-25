@@ -1,0 +1,57 @@
+[1/4] verifying command-line-tools tree (C-locale sorted per-file sha256 list)
+[2/4] base image from Dockerfile.base (FROM python:3.11@sha256:6b0238...)
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.base
+#1 transferring dockerfile:
+#1 transferring dockerfile: 1.41kB 0.1s done
+#1 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/library/python:3.11@sha256:6b023894c26ea77c602814d8b682507e1f9dd731038e25f93381b488ca9e7176
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 666B done
+#4 DONE 0.1s
+
+#5 [1/5] FROM docker.io/library/python:3.11@sha256:6b023894c26ea77c602814d8b682507e1f9dd731038e25f93381b488ca9e7176
+#5 DONE 0.1s
+
+#6 [2/5] WORKDIR /workspace
+#6 DONE 0.1s
+
+#7 [3/5] RUN sed -i "s/deb.debian.org/deb.debian.org/g" /etc/apt/sources.list.d/debian.sources  && apt-get update  && apt-get install -y --no-install-recommends cppcheck=2.17.1-2 clang-tidy=1:19.0-63  && rm -rf /var/lib/apt/lists/*  && test "$(cppcheck --version)" = "Cppcheck 2.17.1"
+#7 4.143 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#7 4.858 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 5.646 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 6.352 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9679 kB]
+#7 309.6 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [1108 B]
+#7 309.7 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [308 kB]
+#7 317.5 Fetched 10.2 MB in 5min 15s (32.4 kB/s)
+#7 317.5 Reading package lists...
+#7 318.3 Reading package lists...
+#7 319.0 Building dependency tree...
+#7 319.1 Reading state information...
+#7 319.3 The following additional packages will be installed:
+#7 319.3   clang-19 clang-tidy-19 clang-tools-19 libclang-common-19-dev libclang-cpp19
+#7 319.3   libclang1-19 libgc1 libllvm19 libobjc-14-dev libobjc4 libtinyxml2-11 libz3-4
+#7 319.3   llvm-19-linker-tools python3-pygments python3-yaml
+#7 319.3 Suggested packages:
+#7 319.3   clang-19-doc wasi-libc cppcheck-gui clang python-pygments-doc
+#7 319.3   ttf-bitstream-vera
+#7 319.3 Recommended packages:
+#7 319.3   llvm-19-dev libclang-rt-19-dev
+#7 319.5 The following NEW packages will be installed:
+#7 319.5   clang-19 clang-tidy clang-tidy-19 clang-tools-19 cppcheck
+#7 319.5   libclang-common-19-dev libclang-cpp19 libclang1-19 libgc1 libllvm19
+#7 319.5   libobjc-14-dev libobjc4 libtinyxml2-11 libz3-4 llvm-19-linker-tools
+#7 319.5   python3-pygments python3-yaml
+#7 321.2 0 upgraded, 17 newly installed, 0 to remove and 178 not upgraded.
+#7 321.2 Need to get 72.2 MB of archives.
+#7 321.2 After this operation, 360 MB of additional disk space will be used.
+#7 321.2 Get:1 http://deb.debian.org/debian trixie/main amd64 libz3-4 amd64 4.13.3-1 [8560 kB]
+#7 585.1 Get:2 http://deb.debian.org/debian trixie/main amd64 libllvm19 amd64 1:19.1.7-3+b1 [26.0 MB]

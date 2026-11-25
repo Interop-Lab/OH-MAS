@@ -1,0 +1,38 @@
+{
+ "rules_json_sha256": "264f0b80a47da15e0dcd9472d95801e48b8b3042726da188c28df3fb2770b29b",
+ "original_rules_json_sha256": "30e3829234bbb07e5ad2e6ed50d47ccec29e0bab0a037b3c3e99009e7624eeb2",
+ "vul_pairs_sha256": "d91ff95e7acc8eccfdd40dd2b996b64db5b7a691936e3e7dc31a59c40226b832",
+ "added_rules": [
+  "@performance/hp-arkts-no-use-any-export-other",
+  "@previewer/mandatory-default-value-for-local-initialization",
+  "@hw-stylistic/quotes",
+  "@hw-stylistic/operator-linebreak",
+  "@hw-stylistic/no-tabs",
+  "@hw-stylistic/no-multi-spaces",
+  "@hw-stylistic/max-len",
+  "@hw-stylistic/space-before-blocks",
+  "@hw-stylistic/space-infix-ops"
+ ],
+ "placeholder_pages": [
+  "mandatory-default-value-for-local-initialization.ets",
+  "quotes.ets",
+  "operator-linebreak.ets",
+  "no-tabs.ets",
+  "no-multi-spaces.ets",
+  "max-len.ets",
+  "space-before-blocks.ets",
+  "space-infix-ops.ets"
+ ],
+ "py_sha256": {
+  "code_repair.py": "41c2eacf04060310425ae0253500ebba5f63f8d39050e6486f1955eea3283389",
+  "fix.py": "3ccdb1988de8d757b6bd611710bdc981e071f2b572a1640b6494b3e5f06b68b8",
+  "fix_projects.py": "e244eaba0ae81cac22fb6d392af9b837ed31872e7bb461156ca3ab279d283573",
+  "get_prompt.py": "f6410850f5d55e289d94c12586f21a56f8476a8cfbb7bd0c2ff492851e6b4e30",
+  "get_surrounding_context.py": "403a5b6c2e87472c1c30d9adea71e1da3b0e5c3ea9f301bb2d7d3d3c187e03e3",
+  "haprepair_local_index.py": "48a007c12f97b2789173520e78ff3c54fb5ea30830a15fd9fd46882c14bbfcc9",
+  "llm.py": "e13edc9100dba8a094db142b84a817abcb7c4adae53a769140618fdf48ac3d70",
+  "output_handler.py": "a880523d4b0d572efb69c64c8e854f34028685d632e93decce6e7310b2a99f20",
+  "preliminary.py": "761b9f43d253e9820c87b293d160f23b20a5834fecfc4e1160a0e081dd4c01f0",
+  "save_defects_to_database.py": "a85c9e07eaa4b922d5f072c11698a4a94e3caf05c0e3a05d2f1ce4f085684ef8"
+ }
+}

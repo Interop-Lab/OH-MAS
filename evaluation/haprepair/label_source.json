@@ -1,0 +1,11 @@
+{
+  "source": "../../results/main_P1-P3_per_instance.csv",
+  "source_sha256": "c2b9a3401c3ddfd397121422b14f2ec545c20cc5124b50e116462372d79bf790",
+  "id_column": "instance_id",
+  "outcome_column": "P1_result",
+  "target_file": "paired_per_instance_ohbench382.csv",
+  "target_outcome_column": "ohmas_p1",
+  "n": 382,
+  "passes": 311,
+  "language_filter": "ArkTS"
+}

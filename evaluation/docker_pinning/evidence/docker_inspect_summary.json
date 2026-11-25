@@ -1,0 +1,160 @@
+{
+ "python:3.11": {
+  "id": "sha256:e22fa15c9daaa83da6b54f696b7cb2dbfe8ac31a85ca4a875c37917934236ce9",
+  "arch": "amd64",
+  "os": "linux",
+  "created": "2026-02-04T20:25:03.369931607Z",
+  "repo_tags": [
+   "python-swebench:3.11",
+   "python:3.11"
+  ],
+  "repo_digests": [
+   "python@sha256:6b023894c26ea77c602814d8b682507e1f9dd731038e25f93381b488ca9e7176"
+  ],
+  "labels": null,
+  "layers": [
+   "sha256:d16566b6c5a6bd5c45da221a2fc94937d8d503c920c8627f154a2f8a57537da4",
+   "sha256:3dc84f17a3999c0ab5fc2ef9c360dde19a663f4c22cbcec9e1b507fa3ca4222d",
+   "sha256:222b6d2e7e9f54c3f0013d281f37408ecd1c690fba9b7230138187da42415cf6",
+   "sha256:05f2b78449c812b7301720f11a1a2e4c2b8fc0229e2433b9aa0b619f2cade10a",
+   "sha256:3d3fe857810f01b4bf4f4bb01a8f3ffae84a5d47ba118f4c2a9e145ca674f52c",
+   "sha256:1d14c6f3d3463c221a9a31c4b0dc4a870afd176d656cd2929ed10ac0301d2c0a",
+   "sha256:148c8e724051d0a2e7bfdfe6e4b671690422a214fcf593de9d413fd269f1c531"
+  ],
+  "env": [
+   "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+   "LANG=C.UTF-8",
+   "PYTHON_VERSION=3.11.14",
+   "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78"
+  ]
+ },
+ "python-swebench:3.11": {
+  "id": "sha256:e22fa15c9daaa83da6b54f696b7cb2dbfe8ac31a85ca4a875c37917934236ce9",
+  "arch": "amd64",
+  "os": "linux",
+  "created": "2026-02-04T20:25:03.369931607Z",
+  "repo_tags": [
+   "python-swebench:3.11",
+   "python:3.11"
+  ],
+  "repo_digests": [
+   "python@sha256:6b023894c26ea77c602814d8b682507e1f9dd731038e25f93381b488ca9e7176"
+  ],
+  "labels": null,
+  "layers": [
+   "sha256:d16566b6c5a6bd5c45da221a2fc94937d8d503c920c8627f154a2f8a57537da4",
+   "sha256:3dc84f17a3999c0ab5fc2ef9c360dde19a663f4c22cbcec9e1b507fa3ca4222d",
+   "sha256:222b6d2e7e9f54c3f0013d281f37408ecd1c690fba9b7230138187da42415cf6",
+   "sha256:05f2b78449c812b7301720f11a1a2e4c2b8fc0229e2433b9aa0b619f2cade10a",
+   "sha256:3d3fe857810f01b4bf4f4bb01a8f3ffae84a5d47ba118f4c2a9e145ca674f52c",
+   "sha256:1d14c6f3d3463c221a9a31c4b0dc4a870afd176d656cd2929ed10ac0301d2c0a",
+   "sha256:148c8e724051d0a2e7bfdfe6e4b671690422a214fcf593de9d413fd269f1c531"
+  ],
+  "env": [
+   "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+   "LANG=C.UTF-8",
+   "PYTHON_VERSION=3.11.14",
+   "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78"
+  ]
+ },
+ "harmonyrepair:latest": {
+  "id": "sha256:07b805e2d87ff6ff7c13e7e64e7a80c9525b46aa20b3d25b2eded1ddca116f4e",
+  "arch": "amd64",
+  "os": "linux",
+  "created": "2026-02-06T08:20:03.449628137Z",
+  "repo_tags": [
+   "harmonyrepair:latest"
+  ],
+  "repo_digests": [],
+  "labels": null,
+  "layers": [
+   "sha256:d16566b6c5a6bd5c45da221a2fc94937d8d503c920c8627f154a2f8a57537da4",
+   "sha256:3dc84f17a3999c0ab5fc2ef9c360dde19a663f4c22cbcec9e1b507fa3ca4222d",
+   "sha256:222b6d2e7e9f54c3f0013d281f37408ecd1c690fba9b7230138187da42415cf6",
+   "sha256:05f2b78449c812b7301720f11a1a2e4c2b8fc0229e2433b9aa0b619f2cade10a",
+   "sha256:3d3fe857810f01b4bf4f4bb01a8f3ffae84a5d47ba118f4c2a9e145ca674f52c",
+   "sha256:1d14c6f3d3463c221a9a31c4b0dc4a870afd176d656cd2929ed10ac0301d2c0a",
+   "sha256:148c8e724051d0a2e7bfdfe6e4b671690422a214fcf593de9d413fd269f1c531",
+   "sha256:e5e49db0234413a8776b315779c34a98e94d7a57f0694ad465d27065bd7c90d8",
+   "sha256:bd0f397bb6e1387ac86e9b7a761387c6fb61a14fdb4aed070ba24ac9febc5589",
+   "sha256:d9096964e67eb440f37c91a3865da497b9a22be00607e39555567ddc60c9c692"
+  ],
+  "env": [
+   "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+   "LANG=C.UTF-8",
+   "PYTHON_VERSION=3.11.14",
+   "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78",
+   "PYTHONUNBUFFERED=1"
+  ]
+ },
+ "harmonyrepair:with-codelinter-20260426-v2": {
+  "id": "sha256:c2f36bbe1df831f18c833aae5d77a9775555b61c3bf7c09afa14d965672face1",
+  "arch": "amd64",
+  "os": "linux",
+  "created": "2026-04-26T03:12:06.123353086Z",
+  "repo_tags": [
+   "harmonyrepair:with-codelinter-20260426-v2"
+  ],
+  "repo_digests": [],
+  "labels": null,
+  "layers": [
+   "sha256:d16566b6c5a6bd5c45da221a2fc94937d8d503c920c8627f154a2f8a57537da4",
+   "sha256:3dc84f17a3999c0ab5fc2ef9c360dde19a663f4c22cbcec9e1b507fa3ca4222d",
+   "sha256:222b6d2e7e9f54c3f0013d281f37408ecd1c690fba9b7230138187da42415cf6",
+   "sha256:05f2b78449c812b7301720f11a1a2e4c2b8fc0229e2433b9aa0b619f2cade10a",
+   "sha256:3d3fe857810f01b4bf4f4bb01a8f3ffae84a5d47ba118f4c2a9e145ca674f52c",
+   "sha256:1d14c6f3d3463c221a9a31c4b0dc4a870afd176d656cd2929ed10ac0301d2c0a",
+   "sha256:148c8e724051d0a2e7bfdfe6e4b671690422a214fcf593de9d413fd269f1c531",
+   "sha256:e5e49db0234413a8776b315779c34a98e94d7a57f0694ad465d27065bd7c90d8",
+   "sha256:bd0f397bb6e1387ac86e9b7a761387c6fb61a14fdb4aed070ba24ac9febc5589",
+   "sha256:d9096964e67eb440f37c91a3865da497b9a22be00607e39555567ddc60c9c692",
+   "sha256:94239db37150f942b170e7714cdf73002d07e41f212d271344e561dbcfea2a0a",
+   "sha256:14bf48406c3f6ff5c764f1cece0cccb1674830ed974ef048ce7e10ce72fc4aba"
+  ],
+  "env": [
+   "PATH=/usr/local/bin:/opt/command-line-tools/bin:/opt/command-line-tools/tool/node/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+   "LANG=C.UTF-8",
+   "PYTHON_VERSION=3.11.14",
+   "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78",
+   "PYTHONUNBUFFERED=1",
+   "DEVECO_NODE_HOME=/opt/command-line-tools/tool/node",
+   "DEVECO_SDK_HOME=/opt/command-line-tools/sdk"
+  ]
+ },
+ "harmonyrepair:with-codelinter": {
+  "id": "sha256:f825fefcb2a25a0da02c314cfa02b0c154ca497466bf8e20d290838d0ac030ab",
+  "arch": "amd64",
+  "os": "linux",
+  "created": "2026-05-25T15:28:14.200477989Z",
+  "repo_tags": [
+   "harmonyrepair:with-codelinter"
+  ],
+  "repo_digests": [],
+  "labels": null,
+  "layers": [
+   "sha256:d16566b6c5a6bd5c45da221a2fc94937d8d503c920c8627f154a2f8a57537da4",
+   "sha256:3dc84f17a3999c0ab5fc2ef9c360dde19a663f4c22cbcec9e1b507fa3ca4222d",
+   "sha256:222b6d2e7e9f54c3f0013d281f37408ecd1c690fba9b7230138187da42415cf6",
+   "sha256:05f2b78449c812b7301720f11a1a2e4c2b8fc0229e2433b9aa0b619f2cade10a",
+   "sha256:3d3fe857810f01b4bf4f4bb01a8f3ffae84a5d47ba118f4c2a9e145ca674f52c",
+   "sha256:1d14c6f3d3463c221a9a31c4b0dc4a870afd176d656cd2929ed10ac0301d2c0a",
+   "sha256:148c8e724051d0a2e7bfdfe6e4b671690422a214fcf593de9d413fd269f1c531",
+   "sha256:e5e49db0234413a8776b315779c34a98e94d7a57f0694ad465d27065bd7c90d8",
+   "sha256:bd0f397bb6e1387ac86e9b7a761387c6fb61a14fdb4aed070ba24ac9febc5589",
+   "sha256:d9096964e67eb440f37c91a3865da497b9a22be00607e39555567ddc60c9c692",
+   "sha256:94239db37150f942b170e7714cdf73002d07e41f212d271344e561dbcfea2a0a",
+   "sha256:c3166abf46186e937bdf9f31bf2d68be22ef5d83016eca608ffb850ea4cd474d",
+   "sha256:acd3fad6bb1e996e16d584efd11fc5c4a03be19565f5f4eaf6f9d149079255a2",
+   "sha256:24742bca1bae4cf7d57b1ed11602875119ed6266b6e5b1a3c2e20aaad4aca8d9"
+  ],
+  "env": [
+   "PATH=/usr/local/bin:/opt/command-line-tools/bin:/opt/command-line-tools/tool/node/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+   "LANG=C.UTF-8",
+   "PYTHON_VERSION=3.11.14",
+   "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78",
+   "PYTHONUNBUFFERED=1",
+   "DEVECO_NODE_HOME=/opt/command-line-tools/tool/node",
+   "DEVECO_SDK_HOME=/opt/command-line-tools/sdk"
+  ]
+ }
+}
